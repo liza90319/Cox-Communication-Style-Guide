@@ -1,0 +1,39 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<div class="cols-grid">
+	<div class="colspan-12 col-reset text-align-center">
+		<h1>Tables</h1>
+	</div>
+	
+	<div class="colspan-12 col-reset library-header">
+		<h2>Grid Table (AEM)</h2>
+	</div>
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/tables-data-table-aem.html"-->
+	</div>
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Grid Table</h2>
+	</div>
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/tables-data-table.html"-->
+	</div>
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Sortable Table</h2>
+	</div>
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/tables-sortable-table.html"-->
+	</div>
+
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

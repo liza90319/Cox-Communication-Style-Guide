@@ -1,0 +1,93 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<div class="library-header">
+	<h1>Modals</h1>
+</div>
+
+<form class="form colspan-10" action="#modals.html" method="post">
+	<div class="cols-10 col-reset">
+		<h3 class="library-h3">Accessibility</h3>
+		<p>The form elements below are included to test accessibility. While modals are open, these links and fields should be disabled, or at least outside of the tab order.</p>
+
+		<!-- div for displaying error message at the top -->
+		<div class="msg-error error-header"></div>
+		
+ 		<h3 class="colspan-10">Name</h3>
+ 		
+		<label class="colspan-2 required-asterisk" for="fname-input90">First Name</label>
+		<div class="colspan-8">
+			<input type="text" name="fname" id="fname-input90" size="30" class="required" placeholder="Please enter your first name"/>
+			<a class="overlay-trigger btn-help" aria-describedby="overlay-one"></a>
+			<div class="overlay-container" id="overlay-one" role="tooltip">
+				<p>Contextual help to provide more details about this field.</p>
+			</div>
+		</div>	
+		
+		<label class="colspan-2 required-asterisk" for="lname-input91">Last Name</label>
+		<div class="colspan-8">
+			<input type="text" name="lname" id="lname-input91" size="30" class="required" placeholder="Please enter your last name" />
+		</div>
+
+		<div class="colspan-10">
+			<input type="submit" value="Submit" />
+		</div>
+	</div>
+</form>
+
+<div class="col-reset">
+	<h3 class="library-h3">Modal Triggers</h3>
+</div>
+
+<div class="library-module col-reset">
+<p><a href="includes/modal.html" class="modal-trigger" title="Modal Title" data-modal-width="780">Launch an Ajax Modal</a>.</p>
+<p><a href="includes/modal-form.html" class="modal-trigger" title="Modal Title" data-modal-width="780">Launch an Ajax Modal WITH Form</a>.</p>
+</div>
+
+<div class="library-module col-reset">
+<p><a class="modal-trigger" data-content-element="modal-div-1" title="Modal Title" data-modal-width="780" href="#">Launch a Modal of in page content using data-content-element WITH form</a>.</p>
+<div id="modal-div-1" class="modal-inline-content">
+	<p>This is a mashup of the modal form include and custom buttons.</p>
+	<form class="form colspan-10" action="#modals.html" method="post">
+		<div class="cols-10 col-reset">
+			<!-- div for displaying error message at the top -->
+			<div class="msg-error error-header"></div>
+			
+			<h3 class="colspan-10">Contact</h3>
+	
+			<label class="colspan-3 required-asterisk" for="phone-input92">Phone Number</label>
+			<div class="colspan-7">
+				<input type="tel" name="phone" id="phone-input92" maxlength="10" size="30" class="required phoneUS" data-mask="(000) 000-0000" placeholder="Please enter phone number" />
+			</div>
+	
+			<label class="colspan-3 required-asterisk" for="email-input93">Email</label>
+			<div class="colspan-7">
+				<input type="text" name="email" id="email-input93" size="30" class="required email" placeholder="Please enter your email" />
+			</div>
+
+			<div class="colspan-10">
+				<input type="submit" value="Submit" />
+			</div>
+		</div>
+	</form>
+	<div class="dialog-component-buttons">
+		<a href="#" class="button btn-close">Close</a>
+	</div>
+</div>
+</div>
+
+<div class="library-module col-reset">
+<p><a class="modal-trigger" href="/folder1/folder2/file.html" title="Modal Title" data-modal-width="780">Launch a Modal of in page content using href path</a>.</p>
+<div id="folder1-folder2-file.html" class="modal-inline-content">
+	<!--#include file="includes/modal.html"-->
+</div>
+</div>
+
+<div class="library-module col-reset">
+<p><a class="modal-trigger" data-disable-close="true" data-content-element="modal-div-2" title="Modal Title" data-modal-width="780" href="#">Launch a Modal of in a page content with close functionality disabled</a>.</p>
+<div id="modal-div-2" class="modal-inline-content">
+	<!--#include file="includes/modal.html"-->
+</div>
+</div>

@@ -1,0 +1,10 @@
+<!--#if expr="${QUERY_STRING} = /child-colspan=(.*?)(&|$)/"-->
+	<!--#set var="child-colspan" value="${1}"-->
+<!--#endif-->
+<div class="colspan-<!--#echo var="child-colspan"-->">
+	<div class="col-content">
+		<h4><code>.cols-<!--#echo var="child-cols"--> .colspan-<!--#echo var="child-colspan"--></code></h4>
+		<p>Etiam nec velit velit. Mauris tristique dictum ipsum, sed molestie tellus volutpat lobortis.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed quam nisl, eget sollicitudin lectus. Vestibulum convallis, quam eu adipiscing congue, leo nisi elementum massa, vitae suscipit justo enim vulputate leo. Etiam blandit massa sed lorem feugiat sagittis. In pulvinar elit quis magna eleifend nec gravida elit euismod. Nunc imperdiet egestas congue. Fusce malesuada vestibulum sodales. Ut eleifend volutpat libero, laoreet convallis lorem dictum sed. In non justo turpis.</p>
+	</div>
+</div>

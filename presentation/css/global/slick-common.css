@@ -1,0 +1,85 @@
+/* slick-common.css */
+/* Dot Navigation */
+/* To override styles of slick-theme.css */
+.slick-carousel .slick-dots {
+	margin: 0;
+	max-width: 80%;
+	left: 10%;
+}
+.slick-carousel .slick-dots li {
+	display: inline-block;
+	margin: 0 9px;
+	padding: 0;
+	background: url("/ui/$version/tsw/img/global/icons/carousel-controls.png") no-repeat scroll center top;
+	cursor: pointer;
+	height: 17px;
+	position: relative;
+	text-indent: -9999px;
+	width: 17px;
+	float: none; /* reset cascade from other styles to allow for components to display properly with js disabled */
+}
+.slick-carousel .slick-dots li button:before {
+	content: '';
+	font-size: 34px;
+}
+.slick-carousel .slick-dots li button:hover, .slick-carousel .slick-dots li button:focus {
+	outline: none;
+	cursor: pointer;
+}
+.slick-carousel .slick-dots li button:hover:before, .slick-carousel .slick-dots li button:focus:before {
+	opacity: 1;
+	cursor: pointer;
+}
+.slick-carousel .slick-dots li button:before {
+	background-position: center bottom;
+	cursor: default;
+}
+.slick-carousel .slick-dots li.slick-active {
+	background-position: center bottom;
+	cursor: default;
+}
+.slick-carousel .slick-list {
+	overflow: hidden;
+}
+
+/* Directional Arrow Navigation */
+.slick-carousel .slick-prev:before, .slick-carousel .slick-next:before {
+	content: '';
+}
+.slick-carousel .slick-prev:before, .slick-carousel .slick-next:before {
+	position: absolute;
+	width: 20px;
+	height: 25px;
+	opacity: 1;
+	z-index: 1002;
+	top: 0;
+}
+/* Previous Arrow Navigation */
+.slick-carousel .slick-prev:before {
+	background: url("/ui/$version/tsw/img/global/arrow-prev.png") no-repeat;
+	left: -10%;
+}
+/* Next Arrow Navigation */
+.slick-carousel .slick-next:before {
+	background: url("/ui/$version/tsw/img/global/arrow-next.png") no-repeat;
+	left: 10%;
+}
+/* To center the items  */
+.slick-carousel .slick-track {
+	margin: 0 auto;	
+}
+@media screen and (max-width: 767px) {
+	.slick-carousel .slick-dots {
+		bottom: -35px;
+	}
+	.slick-carousel .slick-prev:before, 
+	.slick-carousel .slick-next:before {
+		top: 128px;
+	}
+	.slick-carousel .slick-prev:before {
+		left: 50px;
+	}
+	.slick-carousel .slick-next:before {
+		left: -45px;
+	}
+}

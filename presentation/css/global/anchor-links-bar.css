@@ -1,0 +1,200 @@
+/* anchor-links-bar.css */
+.anchor-links-bar {
+	background-color: #2757a7; /* theme a (default) */
+	padding: 8px 0 0;
+	text-align: center;
+}
+
+/* theme backgrounds */
+.anchor-links-bar.theme-b {
+	background-color: #4bb2d9 !important;
+}
+.anchor-links-bar.theme-c {
+	background-color: #353537 !important;
+}
+
+.anchor-links-bar [class*="colspan-"] {
+	vertical-align: middle;
+}
+
+.anchor-links-bar .anchor-inner {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.anchor-link-content {
+	margin: 0 auto;
+}
+
+.anchor-links-bar .link-heading {
+	display: none;
+}
+
+/* class for sticky blocks */
+.anchor-sticky {
+	z-index: 5;
+	position: static;
+}
+.anchor-sticky.active {
+	position: fixed;
+	top: 0 !important;
+	left: 0;
+	width: 100%;
+}
+
+.anchor-links-bar .anchor-sticky.active {
+	margin: 1px auto;
+}
+
+.anchor-link-content .col-content {
+	margin: 0 1px 10px !important;
+}
+
+.anchor-links-bar .anchor-link-content a {
+	border-radius: 4px;
+	color: #ffffff;
+	display: block;
+	vertical-align: middle;
+	word-wrap: break-word;
+}
+
+/* to handle active and focus blocks i.e. all blocks*/
+.anchor-link-content .active a {
+	color: #2757a7;
+	background-color: #ffffff;
+	border-radius: 4px;
+	display: block;
+}
+
+
+.anchor-links-bar .link-selection a {
+	padding: 10px;
+}
+
+/* align free text left/right  */
+.anchor-links-bar .free-text .col-content {
+	font-family: "open_sansbold", Arial, Helvetica, Sans-serif;
+	font-size: 20px;
+	color: #fff;
+}
+.anchor-links-bar .free-text-right {
+	text-align: right;
+}
+.anchor-links-bar .free-text-left {
+	text-align: left;
+}
+
+
+/* freeform mode */
+.anchor-links-freeform {
+	text-align: left;
+	padding: 18px 0 10px;
+}
+
+.anchor-links-freeform .colspan-12 {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+}
+
+.anchor-links-freeform,
+.anchor-links-freeform a:not([class*='button']) {
+	color: #fff;
+}
+
+.anchor-links-freeform img {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+	.anchor-links-freeform {
+		padding: 0;
+	}
+	.anchor-links-bar .anchor-inner {
+		text-align: left;
+		max-width: 100%;
+	}
+	/* mobile - to include sticky styles */
+	.anchor-links-bar.anchor-sticky {
+		background-color: transparent;
+		padding: 10px;
+		box-sizing: border-box; 
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	.anchor-sticky.active {
+		background-color: rgba(0, 0, 0, .9);
+		z-index: 9999; /* resolve issue where slick arrows are overlapping */
+	}
+	.anchor-link-content .col-content {
+		margin: 0 10px !important;
+	}
+	.anchor-links-bar .anchor-link-content {
+		display: none;
+	}
+	.anchor-links-bar .anchor-link-content > div {
+		width: auto !important;
+		min-width: 100% !important;
+		max-width: 100% !important;
+	}
+	.anchor-links-bar .anchor-link-content.selected {
+		display: block;
+	}
+	.anchor-links-bar .anchor-link-content .col-content a,
+	.anchor-links-bar .link-heading.selected {
+		color: #2757a7;
+	}
+	.anchor-links-bar .link-heading {
+		color: #666;
+		display: block;
+		margin: 8px 60px 8px 20px;
+		padding-bottom: 1px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.anchor-links-bar .link-selection span {
+		background: url("/ui/$version/tsw/img/global/white-arrow-down.png") no-repeat 50% 50% #2757a7;
+		display: block;
+		height: 37px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 45px;
+		margin: -1px;
+	}
+	.anchor-links-bar .link-selection span.active {
+		background: url("/ui/$version/tsw/img/global/blue-arrow.png") no-repeat 50% 50% #ffffff;
+		margin: 0;
+	}
+	.anchor-links-bar .link-selection {
+		position: relative;
+		border: 1px solid #999;
+		background-color: #fff;
+	}
+	.anchor-links-bar .free-text-right,
+	.anchor-links-bar .free-text-left {
+		text-align: center;
+	}
+	.anchor-links-bar .free-text-right {
+		padding: 18px 0 6px;
+	}
+	.anchor-links-bar .free-text-right .col-content {
+		margin-bottom: 0;
+	}
+	.anchor-links-bar .free-text .col-content {
+		color: #000;
+	}
+	.anchor-links-bar.active .free-text .col-content {
+		color: #fff;
+	}
+	/* freeform mode  */
+	.anchor-links-freeform .col-content {
+		margin-top: 10px;
+		text-align: center;
+	}
+	.anchor-links-freeform a {
+		margin: 22px 0 0 0;
+	}
+}

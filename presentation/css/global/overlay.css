@@ -1,0 +1,51 @@
+/* help icon style */
+.btn-help {
+	background: url(/ui/$version/tsw/img/global/icons/help.png) no-repeat 0 0;
+	margin: -2px 0 0 8px; /* default alignment */
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	zoom: 1;
+	position: absolute;
+	font-size: 0;
+}
+.btn-help:focus {
+	outline: 1px dotted #404040;
+}
+
+input + .btn-help {
+	margin-top: 2px; /* better alignment to inputs */
+}
+
+/* DROPDOWN PANELS */
+/* General styling for panels */
+.overlay-wrapper {
+	position: relative;
+}
+.overlay-container {
+	display: none;
+	position: absolute;
+	border: 1px solid #9a9a9a;
+	box-shadow: 0 0 4px #D5D6D7;
+	-moz-box-shadow: 0 0 4px #D5D6D7;
+	-webkit-box-shadow: 0 0 4px #D5D6D7;
+	background-color: #fff;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 200px;
+	padding: 10px;
+	text-align: left;
+	font-weight: 100;
+}
+.overlay-container:after {
+	background: url(/ui/$version/tsw/img/global/dropdown-arrow.png) no-repeat 0 0;
+	content: " ";
+	height: 14px;
+	width: 30px;
+	position: absolute;
+	top: -14px;	
+}
+.overlay-open {
+	display: block;
+}

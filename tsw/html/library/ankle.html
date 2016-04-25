@@ -1,0 +1,36 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<div class="library-header">
+	<h1>Ankle</h1>
+</div>
+
+<div class="colspan-12 col-reset library-header">
+	<h2>Theme = a (default)</h2>
+</div>
+<div class="library-module">
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/ankle.html?theme=theme-a"-->
+</div>
+
+<div class="colspan-12 col-reset library-header">
+	<h2>Theme = b</h2>
+</div>
+<div class="library-module">
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/ankle.html?theme=theme-b"-->
+</div>
+
+<div class="colspan-12 col-reset library-header">
+	<h2>Theme = c</h2>
+</div>
+<div class="library-module">
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/ankle.html?theme=theme-c"-->
+</div>
+
+<div class="colspan-12 col-reset library-header">
+	<h2>Theme = d</h2>
+</div>
+<div class="library-module">
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/ankle.html?theme=theme-d"-->
+</div>

@@ -1,0 +1,39 @@
+/* global rail feature */
+
+.rail-feature .divider {
+	border-top: 1px solid #e8e8e8;
+}
+
+/* theme a */
+.rail-feature.theme-a img {
+	display: block;
+	margin: 0 auto 20px;
+}
+.rail-feature.theme-a p {
+	margin: 0 0 10px;
+}
+.rail-feature.theme-a .feature-link a {
+	background: url("/ui/$version/tsw/img/global/icons/arrow-right.png") no-repeat;
+	display: inline-block;
+	padding-left: 25px;
+}
+.rail-feature.theme-a .divider {
+	margin: 20px 0;
+}
+
+/* theme b */
+.rail-feature.theme-b img {
+	float: left;
+	margin-right: 12px;
+	max-width: 30px;
+}
+.rail-feature.theme-b p {
+	margin: 0 0 7px;
+}
+.rail-feature.theme-b .feature-link a {
+	display: block;
+	padding-left: 42px;
+}
+.rail-feature.theme-b .divider {
+	margin: 6px 0;
+}

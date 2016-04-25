@@ -1,0 +1,20 @@
+<!--#set var="alignment" value=""-->
+<!--#if expr="${QUERY_STRING} = /alignment=(.*?)(&|$)/"-->
+	<!--#set var="alignment" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="margin-top" value=""-->
+<!--#if expr="${QUERY_STRING} = /margin-top=(.*?)(&|$)/"-->
+	<!--#set var="margin-top" value="margin-top:${1}px;"-->
+<!--#endif-->
+
+<!--#set var="margin-bottom" value=""-->
+<!--#if expr="${QUERY_STRING} = /margin-bottom=(.*?)(&|$)/"-->
+	<!--#set var="margin-bottom" value="margin-bottom:${1}px;"-->
+<!--#endif-->
+
+<div class="aem-image">
+	<div class="col-content clearfix <!--#echo var="alignment"-->" style="<!--#echo var="margin-top"--><!--#echo var="margin-bottom"-->">
+		<img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/fpo-7-col.png" alt="FPO Image" />
+	</div>
+</div>

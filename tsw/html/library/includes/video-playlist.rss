@@ -1,0 +1,43 @@
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+	<channel>
+		<item>
+			<title>Access 1000s of Free Shows Anytime with Cox FreeZone</title>
+			<description>You're busy. We know it. With On DEMAND, you're no longer ruled by the programming grid. Now, the kids don't have to wait to see their favorite cartoons. The movie can wait for you to pop your popcorn. And that show you missed last night? It's on right now, if you want it to be.</description>
+			<media:thumbnail url="http://www.cox.com/wcm/en/video/tv/ondemand/on-demand-free-zone.jpg" />
+			<media:content url="http://www.cox.com/wcm/en/video/tv/ondemand/on-demand-free-zone.mp4" />
+			<media:subtitle url="library/includes/video-1-captions.vtt" />
+		</item>
+
+		<item>
+			<title>Discover Contour - It’s the new personalized TV experience from Cox</title>
+			<description>Contour adapts to you. Discover a new way to watch TV. Contour delivers a personalized experience to your TV and iPad. With individual profiles for up to 8 members of the household, you get personal show recommendations,  and access to the Record 6 DVR.</description>
+			<media:thumbnail url="http://www.cox.com/wcm/en/video/tv/ondemand/on-demand-premium-services.jpg" />
+			<media:content url="http://www.cox.com/wcm/en/video/tv/ondemand/on-demand-premium-services.mp4" />
+			<media:subtitle url="library/includes/video-1-captions.vtt" />
+		</item>
+		
+		<item>
+			<title>Watch Your Favorite TV Shows Now on My Primetime from Cox</title>
+			<description>You're busy. We know it. With On DEMAND, you're no longer ruled by the programming grid.  Now, the kids don't have to wait to see their favorite cartoons. The movie can wait for you to pop your popcorn. And that show you missed last night? It's on right now, if you want it to be.</description>
+			<media:thumbnail url="http://www.cox.com/wcm/en/video/tv/ondemand/on-demand-myprimetime.jpg" />
+			<media:content url="http://www.cox.com/wcm/en/video/tv/ondemand/on-demand-myprimetime.mp4" />
+			<media:subtitle url="library/includes/video-1-captions.vtt" />
+		</item>
+
+		<item>
+			<title>Catch Your Favorite New Movies at Home with Cox On DEMAND</title>
+			<description>You're busy. We know it. With On DEMAND, you're no longer ruled by the programming grid.  Now, the kids don't have to wait to see their favorite cartoons. The movie can wait for you to pop your popcorn. And that show you missed last night? It's on right now, if you want it to be.</description>
+			<media:thumbnail url="http://www.cox.com/wcm/en/video/tv/ondemand/on-demand-movies.jpg" />
+			<media:content url="http://www.cox.com/wcm/en/video/tv/ondemand/on-demand-movies.mp4" />
+			<media:subtitle url="library/includes/video-1-captions.vtt" />
+		</item>
+
+		<item>
+			<title>Never Go Out Again! Enjoy HD Movies On DEMAND from Cox</title>
+			<description>You're busy. We know it. With On DEMAND, you're no longer ruled by the programming grid.  Now, the kids don't have to wait to see their favorite cartoons. The movie can wait for you to pop your popcorn. And that show you missed last night? It's on right now, if you want it to be.</description>
+			<media:thumbnail url="http://www.cox.com/wcm/en/video/tv/ondemand/on-demand-hd.jpg" />
+			<media:content url="http://www.cox.com/wcm/en/video/tv/ondemand/on-demand-hd.mp4" />
+			<media:subtitle url="library/includes/video-1-captions.vtt" />
+		</item>
+	</channel>
+</rss>

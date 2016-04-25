@@ -1,0 +1,429 @@
+/* global forms */
+
+form label {
+	color: #404040;
+}
+
+form legend {
+	display: none;
+}
+
+input,
+textarea,
+select {
+	font: 1em "open_sansregular", Arial, Helvetica, Sans-serif;
+	color: #000;
+	box-sizing: border-box; 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+textarea {
+	border: 0;
+	border-radius: 3px;
+	background-color: #f1f1f1;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .4);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .4);
+	-webkit-appearance: none;
+}
+
+.IE8 input[type="text"],
+.IE8 input[type="tel"],
+.IE8 input[type="password"],
+.IE8 textarea {
+	border-color: #a0a0a0 #d6d6d6 #f0f0f0;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="password"] {
+	padding: 0 10px;
+	height: 33px;
+	line-height: 31px;
+}
+
+.IE8 input[type="text"],
+.IE8 input[type="tel"],
+.IE8 input[type="password"] {
+	height: 31px;
+}
+
+textarea {
+	padding: 5px 10px;
+}
+
+select {
+	-webkit-border-radius: 0; /* ipad display fix */
+	cursor: pointer;
+	*margin-bottom: 15px; /* ie7 fix to make the select container bigger to prevent grid columns from breaking */
+	border-radius: 0.2em;
+}
+
+select[multiple="multiple"] {
+	border: 1px solid #d9d9d9;
+	padding: 2px 0 2px 8px;
+}
+
+select optgroup {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif; /* to make Firefox look like IE and Safari */
+}
+
+select:not([multiple="multiple"]) {
+	background: url(/ui/$version/tsw/img/global/form-fields.png) 0 -37px no-repeat, url(/ui/$version/tsw/img/global/form-fields.png) 100% 0 no-repeat; 
+	padding: 4px 8px;
+	height: 33px;
+	border: 0;
+	outline: 0;
+	appearence: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+/* focus styles */
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+input[type="button"]:focus,
+textarea:focus,
+select:focus,
+span[role="button"][tabindex]:focus,
+div[role="button"][tabindex]:focus {
+	box-shadow: 0 0 5px #2757a7;
+}
+
+/* IE 8 */
+@media \0screen {
+	select {
+		padding: 6px 8px 7px;
+		background-color: #f1f1f1;
+		border-color: #a0a0a0 #d6d6d6 #f0f0f0;
+		border-radius: 3px;
+		border-style: solid;
+		border-width: 1px;
+  	}
+}
+
+/* IE 9+ non-styled dropdown (hides the vertical divider) */
+.IE select:not([multiple="multiple"]) {
+	background: url(/ui/$version/tsw/img/global/form-fields.png) 0 -37px no-repeat, url(/ui/$version/tsw/img/global/form-fields.png) 100% -94px no-repeat; 
+}
+
+
+/*
+ Position and hide the real checkboxes and radio buttons.
+ The inputs are made transparent instead of completely hidden to preserve
+ clickability in browsers that don't have clickable labels.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+	position: absolute;
+	/* Match the image dimensions */
+	width: 27px;
+	height: 27px;
+	/* Reset anything that could peek out or interfere with dimensions */
+	overflow: hidden;
+	margin: -3px 0 0;
+	padding: 0;
+	outline: 0;
+	opacity: 0;
+}
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+	margin-right: 20px;
+}
+/*
+ Insert a pseudo element inside each label and give it a background
+ image that will become the custom checkbox or radio button.
+ Using inline-block lets you use vertical-align to adjust it vertically
+ as needed.
+ */
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before {
+	display: inline-block;
+	width: 39px;
+	height: 39px;
+	margin: -6px 9px -6px -6px; /* negative margin to account for focus outer glow */
+	background: url(/ui/$version/tsw/img/global/form-fields.png) no-repeat 0 0;
+	content: " ";
+	vertical-align: top;
+}
+
+/* Position the background image differently depending on the state of each checkbox and radio button. */
+input[type="radio"] + label:before { /* unchecked */
+	background-position: 0 -538px;
+}
+input[type="radio"]:focus + label:before { /* unchecked - focused */
+	background-position: 0 -597px;
+}
+input[type="radio"]:checked + label:before { /* checked */
+	background-position: 0 -657px;
+}
+input[type="radio"]:checked:focus + label:before { /* checked - focused */
+	background-position: 0 -717px;
+}
+input[type="checkbox"] + label:before { /* unchecked */
+	background-position: 0 -238px;
+}
+input[type="checkbox"]:focus + label:before { /* unchecked - focused */
+	background-position: 0 -298px;
+}
+input[type="checkbox"]:checked + label:before { /* checked */
+	background-position: 0 -358px;
+}
+input[type="checkbox"]:checked:focus + label:before { /* checked - focused */
+	background-position: 0 -419px;
+}
+
+.required-asterisk {
+	background: url(/ui/$version/tsw/img/global/form-fields.png) no-repeat 0 -149px;
+}
+
+/* label alignment */
+form label.col-content {
+	padding: 3px 0 7px 0 !important;
+	display: block;
+}
+
+/* error messaging styles */
+.error-header,
+.error-wrapper {	
+	display: none;
+}
+form .error-wrapper {
+	background: #fbeeed;	
+	border: 1px solid #d8544c;
+	display: inline-block;
+	padding: 5px 2px 5px 10px;
+	margin-left: 22px; /* width and margin left given in % such that error wrapper does not break in any device */
+	position: absolute;
+	text-indent: 0;
+	color: #000; /* needed to have the right font color for vertical-group error message */
+	vertical-align: top;
+	min-width: 210px; /* needed to prevent errors from collapsing in default 6 column module */
+	box-sizing: border-box; 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.IE9 form .error-wrapper {
+	vertical-align: baseline;
+}
+form .error-wrapper p {
+	background: url('/ui/$version/tsw/img/global/icons/error.png') 0 0 no-repeat; 
+	padding: 0 5px 0 31px;
+	margin-bottom: 0;
+}
+form .bubble-pointer:before {	
+	content:"";
+	position:absolute;
+	border-style: solid;
+	border-width: 7px 14px 7px 0;
+	border-color: transparent #d8544c;
+	display: block;
+	width: 0;	
+	left: -15px;
+	top: 9px;
+	bottom: auto;
+}
+form .bubble-pointer:after {	
+	content: "";
+	position: absolute;	
+	border-style: solid;
+	border-width: 6px 13px 6px 0;
+	border-color: transparent #fbeeed;
+	display: block;
+	width: 0;
+	left: -13px;
+	top: 10px;
+	bottom: auto;
+}
+
+/*** CSS hack for mozilla firefox *****/
+/* Hack needed to do away with the ugly appearance of 1px border */
+
+@-moz-document url-prefix() {
+	form .bubble-pointer:before {
+		border-color: rgba(245, 199, 199, 0) #d8544c;
+	}
+	form .bubble-pointer:after {
+		border-color: rgba(245, 199, 199, 0) #fbeeed;
+	}	
+}
+
+form input.error {	
+	background-color: #fbeeed;	
+}
+form .errorMsg {
+	color: #d8544c;
+}
+
+
+/* spinbox global styles */
+.sb-wrapper .sb-input {
+	color: #2757a7;
+	display: block; 
+	line-height: 12px;
+	font-weight: bold;
+}
+.sb-button {
+	text-align: center !important;
+	float: left;
+	color: #fff;
+	border: none;
+	width: 40px;
+	height: 40px;
+	padding: 0 0 4px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 140%;
+	background-color: #2757a7;
+	-webkit-appearance: none; /* ipad fix */
+	-webkit-border-radius: 0; /* ipad fix */
+}
+.sb-button.disabled {
+	color: #c3c3c3;	
+	background-color: #e6e7e8;
+	cursor: default;
+}
+.sb-wrapper .sb-circle-wrapper {		
+	background-image: -webkit-gradient(linear, top, bottom, from(#ffffff), to(#f1f1f1)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( top, #ffffff, #f1f1f1); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( top, #ffffff, #f1f1f1); /* FF3.6+ */
+	background-image:     -ms-linear-gradient( top, #ffffff, #f1f1f1); /* IE10 */
+	background-image:         linear-gradient( to bottom, #ffffff, #f1f1f1); /* W3C */
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, .59);
+	-moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, .59);
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, .59);	
+	max-width: 219px;
+	width: calc(100% - 80px);
+	float: left;
+	height: 40px;
+	text-align: center;
+}
+.IE8 .sb-wrapper .sb-circle-wrapper {
+	border: 1px solid #ccc;
+	height: 38px;
+	width: 216px;
+}
+.sb-wrapper .sb-circle {
+	min-width: 13px; 
+	height: 12px; 
+	border-radius: 50%; 
+	padding: 6px 6px 6px 5px; 
+	background-color: #FFFFFF; 
+	border: 2px solid #e1e2e2; 
+	margin-top: 5px;
+	display: inline-block;
+}
+
+
+/* START - OLD FORM STYLES - DO NOT ALIGN PROPERLY TO GRID - DEPRECATED!!! */
+.form .required-asterisk {
+	margin-left: -10px;
+	margin-right: 10px;
+	text-indent: 10px;
+}
+
+/* Css added to prevent next label from breaking (old form)*/
+.form .large-content-label {
+	height: 0px;
+}
+
+.form,
+.form-container {
+	overflow: visible !important; /* override overflow so that asterisk are shown*/
+	margin-bottom: 30px;
+}
+
+/* float the label and form element container */
+/* form-container allows for apps like ecomm to have one form wrapping the entire page without breaking the colspans */
+.form [class*="colspan-"],
+.form-container [class*="colspan-"] {
+	margin-bottom: 10px;
+	float: left;
+}
+.form .clear-float {
+	clear: both;
+}
+.form label[class*="colspan-"],
+.form span[class*="colspan-"] {
+	padding: 3px 0 7px 0;
+}
+/* END - OLD FORM STYLES */
+
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	/* mobile styles for error-wrapper */
+	form .error-wrapper {
+		background: none;
+		border: none;
+		padding: 0;
+		margin-left: 0; /* width and margin left given in % such that error wrapper does not break in any device */
+		position: relative;
+		margin-top: 6px;
+		width: 100%;
+	}
+	form .mbubble-pointer:before,
+	form .mbubble-pointer:after {
+		border-style: none;
+		border-width: 0;
+	}
+	
+	/* width for all input to occupy 100% in mobile*/
+	input[type="text"],
+	input[type="tel"],
+	input[type="password"],
+	textarea {
+		width: 100%;		
+	}
+	/* decrease field width to fit the help icon */
+	form .has-help {
+		width: calc(100% - 30px);
+	}
+}
+
+/* overrides for iphone device Only */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+	.SF .sb-wrapper .sb-circle {
+		padding: 5px 5px 6px 7px; /* TODO: is this still needed? */
+	}	
+}
+
+/* ADOBE AEM Style Overrides
+ * 
+ * Adds additional reset styles to the form elements missing in the AEM css */
+#CQ .x-fieldset legend {
+	display: block;
+}
+#CQ .x-form-text,
+#CQ textarea.x-form-field {
+	border-radius: 0;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-sizing: inherit; 
+	-moz-box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+}
+/* turn the original select back on */
+#CQ .x-html-editor-wrap select {
+	background-image: none;
+	-moz-appearance: menulist;
+	-webkit-appearance: menulist;
+}
+/* reset the checkbox and radios back to default */
+#CQ .x-form-check-wrap label:before {
+	width: auto;
+	height: auto;
+	margin: 0;
+	background-image: none;
+}

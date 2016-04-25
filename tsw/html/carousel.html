@@ -1,0 +1,236 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<script src="/ui/<!--#echo var="version"-->/tsw/js/lib/mbox.js"></script>
+
+<div class="cols-grid">
+	<div class="colspan-12 col-reset text-align-center">
+		<h1>Hero Carousel</h1>
+	</div>
+	
+	<div class="colspan-12 col-reset library-header">
+		<h2>Hero, Mobile Text Position = Middle, Mobile Text Underlay = On</h2>
+	</div>
+	<!-- DEV NOTES: The following carousel displays Regular Hero components. -->
+	<div data-slideshow-speed="5000" data-slideshow="true" class="flexslider carousel-container">
+		<ul class="slides col-reset">
+<!--#set var="heroImage" value="hero1.jpg"-->
+<!--#set var="showPrice" value="true"-->
+<!--#set var="pricingProduct" value="Regular Hero Ichi"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero&position=top&mobileVerticalPosition=middle"-->
+				</div>
+				<script>mboxCreate('rotator-slide-1');</script>
+			</li>
+<!--#set var="heroImage" value="hero2.jpg"-->
+<!--#set var="pricingProduct" value="Regular Hero Ni"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero&position=top&mobileVerticalPosition=middle"-->
+				</div>
+				<script>mboxCreate('rotator-slide-2');</script>
+			</li>
+<!--#set var="heroImage" value="hero3.jpg"-->
+<!--#set var="pricingProduct" value="Regular Hero San"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero&position=top&mobileVerticalPosition=middle&color=font-white"-->
+				</div>
+				<script>mboxCreate('rotator-slide-3');</script>
+			</li>
+<!--#set var="heroImage" value="hero4.jpg"-->
+<!--#set var="pricingProduct" value="Regular Hero Shi"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero&position=top&mobileVerticalPosition=middle"-->
+				</div>
+				<script>mboxCreate('rotator-slide-4');</script>
+			</li>
+<!--#set var="heroImage" value="hero5.jpg"-->
+<!--#set var="pricingProduct" value="Regular Hero Go"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero&position=top&mobileVerticalPosition=middle"-->
+				</div>
+				<script>mboxCreate('rotator-slide-5');</script>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="colspan-12 col-reset library-header">
+		<h2>Super Hero, Desktop Text Position = Coordinates</h2>
+	</div>
+	<!-- DEV NOTES: The following carousel displays Super Hero components. -->
+	<div data-slideshow-speed="5000" data-slideshow="true" class="flexslider carousel-container">
+		<ul class="slides col-reset">
+<!--#set var="pricingProduct" value="Phone Essential"-->
+<!--#set var="pricingDollars" value="69"-->
+<!--#set var="pricingDetailsRegular" value="Regular price \$80.95/month."-->
+<!--#set var="heroImage" value="superhero1.jpg"-->
+<!--#set var="showPrice" value="true"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero-super&position=top&color=font-white"-->
+				</div>
+				<script>mboxCreate('rotator-slide-10');</script>
+			</li>
+<!--#set var="pricingProduct" value="Phone Maybe"-->
+<!--#set var="pricingDollars" value="79"-->
+<!--#set var="pricingDetailsRegular" value="Regular price \$90.95/month."-->
+<!--#set var="pricingFreeInstallation" value="true"-->
+<!--#set var="heroImage" value="superhero2.jpg"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero-super&position=top"-->
+				</div>
+				<script>mboxCreate('rotator-slide-11');</script>
+			</li>
+<!--#set var="pricingProduct" value="Phone Sorta"-->
+<!--#set var="pricingDollars" value="89"-->
+<!--#set var="pricingDetailsRegular" value="Regular price \$100.95/month."-->
+<!--#set var="heroImage" value="superhero3.jpg"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero-super&position=top"-->
+				</div>
+				<script>mboxCreate('rotator-slide-12');</script>
+			</li>
+<!--#set var="pricingProduct" value="Phone Virtual"-->
+<!--#set var="pricingDollars" value="99"-->
+<!--#set var="pricingDetailsRegular" value="Regular price \$110.95/month."-->
+<!--#set var="heroImage" value="superhero1.jpg"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero-super&position=top&color=font-white"-->
+				</div>
+				<script>mboxCreate('rotator-slide-13');</script>
+			</li>
+<!--#set var="pricingProduct" value="Phone OFF THE SIDE!"-->
+<!--#set var="pricingDollars" value="19"-->
+<!--#set var="pricingDetailsRegular" value="Regular price \$120.95/month."-->
+<!--#set var="heroImage" value="superhero2.jpg"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero-super&position=top"-->
+				</div>
+				<script>mboxCreate('rotator-slide-14');</script>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="colspan-12 col-reset library-header">
+		<h2>Slim Hero, Desktop Text Position = Coordinates</h2>
+	</div>
+	<!-- DEV NOTES: The following carousel displays Slim Hero components. -->
+	<div data-slideshow-speed="5000" data-slideshow="true" class="flexslider carousel-container">
+		<ul class="slides col-reset">
+			<!--#set var="heroImage" value="slim-hero.jpg"-->
+			<!--#set var="showPrice" value="false"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero-slim&position=top"-->
+				</div>
+				<script>mboxCreate('rotator-slide-20');</script>
+			</li>
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero-slim&position=top"-->
+				</div>
+				<script>mboxCreate('rotator-slide-21');</script>
+			</li>
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero-slim&position=top"-->
+				</div>
+				<script>mboxCreate('rotator-slide-22');</script>
+			</li>
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero-slim&position=top"-->
+				</div>
+				<script>mboxCreate('rotator-slide-23');</script>
+			</li>
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero-slim&position=top"-->
+				</div>
+				<script>mboxCreate('rotator-slide-24');</script>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="colspan-12 col-reset library-header">
+		<h2>Hero Tabs, Text Align = center, Desktop Text Position = Middle</h2>
+	</div>
+	<!-- DEV NOTES: The following carousel displays Hero Tabs Hero components. -->
+	<div data-slideshow-speed="5000" data-slideshow="true" data-manual-controls="true" class="flexslider carousel-container">
+		<ul class="slides col-reset">
+			<!--#set var="heroImage" value="hero1.jpg"-->
+			<!--#set var="showPrice" value="true"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero&position=top&textalign=center&desktopVerticalPosition=middle"-->
+				</div>
+				<script>mboxCreate('rotator-slide-30');</script>
+			</li>
+			<!--#set var="heroImage" value="hero2.jpg"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero&position=top&textalign=center"-->
+				</div>
+				<script>mboxCreate('rotator-slide-31');</script>
+			</li>
+			<!--#set var="heroImage" value="hero3.jpg"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero&position=top&textalign=center&color=font-white"-->
+				</div>
+				<script>mboxCreate('rotator-slide-32');</script>
+			</li>
+			<!--#set var="heroImage" value="hero4.jpg"-->
+			<li>
+				<div class="mboxDefault">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero&position=top&textalign=center"-->
+				</div>
+				<script>mboxCreate('rotator-slide-33');</script>
+			</li>
+		</ul>
+	</div>
+	<!-- custom controls -->
+	<div class="hero-tabs">
+		<ol class="flexslider-controls">
+			<li>
+				<div class="mboxDefault">
+					<div class="hero-tab"><a href="#">Lorum Ipsum Dolar</a><p>Ult sed nibh et nibh auctor trum.</p></div>
+				</div>
+				<script>mboxCreate('rotator-tab-1');</script>
+			</li>
+			<li>
+				<div class="mboxDefault">
+					<div class="hero-tab"><a href="#">Lorum Ipsum Dolar</a><p>Ult sed nibh et nibh auctor trum.</p></div>
+				</div>
+				<script>mboxCreate('rotator-tab-2');</script>
+			</li>
+			<li>
+				<div class="mboxDefault">
+					<div class="hero-tab"><a href="#">Lorum Ipsum Dolar</a><p>Ult sed nibh et nibh auctor trum.</p></div>
+				</div>
+				<script>mboxCreate('rotator-tab-3');</script>
+			</li>
+			<li>
+				<div class="mboxDefault">
+					<div class="hero-tab"><a href="#">Lorum Ipsum Dolar</a><p>Ult sed nibh et nibh auctor trum.</p></div>
+				</div>
+				<script>mboxCreate('rotator-tab-4');</script>
+			</li>
+		</ol>
+	</div>
+	<!-- /custom controls -->
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

@@ -1,0 +1,67 @@
+<!-- START: aem-author-tooltip -->
+<script>
+	$( document ).ready(function() {
+		$('body').on('click', '.aem-author-placeholder .cms-modal-trigger', function() {
+			var thisContent = $(this)[0].outerHTML;
+			console.log(thisContent);
+			$('#modal-code').html(thisContent);
+		});
+		
+	}); 
+</script>
+
+<div class="section-container constrain-960 aem-author-placeholder">
+	<div class="colspan-12">
+		<div class="colspan-1">
+			<div class="col-content">
+				<img src="/ui/<!--#echo var="version"-->/tsw/img/aem/author-image-modal.png" />
+			</div>
+		</div>
+		<div class="colspan-4">
+			<div class="col-content aem-author-placeholder-labels">
+				<p>Link to Referenced Page:</p>
+				<p>Hide Bottom Close Button:</p>
+				<p>Preview Modal:</p>
+			</div>
+		</div>
+		<div class="colspan-3">
+			<div class="col-content">
+				<p><a href="#"><a href="#">Inline Content</a></p>
+				<p>Yes / No</p>
+				<p><strong>Light Theme</strong><br/>
+					<a data-modal-width="1010" class="cms-modal-trigger" href="#" title="Modal Title" data-hide-close-btn="false" data-content-element="residential_tv_modal" data-modal-theme="light">12-column</a><br/>
+					<a data-modal-width="850" class="cms-modal-trigger" href="#" title="Modal Title" data-hide-close-btn="false" data-content-element="residential_tv_modal" data-modal-theme="light">10-column</a><br/>
+					<a data-modal-width="690" class="cms-modal-trigger" href="#" title="Modal Title" data-hide-close-btn="false" data-content-element="residential_tv_modal" data-modal-theme="light">8-column</a>
+				</p>
+			</div>
+		</div>
+		<div class="colspan-4">
+			<div class="col-content">
+				<p><a href="#"><a href="#">Ajax Content</a></p>
+				<p>&nbsp;</p>
+				<p><strong>Dark Theme</strong><br/>
+					<a data-modal-width="1010" class="cms-modal-trigger" href="#" title="Modal Title" data-hide-close-btn="false" data-content-element="residential_tv_modal" data-modal-theme="dark">12-column</a><br/>
+					<a data-modal-width="850" class="cms-modal-trigger" href="#" title="Modal Title" data-hide-close-btn="false" data-content-element="residential_tv_modal" data-modal-theme="dark">10-column</a><br/>
+					<a data-modal-width="690" class="cms-modal-trigger" href="#" title="Modal Title" data-hide-close-btn="false" data-content-element="residential_tv_modal" data-modal-theme="dark">8-column</a>
+				</p>
+			</div>
+		</div>
+		<div class="colspan-1"></div>
+		<div class="colspan-11">
+			<div class="col-content aem-author-placeholder-labels">
+				<p>Source Code:</p>
+				<p><textarea placeholder="Please select a theme above to view the source code." id="modal-code"></textarea></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- sample modal -->
+<div id="residential_tv_modal" class="modal-inline-content">
+	<div class="col-content">
+		<h2>Modal Title</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt consectetur luctus. Praesent nec arcu eleifend nisl dapibus luctus et eget felis. Vivamus bibendum dolor nibh, non fringilla diam ultricies vel.</p>
+	</div>
+</div>
+<!-- /sample modal -->
+<!-- END: aem-author-tooltip -->

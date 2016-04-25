@@ -1,0 +1,16 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<div class="cols-grid">
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/breadcrumb.html"-->
+	</div>
+	<!-- /section container -->
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

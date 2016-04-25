@@ -1,0 +1,739 @@
+/* global tabs */
+
+/* general styles for tabs */
+.tab-component {
+	margin: 30px 0 20px;
+	/* bottom gets 10px additional from col-content margin */
+	text-align: left;
+}
+.tab-component .tab-item {
+	display: none;
+}
+.tab-component .text-layout, 
+.tab-component .icon-layout {
+	margin: 10px 0;
+	padding: 0;
+	display: inline-block;
+	width: 100%;
+}
+
+.tab-component .text-layout li, 
+.tab-component .icon-layout li {
+	float: left;
+	list-style: none;
+}
+
+/* text layout */
+.tab-component .text-layout li {
+	padding: 10px 0;
+}
+
+.tab-component .text-layout li a {
+	color: #555;
+	text-align: center;
+	font-size: 1.125em; 
+	padding: 17px 11px;
+}
+
+/* icon layout */
+.tab-component .icon-layout li {
+	text-align: center;
+}
+
+.tab-component .icon-layout li img {
+	padding: 30px 0 5px 0;
+	display: block;
+	margin: 0 auto;
+}
+
+.tab-component .position-left.icon-layout a, 
+.tab-component .position-right.icon-layout a {
+	padding: 6px 10px;
+	text-align: center !important;
+}
+
+.tab-component .position-top.text-layout {
+	padding-bottom: 5px;
+}
+
+.tab-component .tab-content {
+	margin: 0 0 25px;
+}
+
+/* styles across the themes */
+.tab-component .theme-a.position-top.text-layout,
+.tab-component .theme-a.position-top.icon-layout li a,
+.tab-component .theme-b.position-top.text-layout,
+.tab-component .theme-b.position-top.icon-layout,
+.tab-component .theme-c.position-top.icon-layout {
+	border-bottom: 1px solid #f3f3f3;		
+}
+
+
+.tab-component .theme-a.position-bottom .active, .tab-component .theme-b .active {
+	background-color: #FFF;
+}
+
+.tab-component .theme-a.position-bottom .active, .tab-component .theme-b.position-top.text-layout .active,
+	.tab-component .theme-b.position-bottom.text-layout .active {
+	box-shadow: 0 -1px 5px #d3d3d3;
+}
+
+.tab-component .theme-a.position-left li a, .tab-component .theme-a.position-right li a, .tab-component .theme-b.position-left li a,
+.tab-component .theme-b.position-right li a, .tab-component .theme-c.position-left li a, .tab-component .theme-c.position-right li a {
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+}
+.tab-component .theme-a.position-left li, .tab-component .theme-a.position-right li,
+.tab-component .theme-b.position-left li, .tab-component .theme-b.position-right li, 
+.tab-component .theme-c.position-left li, .tab-component .theme-c.position-right li {
+	padding: 0;	
+} 
+/* apply styles only for desktop */
+@media screen and (min-width: 768px) {	
+	.tab-component .theme-a.position-left li, .tab-component .theme-a.position-right li,
+	.tab-component .theme-b.position-left li, .tab-component .theme-b.position-right li, 
+	.tab-component .theme-c.position-left li, .tab-component .theme-c.position-right li {
+		width: 90%;
+	} 
+	.tab-component .icon-layout a {
+		font-size: 0.75em;
+		padding: 6px 21px;
+		display: block;
+		color: #555;
+	}	
+	.tab-component .position-top.icon-layout li, 
+	.tab-component .position-bottom.icon-layout li {
+		width: 16.66%;
+		min-width: 16.66%;
+		max-width: 16.66%;
+	}	
+	/* theme-b (grey) styles */
+	.tab-component .theme-b.text-layout li {
+		margin: 0 2px;
+	}
+}
+
+
+.tab-component .theme-a.position-bottom.text-layout, .tab-component .theme-a.position-bottom.icon-layout li a,
+	.tab-component .theme-b.position-bottom.text-layout, .tab-component .theme-b.position-bottom.icon-layout,
+	.tab-component .theme-c.position-bottom.icon-layout {
+	border-top: 1px solid #f3f3f3;
+}
+
+.tab-component .theme-a.position-left li a, .tab-component .theme-b.position-left.text-layout,
+.tab-component .theme-b.position-left.icon-layout, .tab-component .theme-c.position-left.icon-layout {
+	border-right: 1px solid #f3f3f3;
+}
+
+.tab-component .theme-a.position-right li a, .tab-component .theme-b.position-right, .tab-component .theme-c.position-right.icon-layout {
+	border-left: 1px solid #f3f3f3;
+}
+
+.tab-component .theme-a.position-top.icon-layout a.active, .tab-component .theme-b.position-top.icon-layout .active {
+	box-shadow: 0 -3px 3px #d3d3d3;
+}
+
+.tab-component .theme-a.position-bottom.icon-layout a.active, .tab-component .theme-b.position-bottom.icon-layout a.active {
+	box-shadow: 0 3px 2px 1px #e6ebf5;
+}
+
+.tab-component .theme-a .active, .tab-component .theme-b .active {
+	color: #000020;
+}
+
+.tab-component .position-left.text-layout li a, .tab-component .position-right.text-layout li a {
+	padding: 10px;
+}
+
+.tab-component .theme-b.position-bottom, .tab-component .theme-b.position-bottom.icon-layout .active,
+	.tab-component .theme-c.position-bottom.icon-layout li a.active {
+	padding-top: 11px;
+	
+}
+
+.tab-component .theme-b.text-layout, .tab-component .theme-b.position-top.icon-layout .active,
+	.tab-component .theme-c.position-top.icon-layout li a.active {
+	padding-bottom: 11px;
+	
+}
+
+/* styles for each themes */
+/* theme-a (transparent) styles */
+
+/* .theme-a.position-top.text-layout {
+	margin-top: 13px !important;	
+} */
+.tab-component .theme-a.position-bottom {
+	padding-top: 8px;
+}
+
+.tab-component .theme-a.position-top.icon-layout a.active {
+	border-bottom: none;
+}
+
+.tab-component .theme-a.position-bottom.icon-layout a.active {
+	border-top: none;
+	padding: 7px 21px 6px;
+}
+
+.tab-component .theme-a.position-top .active {
+	box-shadow: 0 -2px 3px #d3d3d3;
+}
+
+.tab-component .theme-a.position-left .active, .tab-component .theme-a.position-right .active {
+	border-top: 2px solid #c9d3d7;
+}
+
+.tab-component .theme-a.position-right.icon-layout .active {
+	padding: 4px 10px 6px 11px;
+}
+
+.tab-component .theme-a.position-left .active {
+	box-shadow: -3px 0px 7px 0px #d8d8d8;
+	border-right: none;
+	padding: 8px 10px 10px;
+}
+
+.tab-component .theme-a.position-left.icon-layout .active {
+	padding: 4px 10px 6px;
+}
+
+.tab-component .theme-a.position-right .active {
+	box-shadow: 3px 0px 7px 0px #d8d8d8;
+	border-left: none;
+	padding: 8px 10px 10px 11px;
+}
+
+.tab-component .theme-c.position-bottom.icon-layout, .tab-component .theme-b.position-bottom.icon-layout
+	{
+	padding-top: 4px;
+	
+}
+
+.tab-component .theme-b.position-left.icon-layout, .tab-component .theme-c.position-left.text-layout li a.active
+	{
+	padding-right: 9px;
+}
+
+.tab-component .theme-b.position-top.text-layout .active {
+	border-top: 1px solid #d3d3d3;
+}
+
+.tab-component .theme-b.position-top.text-layout .active {
+	padding: 16px 11px 20px;
+}
+
+.tab-component .theme-b.position-left li a.active, .tab-component .theme-b.position-right li a.active
+	{
+	margin: 3px 0 6px;
+	box-shadow: -3px 0 6px -1px #d3d3d3;
+	border: 1px solid #d3d3d3;
+	border-right: none;
+}
+
+.tab-component .theme-b.position-right li a.active {
+	border-left: none;
+}
+
+.tab-component .theme-b.position-left.text-layout {
+	padding-right: 12px;
+}
+.tab-component .theme-b.position-left li a.active {
+	padding-right: 15px;
+} 
+.tab-component .theme-b.position-left li a, .tab-component .theme-b.position-right li a {
+	margin-bottom: 3px;
+}
+
+.tab-component .theme-b.position-right li a.active {
+	box-shadow: 4px 0 6px -1px #d3d3d3;
+}
+
+.tab-component .theme-b.position-top.icon-layout {
+	padding-bottom: 3px;
+	
+}
+
+.tab-component .theme-b.position-top.icon-layout .active {
+	margin: 0 0 -5px;
+}
+
+.tab-component .theme-b.position-bottom.icon-layout .active {
+	margin: -5px 0 0;
+}
+
+.tab-component .theme-b.position-right.icon-layout {
+	padding-left: 3px;
+}
+
+.tab-component .theme-b.position-right.icon-layout .active {
+	margin-left: -4px;
+	padding-left: 13px;
+	padding-right: 14px;
+}
+
+.tab-component .theme-b.position-right.text-layout .active {
+	margin-left: -3px;
+	padding-left: 12px;
+	padding-right: 13px;
+}
+
+/* theme-c (blue) styles */
+.tab-component .theme-c.position-top.text-layout,
+.tab-component .theme-c.position-bottom.text-layout {
+	padding: 10px 0;
+}
+
+.tab-component .theme-c li a {
+	color: #fff;
+}
+
+.tab-component .theme-c.position-bottom.text-layout li a.active {
+	padding: 16px 11px 18px;
+}
+
+.tab-component .theme-c.position-top.text-layout li a.active {
+	padding: 17px 11px 16px;
+}
+
+.tab-component .theme-c.position-bottom.icon-layout li a.active {
+	margin: -5px 0 0 0;
+}
+
+.tab-component .theme-c.position-top.icon-layout li a.active {
+	margin: 0 0 -5px 0;
+}
+
+.tab-component .theme-c.position-top.icon-layout {
+	padding-bottom:4px;
+	
+}
+
+.tab-component .theme-c.position-left.text-layout li a.active {
+	border-right: 1px solid;
+}
+
+.tab-component .theme-c.position-right.text-layout li a.active {
+	padding-left: 9px;
+	border-left: 1px solid;
+}
+
+.tab-component .theme-c.position-left.icon-layout li a.active {
+	padding-right: 15px;
+}
+
+.tab-component .theme-c.position-right.icon-layout li a.active {
+	padding-left: 14px;
+	margin-left: -4px;
+}
+
+.tab-component .theme-c.position-right.icon-layout {
+	padding-left: 4px;
+}
+
+.tab-component .theme-c.position-left.icon-layout, .tab-component .theme-c.position-right.icon-layout li a.active
+	{
+	padding-right: 10px;
+}
+
+.tab-component .theme-c.position-left.icon-layout li, .tab-component .theme-c.position-right.icon-layout li
+	{
+	margin-bottom: 2px;
+}
+
+/* fall-back for box-shadow in IE8 */
+.IE8 .tab-component .theme-a.position-top.text-layout li a.active, .IE8 .tab-component .theme-a.position-bottom.text-layout li a.active
+	{
+	padding: 16px 10px;
+}
+
+.IE8 .tab-component .theme-b.position-top.text-layout li a.active, .IE8 .tab-component .theme-b.position-bottom.text-layout li a.active
+	{
+	padding-left: 10px;
+}
+
+.IE8 .tab-component .theme-b.position-top.icon-layout li a.active {
+	padding: 5px 20px 11px;
+}
+
+.IE8 .tab-component .theme-b.position-bottom.icon-layout li a.active {
+	padding: 11px 20px 6px;
+}
+
+.IE8 .tab-component .theme-a.position-left.text-layout li a.active {
+	padding: 9px 11px 9px 9px;
+}
+
+.IE8 .tab-component .theme-a.position-right.text-layout li a.active {
+	padding: 9px 9px 9px 11px;
+}
+
+.IE8 .tab-component .theme-a.position-top.icon-layout li a.active {
+	padding: 5px 20px 7px;
+}
+
+.IE8 .tab-component .theme-a.position-bottom.icon-layout li a.active {
+	padding: 7px 20px 5px;
+}
+
+.IE8 .tab-component .theme-a.position-left.icon-layout li a.active {
+	padding: 5px 10px 5px 9px;
+}
+
+.IE8 .tab-component .theme-a.position-right.icon-layout li a.active {
+	padding: 5px 9px 5px 11px;
+}
+
+.IE8 .tab-component .theme-a li a.active, .IE8 .tab-component .theme-b.position-bottom.icon-layout .active,
+	.IE8 .tab-component .theme-b.position-top.icon-layout .active, .IE8 .tab-component .position-top.text-layout.theme-b .active,
+	.IE8 .tab-component .position-bottom.text-layout.theme-b .active, .IE8 .tab-component .theme-b.position-right li a.active,
+	.IE8 .tab-component .theme-b.position-left li a.active {
+	border: 1px solid #f3f3f3;
+}
+
+.IE8 .tab-component .theme-a.position-left li a.active {
+	border-right: none;
+}
+
+.IE8 .tab-component .theme-a.position-right li a.active, .IE8 .tab-component .theme-b.position-right li a.active
+	{
+	border-left: none;
+}
+
+.IE8 .tab-component .theme-b.position-top.icon-layout .active {
+	border-bottom: none;
+}
+
+.IE8 .tab-component .theme-b.position-bottom.icon-layout .active {
+	border-top: none;
+}
+
+.IE8 .tab-component .position-bottom.text-layout.theme-b .active {
+	padding-top: 18px;
+	border-top: none;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+	/* reset desktop style that is not require in mobile, to avoid overwritting */
+	.tab-component .position-top.text-layout {
+		padding: 0;
+	}
+	.tab-component .theme-a.position-bottom {
+		padding: 0;
+	}
+
+	.tab-component .theme-b.position-bottom, .tab-component .theme-b.position-bottom.icon-layout .active,
+	.tab-component .theme-c.position-bottom.icon-layout li a.active {
+		padding-top: 0;		
+	}
+	
+	.tab-component .theme-b.text-layout, .tab-component .theme-b.position-top.icon-layout .active,
+	.tab-component .theme-c.position-top.icon-layout li a.active {
+		padding-bottom: 0;		
+	}
+	
+	.tab-component .theme-c.position-bottom.icon-layout, .tab-component .theme-b.position-bottom.icon-layout {
+		padding-top: 0;		
+	}
+	
+	.tab-component .theme-b.position-top.icon-layout {
+		padding-bottom: 0;		
+	}
+	
+	.tab-component .theme-c.position-top.text-layout, .tab-component .theme-c.position-bottom.text-layout {
+		padding:0;
+	}
+	
+	.tab-component .theme-c.position-top.icon-layout {
+		padding-bottom:0;		
+	}
+ 
+
+	/* end */
+	.tab li a {
+		font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+		white-space: nowrap; /* prevent text wrapping which blows up all the slick alignment; text should be short anyways */
+	}    
+   
+   /* prevent long text from extending on to adjacent slide */
+    .tab li.slick-slide {
+    	text-overflow: ellipsis;
+    	overflow: hidden;    
+    }
+    
+	/* border none for all themes */
+	.tab-component .theme-a.position-bottom.text-layout, .tab-component .theme-a.position-bottom.icon-layout li a,
+		.tab-component .theme-a.position-left .active, .tab-component .theme-a.position-right .active,
+		.tab-component .theme-a.position-top.text-layout, .tab-component .theme-a.position-top.icon-layout li a,
+		.tab-component .theme-a.position-right li a, .tab-component .theme-a.position-left li a, .tab-component .theme-b.position-bottom.text-layout,
+		.tab-component .theme-b.position-bottom.icon-layout, .tab-component .theme-b.position-top.text-layout .active,
+		.tab-component .theme-b.position-left li a.active, .tab-component .theme-b.position-right li a.active,
+		.tab-component .theme-b.position-top.text-layout, .tab-component .theme-b.position-top.icon-layout,
+		.tab-component .theme-b.position-right, .tab-component .theme-b.position-left.text-layout, .tab-component .theme-b.position-left.icon-layout,
+		.tab-component .theme-c.position-top.icon-layout, .tab-component .theme-c.position-bottom.icon-layout,
+		.tab-component .theme-c.position-right.icon-layout, .tab-component .theme-c.position-right.text-layout li a.active,
+		.tab-component .theme-c.position-left.text-layout li a.active, .tab-component .theme-c.position-left.icon-layout
+		{
+		border: none;
+	}
+
+	/* box-shadow none for all themes */
+	.tab-component .theme-a.position-top .active, .tab-component .theme-a.position-left .active, .tab-component .theme-a.position-right .active,
+		.tab-component .theme-a.position-bottom .active, .tab-component .theme-a.position-top.icon-layout a.active,
+		.tab-component .theme-a.position-bottom.icon-layout a.active, .tab-component .theme-a.position-left.icon-layout a.active,
+		.tab-component .theme-a.position-right.icon-layout a.active, .tab-component .theme-b.position-top.icon-layout .active,
+		.tab-component .theme-b.position-top.text-layout .active, .tab-component .theme-b.position-bottom.text-layout .active,
+		.tab-component .theme-b.position-bottom.icon-layout a.active, .tab-component .theme-b.position-left li a.active,
+		.tab-component .theme-b.position-right li a.active {
+		box-shadow: none;
+	}
+
+	/* image none for all themes in icon-layout */
+	.tab-component .icon-layout li img {
+		display: none;
+	}
+	.tab-component .icon-layout > div a {
+		display: inline-block;
+		padding: 0 4px;
+		font-size: 1.125em;
+	}
+
+	/* background none for all themes */
+	.tab-component .theme-c.position-top.text-layout li a.active, .tab-component .theme-c.position-top.icon-layout li a.active,
+		.tab-component .theme-c.position-bottom.text-layout li a.active, .tab-component .theme-c.position-bottom.icon-layout li a.active,
+		.tab-component .theme-c.position-left li a.active, .tab-component .theme-c.position-right li a.active,
+		.tab-component .theme-c.position-top.text-layout, .tab-component .theme-c.position-top.icon-layout li a,
+		.tab-component .theme-c.position-bottom.text-layout, .tab-component .theme-c.position-bottom.icon-layout li a,
+		.tab-component .theme-c.position-left.text-layout li a, .tab-component .theme-c.position-right.text-layout li a,
+		.tab-component .theme-c.position-left.icon-layout li a, .tab-component .theme-c.position-right.icon-layout li a,
+		.tab-component .theme-b .active, .tab-component .theme-b li a {
+		background: none !important;
+	}
+	.tab-component .theme-a .active, .tab-component .theme-b .active, .tab-component .theme-c .active, .tab-component .theme-c.position-top.text-layout li a,
+		.tab-component .theme-c.position-top.icon-layout li a, .tab-component .theme-c.position-bottom.text-layout li a,
+		.tab-component .theme-c.position-bottom.icon-layout li a, .tab-component .theme-c.position-left li a,
+		.tab-component .theme-c.position-right li a {
+		color: #555;
+	}
+	.tab .slick-prev, .tab .slick-next {
+		color: #fff;
+	}
+	.tab-component .text-layout li, .tab-component .text-layout li a, .tab-component .icon-layout li, .tab-component .theme-a.position-left li a,
+		.tab-component .theme-a.position-right li a, .tab-component .theme-b.position-left li a, .tab-component .theme-b.position-right li a,
+		.tab-component .theme-c.position-left li a, .tab-component .theme-c.position-right li a {
+		text-align: center;
+	}
+	.tab.position-bottom li {
+		margin-bottom: 70px;
+	}
+	.tab-component .position-top.icon-layout > div li, .tab-component .position-bottom.icon-layout > div li {
+		width: inherit;
+		min-width: inherit;
+		max-width: inherit;
+	}
+	.tab-component .position-left.icon-layout a, .tab-component .position-right.icon-layout a {
+		padding: 6px 4px;
+	}
+	.tab-component .position-left.icon-layout a, .tab-component .position-right.icon-layout a, .tab-component .theme-a.position-top.icon-layout a.active,
+		.tab-component .theme-a.position-bottom.icon-layout a.active, .tab-component .theme-a.position-left.icon-layout a.active,
+		.tab-component .theme-a.position-right.icon-layout a.active, .tab-component .theme-b.position-bottom.icon-layout a.active,
+		.tab-component .theme-b.position-left.icon-layout a.active, .tab-component .theme-b.position-right.icon-layout a.active,
+		.tab-component .theme-c.position-bottom.icon-layout li a.active, .tab-component .theme-c.position-right.icon-layout li a.active
+		{
+		padding: 0 4px;
+	}
+	.tab-component .theme-a.position-left.text-layout li a.active, .tab-component .theme-a.position-right.text-layout li a.active,
+		.tab-component .theme-b.position-left.text-layout li a.active, .tab-component .theme-c.position-left.text-layout li a.active,
+		.tab-component .theme-c.position-right.text-layout li a.active {
+		padding: 10px;
+	}
+	.tab-component .theme-b.position-bottom.icon-layout .active, .tab-component .theme-b.position-left.icon-layout li a.active,
+		.tab-component .theme-b.position-right li a.active, .tab-component .theme-b.position-right.icon-layout .active,
+		.tab-component .theme-c.position-bottom.icon-layout li a.active, .tab-component .theme-c.position-right.icon-layout li a.active,
+		.tab-component .theme-b.position-left.text-layout li a.active {
+		margin: 0;
+	}
+	.tab-component .text-layout.bottom-content p {
+		margin-bottom: -15px;
+	}
+
+	/* Dots and arrow position in mobile */
+	.tab.slick-carousel .slick-prev:before, .tab.slick-carousel .slick-next:before
+		{
+		left: 0;
+		top: 0;
+	}
+	.tab.slick-carousel .slick-prev {
+		left: 4%;
+	}
+	.tab.slick-carousel .slick-next {
+		right: 4%;
+	}
+	.tab.slick-carousel .slick-dots {
+		left: 9%;
+	}
+	.tab.slick-carousel .slick-dots > li {
+		float: none;
+		padding: 0;
+		margin-bottom: 0;
+	}
+
+	/* arrow position */
+	.tab.position-top.text-layout.slick-carousel .slick-prev, .tab.position-top.text-layout.slick-carousel .slick-next {
+		top: -20px;
+	}
+	.tab.position-bottom.text-layout.slick-carousel .slick-prev, .tab.position-bottom.text-layout.slick-carousel .slick-next {
+		top: 57px;
+	}
+	.tab.position-left.text-layout.slick-carousel .slick-prev, .tab.position-left.text-layout.slick-carousel .slick-next {
+		top: -20px;
+	}
+	.tab.position-right.text-layout.slick-carousel .slick-prev, .tab.position-right.text-layout.slick-carousel .slick-next {
+		top: 57px;
+	}
+	.tab.position-top.icon-layout.slick-carousel .slick-prev, .tab.position-top.icon-layout.slick-carousel .slick-next {
+		top: -29px;
+	}
+	.tab.position-bottom.icon-layout.slick-carousel .slick-prev, .tab.position-bottom.icon-layout.slick-carousel .slick-next {
+		top: 47px;
+	}
+	.tab.position-left.icon-layout.slick-carousel .slick-prev, .tab.position-left.icon-layout.slick-carousel .slick-next {
+		top: -29px;
+	}
+	.tab.position-right.icon-layout.slick-carousel .slick-prev, .tab.position-right.icon-layout.slick-carousel .slick-next {
+		top: 47px;
+	}
+
+	/*slick dots center position*/
+	.tab.theme-a.position-top.text-layout.slick-carousel .slick-dots {
+		bottom: 50px;
+	}
+	.tab.theme-a.position-bottom.text-layout.slick-carousel .slick-dots {
+		bottom: 44px;
+	}
+	.tab.theme-a.position-left.text-layout.slick-carousel .slick-dots {
+		bottom: 48px;
+	}
+	.tab.theme-a.position-right.text-layout.slick-carousel .slick-dots {
+		bottom: -28px;
+	}
+	.tab.theme-a.position-top.icon-layout.slick-carousel .slick-dots {
+		bottom: 39px;
+	}
+	.tab.theme-a.position-bottom.icon-layout.slick-carousel .slick-dots {
+		bottom: 34px;
+	}
+	.tab.theme-a.position-left.icon-layout.slick-carousel .slick-dots {
+		bottom: 39px;
+	}
+	.tab.theme-a.position-right.icon-layout.slick-carousel .slick-dots {
+		bottom: -37px;
+	}
+	.tab.theme-b.position-top.text-layout.slick-carousel .slick-dots {
+		bottom: 50px;
+	}
+	.tab.theme-b.position-bottom.text-layout.slick-carousel .slick-dots {
+		bottom: 43px;
+	}
+	.tab.theme-b.position-left.text-layout.slick-carousel .slick-dots {
+		bottom: 52px;
+	}
+	.tab.theme-b.position-right.text-layout.slick-carousel .slick-dots {
+		bottom: -24px;
+	}
+	.tab.theme-b.position-top.icon-layout.slick-carousel .slick-dots {
+		bottom: 39px;
+	}
+	.tab.theme-b.position-bottom.icon-layout.slick-carousel .slick-dots {
+		bottom: 33px;
+	}
+	.tab.theme-b.position-left.icon-layout.slick-carousel .slick-dots {
+		bottom: 42px;
+	}
+	.tab.theme-b.position-right.icon-layout.slick-carousel .slick-dots {
+		bottom: -34px;
+	}
+	.tab.theme-c.position-top.text-layout.slick-carousel .slick-dots {
+		bottom: 50px;
+	}
+	.tab.theme-c.position-bottom.text-layout.slick-carousel .slick-dots {
+		bottom: 44px;
+	}
+	.tab.theme-c.position-left.text-layout.slick-carousel .slick-dots {
+		bottom: 49px;
+	}
+	.tab.theme-c.position-right.text-layout.slick-carousel .slick-dots {
+		bottom: -27px;
+	}
+	.tab.theme-c.position-top.icon-layout.slick-carousel .slick-dots {
+		bottom: 40px;
+	}
+	.tab.theme-c.position-bottom.icon-layout.slick-carousel .slick-dots {
+		bottom: 34px;
+	}
+	.tab.theme-c.position-left.icon-layout.slick-carousel .slick-dots {
+		bottom: 40px;
+	}
+	.tab.theme-c.position-right.icon-layout.slick-carousel .slick-dots {
+		bottom: -36px;
+	}
+
+	/*margin between slider and data*/
+	.tab.theme-a.position-top.text-layout, .tab.theme-b.position-top.text-layout,
+		.tab.theme-c.position-top.text-layout {
+		margin-top: 20px;
+	}
+	.tab.theme-a.position-right.text-layout, .tab.theme-b.position-right.text-layout,
+		.tab.theme-c.position-right.text-layout {
+		margin-top: -11px;
+	}
+	.tab.theme-a.position-bottom.text-layout, .tab.theme-b.position-bottom.text-layout,
+		.tab.theme-c.position-bottom.text-layout {
+		margin-bottom: -37px;
+	}
+	.tab.theme-a.position-left.text-layout, .tab.theme-b.position-left.text-layout,
+		.tab.theme-c.position-left.text-layout {
+		margin-top: 24px;
+	}
+	.tab.theme-a.position-top.icon-layout, .tab.theme-b.position-top.icon-layout,
+		.tab.theme-c.position-top.icon-layout {
+		margin-top: 35px;
+	}
+	.tab.theme-a.position-right.icon-layout, .tab.theme-b.position-right.icon-layout,
+		.tab.theme-c.position-right.icon-layout {
+		margin-top: 0px;
+		margin-bottom: 49px;
+	}
+	.tab.theme-a.position-bottom.icon-layout, .tab.theme-b.position-bottom.icon-layout,
+		.tab.theme-c.position-bottom.icon-layout {
+		margin-top: 25px;
+		margin-bottom: -28px;
+	}
+	.tab.theme-a.position-left.icon-layout, .tab.theme-b.position-left.icon-layout,
+		.tab.theme-c.position-left.icon-layout {
+		margin-top: 30px;
+	}
+}
+/* Targetting only iPhone 5 */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (device-aspect-ratio: 40/71)
+and (orientation : portrait) {
+	.tab.slick-carousel .slick-dots li {
+		margin: 0 8px; /* reduce margin to accommodate max of 7 dots */
+	}
+	.tab.slick-carousel .slick-dots {
+		left: 8%;
+	}
+}
+/* styles for tablet in portrait orientation */
+@media screen and (min-device-width: 768px)
+and (orientation : portrait) {
+	.tab-component .theme-b.position-left li a.active {
+		padding-right: 11px;
+	} 
+}

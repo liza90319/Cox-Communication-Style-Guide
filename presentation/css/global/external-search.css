@@ -1,0 +1,305 @@
+/* google search styles */
+
+/* Search form - START */
+.external-search-form {
+	margin: 20px 0 10px;
+}
+.external-search-form form {
+	display: inline-block;
+	margin: 0;
+}
+.external-search-form .error-wrapper {
+	display: none !important;
+}
+.external-search-form input[type="text"] {
+	margin-right: 10px;
+}
+#container .external-search-form input.loading-wrapper-active[type='submit'] {
+	width: 94px !important;
+	min-height: 39px !important;
+	font-size: 1.063em !important;
+	color: transparent;
+	vertical-align: baseline;
+}
+.FF #container .external-search-form input.loading-wrapper-active[type='submit'] {
+	width: 98px !important;
+}
+.external-search-form .search-google-logo {
+	background: url("/ui/$version/tsw/img/global/google-logo-external.png") no-repeat;
+	float: none;
+	width: 75px;
+	height: 36px;
+	display: inline-block;
+	position: relative;
+	top: 14px;
+	left: 20px;
+}
+.FF .external-search-form .search-google-logo {
+	top: 0;
+}
+/* Search form - END */
+
+/* search results styles */
+.external-search-result-summary {
+	margin: 0 0 20px 5px;
+}
+.correct-search-text {
+	color: #D80A0A;
+}
+/* external search styles */
+.external-web-results-header {
+	font-weight: 100;
+}
+.external-web-results-header span {
+	font-size: 0.778em;
+	padding-left: 10px;
+}
+.external-search-results {
+	padding: 10px 7px;
+}
+.external-search-results a {
+	color: #008000;
+}
+.external-search-results h4 a {
+	color: #2757a7; /* reset header back to normal */
+}
+ul.external-search-navigation {
+	list-style: none;
+	padding: 0;
+	background: #fff;
+	width: 100%;
+	height: 40px;
+	z-index: 1000;
+}
+ul.external-search-navigation a.active:before,
+ul.external-search-navigation a:hover:before {
+	content: ' ';
+	display: block;
+	position: absolute;
+	bottom: -2px;
+	height: 2px;
+	left: auto;
+	right: 0;
+	width: 100%;
+	z-index: 1;
+	box-sizing: border-box;
+}
+ul.external-search-navigation > li {
+	text-align: center;
+	position: relative;
+	margin-bottom: -1px;
+	width: 1%;
+	display: table-cell;
+	border-right: 1px dotted #ededed;
+}
+ul.external-search-navigation li a {
+	color: #000;
+	position: relative;
+	display: block;
+	font-size: 20px;
+	border-radius: 0;
+	padding: 8px;
+}
+ul.external-search-navigation li a.nav-home.active,
+ul.external-search-navigation li a.nav-home:hover {
+	color: #2757a7;
+}
+ul.external-search-navigation a.active.nav-home:before,
+ul.external-search-navigation a.nav-home:hover:before {
+	background: #2757a7;
+}
+ul.external-search-navigation li a.nav-national-news.active,
+ul.external-search-navigation li a.nav-national-news:hover {
+	color: #0a3167;
+}
+ul.external-search-navigation a.active.nav-national-news:before,
+ul.external-search-navigation a.nav-national-news:hover:before {
+	background: #0a3167;
+}
+ul.external-search-navigation li a.nav-entertainment.active,
+ul.external-search-navigation li a.nav-entertainment:hover {
+	color: #c73e97;
+}
+ul.external-search-navigation a.active.nav-entertainment:before,
+ul.external-search-navigation a.nav-entertainment:hover:before {
+	background: #c73e97;
+}
+ul.external-search-navigation li a.nav-sports.active,
+ul.external-search-navigation li a.nav-sports:hover {
+	color: #e57627;
+}
+ul.external-search-navigation a.active.nav-sports:before,
+ul.external-search-navigation a.nav-sports:hover:before {
+	background: #e57627;
+}
+ul.external-search-navigation li a.nav-weather.active,
+ul.external-search-navigation li a.nav-weather:hover {
+	color: #00892d;
+}
+ul.external-search-navigation a.active.nav-weather:before,
+ul.external-search-navigation a.nav-weather:hover:before {
+	background: #00892d;
+}
+ul.external-search-navigation li a.nav-more-news.active,
+ul.external-search-navigation li a.nav-more-news:hover {
+	color: #000;
+}
+ul.external-search-navigation a.active.nav-more-news:before,
+ul.external-search-navigation a.nav-more-news:hover:before {
+	background: #000;
+}
+ul.external-search-navigation li a.nav-trending.active,
+ul.external-search-navigation li a.nav-trending:hover {
+	color: #2757a7;
+}
+ul.external-search-navigation a.active.nav-trending:before,
+ul.external-search-navigation a.nav-trending:hover:before {
+	background: #2757a7;
+}
+ul.external-search-navigation li a.nav-worlds.active,
+ul.external-search-navigation li a.nav-world:hover {
+	color: #0a3167;
+}
+ul.external-search-navigation a.active.nav-world:before,
+ul.external-search-navigation a.nav-world:hover:before {
+	background: #0a3167;
+}
+ul.external-search-navigation li a.nav-politics.active,
+ul.external-search-navigation li a.nav-politics:hover {
+	color: #c73e97;
+}
+ul.external-search-navigation a.active.nav-politics:before,
+ul.external-search-navigation a.nav-politics:hover:before {
+	background: #c73e97;
+}
+ul.external-search-navigation li a.nav-health.active,
+ul.external-search-navigation li a.nav-health:hover {
+	color: #e57627;
+}
+ul.external-search-navigation a.active.nav-health:before,
+ul.external-search-navigation a.nav-health:hover:before {
+	background: #e57627;
+}
+a.nav-more-news:after {
+	background: url("/ui/$version/tsw/img/global/blue-arrow.png") no-repeat;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	position: relative;
+	content: "";
+	left: 10px;
+	top: 6px;
+}
+.dropdown-menu {
+	position: absolute;
+	top: auto;
+	left: auto;
+	right: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 180px;
+	width: 100%;
+	padding: 5px 0;
+	margin: 3px -1px 0;
+	font-size: 14px;
+	text-align: left;
+	list-style: none;
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;
+	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.dropdown-menu.open {
+	display: block;
+}
+.search-nav-mobile {
+	display: none !important;
+}
+ul.dropdown-menu li a {
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-weight: 400;
+	line-height: 1.42857143;
+	white-space: nowrap;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+	.external-search-form form {
+		display: block;
+		margin: 0 0 10px 0;
+	}
+	.external-search-form .search-google-logo {
+		background-position: 0 -40px;
+		width: 123px;
+		height: 18px;
+		display: block;
+		top: 0;
+		left: 0;
+	}
+	.external-search-form input[type="text"] {
+		margin-top: 20px;
+	}
+
+	#container .external-search-form input[type="submit"] {
+		position: absolute;
+		right: 0;
+		top: 20px;
+		height: 33px;
+		width: 33px;
+		min-width: 33px;
+		max-width: 33px;
+		font-size: 0;
+		background: #2757a7 url(/ui/$version/tsw/img/global/icons/search.png) no-repeat 9px 7px; /* fallback */
+		background: url(/ui/$version/tsw/img/global/icons/search.png) no-repeat 9px 7px, -webkit-gradient(linear, 0 0, 0 bottom, from(#2757a7), to(#3264b7)); /* Saf4+, Chrome */
+		background: url(/ui/$version/tsw/img/global/icons/search.png) no-repeat 9px 7px, -webkit-linear-gradient(#2757a7, #3264b7);
+		background: url(/ui/$version/tsw/img/global/icons/search.png) no-repeat 9px 7px, -moz-linear-gradient(#2757a7, #3264b7); /* FF3.6+ */
+		background: url(/ui/$version/tsw/img/global/icons/search.png) no-repeat 9px 7px, -ms-linear-gradient(#2757a7, #3264b7); /* IE10 */
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		z-index: 1;
+	}
+	#container .external-search-form input.loading-wrapper-active[type='submit'] {
+		min-height: 33px !important;
+		font-size: 0 !important;
+	}
+	.external-search-navigation .slick-dots,
+	.external-search-navigation .slick-prev,
+	.external-search-navigation .slick-next {
+		display: none !important;
+	}
+	ul.external-search-navigation {
+		height: auto;
+		border-bottom: 1px solid #ededed;
+		border-top: 1px solid #ededed;
+	}
+	.search-nav-mobile {
+		display: block !important;
+	}
+	.search-nav-desktop {
+		display: none;
+	}
+	ul.external-search-navigation li {
+		text-align: center;
+		padding: 10px 0;
+		position: relative;
+		margin-bottom: -1px;
+		width: 1%;
+		display: table-cell;
+		border-right: 1px dotted #ededed;
+		min-height: 40px;
+	}
+}
+/* styles for tablet in portrait orientation */
+@media screen and (min-device-width: 768px) and (orientation: portrait) {
+	ul.external-search-navigation li a {
+		font-size: 16px;
+	}
+}

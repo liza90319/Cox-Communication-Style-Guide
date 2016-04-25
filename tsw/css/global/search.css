@@ -1,0 +1,81 @@
+/* google search styles */
+
+/* search bar styles */
+.search-bar {
+	text-align: center;
+}
+.search-bar .col-content {
+	display: inline-block;
+}
+.search-google-logo {
+	background:url("/ui/$version/tsw/img/global/google-logo.png") no-repeat;	
+	float: left;
+	height: 40px;
+	width: 160px;
+}
+.search-top {
+	float: left;
+}
+.search-input input[type="text"] {
+	margin: 0 13px 0 11px;
+}
+.search-input .error-wrapper {
+	display: none !important; /* error message should never be displayed */
+}
+/* search results styles */
+.search-result-summary {
+	margin: 0 0 20px 5px;
+}
+.correct-search-text {
+	color: #D80A0A;	
+}
+.recommended-result {
+	background-color: #F8F8F8;	
+}
+.recommended-result .col-content {
+	margin: 15px;
+}
+.recommended-result h4 {
+	margin-top: 9px;
+}
+/* search filter styles */
+.internal-search-filter label {
+	top: 5px;
+}
+.search-filter-result .solid-divider {
+	margin: 0 10px 10px;
+}
+.search-filter-result {
+	margin-top: 10px;
+}
+
+/* external search styles */
+.external-web-results-header {
+	font-weight: 100;
+}
+.external-web-results-header span {
+	font-size: 0.778em;
+	padding-left: 10px;
+}
+.external-search-results {
+	padding: 10px 7px;
+}
+.external-search-results a {
+	color: #008000; 
+}
+.external-search-results h4 a {
+	color: #2757a7; /* reset header back to normal */
+}
+
+/* legacy .paging styles */
+.internal-search .paging a[class*='button'],
+.external-search .paging a[class*='button'] {
+	width: auto;
+	height: auto;
+	font-size: inherit;
+	margin-top: -26px;
+}
+.internal-search .paging ul,
+.external-search .paging ul {
+	width: auto;
+}

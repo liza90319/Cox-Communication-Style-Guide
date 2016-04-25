@@ -1,0 +1,89 @@
+<!--#set var="sticky" value=""-->
+<!--#if expr="${QUERY_STRING} = /sticky=(.*?)(&|$)/"-->
+	<!--#set var="sticky" value="anchor-sticky"-->
+<!--#endif-->
+
+<!--#set var="cols" value=""-->
+<!--#if expr="${QUERY_STRING} = /cols=(.*?)(&|$)/"-->
+	<!--#set var="cols" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="theme" value=""-->
+<!--#if expr="${QUERY_STRING} = /theme=(.*?)(&|$)/"-->
+	<!--#set var="theme" value="${1}"-->
+<!--#endif-->
+
+<!-- START: anchor-links-active-sticky -->
+<!-- DEV NOTES: "anchor-sticky" class below is optional based on configuration in AEM -->
+<div class="anchor-links-bar <!--#echo var="sticky"--> <!--#echo var="theme"-->">
+	<!-- anchor inner -->
+	<div class="anchor-inner">
+		<!-- link selection -->
+		<div class="colspan-12 link-selection">
+			<div class="cols-12">
+				<div class="col-content link-heading">Navigate to:</div>
+				<span></span>
+				<!-- anchor links -->
+				<div class="anchor-link-content">
+					<!--#if expr="${cols} = '2'"-->
+						<div class="colspan-2">
+							<div class="col-content">
+								<a href="#navigation-1">Navigation Link One</a>
+							</div>
+						</div>
+						<div class="colspan-2">
+							<div class="col-content">
+								<a href="#navigation-2">Navigation Link Two</a>
+							</div>
+						</div>
+						<div class="colspan-2">
+							<div class="col-content">
+								<a href="#navigation-3">Navigation Three</a>
+							</div>
+						</div>
+						<div class="colspan-2">
+							<div class="col-content">
+								<a href="#navigation-4">Movie Channel Packages</a>
+							</div>
+						</div>
+						<div class="colspan-2">
+							<div class="col-content">
+								<a href="#navigation-5">Popular Network Packages</a>
+							</div>
+						</div>
+						<div class="colspan-2">
+							<div class="col-content">
+								<a href="#navigation-6">Sports Channel Packages</a>
+							</div>
+						</div>
+					<!--#elif expr="${cols} = '3'"-->
+						<div class="colspan-3">
+							<div class="col-content">
+								<a href="#navigation-1">Navigation Link One</a>
+							</div>
+						</div>
+						<div class="colspan-3">
+							<div class="col-content">
+								<a href="#navigation-2">Navigation Link Two</a>
+							</div>
+						</div>
+						<div class="colspan-3">
+							<div class="col-content">
+								<a href="#navigation-3">Popular Network Packages</a>
+							</div>
+						</div>
+						<div class="colspan-3">
+							<div class="col-content">
+								<a href="#navigation-4">Movie Channel Packages</a>
+							</div>
+						</div>
+					<!--#endif-->
+				</div>
+				<!-- /anchor links -->
+			</div>
+		</div>
+		<!-- /link selection -->
+	</div>
+	<!-- /anchor inner -->
+</div>
+<!--  END : anchor-links-active-sticky -->

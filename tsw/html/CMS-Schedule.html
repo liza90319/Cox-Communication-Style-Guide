@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+		<title>Cox.com CMS Project Schedule</title>
+		<link href="../../build/tsw/css/all.uncompressed.css" rel="stylesheet" />
+		<link href="../../build/tsw/css/residential.uncompressed.css" rel="stylesheet" />
+		<link href="library/src/styles.css" rel="stylesheet" />
+		<script src="../../build/tsw/js/lib.uncompressed.js"></script>
+		<script src="../../build/tsw/js/cox.uncompressed.js"></script>
+	</head>
+	<body id="library">
+		<div id="container">
+			<div id="library-header">
+				<h1 class="library-h1" onclick="location.href='./'">CMS Project Schedule</h1>
+			</div>
+			<div id="library-content" class="content-wrapper">
+
+				<style>
+					.tablesorter {
+						width: auto;
+					}
+					.tablesorter tbody tr {
+						cursor: pointer;
+					}
+					.tablesorter tbody tr:hover {
+						background-color: rgba(64, 143, 173, 0.35);
+					}
+				</style>
+
+				<script>
+					$(function() {
+						$('tbody tr').on('click', 'td:not(.special-td)', function() {
+
+							//get the link from data attribute
+							var the_link = $(this).parent().attr("data-href");
+
+							//do we have a valid link
+							if (the_link == '' || typeof the_link === 'undefined') {
+								//do nothing for now
+							} else {
+								//open the page in a new tab
+								window.open(the_link);
+							}
+						});
+					});
+				</script>
+
+				<div class="cols-grid">
+					<div class="section-container constrain-1280">
+						<div class="col-content">
+							<h3 id="list">Component List</h3>
+							<div class="scroll-table">
+								<table class="tablesorter">
+									<thead>
+										<tr>
+											<th><a href="#" title="Component">Component</a></th>
+											<th><a href="#" title="Status">Status</a></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr data-href="accordion.html">
+											<td>Accordion</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="aem-author-components.html">
+											<td>AEM - Author Components</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="aem-rte.html">
+											<td>AEM - Rich Text Editor</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="adaptive-image.html">
+											<td>Adaptive Image</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="anchor-links-bar.html">
+											<td>Anchor Links Bar</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="ankle.html">
+											<td>Ankle</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="best-offer.html">
+											<td>Best Offer</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="breadcrumb.html">
+											<td>Breadcrumbs</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="channel-lineup.html">
+											<td>Channel Lineup</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="columns-container.html">
+											<td>Columns Container</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="offer-comparison.html">
+											<td>Comparison Chart</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="cta.html">
+											<td>CTA's</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="feature-highlight.html">
+											<td>Feature Highlights</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="form.html">
+											<td>Form</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="header-divider.html">
+											<td>Headers and Dividers</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="../../presentation/html/residential.html">
+											<td>Header/Footer (Residential)</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="../../presentation/html/business.html">
+											<td>Header/Footer (Business)</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="hero.html">
+											<td>Heros/Super Heros/Slim Heros (Standalone)</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="carousel.html">
+											<td>Heros/Super Heros/Slim Heros (Carousel)</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="link-listing.html">
+											<td>Link List</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="aboutus/Cox-Centers.html">
+											<td>Maps - Cox Centers</td>
+											<td>In Progress</td>
+										</tr>
+										<tr data-href="aboutus/WiFi-Map.html">
+											<td>Maps - WiFi</td>
+											<td>In Progress</td>
+										</tr>
+										<tr data-href="modal.html">
+											<td>Modals: 8, 10, 12 columns</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="offer-terms.html">
+											<td>Offer Terms</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="on-demand.html">
+											<td>On Demand</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="pagination.html">
+											<td>Pagination</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="price.html">
+											<td>Pricing</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="promo-box.html">
+											<td>Promo Boxes</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="promo-feature.html">
+											<td>Promo Feature</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="rail-feature.html">
+											<td>Rail Feature</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="search/search-promote.html">
+											<td>Search and Promote</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="section-container.html">
+											<td>Section Container</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="social-share.html">
+											<td>Social Share</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="sub-nav.html">
+											<td>Sub Nav</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="tabs.html">
+											<td>Tabs</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="tables.html">
+											<td>Tables</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="_templates/aem_grid.html">
+											<td>Template (Standard)</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="_templates/aem_grid_right-col.html">
+											<td>Template (Right Column)</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="_templates/aem_grid_left-col.html">
+											<td>Template (Left Column)</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="text-image.html">
+											<td>Text &amp; Image</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="tooltip.html">
+											<td>Tooltip</td>
+											<td>Complete</td>
+										</tr>
+										<tr data-href="video-player.html">
+											<td>Video Player</td>
+											<td>Complete</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="col-content">
+							<h3 id="plan">Detailed Plan</h3>
+							<div class="scroll-table">
+								<table class="tablesorter">
+									<thead>
+										<tr>
+											<th><a href="#" title="Drop">UX Drop</a></th>
+											<th><a href="#" title="Sprint">Dev Sprint</a></th>
+											<th><a href="#" title="Component">Component</a></th>
+											<th><a href="#" title="Review Date">Expected UI Completion</a></th>
+											<th><a href="#" title="Review Date">Business Review Date</a></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr data-href="cta.html">
+											<td>1</td>
+											<td>1</td>
+											<td>button</td>
+											<td>11/14/2014</td>
+											<td>11/17/2014</td>
+										</tr>
+										<tr data-href="feature-highlight.html#fhi5-top">
+											<td>1</td>
+											<td>1</td>
+											<td>feature highlight 5 column image top</td>
+											<td>11/14/2014</td>
+											<td>11/17/2014</td>
+										</tr>
+										<tr data-href="feature-highlight.html#fhi3-no-image">
+											<td>1</td>
+											<td>1</td>
+											<td>feature highlight 3 column no image</td>
+											<td>11/14/2014</td>
+											<td>11/17/2014</td>
+										</tr>
+										<tr data-href="feature-highlight.html#fhi3-top">
+											<td>1</td>
+											<td>1</td>
+											<td>feature highlight 3 column image top</td>
+											<td>11/24/2014</td>
+											<td>12/01/2014</td>
+										</tr>
+										<tr data-href="feature-highlight.html">
+											<td>1</td>
+											<td>1</td>
+											<td>feature highlight container</td>
+											<td>11/20/2014</td>
+											<td>12/01/2014</td>
+										</tr>
+										<tr data-href="hero.html">
+											<td>1</td>
+											<td>1</td>
+											<td>hero - super</td>
+											<td>11/24/2014</td>
+											<td>12/01/2014</td>
+										</tr>
+										<tr data-href="carousel.html">
+											<td>1</td>
+											<td>1</td>
+											<td>rotator controls</td>
+											<td>11/21/2014</td>
+											<td>12/01/2014</td>
+										</tr>
+										<tr data-href="feature-highlight.html#fhi5-left">
+											<td>1</td>
+											<td>2</td>
+											<td>feature highlight 5 column image left</td>
+											<td>11/27/2014</td>
+											<td>12/01/2014</td>
+										</tr>
+										<tr data-href="feature-highlight.html#fhi5-top">
+											<td>1</td>
+											<td>2</td>
+											<td>feature highlight 4 column image top</td>
+											<td>11/24/2014</td>
+											<td>12/01/2014</td>
+										</tr>
+										<tr data-href="feature-highlight.html#fhi4-left">
+											<td>1</td>
+											<td>2</td>
+											<td>feature highlight 4 column image left</td>
+											<td>11/24/2014</td>
+											<td>12/01/2014</td>
+										</tr>
+										<tr data-href="feature-highlight.html#fhi6-top">
+											<td>1</td>
+											<td>2</td>
+											<td>feature highlight 6 column image top</td>
+											<td>11/25/2014</td>
+											<td>12/01/2014</td>
+										</tr>
+										<tr data-href="feature-highlight.html#fhi6-left">
+											<td>1</td>
+											<td>2</td>
+											<td>feature highlight 6 column image left</td>
+											<td>11/25/2014</td>
+											<td>12/01/2014</td>
+										</tr>
+										<tr data-href="feature-highlight.html#fhi8-top">
+											<td>1</td>
+											<td>2</td>
+											<td>feature highlight 8 column image top</td>
+											<td>11/26/2014</td>
+											<td>12/01/2014</td>
+										</tr>
+										<tr data-href="feature-highlight.html#fhi8-left">
+											<td>1</td>
+											<td>2</td>
+											<td>feature highlight 8 column image left</td>
+											<td>11/26/2014</td>
+											<td>12/01/2014</td>
+										</tr>
+										<tr data-href="feature-highlight.html#fhi10-top">
+											<td>1</td>
+											<td>2</td>
+											<td>feature highlight 10 column image top</td>
+											<td>12/01/2014</td>
+											<td>12/15/2014</td>
+										</tr>
+										<tr data-href="feature-highlight.html#fhi12-top">
+											<td>1</td>
+											<td>2</td>
+											<td>feature highlight 12 column image top</td>
+											<td>12/01/2014</td>
+											<td>12/15/2014</td>
+										</tr>
+										<tr data-href="header-divider.html#sh-left-link-right">
+											<td>1</td>
+											<td>2</td>
+											<td>sub-section header</td>
+											<td>12/03/2014</td>
+											<td>12/15/2014</td>
+										</tr>
+										<tr data-href="feature-highlight.html#fhi12-left">
+											<td>1</td>
+											<td>2</td>
+											<td>feature highlight 12 column image left</td>
+											<td>12/05/2014</td>
+											<td>12/15/2014</td>
+										</tr>
+										<tr data-href="header-divider.html#pd-no-shadow-960">
+											<td>1</td>
+											<td>2</td>
+											<td>divider 960</td>
+											<td>12/04/2014</td>
+											<td>12/15/2014</td>
+										</tr>
+										<tr data-href="header-divider.html#pd-shadow-960">
+											<td>1</td>
+											<td>2</td>
+											<td>divider 960 shadow</td>
+											<td>12/05/2014</td>
+											<td>12/15/2014</td>
+										</tr>
+										<tr data-href="hero.html">
+											<td>1</td>
+											<td>2</td>
+											<td>hero - slim</td>
+											<td>12/12/2014</td>
+											<td>12/15/2014</td>
+										</tr>
+										<tr data-href="hero.html">
+											<td>1</td>
+											<td>2</td>
+											<td>hero</td>
+											<td>12/12/2014</td>
+											<td>12/15/2014</td>
+										</tr>
+										<tr data-href="header-divider.html#pd-no-shadow-full">
+											<td>1</td>
+											<td>2</td>
+											<td>divider fullscreen</td>
+											<td>12/08/2014</td>
+											<td>12/15/2014</td>
+										</tr>
+										<tr data-href="header-divider.html#pd-shadow-full">
+											<td>1</td>
+											<td>2</td>
+											<td>divider fullscreen shadow</td>
+											<td>12/09/2014</td>
+											<td>12/15/2014</td>
+										</tr>
+										<tr data-href="modal.html">
+											<td>1</td>
+											<td>3</td>
+											<td>modal: 8, 10, 12 columns</td>
+											<td>12/18/2014</td>
+											<td>01/05/2015</td>
+										</tr>
+										<tr data-href="ankle.html">
+											<td>1</td>
+											<td>3</td>
+											<td>ankle</td>
+											<td>12/19/2014</td>
+											<td>01/05/2015</td>
+										</tr>
+										<tr data-href="header-divider.html#ph-left">
+											<td>1</td>
+											<td>3</td>
+											<td>page header</td>
+											<td>12/23/2014</td>
+											<td>01/05/2015</td>
+										</tr>
+										<tr data-href="header-divider.html#sh-left-link-right">
+											<td>1</td>
+											<td>3</td>
+											<td>section header</td>
+											<td>12/24/2014</td>
+											<td>01/05/2015</td>
+										</tr>
+										<tr data-href="promo-box.html">
+											<td>1</td>
+											<td>3</td>
+											<td>promo box 3 column image top</td>
+											<td>12/30/2014</td>
+											<td>01/05/2015</td>
+										</tr>
+										<tr data-href="promo-box.html">
+											<td>1</td>
+											<td>3</td>
+											<td>promo box 3 column icon top</td>
+											<td>12/31/2014</td>
+											<td>01/05/2015</td>
+										</tr>
+										<tr data-href="price.html">
+											<td>3</td>
+											<td>5</td>
+											<td>pricing widget</td>
+											<td>01/23/2015</td>
+											<td>01/26/2015</td>
+										</tr>
+										<tr data-href="../../presentation/html/residential.html">
+											<td>3</td>
+											<td>5</td>
+											<td>header &amp; footer</td>
+											<td>02/06/2015</td>
+											<td>02/09/2015</td>
+										</tr>
+										<tr data-href="sub-nav.html">
+											<td>2</td>
+											<td>6</td>
+											<td>sub nav</td>
+											<td>02/03/2015</td>
+											<td>02/09/2015</td>
+										</tr>
+										<tr data-href="offer-terms.html">
+											<td>4</td>
+											<td>6</td>
+											<td>offer terms</td>
+											<td>02/03/2015</td>
+											<td>02/09/2015</td>
+										</tr>
+										<tr data-href="text-image.html">
+											<td>4</td>
+											<td>6</td>
+											<td>text &amp; image</td>
+											<td>02/06/2015</td>
+											<td>02/16/2015</td>
+										</tr>
+										<tr data-href="link-listing.html">
+											<td>2</td>
+											<td>6</td>
+											<td>link list</td>
+											<td>02/06/2015</td>
+											<td>02/16/2015</td>
+										</tr>
+										<tr data-href="columns-container.html">
+											<td>n/a</td>
+											<td>6</td>
+											<td>columns container</td>
+											<td>02/13/2015</td>
+											<td>02/16/2015</td>
+										</tr>
+										<tr data-href="best-offer.html">
+											<td>2</td>
+											<td>7</td>
+											<td>best offer</td>
+											<td>02/27/2015</td>
+											<td>03/02/2015</td>
+										</tr>
+										<tr data-href="social-share.html">
+											<td>5</td>
+											<td>7</td>
+											<td>social share</td>
+											<td>02/17/2015</td>
+											<td>03/02/2015</td>
+										</tr>
+										<tr data-href="anchor-links-bar.html">
+											<td>4</td>
+											<td>7</td>
+											<td>anchor links bar</td>
+											<td>02/27/2015</td>
+											<td>03/02/2015</td>
+										</tr>
+										<tr data-href="rail-feature.html">
+											<td>5</td>
+											<td>7</td>
+											<td>rail feature</td>
+											<td>02/27/2015</td>
+											<td>03/02/2015</td>
+										</tr>
+										<tr data-href="tooltip.html">
+											<td>4</td>
+											<td>7</td>
+											<td>tooltip</td>
+											<td>03/06/2015</td>
+											<td>03/16/2015</td>
+										</tr>
+										<tr data-href="offer-comparison.html">
+											<td>4</td>
+											<td>7</td>
+											<td>comparison chart</td>
+											<td>03/06/2015</td>
+											<td>03/16/2015</td>
+										</tr>
+										<tr data-href="on-demand.html">
+											<td>4</td>
+											<td>7</td>
+											<td>on demand</td>
+											<td>03/06/2015</td>
+											<td>03/16/2015</td>
+										</tr>
+										<tr data-href="video-player.html">
+											<td>3</td>
+											<td>8</td>
+											<td>video player</td>
+											<td>03/06/2015</td>
+											<td>03/16/2015</td>
+										</tr>
+										<tr data-href="_templates/aem_grid_left-col.html">
+											<td>5</td>
+											<td>8</td>
+											<td>AEM left column template</td>
+											<td>03/06/2015</td>
+											<td>03/16/2015</td>
+										</tr>
+										<tr data-href="_templates/aem_grid_right-col.html">
+											<td>5</td>
+											<td>8</td>
+											<td>AEM right column template</td>
+											<td>03/06/2015</td>
+											<td>03/16/2015</td>
+										</tr>
+										<tr data-href="tabs.html">
+											<td>4</td>
+											<td>7</td>
+											<td>tabs</td>
+											<td>03/06/2015</td>
+											<td>03/16/2015</td>
+										</tr>
+										<tr data-href="breadcrumb.html">
+											<td>3</td>
+											<td>8</td>
+											<td>bread crumb</td>
+											<td>03/06/2015</td>
+											<td>03/16/2015</td>
+										</tr>
+										<tr data-href="pagination.html">
+											<td>5</td>
+											<td>8</td>
+											<td>pagination</td>
+											<td>03/13/2015</td>
+											<td>03/16/2015</td>
+										</tr>
+										<tr data-href="channel-lineup.html">
+											<td>4</td>
+											<td>9</td>
+											<td>channel lineup</td>
+											<td>03/20/2015</td>
+											<td>04/06/2015</td>
+										</tr>
+										<tr data-href="search/search-promote.html">
+											<td>5</td>
+											<td>10</td>
+											<td>search and promote</td>
+											<td>04/03/2015</td>
+											<td>04/06/2015</td>
+										</tr>
+										<tr data-href="accordion.html">
+											<td>6</td>
+											<td>11</td>
+											<td>accordion</td>
+											<td>04/10/2015</td>
+											<td>04/13/2015</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>

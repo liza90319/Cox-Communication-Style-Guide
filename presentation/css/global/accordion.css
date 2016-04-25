@@ -1,0 +1,182 @@
+/* global accordion */
+
+.accordion.col-content {
+	margin: 0 10px 10px;
+}
+
+
+.accordion {
+	margin: 30px 0 20px; /* bottom gets 10px additional from col-content margin */
+	text-align: left;
+}
+
+/* Overlay triggers for accordions that APPEAR INSIDE the header. */
+.accordion > * > .btn-help {
+	float: right;
+	position: relative;
+	right: 14px;
+	top: 14px;
+}
+.accordion-toggle-expand,
+.accordion-toggle-collapse {
+	border-top: 1px solid #bbb;
+	padding-top: 12px;
+}
+/* Closed accordion */
+.accordion-panel {
+	display: none;
+}
+.accordion-trigger {
+	height: auto;
+	min-height: 43px;
+	padding-left: 45px;
+	padding-bottom: 5px;
+	cursor: pointer;
+	border-top: 1px solid #bbb;
+	display: block;
+	position: relative;
+}
+.accordion-trigger:before {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 35px;
+	height: 35px;
+	background: url("/ui/$version/tsw/img/global/icons/accordion.png") no-repeat 0 0;
+}
+.accordion-trigger > * {
+	font-size: 1.5em; /* 24px */
+	line-height: 1.167em; /* 28px */
+	margin: 9px 0 0 0;
+}
+.accordion-trigger .accordion-dynamic-text {
+	float: right;
+}
+.accordion-trigger .accordion-dynamic-text.optional {
+	float: none;
+	font-variant: small-caps;
+	margin-left: 10px;
+}
+/* Open accordion */
+.accordion-panel-open {
+	display: block;
+}
+/* Disabled accordion */
+.accordion-trigger-disabled {
+	cursor: default;
+}
+.accordion-trigger-disabled:before {
+	cursor: default;
+	background-position: 0 -100px !important;
+}
+.accordion-trigger-disabled > *,
+.accordion-trigger-disabled:focus {
+	color: #bbb !important;
+}
+/* Disabled accordion */
+.accordion-trigger-disabled.accordion-trigger-open:before {
+	background-position: 0 -150px !important;
+}
+/* Expand/Collapse link */
+.accordion-toggle-expand .collapse {
+	display: none;
+}
+.accordion-toggle-expand .expand {
+	display: inline;
+}
+.accordion-toggle-collapse .collapse {
+	display: inline;
+}
+.accordion-toggle-collapse .expand {
+	display: none;
+}
+
+/* THEMES */
+
+/* all themes */
+.accordion[class*='theme-'] .accordion-trigger:before {
+	left: 20px;
+}
+.accordion[class*='theme-'] .accordion-trigger {
+	min-height: 49px;
+	padding-left: 64px;
+}
+.accordion[class*='theme-'] .accordion-trigger:first-child {
+	border-top: 1px solid transparent;
+}
+.accordion[class*='theme-'] .accordion-trigger > * {
+	font: 1.125em "open_sanssemibold", Arial, Helvetica, Sans-serif; /* 18px */
+	line-height: 1.222em; /* 22px */
+	margin-top: 17px;
+}
+.accordion[class*='theme-'] .accordion-panel {
+	padding: 0 20px;
+	overflow: hidden;
+}
+
+/* theme a - transparent */
+/* styles are different for residential versus 
+ * business and in there own css files */
+
+/* theme b - light grey */
+.accordion.theme-b .accordion-trigger {
+	background-color: #f2f2f2;
+}
+.accordion.theme-b .accordion-trigger-open,
+.accordion.theme-b .accordion-panel {
+	background-color: #e7e7e7;
+}
+
+/* theme c - dark gray */
+.accordion.theme-c .accordion-trigger {
+	background-color: #6c6c6d;
+}
+.accordion.theme-c .accordion-trigger-open,
+.accordion.theme-c .accordion-panel {
+	background-color: #515151;
+}
+.accordion.theme-c,
+.accordion.theme-c .accordion-trigger,
+.accordion.theme-c .accordion-trigger > * {
+	color: #fff;
+}
+
+/* theme d */
+/* styles are different for residential versus 
+ * business and in there own css files */
+
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	.accordion-trigger {
+		padding-left: 35px;
+	}
+	.accordion-trigger .accordion-dynamic-text {
+		margin-right: 0;
+		float: none;
+	}
+	.accordion-trigger .accordion-header {
+		display: block;
+		margin-top: 6px;
+		margin-bottom: 5px;
+	}
+	.accordion-trigger .accordion-dynamic-text.optional {
+		margin-left: 0;
+	}
+	
+	/* all themes */
+	.accordion[class*='theme-'] .col-content {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.accordion[class*='theme-'] .accordion-trigger:before {
+		left: 10px;
+	}
+	.accordion[class*='theme-'] .accordion-trigger {
+		padding-left: 54px;
+	}
+	.accordion[class*='theme-'] .accordion-panel {
+		padding: 0 10px;
+	}
+}

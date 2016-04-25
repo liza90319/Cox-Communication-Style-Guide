@@ -1,0 +1,138 @@
+<!--#set var="content" value=""-->
+<!--#if expr="${QUERY_STRING} = /content=(.*?)(&|$)/"-->
+	<!--#set var="content" value="${1}"-->
+	<!--#set var="QUERY_STRING" value=""-->
+<!--#endif-->
+
+<!--#if expr="${pricingpricingOfferId} == 'empty'" -->
+	<!--#set var="pricingOfferId" value=""-->
+<!--#else -->
+	<!--#set var="pricingOfferId" value="${pricingOfferId}"-->
+<!--#endif-->
+
+<!--#if expr="${pricingDollars} == 'empty'" -->
+	<!--#set var="pricingDollars" value=""-->
+<!--#elif expr="${pricingDollars} == ''" -->
+	<!--#set var="pricingDollars" value="27"-->
+<!--#else -->
+	<!--#set var="pricingDollars" value="${pricingDollars}"-->
+<!--#endif -->
+
+<!--#if expr="${pricingCents} == 'empty'" -->
+	<!--#set var="pricingCents" value=""-->
+<!--#elif expr="${pricingCents} == ''" -->
+	<!--#set var="pricingCents" value=".99"-->
+<!--#else -->
+	<!--#set var="pricingCents" value="${pricingCents}"-->
+<!--#endif -->
+
+
+<!-- BEGIN: price -->
+<div class="price">
+<!--#if expr="${pricingProduct}" -->
+	<strong class="product-name"><!--#echo var="pricingProduct"--></strong>
+<!--#endif -->
+
+<!--#if expr="${pricingStartsAt}" -->
+	<p class="offer-start">Starting at:</p>
+<!--#endif -->
+<!--#if expr="${pricingDollars} == 'FREE'" -->
+	<!-- Actual price display block - FREE -->
+	<div class="free">
+		<p>FREE</p>
+	</div>
+<!--#elif expr="${pricingDollars} != ''" -->
+	<!-- Starting offer block -->
+	<!-- Actual price display block - amount -->
+	<div class="price-value clearfix">
+		<span class="unit">$</span>
+		<div><!--#echo var="pricingDollars"--></div>
+		<span class="cents"><!--#echo var="pricingCents"--></span>
+	<!--#if expr="${pricingRecurrence}" -->
+		<span class="recurrence"><!--#echo var="pricingRecurrence"--></span>
+	<!--#endif -->
+	</div>
+<!--#endif -->
+
+<!--#if expr="${pricingDetails} || ${pricingDetailsRegular}" -->
+	<!-- Price details block -->
+	<div class="price-details">
+		<p><!--#echo var="pricingDetails"--></p>
+	<!--#if expr="${pricingDetailsRegular} != ''" -->
+		<p><!--#echo var="pricingDetailsRegular"--></p>
+	<!--#endif-->
+	<!--#if expr="${content} = 'more'"-->
+		<p>SOME OTHER crazy conditions apply:</p>
+		<ul>
+			<li>You have to have 2 legs</li>
+			<li>You have to have 2 arms</li>
+			<li>You have to have 1 head</li>
+		</ul>
+	<!--#endif-->
+	</div>
+<!--#endif-->
+
+<!--#if expr="${pricingOfferDetailsLinkText} != '' || ${pricingOfferDetailsGuarantee} != ''" -->
+	<!-- Offer details and terms block -->
+	<div class="price-terms">
+	<!--#if expr="${pricingOfferDetailsLinkText} != ''" -->
+		<p class="offer-details"><a href="#" data-modal-width="850" class="cms-modal-trigger" data-content-element="offer-div-<!--#echo var="pricingOfferId"-->"><!--#echo var="pricingOfferDetailsLinkText"--></a></p>
+	<!--#endif-->
+	<!--#if expr="${content} = 'most'"-->
+		<p>SOME OTHER crazy conditions apply:</p>
+		<ul>
+			<li>You have to have 2 legs</li>
+			<li>You have to have 2 arms</li>
+			<li>You have to have 1 head</li>
+		</ul>
+	<!--#endif-->
+	<!--#if expr="${pricingFreeInstallation} != ''" -->
+		<!-- promotional savings -->
+		<div class="saving-promotional">
+			<!-- markup below comes from catalog -->
+			<div class="saving-sticker-img"></div>
+			<div>
+				<p>Free Pro Install</p>
+				<p>When you order online!</p>
+			</div>
+			<!-- /markup comes from catalog -->
+		</div>
+		<!-- /promotional savings -->
+	<!--#endif -->
+	<!--#if expr="${pricingOfferDetailsGuarantee} != ''" -->
+		<!-- price guarantee -->
+		<div class="price-guarantee"><a href="#" data-modal-width="850" class="cms-modal-trigger" data-content-element="pricelock-div-<!--#echo var="pricingOfferId"-->"><!--#echo var="pricingOfferDetailsGuarantee"--></a></div>
+		<!-- /price guarantee -->
+	<!--#endif-->
+	</div>
+<!--#endif-->
+<!--#if expr="${pricingPrimaryButtonText} != ''" -->
+	<a href="#" class="button"><!--#echo var="pricingPrimaryButtonText"--></a>
+<!--#endif-->
+<!--#if expr="${pricingSecondaryButtonText} != ''" -->
+	<a href="#" class="button-secondary"><!--#echo var="pricingSecondaryButtonText"--></a>
+<!--#endif-->
+<!--#if expr="${pricingPaymentButtonText} != ''" -->
+	<a href="#" class="button-payment"><!--#echo var="pricingPaymentButtonText"--></a>
+<!--#endif-->
+</div>
+<!--  END : price -->
+
+<!-- sample modal div for terms -->
+<div id="offer-div-<!--#echo var="pricingOfferId"-->" class="modal-inline-content">
+	<div class="col-content">
+		<h2>Offer Details and Terms</h2>
+		<h3>Specific Offer Headline</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan quam nec nunc dictum sagittis. Integer nec ipsum nunc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum velit dui, faucibus id tortor ac, fermentum gravida felis. Fusce egestas turpis sit amet convallis tempus. Donec in neque vulputate, posuere purus et, tincidunt lacus. Mauris non dapibus eros. Donec finibus odio nec interdum euismod. Sed in egestas purus, non maximus arcu. Nulla tristique egestas erat, ut ultrices libero. Curabitur auctor ornare dui, eget vehicula odio. Phasellus varius diam felis, a pharetra metus malesuada sit amet. Cras accumsan purus vel turpis feugiat congue. Curabitur quis diam mauris.</p>
+	</div>
+</div>
+<!-- /sample modal div for terms -->
+
+<!-- sample modal div for price lock -->
+<div id="pricelock-div-<!--#echo var="pricingOfferId"-->" class="modal-inline-content">
+	<div class="col-content">
+		<h2>Price Lock Guarantee</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan quam nec nunc dictum sagittis. Integer nec ipsum nunc. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum velit dui, faucibus id tortor ac, fermentum gravida felis. Fusce egestas turpis sit amet convallis tempus. Donec in neque vulputate, posuere purus et, tincidunt lacus. Mauris non dapibus eros. Donec finibus odio nec interdum euismod. Sed in egestas purus, non maximus arcu. Nulla tristique egestas erat, ut ultrices libero. Curabitur auctor ornare dui, eget vehicula odio. Phasellus varius diam felis, a pharetra metus malesuada sit amet. Cras accumsan purus vel turpis feugiat congue. Curabitur quis diam mauris.</p>
+	</div>
+</div>
+<!-- /sample modal div for price lock -->

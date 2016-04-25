@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<!--#set var="version" value=""-->
+	<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+		<!--#set var="version" value="${1}"-->
+	<!--#endif-->
+	<head>
+		<title><!--#echo var="DOCUMENT_NAME"--></title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+		<meta property="og:image" content="http://www.cox.com/thepageimage.png"/> <!-- the page image url reference for social share -->
+
+<!-- DEV NOTES: the commented out file locations are the actual locations for the applications. The active references are for prototyping only. -->
+			
+		<!-- header/footer css -->
+		<!--<link href="/ui/<!--#echo var="version"-->/presentation/css/presentation.css.jgz" rel="stylesheet" />-->
+		<link href="/ui/<!--#echo var="version"-->/build/presentation/css/presentation.uncompressed.css" rel="stylesheet" />
+		<!-- global css -->
+		<!--<link href="/ui/<!--#echo var="version"-->/tsw/css/all.css.jgz" rel="stylesheet" />-->
+		<link href="/ui/<!--#echo var="version"-->/build/tsw/css/all.uncompressed.css" rel="stylesheet" />
+		<!-- LOB css -->
+		<!--<link href="/ui/<!--#echo var="version"-->/tsw/css/business.css.jgz" rel="stylesheet" />-->
+		<link href="/ui/<!--#echo var="version"-->/build/tsw/css/business.uncompressed.css" rel="stylesheet" />
+
+<!-- DEV NOTES: the commented out file locations are the actual locations for the applications. The active references are for prototyping only.
+				Notice that the commented out file location MUST REPLACE the prototype location INSIDE THE IE CONDITIONAL COMMENT!! -->
+			
+		<!-- ie conditional css -->
+			<!--<link href="/ui/<!--#echo var="version"-->/presentation/css/presentation-ie.css" rel="stylesheet" />-->
+		<!--[if lte IE 9]>
+			<link href="/ui/<!--#echo var="version"-->/build/presentation/css/presentation-ie.css" rel="stylesheet" />
+		<![endif]-->
+
+		<!-- header/footer js -->
+		<script>var CciFrameworkUrl = "http://framework.cox.com/presentation/rest/3.0/locations/cities/";</script>
+		<!--<script src="/ui/<!--#echo var="version"-->/presentation/js/presentation.js.jgz"></script>-->
+		<script src="/ui/<!--#echo var="version"-->/build/presentation/js/presentation.uncompressed.js"></script>
+		<!-- cox specific js -->
+		<!--<script src="/ui/<!--#echo var="version"-->/tsw/js/lib.js.jgz"></script>-->
+		<!--<script src="/ui/<!--#echo var="version"-->/tsw/js/cox.js.jgz"></script>-->
+		<script src="/ui/<!--#echo var="version"-->/build/tsw/js/lib.uncompressed.js"></script>
+		<script src="/ui/<!--#echo var="version"-->/build/tsw/js/cox.uncompressed.js"></script>
+		
+	</head>
+<!--#set var="grid" value=""-->
+<!--#if expr="${QUERY_STRING} = /grid=(.*?)(&|$)/"-->
+	<!--#set var="grid" value="${1}"-->
+<!--#endif-->
+	<body class="<!--#echo var="grid"-->">
+		<!-- pf-container -->
+		<div id="pf-container">
+			<!-- begin header wrapper -->
+			<div class="pf-header-wrapper pf-header-business noindex">
+				<!-- begin menu panel - left side panel on mobile -->
+				<div class="pf-menu-panel">
+					<!-- begin mobile wrapper -->
+					<div class="pf-mobile-wrapper">
+						<!-- begin top header -->
+						<div class="pf-top-header">
+							<div class="pf-top-nav">
+								<!-- left side of top nav -->
+								<ul class="pf-top-nav-lob">
+<!-- DEV NOTES: Only render the 'pf-mobile-only' class below when you are NOT in the About Cox section -->
+									<li class="pf-mobile-only"><a href="#" title="About Cox">About Cox</a></li>
+									<li><a href="#" title="Residential">Residential</a></li>
+									<li><a href="#" title="Cox Business" class="selected">Cox Business</a></li>
+								</ul>
+								<!-- right side of top nav -->
+								<ul class="pf-top-nav-overlays">
+									<!-- begin contact panel -->
+									<li class ="contact">
+										<a href="#" title="Contact Us" class="pf-trigger" aria-haspopup="true"><span><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/header/contact-us-icon.png" alt="FPO Image"/></span>Contact Us</a>
+										<div class="pf-overlay pf-contact-panel">
+											<div class="pf-close-btn"></div>
+											<ul>
+												<li>
+													<p>Speak with Online Sales</p>
+<!-- DEV NOTES: One node each for Mobile vs. Desktop Targeted numbers. -->
+													<a class="tel pf-mobile-only" href="tel: 866-961-MOBI"><strong>866-961-MOBI</strong></a>
+													<a class="tel pf-desktop-only" href="tel: 866-961-DESK"><strong>866-961-DESK</strong></a>
+												</li>
+											</ul>
+											<ul>
+												<li><a href="#">Retail Locations<span></span></a></li>
+												<li><a href="#">Local Services and Support<span></span></a></li>
+												<li><a href="#" class="pf-button">Chat Online Now</a></li>
+											</ul>
+										</div>
+									</li>
+									<!-- end contact panel -->
+									<!-- begin geo location panel -->
+<!-- DEV NOTES: When the location module needs to be displayed by default, "auto-popup" class needs to be added in b li, also commented below-->
+									<!-- <li class="geo-location location-text auto-popup"> -->
+									<li class="geo-location location-text">
+<!--#if expr="${QUERY_STRING} = /location=(.*?)(&|$)/"-->
+	<!--#set var="location" value="${1}"-->
+<!--#endif-->
+<!--#if expr="${location} = 'none'"-->
+										<a href="#" class="pf-trigger" aria-haspopup="true" title="Select Location"><span></span>Select a Location</a>
+<!--#else-->
+										<a href="#" class="pf-trigger" aria-haspopup="true" title="Select Location"><span></span>Macon, GA</a>
+<!--#endif-->
+										<!-- START: select-location -->
+										<div class="pf-overlay pf-location-panel" id="pf-location-panel">
+											<form method="post" action="#" id="pf-location-zipcode-form">
+												<fieldset>
+													<legend>Select a Location</legend>
+													<span aria-label="Close" class="pf-close-btn"></span>
+													<div class="pf-loader"></div>
+													<p class="pf-location-mobile-heading">Current Location: <span class="pf-location-value">Macon, GA</span></p>
+<!--#if expr="${location} = 'outside'"-->
+													<p class="no-service">Welcome Back! Please <a class="no-service pf-toggle pf-nav-trigger-signin-panel" aria-haspopup="true" href="#pf-signin-panel">Sign In.</a></p>
+													<div class="pf-divider"></div>
+													<p>Hello, we do not offer service in: 30096.</p>
+													<p>To find a new provider, please visit <a href="http://cablemover.com/find?c=1734&zip=30041">CableMover.com</a> or call 866-408-1734.</p>
+													<div class="pf-divider"></div>
+													<p class="pf-location-intro ">Let us know the location you'd like to browse.</p>
+<!--#elif expr="${location} = 'invalid'"-->
+													<p>Uh Oh. 99999 isn't a valid ZIP Code. Please try again.</p>
+<!--#elif expr="${location} = 'customer'"-->
+													<p>Welcome Back! Please <a class="pf-toggle signup-message pf-nav-trigger-signin-panel" href="#pf-signin-panel">Sign in</a><p>
+<!--#else-->
+													<p class="pf-location-intro">Let us know the location you'd like to browse.</p>
+<!--#endif-->
+													<div id="pf-location-zipcode-form-status" style="display: none;"></div>
+													<div class="pf-location-panel-mid-section">
+														<label for="zipcode" class="pf-hidden">Zip Code</label>
+														<input type="text" placeholder="Zip" title="Zip Code" data-type="zip" name="zipcode" id="zipcode" maxlength="5">
+														<input type="submit" value="Check This Area" class="pf-location-panel-submit-form">
+														<div class="pf-location-state">
+															<span class="pf-location-panel-or">OR<span class="pf-location-panel-or-divider"></span></span>
+															<label for="state" class="pf-hidden">State</label>
+															<select name="state" id="state">
+																<option selected="selected" value="">Choose a state</option>
+																<option value="AZ">Arizona</option>
+																<option value="AR">Arkansas</option>
+																<option value="CA">California</option>
+																<option value="CT">Connecticut</option>
+																<option value="FL">Florida</option>
+																<option value="GA">Georgia</option>
+																<option value="ID">Idaho</option>
+																<option value="IA">Iowa</option>
+																<option value="KS">Kansas</option>
+																<option value="LA">Louisiana</option>
+																<option value="MA">Massachusetts</option>
+																<option value="MO">Missouri</option>
+																<option value="NE">Nebraska</option>
+																<option value="NV">Nevada</option>
+																<option value="NC">North Carolina</option>
+																<option value="OH">Ohio</option>
+																<option value="OK">Oklahoma</option>
+																<option value="RI">Rhode Island</option>
+																<option value="VA">Virginia</option>
+															</select>
+															<label for="city" class="pf-hidden">City</label>
+															<select name="city" id="city">
+																<option selected="selected" value="">City</option>
+															</select>
+														</div>
+													</div>
+													<div class="pf-divider"></div>
+													<div class="pf-location-links">
+														<p>Already a Cox Residential customer? <a class="pf-toggle pf-nav-trigger-signin-panel" href="#pf-signin-panel">Sign in</a></p>
+														<p>Looking for Business service? <a href="http://www.cox.com/business/">Go to Cox Business</a></p>
+													</div>
+												</fieldset>
+											</form>
+										</div>
+										<div class="pf-location-underlay"></div>
+										<!-- END: select-location -->
+									</li>
+									<!-- end geo location panel -->
+								</ul>
+							</div>
+						</div>
+						<!-- end top header -->
+						<!-- begin main header -->
+						<div class="pf-main-header">
+							<div class="pf-main-nav">
+								<div class="pf-main-right-nav">
+									<ul class="pf-search-cart-tabs">
+									<!--#set var="search" value=""-->
+									<!--#if expr="${QUERY_STRING} = /search=(.*?)(&|$)/"-->
+										<!--#set var="search" value="${1}"-->
+									<!--#endif-->
+
+									<!--#if expr="${QUERY_STRING} != /search=false/"-->
+										<li class="pf-search"><a href="#" title="Search" class="pf-trigger">Search</a></li>
+									<!--#endif-->
+<!-- DEV NOTES: When selected cart it is discriminated by adding class "selected"-->
+										<!-- <li class="cart selected"> -->
+										<li class="cart">
+											<a href="#" title="View Cart">View Cart</a>
+										</li>
+									</ul>
+									<ul class="pf-my-account-tab">
+<!--#set var="username" value="Antidisestablishmentarianism"-->
+<!--#if expr="${QUERY_STRING} = /authenticated=true(&|$)/"-->
+	<!--#if expr="${QUERY_STRING} = /username=(.*?)(&|$)/"-->
+		<!--#set var="username" value="${1}"-->
+	<!--#endif-->
+										<li class="pf-my-account"><a href="#" class="pf-trigger" id="pf-signin-trigger">Hi, <!--#echo var="username"--> <span>MyAccount</span></a></li>
+<!--#elif expr="${QUERY_STRING} = /authenticated=partial(&|$)/"-->
+	<!--#if expr="${QUERY_STRING} = /username=(.*?)(&|$)/"-->
+		<!--#set var="username" value="${1}"-->
+	<!--#endif-->
+										<li class="pf-my-account"><a href="#" class="pf-trigger" id="pf-signin-trigger">Sign In, <!--#echo var="username"--> <span>MyAccount</span></a></li>
+<!--#else-->
+<!-- DEV NOTES: When an IDM authentication error occurs, add a class "auto-popup" to the li below to auto open the account dropdown -->
+										<li class="pf-my-account"><a href="#" class="pf-trigger" id="pf-signin-trigger">Sign In <span>MyAccount</span></a></li>
+<!--#endif-->
+									</ul>
+								</div>
+								<div class="pf-main-left-nav">
+									<ul>
+										<li class="header-logo"><a href="#" title="Cox Business Homepage">Cox Business Homepage</a></li>
+										<!-- mobile sign in -->
+<!--#if expr="${QUERY_STRING} = /authenticated=true(&|$)/"-->
+	<!--#if expr="${QUERY_STRING} = /username=(.*?)(&|$)/"-->
+		<!--#set var="username" value="${1}"-->
+	<!--#endif-->
+										<li class="pf-sign-in pf-mobile-signin-btn"><a href="#" class="pf-mobile-signin pf-trigger">Hi, <!--#echo var="username"--></a> | <a href="#" class="pf-mobile-signout">Sign out</a></li>
+<!--#elif expr="${QUERY_STRING} = /authenticated=partial(&|$)/"-->
+	<!--#if expr="${QUERY_STRING} = /username=(.*?)(&|$)/"-->
+		<!--#set var="username" value="${1}"-->
+	<!--#endif-->
+										<li class="pf-sign-in pf-mobile-signin-btn"><a href="#" class="pf-mobile-signin pf-trigger">Sign In, <!--#echo var="username"--></a></li>
+<!--#else-->
+<!-- DEV NOTES: When an IDM authentication error occurs, add a class "auto-popup" to the li below to auto open the account dropdown -->
+										<li class="pf-sign-in pf-mobile-signin-btn"><a href="#" class="pf-mobile-signin pf-trigger">Sign In</a></li>
+<!--#endif-->
+										<!-- /mobile sign in -->
+									</ul>
+									<!-- mobile only main menu -->
+									<div class="pf-mobile-main-menu">
+										<ul>
+											<li class="pf-revert">
+												<a href="#" title="Main Menu"><span></span>Main Menu</a>
+											</li>
+										</ul>
+									</div>
+									<!-- begin primary link list -->
+									<ul class="pf-main-nav-primary-links">
+										<li class="pf-products-solutions"><a href="#" title="Products & Solutions" class="pf-trigger"><span><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/header/shop-icon.png" alt="FPO Image"/></span>Products &amp; Solutions</a></li>
+										<li class="pf-industry-expertise"><a href="#" title="Industry Expertise" class="pf-trigger"><span><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/header/myconnection-icon.png" alt="FPO Image"/></span>Industry Expertise</a></li>
+										<li class="pf-support-resources"><a href="#" title="Support & Resources" class="pf-trigger"><span><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/header/support-icon.png" alt="FPO Image"/></span>Support &amp; Resources</a></li>
+										<!-- begin mobile only 'my account' div -->
+										<li class="pf-my-account"><a href="#" title="MyAccount" class="pf-trigger"><span><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/header/myaccount-icon.png" alt="FPO Image"/></span>MyAccount</a></li>
+										<!-- end mobile only 'my account' div -->
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- end main header -->
+					</div>
+					<!-- end mobile wrapper -->
+					<!-- begin sub header -->
+					<div class="pf-sub-header">
+						<!-- begin shop items -->
+						<div class="pf-sub-nav pf-products-solutions-items">
+							<div class="pf-sub-nav-underlay">
+								<div class="pf-sub-nav-close"><a></a></div>
+							</div>
+							
+							<div class="pf-sub-nav-link">											
+								<div>
+									<ul>										
+										<li class="pf-primary"><a href="#" title="Products &amp; Solutions">Products &amp; Solutions</a></li>
+										<li class="pf-primary-home"><a href="#" title="Products &amp; Solutions">Products &amp; Solutions</a></li>
+									</ul>
+									<!-- DEV NOTES: nav section -->
+									<ul>
+										<li class="pf-primary"><a href="#" title="Contour &amp; TV">Contour &amp; TV <span></span></a></li>
+										<!-- pf-primary-home: duplicate node shown in mobile  -->
+										<li class="pf-primary-home"><a href="#" title="Contour &amp; TV">Contour &amp; TV <span></span></a></li>
+										<!-- DEV NOTES: nav item's -->
+										<li><a href="#" title="TV Packages">TV Packages</a></li>
+										<li><a href="#" title="Contour">Contour</a></li>
+										<li class="pf-channel-options"><a title="Channel Options">FLYOUT Options</a></li>										
+										<li><a href="#" title="Record 6 &amp; DVR Options">Record 6 &amp; DVR Options</a></li>
+										<li><a href="#" title="Sports Packages">Sports Packages</a></li>
+										<li><a href="#" title="Hispanic &amp; International">Hispanic &amp; International</a></li>
+										<li><a href="#" title="On Demand">On Demand</a></li>
+										<li class="pf-premium-channels"><a href="#" title="Premium Channels">FLYOUT Channels</a></li>
+										<li><a href="#" title="Pay-Per-View Events">Pay-Per-View Events</a></li>
+										<li><a href="#" title="TV Technology">TV Technology</a></li>
+										<li><a href="#" title="Channel Lineups">Channel Lineups</a></li>
+									</ul>
+									<!-- flyout section for first sub nav link items -->
+									<div class="pf-flyout pf-channel-options-items">
+										<ul>
+											<li class="pf-primary"><a href="#" title="Channel Options">Channel Options</a></li>
+											<li><a href="#" title="Option 1">Option 1</a></li>
+											<li><a href="#" title="Option 2">Option 2</a></li>
+											<li><a href="#" title="Option 3">Option 3</a></li>												
+										</ul>
+									</div> 
+									<div class="pf-flyout pf-premium-channels-items">
+										<ul>
+											<li class="pf-primary"><a href="#" title="Premium Channels">Premium Channels</a></li>
+											<li><a href="#" title="Channel 1">Channel 1</a></li>
+											<li><a href="#" title="Channel 2">Channel 2</a></li>
+											<li><a href="#" title="Channel 3">Channel 3</a></li>												
+										</ul>
+									</div> 
+								</div>
+								<div>
+									<!-- DEV NOTES: nav section -->
+									<ul>
+										<li class="pf-primary"><a href="#" title="Internet">Internet <span></span></a></li>
+										<li class="pf-primary-home"><a href="#" title="Internet">Internet <span></span></a></li>
+										<!-- DEV NOTES: nav item's -->
+										<li><a href="#" title="Internet Packages">Internet Packages</a></li>
+										<li><a href="#" title="Features">Features</a></li>
+										<li><a href="#" title="WiFi Modems">WiFi Modems</a></li>
+										<li class="pf-security-software"><a title="Security Software">FLYOUT Software</a></li>											
+										<li><a href="#" title="Speed Advisor">Speed Advisor</a></li>
+										<li><a href="#" title="WiFi Hotspots">WiFi Hotspots</a></li>
+										<li class="pf-tech-solutions"><a href="#" title="Tech Solutions">FLYOUT Solutions</a></li>
+										<li><a href="#" title="24/7 Help Desk">24/7 Help Desk</a></li>
+										<li><a href="#" title="One-Time Support">One-Time Support</a></li>
+										<li><a href="#" title="Another Link">Another Link</a></li>
+										<li><a href="#" title="More Link">More Link</a></li>
+										<li><a href="#" title="Again with the Link">Again with the Link</a></li>
+										<li><a href="#" title="Once Again Link">Once Again Link</a></li>
+										<li><a href="#" title="Please Link">Please Link</a></li>
+										<li><a href="#" title="El Link">El Link</a></li>
+										<li><a href="#" title="First Link">First Link</a></li>
+										<li><a href="#" title="Second Link">Second Link</a></li>
+										<li><a href="#" title="Third Link">Third Link</a></li>
+										<li><a href="#" title="Fourth Link">Fourth Link</a></li>
+										<li><a href="#" title="Fifth Link">Fifth Link</a></li>
+										<li><a href="#" title="Sixth Link">Sixth Link</a></li>
+										<li><a href="#" title="Seventh Link">Seventh Link</a></li>
+										<li><a href="#" title="Eighth Link">Eighth Link</a></li>
+										<li><a href="#" title="Ninth Link">Ninth Link</a></li>
+										<li><a href="#" title="Tenth Link">Tenth Link</a></li>
+										<li><a href="#" title="Eleventh Link">Eleventh Link</a></li>
+									</ul>
+									<div class="pf-flyout pf-security-software-items">
+										<ul>
+											<li class="pf-primary"><a href="#" title="Security Software">Security Software</a></li>
+											<li><a href="#" title="Option 1">Option 1</a></li>
+											<li><a href="#" title="Option 2">Option 2</a></li>
+											<li><a href="#" title="Option 3">Option 3</a></li>
+											<li><a href="#" title="Option 4">Option 4</a></li>
+											<li><a href="#" title="Option 5">Option 5</a></li>
+											<li><a href="#" title="Option 6">Option 6</a></li>
+											<li><a href="#" title="Option 7">Option 7</a></li>
+											<li><a href="#" title="Option 8">Option 8</a></li>
+											<li><a href="#" title="Option 9">Option 9</a></li>
+											<li><a href="#" title="Option 10">Option 10</a></li>
+											<li><a href="#" title="Option 11">Option 11</a></li>
+											<li><a href="#" title="Option 12">Option 12</a></li>
+											<li><a href="#" title="Option 13">Option 13</a></li>
+											<li><a href="#" title="Option 14">Option 14</a></li>
+											<li><a href="#" title="Option 15">Option 15</a></li>
+											<li><a href="#" title="Option 16">Option 16</a></li>
+											<li><a href="#" title="Option 17">Option 17</a></li>
+											<li><a href="#" title="Option 18">Option 18</a></li>
+											<li><a href="#" title="Option 19">Option 19</a></li>
+										</ul>
+									</div> 
+									<div class="pf-flyout pf-tech-solutions-items">
+										<ul>
+											<li class="pf-primary"><a href="#" title="Tech Solutions">Tech Solutions</a></li>
+											<li><a href="#" title="Option 1">Option 1</a></li>
+											<li><a href="#" title="Option 2">Option 2</a></li>
+											<li><a href="#" title="Option 3">Option 3</a></li>
+											<li><a href="#" title="Option 4">Option 4</a></li>
+										</ul>
+									</div> 
+								</div>
+								<div>
+									<!-- DEV NOTES: nav section -->
+									<ul>
+										<li class="pf-primary"><a href="#" title="Home Security">Home Security <span></span></a></li>
+										<li class="pf-primary-home"><a href="#" title="Home Security">Home Security <span></span></a></li>
+										<!-- DEV NOTES: nav item's -->
+										<li><a href="#" title="Packages &amp; Prices">Packages &amp; Prices</a></li>
+										<li><a href="#" title="Features">Features</a></li>
+										<li class="pf-faq"><a href="#" title="Frequently Asked Questions People Are Asking">FLYOUT Asked Questions People Are Asking</a></li>									
+										<li><a href="#" title="Equipment">Equipment</a></li>
+									</ul>
+									
+									 <div class="pf-flyout pf-faq-items">
+										<ul>
+											<li class="pf-primary"><a href="#" title="FAQs">FAQs</a></li>
+											<li><a href="#" title="Option 1">Question 1</a></li>
+											<li><a href="#" title="Option 2">Question 2</a></li>
+											<li><a href="#" title="Option 3">Question 3</a></li>
+											
+										</ul>
+									</div> 
+								</div>
+								<div class="pf-desktop-only">
+									<!-- DEV NOTES: nav section - Promo Variation -->
+									<ul>
+										<li class="pf-primary"><a href="#">Promo Box Headline</a></li>
+										<li><a href="#"><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/fpo-3-col.png" alt="FPO Image" /></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="pf-sub-nav-form"></div>
+						</div>
+						<!-- begin myconnection items -->
+						<div class="pf-sub-nav pf-industry-expertise-items">
+							<div class="pf-sub-nav-underlay">
+								<div class="pf-sub-nav-close"><a></a></div>
+							</div>
+							<div class="pf-sub-nav-link">
+								<div>
+									<ul>										
+										<li class="pf-primary"><a href="#" title="Industry Expertise">Industry Expertise</a></li>
+										<li class="pf-primary-home"><a href="#" title="Industry Expertise">Industry Expertise</a></li>
+									</ul>
+									<!-- DEV NOTES: nav section -->
+									<ul>
+										<li class="pf-primary"><a href="#" title="Column Heading">Column Heading <span></span></a></li>
+										<!-- pf-primary-home: duplicate node shown in mobile  -->
+										<li class="pf-primary-home"><a href="#" title="Column Heading">Column Heading <span></span></a></li>
+										<!-- DEV NOTES: nav item's -->
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+									</ul>
+								</div>
+								<div>
+									<ul>
+										<li class="pf-primary"><a href="#" title="Column Heading">Column Heading <span></span></a></li>
+										<!-- pf-primary-home: duplicate node shown in mobile  -->
+										<li class="pf-primary-home"><a href="#" title="Column Heading">Column Heading <span></span></a></li>
+										<!-- DEV NOTES: nav item's -->
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+									</ul>
+								</div>
+								<div class="pf-desktop-only pf-sub-nav-columns-2">
+									<!-- DEV NOTES: nav section - Promo Variation -->
+									<ul>
+										<li class="pf-primary"><a href="#">Promo Box Headline</a></li>
+										<li><a href="#"><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/fpo-6-col.png" alt="FPO Image" /></a></li>
+									</ul>
+								</div>
+								<!--
+								<div>
+									<ul>
+										<li class="pf-primary"><a href="#" title="Internet Tools">Internet Tools <span></span></a></li>
+										<li class="pf-primary-home"><a href="#" title="Internet Tools">Internet Tools <span></span></a></li>
+										<li><a href="#" title="Email / WebMail">Email / WebMail</a></li>
+										<li><a href="#" title="Online Backup">Online Backup</a></li>
+										<li><a href="#" title="Security Software">Security Software</a></li>
+										<li><a href="#" title="Speed Check">Speed Check</a></li>
+										<li><a href="#" title="Data Usage Meter">Data Usage Meter</a></li>
+										<li><a href="#" title="Home Network Manager">Home Network Manager</a></li>
+										<li><a href="#" title="PC Health Check">PC Health Check</a></li>
+									</ul>
+								</div>
+								<div>
+									<ul>
+										<li class="pf-primary"><a href="#" title="TV Tools">TV Tools <span></span></a></li>
+										<li class="pf-primary-home"><a href="#" title="TV Tools">TV Tools <span></span></a></li>
+										<li><a href="#" title="TV Tools">TV Tools</a></li>
+										<li><a href="#" title="Channel Lineups">Channel Lineups</a></li>
+										<li><a href="#" title="TV Listings">TV Listings</a></li>
+										<li><a href="#" title="Remote DVR Scheduling">Remote DVR Scheduling</a></li>
+									</ul>
+								</div>
+								-->
+							</div>
+							<div class="pf-sub-nav-form"></div>
+						</div>
+						<!-- begin support items -->
+						<div class="pf-sub-nav pf-support-resources-items">
+							<div class="pf-sub-nav-underlay">
+								<div class="pf-sub-nav-close"><a></a></div>
+							</div>
+							<div class="pf-sub-nav-link">
+								<div>
+									<ul>										
+										<li class="pf-primary"><a href="#" title="Support &amp; Resources">Support &amp; Resources</a></li>
+										<li class="pf-primary-home"><a href="#" title="Support &amp; Resources">Support &amp; Resources</a></li>
+									</ul>
+									<ul>
+										<li class="pf-primary"><a href="#" title="Column Heading">Column Heading <span></span></a></li>
+										<!-- pf-primary-home: duplicate node shown in mobile  -->
+										<li class="pf-primary-home"><a href="#" title="Column Heading">Column Heading <span></span></a></li>
+										<!-- DEV NOTES: nav item's -->
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+									</ul>
+								</div>
+								<div>
+									<ul>
+										<li class="pf-primary"><a href="#" title="Column Heading">Column Heading <span></span></a></li>
+										<!-- pf-primary-home: duplicate node shown in mobile  -->
+										<li class="pf-primary-home"><a href="#" title="Column Heading">Column Heading <span></span></a></li>
+										<!-- DEV NOTES: nav item's -->
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+									</ul>
+								</div>
+								<div>
+									<ul>
+										<li class="pf-primary"><a href="#" title="Column Heading">Column Heading <span></span></a></li>
+										<!-- pf-primary-home: duplicate node shown in mobile  -->
+										<li class="pf-primary-home"><a href="#" title="Column Heading">Column Heading <span></span></a></li>
+										<!-- DEV NOTES: nav item's -->
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+									</ul>
+								</div>
+								<div>
+									<ul>
+										<li class="pf-primary"><a href="#" title="Column Heading">Column Heading <span></span></a></li>
+										<!-- pf-primary-home: duplicate node shown in mobile  -->
+										<li class="pf-primary-home"><a href="#" title="Column Heading">Column Heading <span></span></a></li>
+										<!-- DEV NOTES: nav item's -->
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+										<li><a href="#" title="Link Text">Link Text</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="pf-sub-nav-form"></div>
+						</div>
+						
+						<!-- begin search items -->
+						<div class="pf-sub-nav pf-search-items">
+							<div class="pf-sub-nav-underlay">
+								<div class="pf-sub-nav-close"><a></a></div>
+							</div>
+							<div class="pf-sub-nav-link"></div>
+					<!--#if expr="${QUERY_STRING} != /search=false/"-->
+						<!--#set var="q" value=""-->
+						<!--#if expr="${QUERY_STRING} = /q=(.*?)(&|$)/"-->
+							<!--#set var="q" value="${1}"-->
+						<!--#endif-->
+							<div class="pf-sub-nav-form">
+								<form name="searchform" class="col-content form" action="/ui/<!--#echo var="version"-->/tsw/html/search/search-promote.html" method="get" id="search-promote-form">
+									<fieldset>
+										<legend>Search Form</legend>
+										<input type="text" name="q" value="<!--#echo var="q"-->" title="Search" id="q" autocomplete="off" class="required search-promote-keyword" />
+										<input type="submit" value="Search" />
+										<div id="autocomplete"></div>
+									</fieldset>
+								</form>
+								<!-- added scripts that AEM generates for testing the prototypes. Adobe, do not add these below. -->
+								<script src="//ajax.googleapis.com/ajax/libs/yui/2.8.0r4/build/utilities/utilities.js"></script>
+								<script src="//ajax.googleapis.com/ajax/libs/yui/2.8.0r4/build/datasource/datasource-min.js"></script>
+								<script src="//ajax.googleapis.com/ajax/libs/yui/2.8.0r4/build/autocomplete/autocomplete-min.js"></script>
+								<!-- SMT - Using Cox-modified script to fire Search form submission events. --> 
+								<!-- script src="//content.atomz.com/sp10050d50/publish/autocomplete_data.js?sp_js_cache_ver=2"></script -->
+								<script src="/ui/<!--#echo var="version"-->/tsw/js/extlib/aemAutoComplete.js"></script>
+								<!-- end test scripts -->
+							</div>
+					<!--#endif-->
+						</div>
+
+						<!-- begin myaccount items -->
+						<div class="pf-sub-nav pf-my-account-items">
+							<div class="pf-sub-nav-underlay">
+								<div class="pf-sub-nav-close"><a></a></div>
+							</div>
+
+<!--#if expr="(${QUERY_STRING} = /authenticated=true(&|$)/) || (${QUERY_STRING} = /authenticated=partial(&|$)/)"-->
+							<!-- link columns -->
+							<div class="pf-sub-nav-link">
+								<div>
+									<ul>
+										<li class="pf-primary"><a href="#" title="MyAccount">MyAccount</a></li>
+									</ul>
+									<ul>
+										<li class="pf-primary"><a href="#" title="Billing">Billing <span></span></a></li>
+										<!-- pf-primary-home: duplicate node shown in mobile  -->
+										<li class="pf-primary-home"><a href="#" title="Billing">Billing <span></span></a></li>
+										<li><a href="#" title="Pay Bill">Pay Bill</a></li>
+										<li><a href="#" title="View Bill">View Bill</a></li>
+										<li><a href="#" title="View Recent Activity">View Recent Activity</a></li>
+										<li><a href="#" title="Enroll in Paperless Billing">Enroll in Paperless Billing</a></li>
+										<li><a href="#" title="Automatic Payments">Automatic Payments</a></li>
+										<li><a href="#" title="Profile &amp; Settingspf">Profile &amp; Settings</a></li>
+									</ul>
+								</div>
+								<div>
+									<ul>
+										<li class="pf-primary"><a href="#" title="My Tools">My Tools <span></span></a></li>
+										<li class="pf-primary-home"><a href="#" title="My Tools">My Tools <span></span></a></li>
+										<li><a href="#" title="WebMail Inbox">WebMail Inbox</a></li>
+										<li><a href="#" title="TV Tools">TV Tools</a></li>
+										<li><a href="#" title="Internet Tools">Internet Tools</a></li>
+										<li><a href="#" title="Phone Tools">Phone Tools</a></li>
+										<li><a href="#" title="Home Security Portal">Home Security Portal</a></li>
+									</ul>
+								</div>
+								<div>
+									<ul>
+										<li class="pf-primary"><a href="#" title="My Services">My Services <span></span></a></li>
+										<li class="pf-primary-home"><a href="#" title="My Services">My Services <span></span></a></li>
+										<li><a href="#" title="Explore My Services">Explore My Services</a></li>
+										<li><a href="#" title="Move or Transfer Services">Move or Transfer Services</a></li>
+										<li><a href="#" title="Add or Upgrade">Add or Upgrade</a></li>
+										<li><a href="#" title="Manage Appointments">Manage Appointments</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- /link columns -->
+<!--#else-->				
+							<!-- promo area -->
+							<div class="pf-sub-nav-promo pf-desktop-only">
+								<h2>Sign In To MyAccount</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id felis purus. Mauris eget mi non nulla consequat hendrerit vel nec elit. Nullam interdum mauris a risus egestas volutpat.</p>
+								<ul>
+									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+								</ul>
+							</div>
+							<!-- /promo area -->
+<!--#endif-->
+							<div class="pf-sub-nav-form"></div>
+						</div>
+					</div>
+					<!-- end sub header -->
+				</div>
+				<!-- end menu panel - left side panel on mobile -->
+				<!-- begin authentication panel - right side panel on mobile -->
+				<div class="pf-authentication-panel">
+					<!-- begin sign-in items -->
+					<div class="pf-sub-nav pf-sign-in-items">
+						<div class="pf-sub-nav-underlay">
+							<div class="pf-sub-nav-close"><a></a></div>
+						</div>
+						<div class="pf-sub-nav-link"></div>
+						<div class="pf-sub-nav-form" id="pf-signin-panel">
+							<div class="pf-divider-vertical"></div>
+<!--#if expr="${QUERY_STRING} = /authenticated=true(&|$)/"-->
+<!-- DEV NOTES: begin authenticated div -->
+							<div class="pf-authenticated-links">
+								<div class="pf-shortcut-text">My Shortcuts</div>
+								<ul>
+									<li><a href="#"><span class="pf-pay-bill-image"><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/header/bill-icon.png" alt="FPO Image"/></span>Pay Bill</a></li>
+									<li><a href="#"><span class="pf-view-web-mail-image"><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/header/webmail-icon.png" alt="FPO Image"/></span>View WebMail</a></li>
+									<li><a href="#"><span class="pf-manage-my-services-image"><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/header/service-icon.png" alt="FPO Image"/></span>Manage My Service</a></li>
+									<li><a href="#"><span class="pf-view-my-tools-image"><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/header/tool-icon.png" alt="FPO Image"/></span>View My Tools</a></li>
+								</ul>
+								<div class="pf-divider"></div>
+								<div><a href="#" class="pf-sign-out">Sign Out</a></div>
+							</div>
+<!--#else-->
+<!-- DEV NOTES: begin unauthenticated div; the hidden input and method="get" are for development ONLY; remove hidden input and change method to "post" for production -->
+							<form method="get" action="#" id="pf-signin-panel-form">
+								<input type="hidden" name="authenticated" value="true" />
+								<div class="pf-sign-in-text">Sign In</div>
+								<div id="pf-signin-panel-form-status"></div>
+<!-- DEV NOTES: render this error div below instead of the empty container above if any IDM authentication errors occur.
+								<div id="pf-signin-panel-form-status" class="pf-form-error" style="display:block;">
+									<p>An invalid User ID or Password was entered. Please try again. <a href="#">More information</a></p>
+								</div>
+-->
+								<label for="username" class="pf-hidden">User ID</label>
+								<input type="text" placeholder="User ID" id="username" name="username" title="User ID" size="25" value="" />
+								<div class="password-wrapper">
+									<label for="password" class="display-placeholder">Password</label>
+									<input type="password" class="create-placeholder" placeholder="Password" id="password" name="password" title="Password" value="" />
+								</div>
+								<div class="remember-me">
+									<input type="checkbox" checked="checked" name="rememberme" id="rememberme" />
+									<label for="rememberme"  id="rememberme-label" class="remove-margin">Remember User ID</label>
+								</div>
+								<div>
+									<input type="submit" class="pf-sign-in-submit-form" value="Sign In"/>
+									<span class="pf-sign-in-lock"></span>
+								</div>
+								<div class="pf-divider"></div>
+								<hr/>
+								<p><a href="#">No Account? Register Now!</a></p>
+								<p><a href="#">Forgot User ID</a> / <a href="#">Password?</a></p>
+								<p><a href="#">Need Help Signing In?</a></p>
+							</form>
+<!--#endif-->
+						</div>
+					</div>
+				</div>
+				<!-- end authentication panel - right side panel on mobile -->
+			</div>
+			<!-- end header wrapper -->
+	
+			<!-- container -->
+<!-- DEV NOTES: leave off the class below. It's used for debugging only -->
+			<div id="container" class="<!--#echo var="grid"-->">

@@ -1,0 +1,121 @@
+/*  LIGHTBOX */
+#underlay {
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	z-index: 2001;
+	-moz-opacity: 0.75;
+	opacity: .75;
+	filter: alpha(opacity=75);
+}
+
+.dialog-component {
+	display: none;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	z-index: 2002;
+	background-color: #fff;
+	border: 1px solid #9a9a9a;
+	-webkit-box-shadow: #888 10px 10px 10px; /* FF3.5 - 3.6 */
+	-moz-box-shadow: #888 10px 10px 10px; /* Saf3.0+, Chrome */
+	box-shadow: #888 10px 10px 10px; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+	font-size: 1em; /* to match the container font size and reset from zero */
+}
+.dialog-component .dialog-component-content {
+	margin: 30px 30px 40px;
+}
+.dialog-component .dialog-component-title {
+	font-size: 1.875em; /* 30px */
+	line-height: 1.133em; /* 34px */
+	margin: 30px 30px 50px;
+}
+.dialog-component .dialog-component-content .modal-inline-content > h2,
+.dialog-component .dialog-component-content > h2 { /* allow for title to be passed in content area instead of in title tag component and look like H1 */
+	font-size: 1.875em; /* 30px */
+	line-height: 1.133em; /* 34px */
+	margin-bottom: 50px;
+}
+.dialog-component .dialog-component-head {
+	position: relative;
+	border-bottom: 1px solid #b7b7b7;
+	height: 67px;
+	z-index: 2002;
+}
+.dialog-component .dialog-component-head .btn-close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	width: 27px;
+	height: 27px;
+	background: url(/ui/$version/tsw/img/global/icons/close.png) no-repeat;
+	cursor: pointer;
+}
+.dialog-component .dialog-component-head .btn-close:focus {
+	box-shadow: 0 0 5px #2757a7;
+	border-radius: 27px;
+}
+
+.dialog-component .dialog-component-buttons {
+	border-top: 1px solid #b7b7b7;
+	margin: 65px -30px 0;
+	padding: 30px 30px 0 0;
+	text-align: right;
+}
+
+/* loading dialog */
+.dialog-component .dialog-component-title h3.loading-title {
+	font-family: "open_sansregular", Arial, Helvetica, Sans-serif;
+	font-size: 1em;
+	background: url(/ui/$version/emergence/corp/en/img/interface/loading-whitebg.gif) no-repeat top center;
+	padding-top: 40px;
+	text-align: center;
+}
+.dialog-component .dialog-component-content .loading-message p {
+	text-align: center;
+}
+
+.modal-inline-content {
+	display: none;
+}
+.dialog-component-content .modal-inline-content {
+	display: block;
+}
+
+/* modal link styles */
+.modal-link {
+	display: block;
+	margin: 23px 0 0;
+}
+/* modal mobile styles */
+@media screen and (max-width: 767px) {
+	/* modal link style */
+	.modal-link {
+			margin: 22px 20px 0 !important;
+			text-align: left;
+	}
+	.dialog-component {
+		left: 0 !important;
+		width: 100% !important;
+		top: 0 !important;
+	}
+	.dialog-component .dialog-component-content {
+		margin: 30px 20px 40px;
+	}
+	.dialog-component .dialog-component-title {
+	    margin: 30px 20px;
+	}		
+	.dialog-component-buttons {
+		padding: 10px 0px 0 0 !important; /* override global styles*/
+		margin: 65px -20px 0 !important;
+	}
+	.dialog-component-buttons .button {
+	    margin: 15px 20px 0;	    
+	}
+}

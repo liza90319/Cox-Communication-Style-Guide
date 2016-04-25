@@ -1,0 +1,103 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<div class="library-header">
+	<h1>Grid</h1>
+	<p>The column-based grid layout is designed to allow for flexible horizontal spacing with a minimum of code.  By defining the number of columns a module spans (how many columns wide it is) as a configuration option, the same module source can be used to span any number of columns.</p>
+	<p>Currently, this grid is defined as 12 columns in a 960px width container.  By defining column width as a percentage of overall width instead of exact pixels, the number of columns and the overall width are abitrary, and thus can be modified with very little effort, and developers do not have to be concerned with specifying layout dimensions.</p>
+</div>
+
+<div class="col-reset">
+	<h3 class="library-h3">Basic Grid</h3>
+	<p>Structural markup and CSS applied via classes are used together to place a node within the column structure and define it's width.</p>
+	<h4><code>.cols-grid</code></h4>
+	<p>The top-level class, <code>.cols-grid</code> is implemented once in the template.  All structure and content for the grid are children of this one node.  While there is little styling applied to this class, it is used when defining the styles for <code>.colspan-*</code> to describe how many columns a grid has as a function of the percentage width in the <code>.colspan-*</code> style.  See the next section for more information.</p>
+	<p>Combining the top-level <code>.cols-*</code> class with the <code>.colspan-*</code> classes allows us to define a layout with a different number of columns.  For example, <code>.cols-10 .colspan-5</code> defines a grid of 10-columns and a module spanning 5 of them.  The result would be a module that occupies half the container width exactly like a <code>.cols-grid .colspan-6</code> styled module.  As these <code>.cols-*</code> can safely be nested inside each other, a single page can have different grids and still correctly align with each other.</p>
+	<h4><code>.colspan-*</code></h4>
+	<p>The magic happens with this class.  It is by combining the parent number of columns (12 for <code>.cols-grid</code>) class with these <code>.colspan-*</code> that we can define the actual width of the columns, as a percentage.</p>
+	<pre class="prettyprint">
+/* Define styling for widget container. */
+[class*='cols-'] [class*='colspan-'] {
+	vertical-align: top;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.........
+
+/* Widget width in a cols-grid layout. */
+.cols-grid .colspan-1 {
+	width: 8.33%;
+	min-width: 8.33%;
+	max-width: 8.33%;
+}
+/* Widget spanning 2 columns in a cols-grid layout. */
+.cols-grid .colspan-2 {
+	width: 16.66%;
+	min-width: 16.66%;
+	max-width: 16.66%;
+}
+	</pre>
+	<h4><code>.col-content</code></h4>
+	<p>The final piece of the grid puzzle is the <code>.col-content</code> node.  This is the node that contains the final content of the widget.</p>
+	<p>Margins are applied to this node to provide gutters between widgets.  This also allows the <code>.colspan-*</code> nodes to use percentage widths.</p>
+	<p>You can place an arbitrary number of widgets in the parent container.  Widgets wrap as each row fills.  The following is a basic example of combining structure and classes to create a simple columned layout:</p>
+</div>
+<div class="library-module grid-sample centered">
+<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-basic.html"-->
+</div>
+
+<div class="col-reset">
+	<h3 class="library-h3">Multi-Row Columns</h3>
+	<p>There are layouts that have the far left or right columns vertically spanning more than one row.  This is easy to do by properly utilizing the <code>.rowspan-*</code> class.</p>
+	<h4><code>.rowspan-*</code></h4>
+	<p>When applied to the node in the first or last column of a row (as counted by columns spanned), the <code>.rowspan-left/right</code> class floats the associated node.  This causes other nodes to wrap on the side of this column.</p>
+</div>
+<div class="library-module grid-sample">
+<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-multi-row.html"-->
+</div>
+
+<div class="col-reset">
+	<h3 class="library-h3">Internal Columns</h3>
+	<p>While the <code>.cols-grid</code> is our default, 12-column grid, the grid system allows for other column count variations.  Mixing the two allows for a section of the page, which normally occupies 6-columns (half) of the default grid, to be laid out with it's own, internal grid system. We are currently coded for the following n-columns grid layouts:</p>
+	<ul>
+		<li><code>.cols-10</code></li>
+		<li><code>.cols-9</code></li>
+		<li><code>.cols-7</code></li>
+		<li><code>.cols-6</code></li>
+		<li><code>.cols-5</code></li>
+		<li><code>.cols-4</code></li>
+		<li><code>.cols-3</code></li>
+		<li><code>.cols-2</code></li>
+		<li><code>.cols-1</code></li>
+	</ul>
+	<p>The following example takes 6-, 8-, and 4-column widgets and places <code>.cols-3</code>, <code>.cols-4</code>, and <code>.cols-2</code> grids inside each, respectively:</p>
+</div>
+<div class="library-module grid-sample">
+<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-internal.html"-->
+</div>
+
+<!-- Grid layout debugging style and legend. -->
+<style>
+	/* Styling grid nodes */
+	.grid-sample .col-content {
+		border: 1px solid #c9c9c9;
+		background-color: #e9e9e9;
+	}
+	.grid-sample [class*='cols-'] .col-content {
+		border: 1px solid #000;
+		background-color: #888;
+		color: #fff;
+	}
+	.grid-sample [class*='cols-'] .col-content h4 {
+		color: #fff;
+	}
+	.grid-sample.centered p {
+		text-align: center;
+	}
+	.grid-sample .col-content p {
+		margin-top: 5px;
+	}
+</style>

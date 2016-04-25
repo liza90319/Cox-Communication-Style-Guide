@@ -1,0 +1,124 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+<!-- This page is only for testing purpose -->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<div class="cols-grid">
+	<div class="colspan-12 col-reset text-align-center">
+		<h1>Anchor Links Bar</h1>
+		<h2>See <a href="anchor-links-bar.html">anchor-links-bar.html</a> for variations.</h2>
+	</div>
+	
+	<!-- section container -->
+	<div class="section-container constrain-1280">
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/anchor-links.html?sticky=true&theme=theme-a&cols=2"-->
+		<!-- #include virtual="/ui/$version/tsw/html/library/includes/anchor-links.html?sticky=true&theme=theme-a&cols=3"-->
+		<!-- #include virtual="/ui/$version/tsw/html/library/includes/anchor-links-free-text.html?sticky=true&theme=theme-a&cols=2&text-align=right"-->
+		<!-- #include virtual="/ui/$version/tsw/html/library/includes/anchor-links-free-text.html?sticky=true&theme=theme-a&cols=3&text-align=right"-->
+		<!-- #include virtual="/ui/$version/tsw/html/library/includes/anchor-links-free-text.html?sticky=true&theme=theme-a&cols=2&text-align=left"-->
+		<!-- #include virtual="/ui/$version/tsw/html/library/includes/anchor-links-free-text.html?sticky=true&theme=theme-a&cols=3&text-align=left"-->
+		<!-- #include virtual="/ui/$version/tsw/html/library/includes/anchor-links-free-text.html?sticky=true&theme=theme-a&cols=2&text-align=right"-->
+		<!-- #include virtual="/ui/$version/tsw/html/library/includes/anchor-links-freeform.html?sticky=true&theme=theme-b"-->
+		<!-- #include virtual="/ui/$version/tsw/html/library/includes/anchor-links-freeform.html?sticky=true&theme=theme-c"-->
+	</div>
+
+	<div class="section-container constrain-960">
+		<div class="colspan-8">
+			<div class="col-content">
+				<h1 id="navigation-1">Section-1</h1>
+				<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+			</div>
+		</div>
+		<div class="section-container constrain-960">
+			<div class="colspan-12">
+				<div class="col-content">
+					<h2>State Change Links</h2>
+					<p>The links below change various states of the UI, such as authenticated user views and locations.</p>
+					<ul>
+						<li><a href="?authenticated=true" title="Mimic Authenticated User">Authenticated User (for <b>My Account</b> panel)</a></li>
+						<li><a href="?location=outside" title="Mimic Location OUTSIDE Cox Footprint">Outside Cox Footprint (for <b>Location</b> panel)</a></li>
+						<li><a href="?location=customer" title="Mimic Location INSIDE Cox Footprint">Inside Cox Footprint (for <b>Location</b> panel)</a></li>
+						<li><a href="?location=invalid" title="Mimic Location INVALID">Invalid Location (for <b>Location</b> panel)</a></li>
+					</ul>
+					<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+					<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+					<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+					<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+					<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="section-container constrain-960">
+		<div class="colspan-8">
+			<div class="col-content">
+				<h2 id="navigation-2">Section-2</h2>
+				<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+			</div>
+		</div>
+		<div class="section-container constrain-960 text-align-center">
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi3-top.html?content=most"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi3-top.html?content=more"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi3-top.html"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi3-top.html"-->
+		</div>
+	</div>
+
+	<div class="section-container constrain-960 text-align-center">
+		<div class="colspan-8">
+			<div class="col-content">
+				<h2 id="navigation-3">Section-3</h2>				
+			</div>
+		</div>
+		<div class="section-container constrain-960 text-align-center">
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi4-left.html"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi4-left.html?content=more"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi4-left.html"-->
+		</div>
+	</div>
+	
+	<div class="section-container constrain-960 text-align-center">
+		<div class="colspan-8">
+			<div class="col-content">
+				<h2 id="navigation-4">Section-4</h2>				
+			</div>
+		</div>
+		<div class="section-container constrain-960 text-align-center">
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi4-left.html"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi4-left.html?content=more"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi4-left.html"-->
+		</div>
+	</div>
+	
+	<div class="section-container constrain-960 text-align-center">
+		<div class="colspan-8">
+			<div class="col-content">
+				<h2 id="navigation-5">Section-5</h2>				
+			</div>
+		</div>
+		<div class="section-container constrain-960 text-align-center">
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi6-top.html?content=most"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi6-top.html"-->
+		</div>
+	</div>
+	
+	<div class="section-container constrain-960 text-align-center">
+		<div class="colspan-8">
+			<div class="col-content">
+				<h2 id="navigation-6">Section-6</h2>				
+			</div>
+		</div>
+		<div class="section-container constrain-960 text-align-center">
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi5-top.html?content=more"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi5-top.html?content=most"-->
+		</div>
+	</div>
+	
+	
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

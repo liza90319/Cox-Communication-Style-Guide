@@ -1,0 +1,10 @@
+/* disclaimer */
+
+.disclaimer {
+	font-size: 12px;
+	color: #666;
+	margin-bottom: 30px;
+}
+.disclaimer .col-content { /* for older non-aem implementations */
+	font-size: 12px;
+}

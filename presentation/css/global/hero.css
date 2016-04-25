@@ -1,0 +1,258 @@
+/* Default Hero Styles */
+
+.hero-block {
+	margin: 0 auto;
+	max-width: 1280px;
+	overflow: hidden;
+	text-align: left;
+	position: relative;
+}
+.hero-block .hero-image {
+	display: block;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.hero-block .text-block {
+	width: 960px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+	color: #252525;
+	cursor: pointer;
+	display: table; /* allow for vertical align center of content */
+}
+.hero-block .position-content {
+	position: relative;
+	vertical-align: middle; /* allow for vertical align center of content */
+}
+.hero-block .position-content-desktop-middle {
+	top: 0 !important;
+	display: table-cell;
+}
+.hero-block .font-white * {
+	color: #fff; /* cannot have an important flag otherwise the inline color overrides will not work */
+}
+.hero-block p {
+	line-height: 1.25em;
+	margin-bottom: 11px;
+	font-size: 1.25em; /* 20px */
+}
+
+/* ability to add a page title into a hero */
+.hero h1 {
+	font-size: 1.875em;
+}
+
+/* hero sizes */
+.hero-slim {
+	height: 300px;
+}
+.hero {
+	height: 450px;
+}
+.hero-super {
+	height: 750px;
+}
+
+/* Super Hero Specific Styles */
+.hero-super h1,
+.hero-super h2 {
+	font-size: 3.25em; /* 52px */
+}
+.hero-super p {
+	font-size: 1.875em; /* 30px */
+	line-height: 1.133em; /* 34px */
+	margin: 10px 0px 9px;
+}
+
+/* remove the additional col-content margin around the Adobe drop components */
+.hero-block .aem-rte .col-content,
+.hero-block .aem-cta .col-content {
+	margin: 0;
+}
+
+/* mobile styles */
+@media screen and (max-width: 767px) {
+	.hero-block {
+		max-width: 100%;
+		position: relative;
+	}
+	.hero-super h1,
+	.hero-super h2 {
+		font-size: 1.875em; /* 30px */
+	}
+	.hero-block .text-block {
+		width: 100%;
+		display: table;
+	}
+	.hero-block .position-content {
+		left: 0 !important; /* !important needed to override inline styles */
+		padding: 0 20px; /* margin does not work with the table-cell in mobile */
+	}
+	.hero-block .text-wrapper {
+		width: 100% !important; /* !important needed to override inline styles */
+	}
+	.hero-block .button {
+		position: absolute;
+		margin: 10px;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+	.position-button {
+		padding-bottom: 65px;
+	}
+
+	/* resize heros */
+	.hero-slim,
+	.hero-slim .hero-image {
+		height: 300px;
+	}
+	.hero,
+	.hero-super,
+	.hero .hero-image,
+	.hero-super .hero-image {
+		height: 390px;
+	}
+
+	/* super hero mobile styles */
+	.hero-super p {
+		font-size: 1.25em;
+	}
+
+	.hero-text-top {
+		top: 20px !important;
+	}
+	.hero-block .position-content-mobile-middle {
+		top: 0 !important;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.hero-block .hero-text-underlay {
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+	.hero-block .hero-text-underlay * {
+		color: #fff;
+	}
+
+	.hero-block .text-block .button {
+		display: none !important;
+	}
+}
+
+/* Target specific */
+@media only screen and (orientation: landscape) {
+	body[data-os='ios'] .hero-block .mobile-only {
+		margin-top: 5px;
+	}
+}
+
+/* tabbed hero component with custom controls */
+.hero-tabs {
+	font-size: 16px;
+	max-width: 1280px;
+	margin: 0 auto;
+	position: relative;
+}
+.hero-tabs .flexslider-controls {
+	margin: 0;
+	list-style: none;
+	position: absolute;
+	top: -450px;
+	right: 0;
+	width: 30%;
+}
+.hero-tabs .flexslider-controls:before {
+	content: "";
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 1px;
+	background: #cccccc; /* Old browsers */
+	background: -moz-linear-gradient(left,  #cccccc 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#cccccc), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #cccccc 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #cccccc 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #cccccc 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to right,  #cccccc 0%,#ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 */
+}
+.hero-tabs .flexslider-controls li {
+	max-width: 400px;
+	height: 112.5px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #ffffff 72%, #ffffff 72%, #cccccc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(72%,#ffffff), color-stop(72%,#ffffff), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#ffffff 72%,#ffffff 72%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#ffffff 72%,#ffffff 72%,#cccccc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#ffffff 72%,#ffffff 72%,#cccccc 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#ffffff 72%,#ffffff 72%,#cccccc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cccccc',GradientType=0 ); /* IE6-8 */
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+}
+.hero-tabs .flexslider-controls li.flex-active {
+	border-top: 0;
+	color: #fff;
+	filter: none;
+	background-color: #098DCD; /* svg fallback */
+}
+.hero-tabs .flexslider-controls li.flex-active:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: -45px;
+	/*width: calc(100% + 45px);*/
+	width: calc(100% - -45px); /* fixes YUI compressor bug which removes spaces in above line */
+	height: 100%;
+	background: url(/ui/$version/tsw/img/interface/hero/arrow-tab-residential.svg) no-repeat;
+	background-size: cover;
+}
+.IE8 .hero-tabs .flexslider-controls li.flex-active:before {
+	left: -40px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 56px 40px 56px 0;
+	border-color: transparent #098ccd transparent transparent;
+}
+.hero-tabs .flexslider-controls li .hero-tab {
+	vertical-align: middle;
+	display: table-cell;
+	height: 112.4px;
+	padding: 0 30px;
+}
+.hero-tabs .flexslider-controls li a {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+}
+.hero-tabs .flexslider-controls li p {
+	margin: 0;
+}
+.hero-tabs .flexslider-controls li.flex-active * {
+	color: #fff !important; /* override any inline style set in html for inactive */
+}
+
+@media screen and (max-width: 767px) {
+	/* change the desktop hero tabs to the dot style (class name switch with hero.js) */
+	.hero-tabs .flex-control-nav li {
+		width: 17px;
+		height: 17px;
+		display: inline-block;
+		background: url('/ui/$version/tsw/img/global/icons/carousel-controls.png') no-repeat center top;
+		cursor: pointer;
+		max-width: auto;
+	}
+	.hero-tabs .flex-control-nav li.flex-active {
+		background-position: center bottom;
+		cursor: default;
+	}
+	.hero-tabs .flex-control-nav li div {
+		display: none !important;
+	}
+}

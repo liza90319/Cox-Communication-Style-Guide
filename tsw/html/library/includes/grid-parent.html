@@ -1,0 +1,36 @@
+<!--#if expr="${QUERY_STRING} = /parent-colspan=(.*?)(&|$)/"-->
+	<!--#set var="parent-colspan" value="${1}"-->
+<!--#endif-->
+<!--#if expr="${QUERY_STRING} = /child-cols=(.*?)(&|$)/"-->
+	<!--#set var="child-cols" value="${1}"-->
+<!--#endif-->
+<div class="colspan-<!--#echo var="parent-colspan"-->">
+	<div class="col-content">
+		<h3>Widget</h3>
+		<h4><code>.colspan-<!--#echo var="parent-colspan"--></code></h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div class="cols-<!--#echo var="child-cols"-->">
+<!--#if expr="${child-cols} = 4"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=1"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=1"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=1"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=1"-->
+<!--#elif expr="${child-cols} = 3"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=1"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=2"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=3"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=1"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=1"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=1"-->
+<!--#elif expr="${child-cols} = 2"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=1"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=1"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=2"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=1"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=1"-->
+<!--#elif expr="${child-cols} = 1"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/grid-child.html?child-colspan=12"-->
+<!--#endif-->
+	</div>
+</div>

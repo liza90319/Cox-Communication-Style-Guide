@@ -1,0 +1,36 @@
+/* sub-nav.css */
+.sub-nav {
+	padding-top: 9px; /* to handle text text wrapping and vertical button alignment */
+}
+.sub-nav .button,
+.sub-nav .button-secondary,
+.sub-nav .button-payment {
+	float: right;
+	margin-top: -9px; /* to handle text text wrapping and vertical button alignment */
+}
+.sub-nav .col-content {
+	margin-bottom: 15px;
+}
+
+.sub-nav .active {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	color: #252525;
+}
+
+/* themes */
+.sub-nav.theme-b {
+	background-color: #f2f2f2;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+	.sub-nav .button,
+	.sub-nav .button-secondary,
+	.sub-nav .button-payment {
+		float: none;
+		margin-top: 2px;
+	}
+	.sub-nav div {
+		margin: 7px 0;
+	}
+}

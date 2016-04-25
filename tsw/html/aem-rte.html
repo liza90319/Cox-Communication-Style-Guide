@@ -1,0 +1,127 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<div class="cols-grid">
+	<div class="colspan-12 col-reset text-align-center">
+		<h1>Adobe Rich Text Editor - Custom Styles Dropdown</h1>
+		<p>Note that these are all wrapped in a span based on the <a href="http://docs.adobe.com/docs/en/aem/6-0/administer/operations/page-authoring/rich-text-editor.html#Styles%20(Text)" target="_blank">Adobe Implementation.</a></p>
+	</div>
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>General RTE</h2>
+	</div>
+	<div class="section-container constrain-960">
+		<!-- rte -->
+		<div class="aem-rte">
+			<div class="col-content">
+				<h1>Heading 1</h1>
+				<!-- primary button style -->
+				<span class="aem-cta">
+					<span class="col-content">
+						<span class="button"><a href="#">Button</a></span>
+					</span>
+				</span>
+				<!-- /primary button style -->
+				<!-- secondary button style -->
+				<span class="aem-cta">
+					<span class="col-content">
+						<span class="button-secondary"><a href="#">Button</a></span>
+					</span>
+				</span>
+				<!-- /secondary button style -->
+				<!-- payment button style -->
+				<span class="aem-cta">
+					<span class="col-content">
+						<span class="button-payment"><a href="#">Button</a></span>
+					</span>
+				</span>
+				<!-- /payment button style -->
+			</div>
+		</div>
+		<!-- /rte -->
+	</div>
+		
+	<div class="colspan-12 col-reset library-header">
+		<h2>Icon (Check)</h2>
+	</div>
+	<div class="section-container constrain-960">
+		<!-- check style -->
+		<div class="icon-check"></div>
+		<!-- /disclaimer style -->
+	</div>
+	
+	<div class="colspan-12 col-reset library-header">
+		<h2>Icon (Cross)</h2>
+	</div>
+	<div class="section-container constrain-960">
+		<!-- check style -->
+		<div class="icon-cross"></div>
+		<!-- /disclaimer style -->
+	</div>
+	
+	<div class="colspan-12 col-reset library-header">
+		<h2>Disclaimer</h2>
+	</div>
+	<div class="section-container constrain-960">
+		<!-- disclaimer style -->
+		<div class="disclaimer">
+			<div class="col-content">
+				<p>
+					On DEMAND programming varies by market and is not available in all areas. Available to residential Cox Advanced TV customers. Visit starz.com
+					for airdates/times. STARZ and related channels and service marks are the property of Starz Entertainment, LLC. Pompeii &copy; 2014Constantin Film
+					International GMBH and Impact Pictures (Pompeii), Inc. Muppets Most Wanted &copy; Disney. All rights reserved. On Demand requires a Cox
+					digital reciever or a Cox-provided CableCard &reg; together with a certified compatible Tru2Way CableCard retail device. See CableCard FAQ's
+					on cox.com for details. Some On Demand programming may be extra. On Demand Channels  cannot be recorded. Installation fees, Cox equipment charges, taxes,
+					franchise fees and other surcharges are additional. Other restrictions may apply.
+				</p>
+			</div>
+		</div>
+		<!-- /disclaimer style -->
+	</div>
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Button (Primary)</h2>
+	</div>
+	<div class="section-container constrain-960">
+		<!-- primary button style -->
+		<span class="aem-cta">
+			<span class="col-content">
+				<span class="button"><a href="#">Button</a></span>
+			</span>
+		</span>
+		<!-- /primary button style -->
+	</div>
+	
+	<div class="colspan-12 col-reset library-header">
+		<h2>Button (Secondary)</h2>
+	</div>
+	<div class="section-container constrain-960">
+		<!-- secondary button style -->
+		<span class="aem-cta">
+			<span class="col-content">
+				<span class="button-secondary"><a href="#">Button</a></span>
+			</span>
+		</span>
+		<!-- /secondary button style -->
+	</div>
+	
+	<div class="colspan-12 col-reset library-header">
+		<h2>Button (Payment)</h2>
+	</div>
+	<div class="section-container constrain-960 col-reset">
+		<!-- payment button style -->
+		<span class="aem-cta">
+			<span class="col-content">
+				<span class="button-payment"><a href="#">Button</a></span>
+			</span>
+		</span>
+		<!-- /payment button style -->
+	</div>
+
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

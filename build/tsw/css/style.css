@@ -1,0 +1,560 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Side Menu Styling*/
+
+/*
+OLD WORKING CODES
+#nav .nav-stacked .active{
+	background-color:#1B5C9C;
+	font-weight:bolder;
+	color:white;
+	}
+#nav .nav-stacked .active a{
+	display:block;
+	color:#f4f4f4;
+	}
+OLD WORKING CODES
+*/
+
+.nav .nav .nav{
+	display:none;
+	}
+	
+/*Styling 2-tier titles such as "Grid and Columns, Colors, Typography, etc.*/
+.nav .active .nav .active>a{
+	background-color: #1B5C9C;
+	color:#f4f4f4;
+	font-weight:bold;
+	}
+
+/*collapsible list indentation*/
+.nav .nav .active .nav{
+	display:block;
+	font-size:14px;
+	padding-left:2em;
+	}
+/*collapsible list background color*/	
+.nav .nav .active .nav .active {
+	background-color: #1B5C9C;
+	color:#f4f4f4;
+	}
+/*collapsible list font color and weigt*/
+.nav .nav .active .nav .active a{
+	color:#f4f4f4;
+	font-weight:bold;
+	}
+	
+.sidebar.affix-top {
+    position: static;
+  	margin-top:30px;
+  	width:228px;
+  }
+  
+.sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+  }
+
+
+	/* Styling grid nodes */
+.grid-sample .col-content {
+		border: 1px solid #c9c9c9;
+		background-color: #e9e9e9;
+	}
+
+#res_grid_and_columns .col-content {
+		text-align:center;
+		border: 1px solid #E8E8E5;
+		background-color:#F4F4F4;
+		color: #455051;
+	}
+#internal_columns .cols-3 > .colspan-1 > .col-content,
+				   .cols-3 > .colspan-2,
+				   .cols-4 > .colspan-1,
+				   .cols-4 > .colspan-2,
+				   .cols-4 > .colspan-1,
+				   .cols-2 > .colspan-1{
+	padding: 1em 1em;
+	}
+
+.col-content h4 {
+		color: #fff;
+	}
+
+.grid-sample.centered p {
+		text-align: center;
+	}
+
+.grid-sample .col-content p {
+		margin-top: 5px;
+	}
+
+	/* Styling Colors */
+.color_palette{
+	width:100%;
+	height:6.5em;
+	border-radius:2px;
+	min-width:5em;
+	max-width:15em;
+	display:inline-block;
+	}
+..color_palette h5{
+	display:inline;
+	}
+.color_palette h5, h4, h6, small{
+	display:inline-block;
+	padding:0 auto;
+	margin:0 auto;
+	}
+/* make sidebar nav vertical */ 
+
+   #side-menu h4{
+	   padding:0 1em;
+	   }
+	
+   .badge{
+	   margin-right:1em;
+
+	   }
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+  }
+  .sidebar-nav .navbar ul:not {
+    display: block;
+  }
+
+  .sidebar-nav .navbar li a {
+    padding-top: .2em;
+    padding-bottom: .2em;
+	padding-left: 2em;
+  }
+
+.toggle_code{
+	width:2em;
+	height:1.5em;
+	background:url(../../../tsw/img/global/sourcecode-01.svg) no-repeat;
+	}
+.sourcecode{
+	text-align:left !important;
+	}
+.comments{
+	font-size:2em;
+	color:#D40508;
+	font-weight:bold;
+	display:block;
+	background-color:#FAE862;
+	}
+@import url(http://fonts.googleapis.com/css?family=Voltaire);
+@font-face{
+	font-family:"OpenSans Regular";
+	src: url('../../../presentation/css/fonts/OpenSans-Regular-webfont.woff') format('embedded-opentype'), /* IE6-IE8 */
+         url('../../../presentation/css/fonts/OpenSans-Regular-webfont.woff') format('woff');
+}
+@font-face{
+	font-family:'OpenSans Bold';
+	src:
+	url('../../../presentation/css/fonts/OpenSans-Bold-webfont.woff') format('embedded-opentype'),
+	url('../../../presentation/css/fonts/OpenSans-Bold-webfont.woff') format('woff');
+	}
+	
+	
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family:'OpenSans Regular',Arial,sans-serif;
+}
+
+/* fix bs3 horizontal scrollbar bug */
+.row { margin: 0; padding: 0 }
+
+
+/* use special fonts in certain elements */
+h1,h2,h3,h4,.lead,.btn,.navbar a {
+  /*text-transform:uppercase;*/
+  font-family:'OpenSans Regular',Arial,sans-serif;
+  /*letter-spacing:2px;*/
+}
+
+h1 {
+  font-size:50px;
+}
+
+/* make images gray */
+img.grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+}
+
+.icon-bar {
+   background-color:#fff;
+}
+
+.scroll-down a, .scroll-top a {
+   color:#ffffff;
+}
+
+.scroll-down {
+   position:fixed;
+   bottom:20%;
+   right:0%;
+   color:#f9f9f9;
+}
+
+.scroll-top {
+  background-color:#dbdbdb;
+}
+
+.vert {
+  vertical-align: middle;
+  width:100%;
+  padding-top:10%;
+  text-align:center;
+}
+
+.header .btn-lg {
+   font-size:1em;
+   width:8.5em;
+   height:2.5em;
+   padding:0 auto;
+   border-color:#eeeeee;
+   margin:.2em .3em .2em .3em;
+   padding:15px 15px;
+   background-color:transparent;
+   color:#ffffff;
+}
+
+.header .btn-lg:hover {
+   background-color:#eeeeee;
+   color:#777777;
+}
+
+.btn-download{
+	padding:10px 10px;
+	background-color:#E9E9E9;
+	color:#0A3167;
+	border-radius:none;
+	background-color:#E5AF28;
+	}
+
+
+.navbar a {
+  color:#fff;
+  font-size:14px;
+}
+
+.navbar-bold.affix {
+  background-color:#d46054;
+}
+
+.navbar-bold {
+  background-color:#f68076;
+  font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.navbar-bold li a:hover, .navbar-bold li.active {
+  background-color:#d46054;
+}
+
+    
+.header h1 {
+  font-size:80px;
+  -webkit-text-stroke: 1px rgba(f,f,f,0.1);
+  color:#431a6d;
+  color:#fff;
+  margin-left:-5px;
+  margin-bottom:5px;
+  text-transform:uppercase;
+}
+
+.header{
+  color:#d46054;
+  font-size:25px;
+}
+
+.lead1{
+	color: #F4F4F4;
+	font-size:20px;
+}
+.lead{
+   color:#7B7D7D;
+   font-size:20px;
+}
+
+
+/* -------------navbar.inc.php-------------- */
+#navbar{padding-top:.5em;}
+#navbar li {margin-left:2em;}
+#navbar li a{font-size:1.2em;}
+.navbar-fixed-top{
+	-webkit-box-shadow: 0px 5px 14px 0px rgba(51,51,51,0.47);
+	-moz-box-shadow: 0px 5px 14px 0px rgba(51,51,51,0.47);
+	box-shadow: 0px 5px 14px 0px rgba(51,51,51,0.47);
+}
+.alt{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0a3167+0,1b5c9c+50,00bdcd+100 */
+	background: #0a3167; /* Old browsers */
+	background: -moz-linear-gradient(45deg, #0a3167 0%, #1b5c9c 50%, #00bdcd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#0a3167), color-stop(50%,#1b5c9c), color-stop(100%,#00bdcd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg, #0a3167 0%,#1b5c9c 50%,#00bdcd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg, #0a3167 0%,#1b5c9c 50%,#00bdcd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg, #0a3167 0%,#1b5c9c 50%,#00bdcd 100%); /* IE10+ */
+	background: linear-gradient(45deg, #0a3167 0%,#1b5c9c 50%,#00bdcd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a3167', endColorstr='#00bdcd',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.header {
+  height: 100%;
+  background-size: cover;
+}
+
+
+
+.alt.affix {
+  background-color:#0A3167;
+}
+
+.alt li a:hover, .alt li.active {
+  background-color:#1B5C9C;
+}
+
+
+.blurb {
+  padding: 120px 0;
+  background-color:#fefefe;
+}
+
+.blurb .panel {
+  background-color:transparent;
+}
+
+.bright {
+  background: #dbdbdb url('http://www.bootply.com/assets/example/pt_topo.png') repeat center center fixed; 
+  color:#777;
+}
+
+.featurette {
+  background: #222334;
+  padding: 50px 0;
+  color: #ffffff;
+}
+
+.featurette-item {
+  margin-bottom: 15px;
+}
+
+.featurette-item > i {
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 56px;
+  width: 140px;
+  height: 140px;
+  line-height: 136px;
+  vertical-align: middle; 
+  text-align: center;
+}
+
+.featurette-item > i:hover {
+  font-size: 68px;
+}
+
+.callout {
+  color: #ffffff;
+  padding-top:7%;
+  height: 100%;
+  width: 100%;
+  background: url('http://www.bootply.com/assets/example/bg_suburb.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.gallery {
+  padding: 50px 0;
+}
+
+.call-to-action {
+  background: #eeeeee;
+  padding: 50px 0;
+}
+
+.call-to-action .btn {
+  margin: 10px;
+}
+
+footer {
+  padding: 100px 0;
+}
+
+/* ----------------P R I S M . J S    S T Y L I N G ---------------------*/
+
+.clipboard{
+	position:relative;
+	display:block;
+}
+.btn-clipboard{
+	position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: block;
+    padding: 6px 9px;
+    font-size: 14px;
+    color: #5E5E5E;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #e1e1e8;
+    border-radius: 0 3px 0 3px;
+	top: -42px;
+	right:-16px;
+    border-top-right-radius: 0;
+}
+
+pre{
+	border:none;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #7B7D7D;
+	text-shadow: none;
+	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+.token.tag, .token.attr-name{
+	color:#1B5C9C;
+	}
+.token.attr-value{
+	color:#D3544C;
+	}
+
+#nav input[type=text] {
+  border-bottom: 1px solid #1B5C9C;
+  border-radius: 0;
+	background-color:white;
+	box-shadow:none;
+  -webkit-appearance: none;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+.sidebar-nav .navbar li {
+   	margin-left:1em;
+    display:inline-block;
+	float:left;
+	
+  }
+  
+}
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.affix{
+		position:relative;
+		display:inline-block;}
+	#nav{
+		margin-top:0 !important;
+		position:relative;
+		display:inline-block;
+		}
+	.nav>li{
+		display:inline-block;
+	}
+	.nav>li>ul>li>a{border:1px solid #1B5C9C;
+	border-radius:.6em;
+	margin:.2em .2em;
+	float:left;}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.affix{
+		position:relative;
+		display:inline-block;}
+	#nav{
+		margin-top:0 !important;
+		position:relative;
+		display:inline-block;
+		}
+	.nav>li{
+		display:inline-block;
+	}
+	.nav>li>ul>li>a{border:1px solid #1B5C9C;
+	border-radius:.6em;
+	margin:.2em .2em;
+	float:left;}
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    
+}

@@ -1,0 +1,141 @@
+/* styling for individual components */
+
+/* section container */
+.section-container {
+	position: relative;
+	margin: 0 auto;
+	background-repeat: no-repeat; /* to support an inline background image */
+}
+.section-container:after { /* to help prevent pages from breaking if someone does not clear a float properly */
+	content: " ";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* new googletagservices */
+.ad-widget .col-content {
+	text-align: center;
+}
+
+/* doubleclick ads (remove after ad update is live) */
+.ad-container iframe {
+	width: 160px;
+	height: 600px;
+}
+.colspan-4 .ad-container {
+	text-align: right;
+}
+.colspan-4 .ad-container iframe {
+	width: 300px;
+	height: 250px;
+}
+
+/*price component */
+.clear {
+	clear: both;
+}
+/* pricing button */
+.pricing a {
+	margin: 12px 0 -3px 0; 
+	*margin: 25px 0 -3px 0; /* ie7 - fix for alignment */
+}
+
+.pricing .price-value {	
+	float: left;	
+	*line-height: normal; 
+	margin: 22px 20px 0 0; 
+}
+
+.pricing .price-value-margin {
+    margin-bottom:15px !important;
+}    
+
+.pricing .per-month {
+    margin-left: -30px;
+    margin-top: 10px !important;
+    font-size:40% !important;    
+}
+
+/*pricing for 47px size*/
+.pricing .small {	
+	font-size: 2.938em;	
+}
+.pricing span {
+	float: left;
+}
+.pricing .small span {	
+	font-size: 50%;	
+	margin-top: -8px;
+	*margin-top: 5px; /* ie7 - fix for alignment */
+}
+.pricing .price-value div {
+	float: left;
+	margin-bottom: 8px;
+}
+
+/*pricing for 60px size hero widget*/
+.pricing .medium {
+	font-size: 3.750em;
+	margin: 12px 0 30px;
+}
+.pricing .medium span {
+	font-size: 50%;
+	margin-top: -10px;
+	*margin-top: 0; /* ie7 - fix for alignment */
+}
+/*pricing for 70px size super-hero widget*/
+.pricing .large {
+	font-size: 4.375em;
+	margin: 30px 0 25px;
+}
+.pricing .large span {
+	font-size: 55%;
+    margin-top: -15px;
+	*margin-top: 0; /* ie7 - fix for alignment */
+}
+
+
+/* callout */
+.callout {
+	background: url(/ui/$version/tsw/img/global/callout-bg.png) no-repeat;
+	margin: 0 0 20px;
+}
+.callout .col-content {
+	margin: 20px 10px 0 20px !important;
+	font-size: 14px; /* font size override to not break My Account with base size increase to 16px */
+}
+.callout p {
+	margin-bottom: 5px;
+}
+.callout h4 {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	font-size: 1em; /* font size override to not break My Account with base size increase to 16px */
+	line-height: 1.143em; /* line-height override to not break My Account with base size increase to 16px */
+}
+.callout .button-secondary,
+.callout .button-payment {
+	font-size: 1em;  /* font size override to get buttons to an even 14px with .col-content override above */
+}
+
+/* link lists (used by MyAccount and Email Us Form)*/
+.link-listing .link-lists {
+	margin: 15px 0;
+}
+.link-listing a {
+	display: block;
+    margin: 5px 0;
+}
+.link-listing p {
+	margin: 10px 0 20px;
+}
+
+/* mobile styles */
+@media screen and (max-width: 767px) {
+	/* page divider */
+	.page-divider { /* fixes horizontal scroll that gets added */
+		margin-left: 0;
+		margin-right: 0;
+	}
+}

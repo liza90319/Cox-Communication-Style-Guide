@@ -1,0 +1,59 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<script>
+	$(function() {
+		storage = $.sessionStorage; // use session storage
+		
+		var storedKey = storage.get('myKey');
+		if (storage.isEmpty('myKey')) { 
+			$('.stored-key').html('None');
+		} else {
+			$('.stored-key').html(storedKey + ' (<a href="storage.html" class="clear-key">clear</a>)');
+		}
+
+		$("body").on("submit", ".storage-form", function(event) {
+			var keyValue = $(".keyword").val();
+			storage.set('myKey', keyValue);
+		});
+
+		$("body").on("click", ".clear-key", function(event) {
+			storage.remove('myKey');
+		});				
+	});
+</script>
+
+<div class="cols-grid">
+	<div class="colspan-12 col-reset text-align-center">
+		<h1>Session Based Storage Demo</h1>
+		<p><a href="storage.html">Reload Page</a></p>
+	</div>
+
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<div class="col-content">
+			<h3>Current Storage Value: <span class="stored-key"></span></h3>
+
+			<hr/>
+
+			<h3>Set Storage Value: </h3>
+			<form action="storage.html" method="post" class="form storage-form">
+				<input type="text" name="key" size="30" class="keyword" />
+				<input type="submit" value="Submit" />
+			</form>
+			
+			<hr/>
+			
+			<h3>Documentation</h3>
+			<p><a href="https://github.com/julien-maurel/jQuery-Storage-API" target="_blank">API Spec</a></p>
+		</div>
+	</div>
+	<!-- /section container -->
+
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

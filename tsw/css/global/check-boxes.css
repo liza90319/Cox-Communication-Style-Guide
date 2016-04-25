@@ -1,0 +1,70 @@
+/* Styling for blue check boxes */
+.check-boxes {
+	background: #ffffff;
+	color: #2757a7;
+	width: 46%;
+	/* Width needs to be change depending upon the module requirement */
+	height: 2.5em;
+	display: inline-block;
+	border: 1px solid #CCCCCC;
+	-webkit-box-shadow: 1px 1px 1px 1px #cccccc; /* FF3.5 - 3.6 */
+	-moz-box-shadow: 1px 1px 1px 1px #cccccc; /* Saf3.0+, Chrome */
+	box-shadow: 1px 1px 1px 1px #cccccc;
+	/* Opera 10.5, IE9, FF4+, Chrome 10+ */
+	padding-left: 2.5%;
+	padding-top: 2%;
+	cursor: pointer;
+}
+
+.checkbox-gap {
+	margin-right: 16px;
+	/* Gap between check box needs to be change depending upon the module requirement */
+}
+
+.check-boxes.active-check a {
+	color: #E8E8E8 !important;
+}
+/* Css for checked install option selection box */
+.check-boxes.active-check {
+	background-color: #0a3167;
+	color: #ffffff !important;
+	display: inline-block;
+	border: 1px solid #0a3167;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.50) inset;
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.50) inset;
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.50) inset;
+}
+
+.check-boxes.focused-check {
+	box-shadow: 0 0 5px #2757a7;
+	-webkit-box-shadow: 0 0 5px #2757a7;
+	-moz-box-shadow: 0 0 5px #2757a7;
+}
+
+.checkbox-block input[type="checkbox"]+label:before {
+	background: none;
+	width: 0px;
+}
+
+
+
+@media screen and (max-width: 767px) {
+	.check-text {
+		font-size: 0.89em;
+		/* overriding to 16px as desktop font size was appearing too small in mobile */
+	}
+	/* Mobile version Css for unchecked install option selection box */
+	.check-boxes {
+		padding: 3% 0 3% 0;
+		display: inline-block;
+		margin-bottom: 7%;
+		height: 1%;
+		margin-right: 0;
+		text-align: center;
+		font-size: 1em !important;
+		-webkit-box-shadow: 1px 1px 0px 0px #cccccc; /* FF3.5 - 3.6 */
+		-moz-box-shadow: 1px 1px 0px 0px #cccccc; /* Saf3.0+, Chrome */
+		box-shadow: 1px 1px 0px 0px #cccccc;
+		/* Opera 10.5, IE9, FF4+, Chrome 10+ */
+	}
+}

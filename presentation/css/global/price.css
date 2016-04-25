@@ -1,0 +1,138 @@
+/*price component */
+.price .product-name {
+	font-weight: 100;
+	font-family: "open_sansbold", Arial, Helvetica, Sans-serif;
+	font-size: 0.875em; /* 14px */
+	margin-bottom: 11px;
+	display: block;
+}
+.price .product-name + .free,
+.price .product-name + .price-value {
+	margin-top: -5px;
+}
+.price .offer-start {
+	font-size: 0.96em;
+	margin-bottom: -4px;
+}
+.price .free,
+.price .price-value {
+	line-height: 2.33em;
+	font-size: 1.41em;
+	position: relative;
+	display: inline-block;
+	margin-bottom: -3px;
+}
+.price .free p,
+.price .price-value div {
+	font-size: 2.23em;
+}
+.price .free p {
+	line-height: inherit;
+	margin-bottom: 0px;
+}
+.price .price-value div,
+.price .price-value span {
+	float: left;
+}
+.price .price-value span {
+	margin-top: -7px;
+}
+.price .price-value .recurrence {
+	margin-left: -32px;
+	font-size: 0.9em;
+	position: relative;
+	margin-top: 0;
+	top: 12px;
+}
+.price .price-details {
+	font-size: 0.750em; /* 12px */
+}
+.price .price-details p {
+	margin-bottom: 0;
+}
+
+.price .price-terms {
+	margin-top: 13px;
+	font-size: 0.875em; /* 14px */
+}
+.price .price-terms p,
+.price .price-terms ul,
+.price .price-terms li {
+	margin-bottom: 8px;
+	font-size: 1em;
+}
+
+/* promotional savings */
+.price .price-terms .saving-promotional {
+	color: #00892d;
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	margin-bottom: 8px;
+}
+.price .price-terms .saving-promotional p {
+	margin: 0;
+}
+/* crazy css below due to all the html markup coming back from the catalog */
+.price .price-terms .saving-promotional .saving-sticker-img + div {
+	padding-left: 20px;
+}
+/* add the icon to the first line of copy */
+.price .price-terms .saving-promotional .saving-sticker-img + div > :first-child:before {
+	background: url("/ui/$version/tsw/img/global/icons/price-savings.png") no-repeat 0 0;
+	content: "";
+	position: relative;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	padding-left: 5px;
+	margin-left: -20px;
+	top: 3px;
+}
+
+/* price guarantee */
+.price .price-terms .price-guarantee {
+	font: 0.857em "open_sanssemibold", Arial, Helvetica, Sans-serif; /* 12px */
+	padding-left: 20px;
+	margin-bottom: 8px !important;
+}
+.price .price-terms .price-guarantee > :first-child:before {
+	background: url("/ui/$version/tsw/img/global/icons/price-lock.png") no-repeat 0 0;
+	content: "";
+	position: relative;
+	width: 15px;
+	height: 16px;
+	display: inline-block;
+	padding-left: 5px;
+	margin-left: -20px;
+	top: 1px;
+}
+.font-white .price .price-terms .price-guarantee > :first-child:before { /* used in hero for now */
+	background-position: 0 -53px;
+}
+.price .button,
+.price .button-payment,
+.price .button-secondary {
+	margin-top: 26px;
+}
+
+/* Pricing Highlights */
+.pricing-higlights {
+	margin-top: 30px;
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+}
+.pricing-higlights .col-content {
+	margin: 0 10px 10px; /* offer comparison on col-content was resetting to zero */
+}
+
+/* mobile styles */
+@media screen and (max-width: 767px) {
+	/* Pricing Highlights */
+	.pricing-higlights .colspan-2 {
+		max-width: 50%;
+		min-width: 50%;
+		width: 50%;
+	}
+
+	.hero-text-underlay .price .price-terms .price-guarantee > :first-child:before { /* used in hero for now */
+		background-position: 0 -53px;
+	}	
+}

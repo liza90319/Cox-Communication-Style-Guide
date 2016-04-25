@@ -1,0 +1,51 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<div class="cols-grid">
+	<div class="colspan-12 col-reset text-align-center">
+		<h1>Adaptive Image</h1>
+	</div>
+	
+	<div class="colspan-12 col-reset library-header" id="ph-left">
+		<h2>Alignment - left</h2>
+	</div>
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/adaptive-image.html?alignment=image-left"-->
+	</div>
+	<!-- /section container -->
+
+	<div class="colspan-12 col-reset library-header" id="ph-left">
+		<h2>Alignment - center</h2>
+	</div>
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/adaptive-image.html?alignment=image-center"-->
+	</div>
+	<!-- /section container -->
+	
+	<div class="colspan-12 col-reset library-header" id="ph-left">
+		<h2>Alignment - right</h2>
+	</div>
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/adaptive-image.html?alignment=image-right"-->
+	</div>
+	<!-- /section container -->
+
+	<div class="colspan-12 col-reset library-header" id="ph-left">
+		<h2>Alignment - center with margin example (20px top margin, 20px bottom margin)</h2>
+	</div>
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/adaptive-image.html?alignment=image-center&margin-top=20&margin-bottom=20"-->
+	</div>
+	<!-- /section container -->
+	
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

@@ -1,0 +1,58 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<div class="library-header">
+	<h1>Best Offers</h1>
+</div>
+
+<!-- section container -->
+<div class="library-module section-container constrain-960 text-align-center">
+	<ul class="slick-carousel col-reset best-offer-container" data-show-slides="3">
+		<li>
+			<!--#set var="pricingRecurrence" value="/mo."-->
+			<!--#set var="pricingDetails" value="Per month for 24 months"-->
+			<!--#set var="pricingOfferDetailsLinkText" value="Offer Details &amp; Terms"-->
+			<!--#set var="pricingStartsAt" value="true"-->
+			<!--#set var="pricingOfferDetailsGuarantee" value="Price Lock guarantee with 24 month service agreement."-->
+			<!--#set var="pricingFreeInstallation" value="true"-->
+
+			<!--#set var="pricingDollars" value="19"-->
+			<!--#set var="pricingDetailsRegular" value="Regular price \$27.95/month."-->
+			<!--#set var="pricingOfferId" value="23412424"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/best-offer.html"-->
+		</li>
+		<li>
+			<!--#set var="pricingDollars" value="29"-->
+			<!--#set var="pricingDetailsRegular" value="Regular price \$37.95/month."-->
+			<!--#set var="pricingOfferId" value="5756878"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/best-offer.html?highlight=highlight"-->
+		</li>
+		<li>
+			<!--#set var="pricingDollars" value="39"-->
+			<!--#set var="pricingDetailsRegular" value="Regular price \$47.95/month."-->
+			<!--#set var="pricingOfferId" value="46786878"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/best-offer.html"-->
+		</li>
+		<li>
+			<!--#set var="pricingDollars" value="49"-->
+			<!--#set var="pricingDetailsRegular" value="Regular price \$57.95/month."-->
+			<!--#set var="pricingOfferId" value="68798789"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/best-offer.html"-->
+		</li>
+		<li>
+			<!--#set var="pricingDollars" value="59"-->
+			<!--#set var="pricingDetailsRegular" value="Regular price \$67.95/month."-->
+			<!--#set var="pricingOfferId" value="8657567"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/best-offer.html"-->
+		</li>
+		<li>
+			<!--#set var="pricingDollars" value="69"-->
+			<!--#set var="pricingDetailsRegular" value="Regular price \$77.95/month."-->
+			<!--#set var="pricingOfferId" value="12434654"-->
+			<!--#include virtual="/ui/$version/tsw/html/library/includes/best-offer.html?highlight=highlight"-->
+		</li>
+	</ul>
+</div>
+<!-- /section container -->

@@ -1,0 +1,54 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<div class="cols-grid">
+	<div class="colspan-12 col-reset text-align-center">
+		<h1>Section Container</h1>
+	</div>
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Width: 960px, Text Align: Left</h2>
+	</div>
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/section-container.html?size=constrain-960&alignment=text-align-left"-->
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Width: 960px, Text Align: Center</h2>
+	</div>
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/section-container.html?size=constrain-960&alignment=text-align-center"-->
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Width: 960px, Text Align: Left, Background Color, Padding: Top and Bottom</h2>
+	</div>
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/section-container.html?size=constrain-960&alignment=text-align-left&background-color=c00&padding-top=10&padding-bottom=10"-->
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Width: 960px, Text Align: Left, Background Image</h2>
+	</div>
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/section-container.html?size=constrain-960&alignment=text-align-left&background-image=/ui/$version/tsw/img/fpo/rotator/superhero3.jpg&background-position=center center"-->
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Width: 1280px, Text Align: Left</h2>
+	</div>
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/section-container.html?size=constrain-1280&alignment=text-align-left"-->
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Width: 1280px, Text Align: Center</h2>
+	</div>
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/section-container.html?size=constrain-1280&alignment=text-align-center"-->
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Width: 100%, Text Align: Left</h2>
+	</div>
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/section-container.html?alignment=text-align-left"-->
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Width: 100%, Text Align: Center</h2>
+	</div>
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/section-container.html?alignment=text-align-center"-->
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<!--#set var="version" value=""-->
+	<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+		<!--#set var="version" value="${1}"-->
+	<!--#endif-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+		<title>Cox.com TSW Prototypes</title>
+		<link href="../../build/tsw/css/all.uncompressed.css" rel="stylesheet" />
+		<link href="../../build/tsw/css/residential.uncompressed.css" rel="stylesheet" />
+		<link href="library/src/styles.css" rel="stylesheet" />
+	</head>
+	<body id="library">
+		<div id="container">
+			<div id="library-header">
+				<h1 class="library-h1" onclick="location.href='./'">Cox.com Target State Web</h1>
+			</div>
+
+			<div id="library-content" class="content-wrapper">
+				<div style="text-align:center;">
+					<div class="library-feature">
+						<h3>UI Library</h3>
+						<ul>
+							<li><a href="library/">Web Pattern Library</a></li>
+							<li>&nbsp;</li>
+							<li><a href="CMS-Schedule.html">CMS Project Schedule</a></li>
+							<li>&nbsp;</li>
+							<li>&nbsp;</li>
+						</ul>
+					</div>
+					<div class="library-feature">
+						<h3>Tech/Style Guides</h3>
+						<ul>
+							<li><a href="https://www.dropbox.com/sh/4vmdh8ravomf9yh/AABfMWxjyjfvs8vXvmohe3pXa?dl=0" target="_blank">Adobe CMS Tech Guides</a></li>
+							<li><a href="https://www.dropbox.com/s/ygmkq8kfvwrz4g8/cox_style_guide_2.0_March2014.pdf" target="_blank">Residential Style Guide</a></li>
+							<li><a href="https://myaxisconnect.cox.com/projects/SalesandMarketing/Sales%20%20Marketing%20Capabilities/Forms/AllItems.aspx?RootFolder=%2Fprojects%2FSalesandMarketing%2FSales%20%20Marketing%20Capabilities%2F728%20%2D%20New%20Landing%20Page%20Templates%2F3%20%2D%20Design%2FUX%20Design%2FDME%20and%20CLU%20UX%20Artifacts%2F006%5FStyle%5FGuide" target="_blank">DME Tech Guide</a></li>
+							<li><a href="https://www.dropbox.com/sh/pk69gzrmd8tq55w/AAB3Mje7Hym5gQ3VwAg1PbUma/TechnicalGuide_AllDigital_v4.pdf" target="_blank">All Digital Tech Guide</a></li>
+							<li><a href="https://myaxisconnect.cox.com/projects/TSW-2014/Shared%20Documents/Q%20-%20My%20Account%20iBill%20Redesign/03%20-%20UX%20Design/iBill%20Technical%20Guide%20(Version%201.0%20-%20August%202014)/TechnicalGuide_iBill_v1.0_August2014.pdf" target="_blank">iBill Tech Guide</a></li>
+						</ul>
+					</div>
+					<div class="library-feature">
+						<h3>CoxJS Framework</h3>
+						<ul>
+							<li><a href="https://myaxisconnect.cox.com/projects/CSUXD-DEV/UI%20Docs/CoxJS%20Framework.pptx" target="_blank">CoxJS Intro</a></li>
+							<li><a href="/ui/<!--#echo var="version"-->/jsdoc/" target="_blank">CoxJS API</a></li>
+							<li><a href="demo.html" target="_blank">CoxJS Demo</a></li>
+							<li>&nbsp;</li>
+						</ul>
+					</div>
+				
+				</div>
+			</div>
+			<br/>
+		</div>
+			
+		<div style="text-align:center;">
+			<h2>Site Map</h2>
+			<p>(Click a page to view the prototype)</p>
+			<div class="tree" style="width:1400px;">
+				<ul class="clearfix">
+					<li><a href="residential/Residential-Home.html" target="_blank">Residential</a>
+						<ul>
+							<li><a href="residential/digital-switch/" target="_blank">All Digital</a></li>							
+							<li><a href="#">Shop</a>
+								<ul>
+									<li><a href="residential/shop/tv/Channel-Lineup.html" target="_blank">Channel Lineup</a></li>
+								</ul>								
+							</li>						
+							<li><a href="residential/myaccount/Overview.html" target="_blank">My Account</a>
+								<ul>
+									<li><a href="residential/myaccount/Overview.html" target="_blank">Overview</a></li>
+									<li><a href="residential/myaccount/Tools.html" target="_blank">Tools</a></li>
+									<li><a href="residential/myaccount/Plan-And-Equipment.html" target="_blank">Detailed Plan &amp; Equipment</a></li>
+									<li><a href="residential/myaccount/Profile-And-Settings.html" target="_blank">Profile &amp; Settings</a></li>									
+									<li><a href="residential/myaccount/bill/View-Bill.html" target="_blank">View Bill</a>
+										<ul>
+											<li><a href="residential/myaccount/bill/Make-Payment.html" target="_blank">Pay Bill</a></li>
+											<li><a href="residential/myaccount/bill/Recent-Activity.html" target="_blank">Recent Activity</a></li>
+											<li><a href="residential/myaccount/bill/Statements.html" target="_blank">Statements</a></li>
+											<li><a href="residential/myaccount/bill/Agreements.html" target="_blank">Agreements</a></li>
+											<li><a href="residential/myaccount/bill/Paperless-Billing.html" target="_blank">Paperless Billing</a></li>
+											<li><a href="residential/myaccount/bill/Video-Bill.html" target="_blank">Video Bill</a></li>
+										</ul>
+									</li>									
+								</ul>
+							</li>							
+							<li><a href="residential/support/Support-Landing.html" target="_blank">Support</a></li>							
+							<li><a href="search/search-promote.html" target="_blank">Internal Search</a>
+							<li><a href="search/google/External-Search.html" target="_blank">External Search</a>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<h6>Last Modified: <!--#echo var="LAST_MODIFIED"--></h6>
+	
+	</body>
+</html>

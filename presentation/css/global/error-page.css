@@ -1,0 +1,15 @@
+/*
+	Server error pages (i.e., 404, 500, Site Outage, etc)
+*/
+
+.error-page .error-type {
+	font-size: 0.786em;
+}
+.error-page ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.error-page li {
+	padding-bottom: 2px;
+}

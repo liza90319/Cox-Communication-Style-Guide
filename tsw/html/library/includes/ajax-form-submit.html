@@ -1,0 +1,29 @@
+<div class="ajax-form-submit">
+	<form class="form colspan-8" action="includes/ajax-form-submit.html" method="post">
+		<div class="cols-8">
+			<fieldset class="col-reset">
+				<!-- div for displaying error message at the top -->
+				<div class="msg-error error-header"></div>
+				
+				<label class="colspan-3 required-asterisk" for="fname-input1">First Name</label>
+				<div class="colspan-9">
+					<input type="text" name="fname" id="fname-input1" size="30" class="required" placeholder="Please enter your first name"/>													
+				</div>	
+				
+				<label class="colspan-3 required-asterisk" for="lname-input2">Last Name</label>
+				<div class="colspan-9">
+					<input type="text" name="lname" id="lname-input2" size="30" class="required" placeholder="Please enter your last name" />
+				</div>
+				
+				<label class="colspan-3 required-asterisk" for="calendar-input-start">Start Date</label>
+				<div class="colspan-9">
+					<input type="text" name="calendar-input-start" id="calendar-input-start" size="10" class="required date date-picker" maxlength="10" placeholder="mm/dd/yyyy" readonly="readonly" value="02/27/1972" />
+				</div>
+		
+				<div class="colspan-12">	
+					<input type="submit" value="Submit" />
+				</div>
+	
+			</fieldset>
+		</div>
+	</form>

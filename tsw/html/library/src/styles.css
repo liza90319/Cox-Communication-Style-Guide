@@ -1,0 +1,390 @@
+/* open sans - regular */
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'open_sansregular';
+	src: url('OpenSans-Regular-webfont.eot');
+	src: url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('OpenSans-Regular-webfont.woff') format('woff'), url('OpenSans-Regular-webfont.ttf') format('truetype'), url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+}
+/* open sans - semi-bold */
+@font-face {
+	font-family: 'open_sanssemibold';
+	font-weight: normal;
+	font-style: normal;
+	src: url('open-sans.semibold-webfont.eot');
+	src: url('open-sans.semibold-webfont.eot?#iefix') format('embedded-opentype'), url('open-sans.semibold-webfont.woff') format('woff'), url('open-sans.semibold-webfont.ttf') format('truetype'), url('open-sans.semibold-webfont.svg#open_sanssemibold') format('svg');
+}
+/* open sans - bold */
+@font-face {
+	font-family: 'open_sansbold';
+	font-weight: normal;
+	font-style: normal;
+	src: url('OpenSans-Bold-webfont.eot');
+	src: url('OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('OpenSans-Bold-webfont.woff') format('woff'), url('OpenSans-Bold-webfont.ttf') format('truetype'), url('OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+}
+
+body#library {
+	color: #404040;
+	font: 12pt/1.125em "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+.menu-trigger {
+	display: none;
+}
+
+#library .library-header h1 {
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+#library .library-header h1:before,
+#library .library-header h1:after {
+	height: 1px;
+	content: '';
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	width: 30%;
+	background: #bbb;
+}
+#library .library-header h1:before {
+	background: -moz-linear-gradient(left, #ffffff 0%, #bbbbbb 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(100%,#bbbbbb)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ffffff 0%,#bbbbbb 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #ffffff 0%,#bbbbbb 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #ffffff 0%,#bbbbbb 100%); /* IE10+ */
+	background: linear-gradient(to right, #ffffff 0%,#bbbbbb 100%); /* W3C */
+	right: 17px;
+	margin-left: -50%;
+}
+#library .library-header h1:after {
+	background: -moz-linear-gradient(left, #bbbbbb 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#bbbbbb), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #bbbbbb 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #bbbbbb 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #bbbbbb 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to right, #bbbbbb 0%,#ffffff 100%); /* W3C */
+	left: 17px;
+	margin-right: -50%;
+}
+.IE9 #library .library-header h1:before,
+.IE9 #library .library-header h1:after {
+	margin: 0;
+}
+
+#library-content {
+	position: relative;
+}
+#library-menu {
+	position: fixed;
+	top: 45px;
+	width: 0;
+	height: calc(100% - 45px);
+	margin: 0;
+	overflow-y: auto;
+	transform: translate(0,0);
+	-webkit-transform: translate(0,0);
+	-webkit-transition: all 300ms;
+	transition: all 300ms;
+}
+.menu-active #library-menu {
+	width: 240px;
+}
+#library-menu a:focus {
+	text-decoration: underline;
+}
+#library-menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	border-bottom: 1px solid #fff;
+}
+#library-menu > ul {
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+#library-menu li {
+	margin: 0;
+	padding: 0;
+}
+#library-menu li.css-toggle {
+	padding: 10px;
+}
+
+/* top level menu */
+#library-menu ul li {
+	border-top: 1px solid #ccc;
+}
+#library-menu > ul > li span {
+	background-color: #e8e8e5;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 10px 20px;
+	display: block;
+	border-bottom: 1px solid #ccc;
+}
+#library-menu ul li:first-child {
+	border-top: 0;
+}
+
+/* second level  menu*/
+#library-menu ul ul li a {
+	text-decoration: none;
+	color: #333;
+	display: block;
+	font-size: 16px;
+	padding: 10px 20px;
+	background-color: #f4f4f4;
+}
+#library-menu ul ul li a:hover {
+	background-color: #e2e2e2;
+}
+#library-menu ul ul .active a {
+	font-weight: 600;
+}
+
+.content-wrapper {
+	margin-top: 80px;
+}
+
+#library-details {
+	position: relative;
+	top: 80px;
+}
+.menu-active #library-details {
+	transform: translate(280px,0);
+	-webkit-transform: translate(280px,0);
+	transition: all 0.5s linear;
+	-webkit-transition: -webkit-transform 0.5s linear;
+	width: calc(100% - 280px);
+}
+
+#library-header {
+	background: url(logo-cox.png) no-repeat;
+	min-height: 45px;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	background-color: #092c53;
+	background-image: url(logo-white.svg);
+	background-size: 66px 30px;
+	background-position: 99% 50%;
+}
+#library h1.library-h1 {
+	color: #fff;
+	font-size: 18px;
+	line-height: 24px;
+	padding: 10px 0 0 0;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	left: -41px;
+}
+
+.library-module pre {
+	font-size: 0.750em; /* 12px */
+	text-align: left;
+	margin: 10px 0 15px;
+	background-color: #eee;
+	overflow: auto;
+	display: none;
+	-moz-tab-size: 3;
+}
+.source-header {
+	background: url(source.png) no-repeat;
+	font-size: 0.750em; /* 12px */
+	text-align: left;
+	margin: 10px 10px 15px;
+	padding: 3px 0 3px 20px;
+	cursor: pointer;
+}
+
+/* feature bubble */
+.library-feature {
+	background-color: #fbfafa;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fbfafa), to(#eeedee));
+	background-image: -webkit-linear-gradient(top, #fbfafa, #eeedee);
+	background-image: -moz-linear-gradient(top, #fbfafa, #eeedee);
+	background-image: -ms-linear-gradient(top, #fbfafa, #eeedee);
+	background-image: linear-gradient(top, #fbfafa, #eeedee);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbfafa', endColorstr='#eeedee');
+	display: inline-block;
+	border: 1px solid #2757a7;
+	border-radius: 5px;
+	margin: 0 10px 10px;
+	padding: 10px;
+	vertical-align: top;
+}
+.library-feature ul {
+	list-style: none;
+}
+
+/* tree css */
+.tree {
+	margin: 0 auto 40px auto;
+	padding-bottom: 20px;
+	overflow-x: auto;
+}
+.tree ul {
+	margin: 0;
+	padding-top: 20px;
+	position: relative;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.tree li {
+	float: left;
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	margin: 0 !important;
+	padding: 20px 5px 0 5px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+.tree li::before, .tree li::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 50%;
+	border-top: 1px solid #ccc;
+	width: 50%;
+	height: 20px;
+}
+.tree li::after {
+	right: auto;
+	left: 50%;
+	border-left: 1px solid #ccc;
+}
+
+/*We need to remove left-right connectors from elements without any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+	display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child {
+	padding-top: 0;
+}
+
+/*Remove left connector from first child and right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after {
+	border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before {
+	border-right: 1px solid #ccc;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after {
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	border-left: 1px solid #ccc;
+	width: 0;
+	height: 20px;
+}
+
+.tree li a {
+	border: 1px solid #ccc;
+	padding: 5px 8px;
+	text-decoration: none;
+	color: #252525;
+	font-size: 10px;
+	display: inline-block;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover, .tree li a:hover+ ul li a {
+	background: #c8e4f8;
+	color: #000;
+	border: 1px solid #94a0b4;
+}
+/*Connector styles on hover*/
+.tree li a:hover+ ul li::after, .tree li a:hover+ ul li::before, .tree li a:hover+ ul::before, .tree li a:hover+ ul ul::before {
+	border-color: #94a0b4;
+}
+
+/* tree colors */
+.tree li a {
+	background-color: #ACC6EE;
+	border-color: #6685c2;
+}
+.tree li li a {
+	background-color: #C3EAFB;
+	border-color: #9ACCCD;
+}
+.tree li li li a {
+	background-color: #CEE3AC;
+	border-color: #9BBB59;
+}
+.tree li li li li a {
+	background-color: #FFF7AA;
+	border-color: #E3CA4B;
+}
+.tree li li li li li a {
+	background-color: #EEC6AC;
+	border-color: #ED8957;
+}
+
+
+/* mobile menu trigger */
+.menu-trigger {
+	display: block;
+	float: left;
+	width: 44px;
+	height: 32px;
+	cursor: pointer;
+	position: relative;
+	padding: 13px 0 0 1px;
+	color: #fff;
+	border-right: 1px solid #ccc;
+}
+.menu-trigger:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: solid #fff;
+	content: "";
+	position: absolute;
+	top: 12px;
+	left: 10px;
+	width: 24px;
+	height: 20px;
+	border-width: 4px 0;
+}
+.menu-trigger:after {
+	border-bottom: 4px solid #fff;
+	content: "";
+	position: absolute;
+	top: 20px;
+	left: 10px;
+	width: 24px;
+}
+

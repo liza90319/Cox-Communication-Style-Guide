@@ -1,0 +1,26 @@
+<!--#set var="content" value=""-->
+<!--#if expr="${QUERY_STRING} = /content=(.*?)(&|$)/"-->
+	<!--#set var="content" value="${1}"-->
+<!--#endif-->
+<!-- START: fhi4-top -->
+<div class="colspan-4 feature-highlight">
+	<div class="cols-4">
+		<div class="colspan-4">
+			<div class="col-content">
+				<img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/fpo-4-col.png" alt="FPO Image"/>
+				<h3>fhi4-top</h3>
+				<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+<!--#if expr="${content} = 'more'"-->
+				<ul>
+					<li>You have to have 2 legs</li>
+					<li>You have to have 2 arms</li>
+					<li>You have to have 1 head</li>
+				</ul>
+				<p>Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris.</p>
+<!--#endif-->
+				<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html?content=most"-->
+			</div>
+		</div>
+	</div>
+</div>
+<!--  END : fhi4-top -->

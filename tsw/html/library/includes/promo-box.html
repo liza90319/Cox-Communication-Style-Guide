@@ -1,0 +1,30 @@
+<!--#set var="layout" value=""-->
+<!--#if expr="${QUERY_STRING} = /layout=(.*?)(&|$)/"-->
+	<!--#set var="layout" value="colspan-${1}"-->
+<!--#endif-->
+
+<!--#set var="theme" value=""-->
+<!--#if expr="${QUERY_STRING} = /theme=(.*?)(&|$)/"-->
+	<!--#set var="theme" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="image" value=""-->
+<!--#if expr="${layout} = 'colspan-3'"-->
+	<!--#set var="image" value="fpo-3-col.png"-->
+<!--#else-->
+	<!--#set var="image" value="fpo-4-col.png"-->
+<!--#endif-->
+
+<!-- START: promo-box -->
+<div class="promo-box <!--#echo var="layout"--> <!--#echo var="theme"-->">
+	<div class="col-content">
+		<img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/<!--#echo var="image"-->" alt="" />
+		<p class="promo-box-label">LABEL</p>
+		<h4>Heading Four Lorem Ipsum Dolor Sit</h4>
+		<p>Nam a lacus tempus, fermentum dolor quis.</p>
+		<div class="promo-box-cta">
+			<a href="#">Learn More</a>
+		</div>
+	</div>
+</div>
+<!--  END : promo-box -->

@@ -1,0 +1,195 @@
+/* global tooltip */
+
+/* provided z-index in order to open tooltip inside modal as z-index of modal is 9998 */
+.ui-tooltip {
+	max-width: 320px;
+	position: absolute;
+	z-index: 9999;
+}
+/* theme */
+.ui-tooltip-content.theme-b {
+	color: #fff;
+	border: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.ui-tooltip-content.theme-b * {
+	color: #fff;
+}
+.IE8 .ui-tooltip-content.theme-b {
+	border: 0;
+}
+/* alternate white color theme*/
+.ui-tooltip-content {
+	background-color: #fff;
+	-webkit-box-shadow: 0px 0px 5px 3px rgba(213,213,213,0.75);
+	-moz-box-shadow: 0px 0px 5px 3px rgba(213,213,213,0.75);
+	box-shadow: 0px 0px 5px 3px rgba(213,213,213,0.75);
+	color: #404040;
+	border-radius: 5px;
+}
+.IE8 .ui-tooltip-content {
+	border: 1px solid #c8c7c7;
+}
+.ui-tooltip-content .col-content {
+	padding: 15px 20px;
+}
+.ui-tooltip-content p {
+	margin: 0;
+}
+.tooltip-message {
+	display: none;
+}
+
+/* arrow styles */
+.arrow {
+	width: 70px;
+	height: 16px;
+	position: absolute;
+	left: 50%;
+	margin-left: -35px;
+	bottom: -15px;
+	overflow: hidden;
+}
+.arrow:after {
+	content: "";
+	position: absolute;
+	left: 23px;
+	top: -20px;
+	width: 25px;
+	height: 20px;
+	background-color: #fff;
+	-webkit-box-shadow: 0px 0px 5px 3px rgba(213,213,213,0.75);
+	-moz-box-shadow: 0px 0px 5px 3px rgba(213,213,213,0.75);
+	box-shadow: 0px 0px 5px 3px rgba(213,213,213,0.75);
+	border: 1px solid #dfdfdf;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.arrow.top {
+	top: -15px;
+	bottom: auto;
+}
+.IE8 .arrow {
+	content: "";
+	position: absolute;
+	display: block;
+	margin-left: 0;
+	width: 0;
+	height: 0;
+	left: -13px;
+}
+.IE8 .arrow:after {
+	width: 0;
+	height: 0;
+	left: -13px;
+}
+.IE8 .arrow.middle.left,
+.IE8 .arrow.middle.right {
+	border-top: 9px solid transparent;
+	border-bottom: 9px solid transparent;
+}
+.IE8 .arrow.top,
+.IE8 .arrow.bottom {
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+}
+.IE8 .arrow.top {
+	border-bottom: 9px solid #fff;
+	top: -7px !important;
+}
+.IE8 .arrow.middle.right {
+	border-left: 9px solid #fff;
+	left: 320px;
+}
+.IE8 .arrow.bottom {
+	border-top: 9px solid #fff;
+	bottom: -7px;
+}
+.IE8 .arrow.middle.left {
+	border-right: 9px solid #fff;
+	left: -7px;
+}
+
+/* Theme-b Arrows for IE8  */
+.IE8 .arrow.middle.left.theme-b {
+	border-right: 9px solid;
+}
+.IE8  .arrow.middle.right.theme-b {
+	border-left: 9px solid;
+}
+.IE8 .arrow.top.theme-b {
+	border-bottom: 9px solid;
+}
+.IE8 .arrow.bottom.theme-b {
+	border-top: 9px solid;
+}
+
+.arrow.top:after {
+	bottom: -20px;
+	top: auto;
+}
+.arrow.middle.left {
+	left: -8px;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+}
+.arrow.middle.right {
+	left: 327px;
+	transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+}
+.arrow.theme-b:after {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.ui-helper-hidden-accessible {
+	display: none;
+}
+
+@media screen and (max-width: 767px) {
+	.ui-tooltip {
+		max-width: 75%;
+	}
+	.ui-tooltip-content .col-content {
+		padding-right: 40px;
+	}
+	.ui-tooltip-close {
+		background: url("/ui/$version/tsw/img/global/icons/close-blue.png") no-repeat 0 0;
+		height: 20px;
+		width: 20px;
+		float: right;
+		position: absolute;
+		right: 15px;
+		top: 10px;
+	}
+	/* close image for alternate blue theme*/
+	.theme-b .ui-tooltip-close {
+		background: url("/ui/$version/tsw/img/global/icons/close-white.png") no-repeat 0 0;
+	}
+	.arrow.top {
+		top: -15px;
+	}
+	.arrow:after {
+		height: 19px;
+		left: 35px;
+	}
+	.arrow.middle.right {
+		left: 323px;
+	}
+	.arrow.middle.left {
+		left: -7px;
+	}
+}

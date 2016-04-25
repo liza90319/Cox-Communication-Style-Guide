@@ -1,0 +1,37 @@
+<p class="col-reset">Additional patterns are available at <a href="http://igorescobar.github.io/jQuery-Mask-Plugin/" target="_blank">http://igorescobar.github.io/jQuery-Mask-Plugin/</a></p>
+<form class="form" action="#" method="post">
+	<fieldset class="col-reset">
+		<!-- div for displaying error message at the top -->
+		<div class="msg-error error-header"></div>
+		
+		<label class="colspan-3 required-asterisk" for="phone-input">Phone Number</label>
+		<div class="colspan-9">
+			<input type="tel" name="phone" id="phone-input" maxlength="10" size="30" class="required" data-mask="(000) 000-0000" />
+		</div>
+
+		<label class="colspan-3 required-asterisk" for="zip-input">Zip Code</label>
+		<div class="colspan-9">
+			<input type="tel" name="zip" id="zip-input" maxlength="10" size="30" class="required" data-mask="00000-0000" />
+		</div>
+
+		<label class="colspan-3 required-asterisk" for="time-input">Time</label>
+		<div class="colspan-9">
+			<input type="tel" name="time" id="time-input" maxlength="10" size="30" class="required" data-mask="00:00" placeholder="hh:mm" />
+		</div>
+
+		<label class="colspan-3 required-asterisk" for="number-input">Number</label>
+		<div class="colspan-9">
+			<input type="tel" name="number" id="number-input" maxlength="10" size="30" class="required" data-mask="V" />
+		</div>
+
+		<label class="colspan-3 required-asterisk" for="currency-input">Currency</label>
+		<div class="colspan-9">
+			<input type="text" name="txtCurrency" class="required currency" id="currency-input" size="30" data-mask="C" />
+		</div>
+												
+		<div class="colspan-12">	
+			<input type="submit" value="Submit" />
+		</div>
+
+	</fieldset>
+</form>

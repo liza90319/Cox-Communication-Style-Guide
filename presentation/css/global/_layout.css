@@ -1,0 +1,970 @@
+/************ Multi-Column Layout ************/
+/* Removes white space between modules. */
+[class*='cols-'] {
+	font-size: 0;
+}
+
+/* Reset the column content back to the base font size */
+.col-reset, .col-content {
+	font-size: 16px;
+}
+/* Reset font-size for different zoom level */
+.pf-style-font-medium .col-reset, .pf-style-font-medium .col-content {
+	font-size: 17px !important; /* 1.125em */
+}
+.pf-style-font-large .col-reset, .pf-style-font-large .col-content {
+	font-size: 18px !important; /* 1.25em */
+}
+
+/* Define styling for widget container. */
+[class*='cols-'] [class*='colspan-'] {
+	vertical-align: top;
+	display: inline-block;
+	/*overflow: hidden;  disabling since this is cutting off items like button shadows and overlay if it's the last item in the DOM */
+}
+
+/* Define styling for widget contents. */
+[class*='cols-'] .col-content {
+	margin: 0 10px 10px;
+	position: relative;
+	padding: 0;
+	max-height: 1000000em; /* disable font boosting */
+}
+
+.cols-grid .colspan-12 {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+}
+.cols-grid .colspan-11 {
+	width: 91.66%;
+	min-width: 91.66%;
+	max-width: 91.66%;
+
+	width: calc(100% / 12 * 11);
+	min-width: calc(100% / 12 * 11);
+	max-width: calc(100% / 12 * 11);
+}
+.cols-grid .colspan-10 {
+	width: 83.33%;
+	min-width: 83.33%;
+	max-width: 83.33%;
+
+	width: calc(100% / 12 * 10);
+	min-width: calc(100% / 12 * 10);
+	max-width: calc(100% / 12 * 10);
+}
+.cols-grid .colspan-9 {
+	width: 75%;
+	min-width: 75%;
+	max-width: 75%;
+	
+	width: calc(100% / 12 * 9);
+	min-width: calc(100% / 12 * 9);
+	max-width: calc(100% / 12 * 9);
+}
+.cols-grid .colspan-8 {
+	width: 66.6%;
+	min-width: 66.6%;
+	max-width: 66.6%;
+	
+	width: calc(100% / 12 * 8);
+	min-width: calc(100% / 12 * 8);
+	max-width: calc(100% / 12 * 8);
+}
+.cols-grid .colspan-7 {
+	width: 58.33%;
+	min-width: 58.33%;
+	max-width: 58.33%;
+	
+	width: calc(100% / 12 * 7);
+	min-width: calc(100% / 12 * 7);
+	max-width: calc(100% / 12 * 7);
+}
+.cols-grid .colspan-6 {
+	width: 50%;
+	min-width: 50%;
+	max-width: 50%;
+	
+	width: calc(100% / 12 * 6);
+	min-width: calc(100% / 12 * 6);
+	max-width: calc(100% / 12 * 6);
+}
+.cols-grid .colspan-5 {
+	width: 41.66%;
+	min-width: 41.66%%;
+	max-width: 41.66%%;
+
+	width: calc(100% / 12 * 5);
+	min-width: calc(100% / 12 * 5);
+	max-width: calc(100% / 12 * 5);
+}
+.cols-grid .colspan-4 {
+	width: 33.33%;
+	min-width: 33.33%;
+	max-width: 33.33%;
+	
+	width: calc(100% / 12 * 4);
+	min-width: calc(100% / 12 * 4);
+	max-width: calc(100% / 12 * 4);
+}
+.cols-grid .colspan-3 {
+	width: 25%;
+	min-width: 25%;
+	max-width: 25%;
+	
+	width: calc(100% / 12 * 3);
+	min-width: calc(100% / 12 * 3);
+	max-width: calc(100% / 12 * 3);
+}
+.cols-grid .colspan-2 {
+	width: 16.66%;
+	min-width: 16.66%;
+	max-width: 16.66%;
+
+	width: calc(100% / 12 * 2);
+	min-width: calc(100% / 12 * 2);
+	max-width: calc(100% / 12 * 2);
+}
+.cols-grid .colspan-1 {
+	width: 8.33%;
+	min-width: 8.33%;
+	max-width: 8.33%;
+
+	width: calc(100% / 12);
+	min-width: calc(100% / 12);
+	max-width: calc(100% / 12);
+}
+
+
+/* Widget width in a cols-10 layout. */
+.cols-10 .colspan-1 {
+	width: 10%;
+	min-width: 10%;
+	max-width: 10%;
+}
+/* Widget spanning 2 columns in a cols-10 layout. */
+.cols-10 .colspan-2 {
+	width: 20%;
+	min-width: 20%;
+	max-width: 20%;
+}
+/* Widget spanning 3 columns in a cols-10 layout. */
+.cols-10 .colspan-3 {
+	width: 30%;
+	min-width: 30%;
+	max-width: 30%;
+}
+/* Widget spanning 4 columns in a cols-10 layout. */
+.cols-10 .colspan-4 {
+	width: 40%;
+	min-width: 40%;
+	max-width: 40%;
+}
+/* Widget spanning 5 columns in a cols-10 layout. */
+.cols-10 .colspan-5 {
+	width: 50%;
+	min-width: 50%;
+	max-width: 50%;
+}
+/* Widget spanning 6 columns in a cols-10 layout. */
+.cols-10 .colspan-6 {
+	width: 60%;
+	min-width: 60%;
+	max-width: 60%;
+}
+/* Widget spanning 7 columns in a cols-10 layout. */
+.cols-10 .colspan-7 {
+	width: 70%;
+	min-width: 70%;
+	max-width: 70%;
+}
+/* Widget spanning 8 columns in a cols-10 layout. */
+.cols-10 .colspan-8 {
+	width: 80%;
+	min-width: 80%;
+	max-width: 80%;
+}
+/* Widget spanning 9 columns in a cols-10 layout. */
+.cols-10 .colspan-9 {
+	width: 90%;
+	min-width: 90%;
+	max-width: 90%;
+}
+/* Widget spanning 10 columns in a cols-10 layout. */
+.cols-10 .colspan-10 {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+}
+/* Widget width in a cols-9 layout. */
+.cols-9 .colspan-1 {
+	width: 11.1%;
+	min-width: 11.1%;
+	max-width: 11.1%;
+}
+/* Widget spanning 2 columns in a cols-9 layout. */
+.cols-9 .colspan-2 {
+	width: 22.2%;
+	min-width: 22.2%;
+	max-width: 22.2%;
+}
+/* Widget spanning 3 columns in a cols-9 layout. */
+.cols-9 .colspan-3 {
+	width: 33.3%;
+	min-width: 33.3%;
+	max-width: 33.3%;
+}
+/* Widget spanning 4 columns in a cols-9 layout. */
+.cols-9 .colspan-4 {
+	width: 44.4%;
+	min-width: 44.4%;
+	max-width: 44.4%;
+}
+/* Widget spanning 5 columns in a cols-9 layout. */
+.cols-9 .colspan-5 {
+	width: 55.5%;
+	min-width: 55.5%;
+	max-width: 55.5%;
+}
+/* Widget spanning 6 columns in a cols-9 layout. */
+.cols-9 .colspan-6 {
+	width: 66.6%;
+	min-width: 66.6%;
+	max-width: 66.6%;
+}
+/* Widget spanning 7 columns in a cols-9 layout. */
+.cols-9 .colspan-7 {
+	width: 77.7%;
+	min-width: 77.7%;
+	max-width: 77.7%;
+}
+/* Widget spanning 8 columns in a cols-9 layout. */
+.cols-9 .colspan-8 {
+	width: 88.8%;
+	min-width: 88.8%;
+	max-width: 88.8%;
+}
+/* Widget spanning 9 columns in a cols-9 layout. */
+.cols-9 .colspan-9 {
+	width: 99.9%;
+	min-width: 99.9%;
+	max-width: 99.9%;
+
+	width: calc(100% / 9 * 9);
+	min-width: calc(100% / 9 * 9);
+	max-width: calc(100% / 9 * 9);
+}
+
+/* Widget width in a cols-8 layout. */
+.cols-8 .colspan-1 {
+	width: 12.5%;
+	min-width: 12.5%;
+	max-width: 12.5%;
+}
+/* Widget spanning 2 columns in a cols-8 layout. */
+.cols-8 .colspan-2 {
+	width: 25.0%;
+	min-width: 25.0%;
+	max-width: 25.0%;
+}
+/* Widget spanning 3 columns in a cols-8 layout. */
+.cols-8 .colspan-3 {
+	width: 37.5%;
+	min-width: 37.5%;
+	max-width: 37.5%;
+}
+/* Widget spanning 4 columns in a cols-8 layout. */
+.cols-8 .colspan-4 {
+	width: 50.0%;
+	min-width: 50.0%;
+	max-width: 50.0%;
+}
+/* Widget spanning 5 columns in a cols-8 layout. */
+.cols-8 .colspan-5 {
+	width: 62.5%;
+	min-width: 62.5%;
+	max-width: 62.5%;
+}
+/* Widget spanning 6 columns in a cols-8 layout. */
+.cols-8 .colspan-6 {
+	width: 75.0%;
+	min-width: 75.0%;
+	max-width: 75.0%;
+}
+/* Widget spanning 7 columns in a cols-8 layout. */
+.cols-8 .colspan-7 {
+	width: 87.5%;
+	min-width: 87.5%;
+	max-width: 87.5%;
+}
+/* Widget spanning 8 columns in a cols-8 layout. */
+.cols-8 .colspan-8 {
+	width: 100.0%;
+	min-width: 100.0%;
+	max-width: 100.0%;
+}
+
+
+/* Widget width in a cols-7 layout. */
+.cols-7 .colspan-1 {
+	width: 14.28%;
+	min-width: 14.28%;
+	max-width: 14.28%;
+}
+/* Widget spanning 2 columns in a cols-7 layout. */
+.cols-7 .colspan-2 {
+	width: 28.5%;
+	min-width: 28.5%;
+	max-width: 28.5%;
+}
+/* Widget spanning 3 columns in a cols-7 layout. */
+.cols-7 .colspan-3 {
+	width: 42.8%;
+	min-width: 42.8%;
+	max-width: 42.8%;
+}
+/* Widget spanning 4 columns in a cols-7 layout. */
+.cols-7 .colspan-4 {
+	width: 57.1%;
+	min-width: 57.1%;
+	max-width: 57.1%;
+}
+/* Widget spanning 5 columns in a cols-7 layout. */
+.cols-7 .colspan-5 {
+	width: 71.4%;
+	min-width: 71.4%;
+	max-width: 71.4%;
+}
+/* Widget spanning 6 columns in a cols-7 layout. */
+.cols-7 .colspan-6 {
+	width: 85.7%;
+	min-width: 85.7%;
+	max-width: 85.7%;
+}
+/* Widget spanning 7 columns in a cols-7 layout. */
+.cols-7 .colspan-7 {
+	width: 99.9%;
+	min-width: 99.9%;
+	max-width: 99.9%;
+}
+
+/* Widget width in a cols-6 layout. */
+.cols-6 .colspan-1 {
+	width: 16.66%;
+	min-width: 16.66%;
+	max-width: 16.66%;
+}
+
+/* Widget spanning 2 columns in a cols-6 layout. */
+.cols-6 .colspan-2 {
+	width: 33.3%;
+	min-width: 33.3%;
+	max-width: 33.3%;
+}
+
+/* Widget spanning 3 columns in a cols-6 layout. */
+.cols-6 .colspan-3 {
+	width: 50%;
+	min-width: 50%;
+	max-width: 50%;
+}
+
+/* Widget spanning 4 columns in a cols-6 layout. */
+.cols-6 .colspan-4 {
+	width: 66.6%;
+	min-width: 66.6%;
+	max-width: 66.6%;
+}
+
+/* Widget spanning 5 columns in a cols-6 layout. */
+.cols-6 .colspan-5 {
+	width: 83.3%;
+	min-width: 83.3%;
+	max-width: 83.3%;
+}
+
+/* Widget spanning 6 columns in a cols-6 layout. */
+.cols-6 .colspan-6 {
+	width: 99.9%;
+	min-width: 99.9%;
+	max-width: 99.9%;
+}
+
+/* Widget width in a cols-5 layout. */
+.cols-5 .colspan-1 {
+	width: 20%;
+	min-width: 20%;
+	max-width: 20%;
+}
+
+/* Widget spanning 2 columns in a cols-5 layout. */
+.cols-5 .colspan-2 {
+	width: 40%;
+	min-width: 40%;
+	max-width: 40%;
+}
+
+/* Widget spanning 2 columns in a cols-5 layout. */
+.cols-5 .colspan-3 {
+	width: 60%;
+	min-width: 60%;
+	max-width: 60%;
+}
+
+/* Widget spanning 2 columns in a cols-5 layout. */
+.cols-5 .colspan-4 {
+	width: 80%;
+	min-width: 80%;
+	max-width: 80%;
+}
+
+/* Widget spanning 2 columns in a cols-5 layout. */
+.cols-5 .colspan-5 {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+/* Widget width in a cols-4 layout. */
+.cols-4 .colspan-1 {
+	width: 25%;
+	min-width: 25%;
+	max-width: 25%;
+}
+
+/* Widget spanning 2 columns in a cols-4 layout. */
+.cols-4 .colspan-2 {
+	width: 50%;
+	min-width: 50%;
+	max-width: 50%;
+}
+
+/* Widget spanning 3 columns in a cols-4 layout. */
+.cols-4 .colspan-3 {
+	width: 75%;
+	min-width: 75%;
+	max-width: 75%;
+}
+
+/* Widget spanning 4 columns in a cols-4 layout. */
+.cols-4 .colspan-4 {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+/* Widget width in a cols-3 layout. */
+.cols-3 .colspan-1 {
+	width: 33.3%;
+	min-width: 33.3%;
+	max-width: 33.3%;
+}
+
+/* Widget spanning 2 columns in a cols-3 layout. */
+.cols-3 .colspan-2 {
+	width: 66.6%;
+	min-width: 66.6%;
+	max-width: 66.6%;
+}
+
+/* Widget spanning 3 columns in a cols-3 layout. */
+.cols-3 .colspan-3 {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+/* Widget width in a cols-2 layout. */
+.cols-2 .colspan-1 {
+	width: 50%;
+	min-width: 50%;
+	max-width: 50%;
+}
+
+/* Widget spanning 2 columns in a cols-2 layout. */
+.cols-2 .colspan-2 {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+/* Widget width in a cols-1 layout. */
+.cols-1 .colspan-1 {
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+}
+
+/* Fix for IE subpixel rounding issue on calc causing items to wrap in some cases.
+ * Not the best solution but cleaner than removing 1px off each width above. */
+.IE [class*='cols-'] [class*='colspan-'] {
+	margin-right: -0.5px;
+}
+
+/* Multi-row layout. */
+[class*='cols-'] .rowspan-left {
+	float: left;
+}
+[class*='cols-'] .rowspan-right {
+	float: right;
+}
+
+/* Clearing after cols-y container in case of floats. */
+[class*='cols-']:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* Using .debug to set off modern browser support - CALC! */
+.debug [class*="cols-"] [class*="cols-"] [class*="colspan-"]:first-child .col-content {
+	background-color: rgba(255, 255, 0, 0.27) !important;
+}
+.debug [class*="cols-"] [class*="cols-"] [class*="colspan-"]:last-child .col-content {
+	background-color: rgba(255, 165, 0, 0.27) !important;
+}
+
+/* Vertical dividers. */
+@media screen and (min-width: 768px) {
+	.left-col-divider > [class*='cols-'] {
+		margin-right: 4%;
+	}
+	.right-col-divider > [class*='cols-'] {
+		margin-left: 4%;
+	}
+}
+
+/* the negative shift starts to create a horizontal scroll and cut off content so overriding the UX design here */
+@media screen and (min-width: 1028px) {
+	.left-col-divider > [class*='cols-'] {
+		margin-left: -10%;
+	}
+	.right-col-divider > [class*='cols-'] {
+		margin-right: -10%;
+	}
+}
+
+.left-col-divider > [class*='cols-']:after,
+.right-col-divider > [class*='cols-']:after {
+	content: ".";
+	display: block;
+	position: absolute;
+	background: #f5f5f5;
+	visibility: inherit;
+	clear: none;
+	height: 100%;
+	top: 0;
+	width: 1px;
+}
+.cols-grid .colspan-3.left-col-divider > .cols-3:after {
+	left: 25%;
+	left: calc(25% - 1px);
+	margin-left: -1%;
+}
+.cols-grid .colspan-3.right-col-divider > .cols-3:after {
+	right: 25%;
+	right: calc(25% - 1px);
+	margin-right: -1%;
+}
+
+/* Adjusting for various tag/class combinations. */
+li[class*='colspan-'] {
+	margin: 0 -3px 0 0;
+}
+.mobile-only {
+	display: none !important;
+}
+
+/* mobile styles */
+@media screen and (max-width: 767px) {
+	/* set some new minimums for columns */
+	[class*="cols-"] [class*="colspan-"] {
+		width: auto;
+		min-width: 100%;
+		max-width: 100%;
+	}
+
+	/* Define mobile grid widths - DEPRECATED */
+	.cols-grid .colspan-m1 {
+		width: 8.33333%;
+		max-width: 8.33333%;
+		min-width: 8.33333%;
+	}
+	.cols-grid .colspan-m2 {
+		width: 16.66667%;
+		max-width: 16.66667%;
+		min-width: 16.66667%;
+	}
+	.cols-grid .colspan-m3 {
+		width: 25%;
+		max-width: 25%;
+		min-width: 25%;
+	}
+	.cols-grid .colspan-m4 {
+		width: 33.33333%;
+		max-width: 33.33333%;
+		min-width: 33.33333%;
+	}
+	.cols-grid .colspan-m5 {
+		width: 41.66667%;
+		max-width: 41.66667%;
+		min-width: 41.66667%;
+	}
+	.cols-grid .colspan-m6 {
+		width: 50%;
+		max-width: 50%;
+		min-width: 50%;
+	}
+	.cols-grid .colspan-m7 {
+		width: 58.33333%;
+		max-width: 58.33333%;
+		min-width: 58.33333%;
+	}
+	.cols-grid .colspan-m8 {
+		width: 66.66667%;
+		max-width: 66.66667%;
+		min-width: 66.66667%;
+	}
+	.cols-grid .colspan-m9 {
+		width: 75%;
+		max-width: 75%;
+		min-width: 75%;
+	}
+	.cols-grid .colspan-m10 {
+		width: 83.33333%;
+		max-width: 83.33333%;
+		min-width: 83.33333%;
+	}
+	.cols-grid .colspan-m11 {
+		width: 91.66667%;
+		max-width: 91.66667%;
+		min-width: 91.66667%;
+	}
+	.cols-grid .colspan-m12 {
+		width: 100%;
+		max-width: 100%;
+		min-width: 100%;
+	}
+	.cols-7 .colspan-m2 {
+		width: 28.57143%;
+		max-width: 28.57143%;
+		min-width: 28.57143%;
+	}
+
+	.cols-7 .colspan-m3 {
+		width: 42.85714%;
+		max-width: 42.85714%;
+		min-width: 42.85714%;
+	}
+
+	.cols-7 .colspan-m4 {
+		width: 57.14286%;
+		max-width: 57.14286%;
+		min-width: 57.14286%;
+	}
+
+	.cols-7 .colspan-m5 {
+		width: 71.42857%;
+		max-width: 71.42857%;
+		min-width: 71.42857%;
+	}
+	.cols-12 .colspan-m4 {
+		width: 33.33%;
+		min-width: 33.33%;
+		max-width: 33.33%;
+	}
+	.cols-12 .colspan-m8 {
+		width: 66.6%;
+		min-width: 66.6%;
+		max-width: 66.6%;
+	}
+	.cols-12 .colspan-m12 {
+		width: 100%;
+		min-width: 100%;
+		max-width: 100%;
+	}
+	/* Widget width in a cols-10 layout. */
+	.cols-10 .colspan-m1 {
+		width: 10%;
+		min-width: 10%;
+		max-width: 10%;
+	}
+	/* Widget spanning 2 columns in a cols-10 layout. */
+	.cols-10 .colspan-m2 {
+		width: 20%;
+		min-width: 20%;
+		max-width: 20%;
+	}
+	/* Widget spanning 3 columns in a cols-10 layout. */
+	.cols-10 .colspan-m3 {
+		width: 30%;
+		min-width: 30%;
+		max-width: 30%;
+	}
+	/* Widget spanning 4 columns in a cols-10 layout. */
+	.cols-10 .colspan-m4 {
+		width: 40%;
+		min-width: 40%;
+		max-width: 40%;
+	}
+	/* Widget spanning 5 columns in a cols-10 layout. */
+	.cols-10 .colspan-m5 {
+		width: 50%;
+		min-width: 50%;
+		max-width: 50%;
+	}
+	/* Widget spanning 6 columns in a cols-10 layout. */
+	.cols-10 .colspan-m6 {
+		width: 60%;
+		min-width: 60%;
+		max-width: 60%;
+	}
+	/* Widget spanning 7 columns in a cols-10 layout. */
+	.cols-10 .colspan-m7 {
+		width: 70%;
+		min-width: 70%;
+		max-width: 70%;
+	}
+	/* Widget spanning 8 columns in a cols-10 layout. */
+	.cols-10 .colspan-m8 {
+		width: 80%;
+		min-width: 80%;
+		max-width: 80%;
+	}
+	/* Widget spanning 9 columns in a cols-10 layout. */
+	.cols-10 .colspan-m9 {
+		width: 90%;
+		min-width: 90%;
+		max-width: 90%;
+	}
+	/* Widget spanning 10 columns in a cols-10 layout. */
+	.cols-10 .colspan-m10 {
+		width: 100%;
+		min-width: 100%;
+		max-width: 100%;
+	}
+
+	/* common layout related styles */
+	.desktop-only {
+		display: none !important;
+	}
+	.mobile-only {
+		display: block !important;
+	}
+	.rowspan-mleft {
+		float: left;
+	}
+	.rowspan-mright {
+		float: right;
+	}
+	.colspan-mmargin .col-content {
+		margin: 0 20px 10px;
+	}
+}
+
+
+/* ALL NEW responsive mobile css */
+@media screen and (max-width: 767px) {
+	[class*='colspan-'] {
+		width: 100%;
+		max-width: 100%;
+		min-width: 100%;
+	}
+	[class*='colspan-'] .col-content {
+		margin-right: calc(100% / 32);
+		margin-left: calc(100% / 32);
+	}
+
+	/* For special cases where intention is to have image in 1 column. */
+	.cols-grid .mobile-image-colspan-1 [class*='cols-'] .colspan-1 {
+		width: calc(100% / 4);
+		max-width: calc(100% / 4);
+		min-width: calc(100% / 4);
+	}
+	.cols-grid .mobile-image-colspan-1 [class*='cols-'] .colspan-3 {
+		width: calc(100% / 4 * 3);
+		max-width: calc(100% / 4 * 3);
+		min-width: calc(100% / 4 * 3);
+	}
+	.cols-grid .mobile-image-colspan-1 [class*='cols-'] .colspan-1 .col-content {
+		margin-top: 0;
+		margin-right: 12.5%;
+		margin-bottom: 12.5%;
+		margin-left: 12.5%;
+
+		margin-right: calc(100% / 32 * 4);
+		margin-bottom: calc(100% / 32 * 4);
+		margin-left: calc(100% / 32 * 4);
+	}
+	.cols-grid .mobile-image-colspan-1 [class*='cols-'] .colspan-3 .col-content {
+		margin-right: 4%;
+		margin-bottom: 4%;
+		margin-left: 4%;
+
+		background-color: lime !important;
+
+		margin-right: calc(100% / 32 * 1.32);
+		margin-bottom: calc(100% / 32 * 1.32);
+		margin-left: calc(100% / 32 * 1.32);
+	}
+
+	/* In an 8-column nested group, broken into 1-by-3 columns. */
+	.cols-grid .cols-8 .colspan-2 {
+		width: calc(100% / 4);
+		max-width: calc(100% / 4);
+		min-width: calc(100% / 4);
+	}
+	.cols-grid .cols-8 .colspan-6 {
+		width: calc(100% / 4 * 3);
+		max-width: calc(100% / 4 * 3);
+		min-width: calc(100% / 4 * 3);
+	}
+	.cols-grid .cols-8 .colspan-2 .col-content {
+		margin-right: calc(100% / 8);
+		margin-bottom: calc(100% / 8);
+		margin-left: calc(100% / 8);
+	}
+	.cols-grid .cols-8 .colspan-6 .col-content {
+		margin-right: calc(100% / 24);
+		margin-bottom: calc(100% / 24);
+		margin-left: calc(100% / 24);
+	}
+
+	/* Do not display column dividers on mobile. */
+	.left-col-divider [class*='cols-']:after,
+	.right-col-divider [class*='cols-']:after {
+		display: none;
+	}
+
+	#container input[type="submit"],
+	.dialog-component input[type="submit"],
+	.cms-dialog input[type="submit"]{
+		width: 100%;
+		max-width: 100%;
+		min-width: 100%;
+	}
+}
+
+
+/* grid debug */
+.library-header h2 {
+	color: #3264b7;
+	background-color: #98b1db;
+	border-bottom: 5px solid #658ac9;
+	padding: 5px;
+}
+body.debug .section-container,
+body.debug .pf-top-nav,
+body.debug .pf-main-nav,
+body.debug .pf-sub-nav,
+body.debug .pf-top-footer-inner,
+body.debug .pf-bottom-footer-inner,
+body.debug .cms-dialog .ui-dialog-content {
+	background: url(/ui/$version/tsw/img/global/grid.png) repeat-y left top;
+	background-size: contain;
+}
+body.debug .cms-dialog .ui-dialog-content.colspan-10 {
+	background: url(/ui/$version/tsw/img/global/grid-10.png);
+}
+body.debug .cms-dialog .ui-dialog-content.colspan-8 {
+	background: url(/ui/$version/tsw/img/global/grid-8.png);
+}
+body.debug .cms-dialog .ui-dialog-content {
+	background-size: contain;
+}
+body.debug .ankle {
+	background-position: center top;
+}
+
+
+body.debug .cols-grid > div > .colspan-12 .col-content {
+	background-color: rgba(255, 0, 0, 0.27);
+}
+body.debug .cols-grid > div > .colspan-6 .col-content {
+	background-color: rgba(255, 165, 0, 0.27);
+}
+body.debug .cols-grid > div > .colspan-4 .col-content {
+	background-color: rgba(255, 255, 0, 0.27);
+}
+body.debug .cols-grid > div > .colspan-3 .col-content {
+	background-color: rgba(0, 128, 0, 0.27);
+}
+body.debug .cols-grid > div > .colspan-2 .col-content {
+	background-color: rgba(0, 0, 255, 0.27);
+}
+body.debug .cols-grid > div > .colspan-8 .col-content {
+	background-color: rgba(75, 0, 130, 0.27);
+}
+body.debug .cols-grid > div > .colspan-9 .col-content {
+	background-color: rgba(238, 130, 238, 0.27);
+}
+body.debug [class*='cols-'] [class*='cols-'] [class*='colspan-']:nth-child(odd) .col-content {
+	background-color: rgba(27, 127, 227, 0.27);
+}
+body.debug [class*='cols-'] [class*='cols-'] [class*='colspan-']:nth-child(even) .col-content {
+	background-color: rgba(227, 127, 27, 0.27);
+}
+body.debug {
+	counter-reset: parent-grid, child-grid;
+}
+body.debug [class*='colspan-']:not(.col-content) {
+	counter-increment: parent-grid;
+}
+body.debug [class*='colspan-'] [class*='colspan-'] {
+	counter-increment: child-grid;
+}
+body.debug [class*='colspan-'] h3::after {
+	content: " " counter(parent-grid, upper-roman);
+}
+/* Per Page/App/Component debugging */
+body.debug .price {
+	background-color: plum !important;
+}
+
+@media screen and (max-width: 767px) {
+	/* grid debug */
+	body.debug #container:before {
+		content: "767px";
+		font-size: 27px;
+		position: sticky;
+		background-color: rgba(100, 200, 200, 0.5);
+		color: white;
+		padding: 20px;
+		z-index: 1000;
+		border-radius: 27px;
+		top: 10px;
+		left: 0;
+		margin: 10px;
+	}
+	body.debug .section-container,
+	body.debug .pf-top-nav,
+	body.debug .pf-main-nav,
+	body.debug .pf-sub-nav,
+	body.debug .pf-top-footer-inner,
+	body.debug .pf-bottom-footer-inner,
+	body.debug .cms-dialog .ui-dialog-content,
+	body.debug .cms-dialog .ui-dialog-content.colspan-10,
+	body.debug .cms-dialog .ui-dialog-content.colspan-8 {
+		background: url(/ui/$version/tsw/img/global/grid-mobile.png) repeat-y left top;
+		background-size: contain;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+	/* grid debug */
+	body.debug #container:before {
+		content: "768px - 959px";
+		font-size: 27px;
+		position: sticky;
+		background-color: rgba(100, 200, 100, 0.5);
+		color: white;
+		padding: 20px;
+		z-index: 1000;
+		border-radius: 27px;
+		top: 10px;
+		left: 0;
+		margin: 10px;
+	}
+}

@@ -1,0 +1,25 @@
+<!--#set var="alignment" value=""-->
+<!--#if expr="${QUERY_STRING} = /alignment=(.*?)(&|$)/"-->
+	<!--#set var="alignment" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="subHeader" value=""-->
+<!--#set var="link" value=""-->
+<!--#set var="button" value=""-->
+
+<!-- START: sh -->
+<div class="colspan-12 sh <!--#echo var="alignment"-->" id="{optional anchor id}">
+	<div class="col-content">
+		<h2>Section Header Display 3</h2>
+		<!--#if expr="${QUERY_STRING} = /subHeader=(.*?)(&|$)/"-->
+			<h3>Subheader Display 4</h3>
+		<!--#endif-->
+		<!--#if expr="${QUERY_STRING} = /link=(.*?)(&|$)/"-->
+			<a href="#">Lorum ipsum dollar</a>
+		<!--#endif-->
+		<!--#if expr="${QUERY_STRING} = /button=(.*?)(&|$)/"-->
+			<a class="button" href="#">Button</a>
+		<!--#endif-->
+	</div>
+</div>
+<!--  END : sh -->

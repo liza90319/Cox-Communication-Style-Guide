@@ -1,0 +1,88 @@
+<!--#set var="sticky" value=""-->
+<!--#if expr="${QUERY_STRING} = /sticky=(.*?)(&|$)/"-->
+	<!--#set var="sticky" value="anchor-sticky"-->
+<!--#endif-->
+
+<!--#set var="cols" value=""-->
+<!--#if expr="${QUERY_STRING} = /cols=(.*?)(&|$)/"-->
+	<!--#set var="cols" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="text-align" value=""-->
+<!--#if expr="${QUERY_STRING} = /text-align=(.*?)(&|$)/"-->
+	<!--#set var="text-align" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="theme" value=""-->
+<!--#if expr="${QUERY_STRING} = /theme=(.*?)(&|$)/"-->
+	<!--#set var="theme" value="${1}"-->
+<!--#endif-->
+
+<!-- START: anchor-links -->
+<!-- DEV NOTES: "anchor-sticky" class below is optional based on configuration in AEM -->
+<div class="anchor-links-bar <!--#echo var="theme"--> <!--#echo var="sticky"-->">
+	<!-- anchor inner -->
+	<div class="anchor-inner">
+		<!--#if expr="${text-align} = 'left'"-->
+			<!-- free text -->
+			<div class="colspan-4 free-text free-text-left">
+				<div class="col-content">FREE TEXT ALIGNED LEFT</div>
+			</div>
+			<!-- /free text -->
+		<!--#endif-->
+		<!-- link selection -->
+		<div class="colspan-8 link-selection">
+			<div class="cols-8">
+				<div class="col-content link-heading">Navigate to:</div>
+				<span></span>
+				<!-- anchor links -->
+				<div class="anchor-link-content">
+					<!--#if expr="${cols} = '2'"-->
+						<div class="colspan-2">
+							<div class="col-content">
+								<a href="#navigation-1">Navigation Link One</a>
+							</div>
+						</div>
+						<div class="colspan-2">
+							<div class="col-content">
+								<a href="#navigation-2">Navigation Link Two</a>
+							</div>
+						</div>
+						<div class="colspan-2">
+							<div class="col-content">
+								<a href="#navigation-3">Navigation Link Three</a>
+							</div>
+						</div>
+						<div class="colspan-2">
+							<div class="col-content">
+								<a href="#navigation-4">Movie Channel Packages</a>
+							</div>
+						</div>
+					<!--#elif expr="${cols} = '3'"-->
+						<div class="colspan-3">
+							<div class="col-content">
+								<a href="#navigation-1">Navigation Link One</a>
+							</div>
+						</div>
+						<div class="colspan-3">
+							<div class="col-content">
+								<a href="#navigation-2">Navigation Link Two</a>
+							</div>
+						</div>
+					<!--#endif-->
+				</div>
+				<!-- /anchor links -->
+			</div>
+		</div>
+		<!-- /link selection -->
+		<!--#if expr="${text-align} = 'right'"-->
+			<!-- free text -->
+			<div class="colspan-4 free-text free-text-right">
+				<div class="col-content">FREE TEXT ALIGNED RIGHT</div>
+			</div>
+			<!-- /free text -->
+		<!--#endif-->
+	</div>
+	<!-- /anchor inner -->
+</div>
+<!--  END : anchor-links -->

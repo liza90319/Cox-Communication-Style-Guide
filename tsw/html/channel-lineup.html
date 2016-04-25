@@ -1,0 +1,29 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<div class="cols-grid">
+	<div class="colspan-12 col-reset text-align-center">
+		<h1>Channel Lineup</h1>
+	</div>
+	<div class="section-container constrain-960">
+		<div class="colspan-12">
+			<div class="col-content">
+				<!-- DEVNOTES:
+					
+				-->
+				<p><a href="/ui/<!--#echo var="version"-->/tsw/html/residential/shop/tv/Channel-Lineup.html" target="_blank">Launch Channel Lineup Full Page</a>.</p>
+				<p><a href="/ui/<!--#echo var="version"-->/tsw/html/residential/shop/tv/Channel-Lineup.html?item1=test1&item2=test2&item3=test3" target="_blank">Launch Channel Lineup Full Page With Params</a>.</p>
+
+				<p><a data-modal-width="690" class="cms-modal-trigger" href="/ui/<!--#echo var="version"-->/tsw/html/residential/shop/tv/includes/channel-lineup.html">Launch Channel Lineup From Modal</a>.</p>
+				<p><a data-modal-width="690" class="cms-modal-trigger" href="/ui/<!--#echo var="version"-->/tsw/html/residential/shop/tv/includes/channel-lineup.html?package=TV%20Starter&param=test1&anotherParam=test2">Launch Channel Lineup From Modal With Params</a>.</p>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

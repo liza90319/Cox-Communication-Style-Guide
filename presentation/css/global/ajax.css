@@ -1,0 +1,45 @@
+/* animated loading message */
+.loading-wrapper-active {
+	position: relative;
+	min-height: 60px;
+	height: auto !important;
+	height: 60px;
+}
+.ajax-form-submit {
+	position: relative;
+}
+.loading-wrapper-active .loader,
+.ajax-throbber {
+	background: #fff url(/ui/$version/tsw/img/global/loading-whitebg.gif) no-repeat center center;
+	position: absolute;
+	z-index: 2001;
+	width: 100%;
+	height: 100%;
+	opacity: .90;
+	filter:alpha(opacity=90);
+}
+
+/* Throbber Styles for button on form submission */
+#container input.loading-wrapper-active[type='submit'],
+.dialog-component input.loading-wrapper-active[type='submit'],
+.cms-dialog input.loading-wrapper-active[type='submit'] {	
+	width: 75px !important;
+	font-size: 0 !important;
+	min-height: 40px;
+	vertical-align: top;
+	background-position: center center !important;
+}
+.IE8 #container input.loading-wrapper-active[type='submit'],
+.IE8 .dialog-component input.loading-wrapper-active[type='submit'],
+.IE8 .cms-dialog input.loading-wrapper-active[type='submit'] {		
+	min-height: 28px;
+}
+/* Button width in mobile when throbber is active */
+@media screen and (max-width: 767px) {	
+	#container input.loading-wrapper-active[type='submit'],
+	.dialog-component input.loading-wrapper-active[type='submit'],
+	.cms-dialog input.loading-wrapper-active[type='submit'] {	
+		width: 100% !important;	
+	}
+	
+}

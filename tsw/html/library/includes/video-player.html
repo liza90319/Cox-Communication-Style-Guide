@@ -1,0 +1,13 @@
+<!--#set var="playlist" value=""-->
+<!--#if expr="${QUERY_STRING} = /playlist=(.*?)(&|$)/"-->
+	<!--#set var="playlist" value="${1}"-->
+<!--#endif-->
+
+<!-- START: video-player -->
+<!-- DEV NOTES: need to populate the number of columns the user selected as well as the data-attributes below -->
+<div class="colspan-10 video-player">
+	<div class="col-content">
+		<div class="video-holder" data-video-file="//images.cox.com/wcm/en/video/tv/contour/contour-overview.mp4" data-video-image="//images.cox.com/wcm/en/video/tv/contour/contour-overview.jpg" data-video-ratio="4:3" data-video-captions="/ui/<!--#echo var="version"-->/tsw/html/library/includes/video-1-captions.vtt" data-video-playlist="/ui/<!--#echo var="version"-->/tsw/html/library/includes/video-playlist.rss" data-video-playlist-position="<!--#echo var="playlist"-->" data-video-related="/ui/<!--#echo var="version"-->/tsw/html/library/includes/video-playlist.rss"></div>
+	</div>
+</div>
+<!--   END: video-player -->

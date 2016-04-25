@@ -1,0 +1,83 @@
+<!--#set var="content" value=""-->
+<!--#if expr="${QUERY_STRING} = /content=(.*?)(&|$)/"-->
+	<!--#set var="content" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="theme" value=""-->
+<!--#if expr="${QUERY_STRING} = /theme=(.*?)(&|$)/"-->
+	<!--#set var="theme" value="${1}"-->
+<!--#endif-->
+
+<!-- START: promo feature component -->
+<!-- DEV Notes: In AEM author mode, remove 'inactive' class from 'promo-feature-details' DIV -->
+<!-- DEV Notes: and add class 'auth-mode' to 'promo-feature' DIV in order to see both DIVs shown one below the other -->
+<div class="colspan-6 promo-feature <!--#echo var="theme"-->">
+	<!-- outer section -->
+	<div class="col-content">
+		<!-- promo feature visible DIV -->
+		<div class="cols-6 promo-feature-content">
+			<div class="colspan-2">
+				<div class="col-content">
+					<!-- optional wrapper for image -->
+					<a href="#"><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/fpo-2-col.png" alt="FPO Image" /></a>
+				</div>
+			</div>
+			<div class="colspan-4">
+				<div class="col-content">
+					<!-- Dev Notes: optional anchor wrapper for heading, if not needed remove wrapping <a> tag -->
+					<h3><a href="#">Header Lorem Ipsum</a></h3>
+					<!--#if expr="${content} = 'more'"-->
+					<p>Crystal-clear unlimited national calling, TV Caller ID &amp; more</p>
+					<!--#elif expr="${content} = 'most'"-->
+					<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque in.</p>
+					<!--#else-->
+					<p>Lorem Ipsum Dolar</p>
+					<!--#endif-->
+					<a href="#" class="button-secondary">Add Service</a>
+				</div>
+			</div>
+			<!-- link to open the promo feature details section -->
+			<div class="colspan-6 promo-feature-link">
+				<div class="col-content">
+					<a href="#">$39.99/mo for 12 mos.</a>
+				</div>
+			</div>
+		</div>
+		<!-- promo feature details section - toggles state between inactive and active -->
+		<div class="cols-6 promo-feature-details inactive">
+			<!--#if expr="${content} = 'more'"-->
+			<!-- Dev Notes: Variation where overlay DIV that spans entire box-->
+			<div class="colspan-6">
+				<div class="col-content">
+					<h2>Advanced TV with HBO<sup>&reg;</sup> &amp; HBO GO<sup>&reg;</sup></h2>
+					<p>Binge-watch the hottest HBO<sup>&reg;</sup> original series like Game of Thrones<sup>&reg;</sup>, any time you want.</p>
+				</div>
+			</div>
+			<!--#else-->
+			<div class="colspan-3">
+				<div class="col-content">
+					<!-- Dev Notes: Below DIV with class 'vertical-divider' is optional, remove the DIV if not needed -->
+					<div class="vertical-divider"></div>
+					<h2>Advanced TV with HBO<sup>&reg;</sup> &amp; HBO GO<sup>&reg;</sup></h2>
+					<p>Binge-watch the hottest HBO<sup>&reg;</sup> original series like Game of Thrones<sup>&reg;</sup>, any time you want.</p>
+				</div>
+			</div>
+			<div class="colspan-3">
+				<div class="col-content">
+					<!--#set var="pricingDollars" value="39"-->
+					<!--#set var="pricingDetails" value="Per month for 12 months"-->
+					<!--#set var="pricingSecondaryButtonText" value="Add Service"-->
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html?content="-->
+				</div>
+			</div>
+			<!--#endif-->
+			<!-- link to close the promo feature details section -->
+			<div class="colspan-6 promo-feature-details-link">
+				<div class="col-content">
+					<a href="#">Hide</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--  END : promo feature component -->

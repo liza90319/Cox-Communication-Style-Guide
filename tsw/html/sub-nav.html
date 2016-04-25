@@ -1,0 +1,40 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<div class="cols-grid">
+	<div class="colspan-12 col-reset text-align-center">
+		<h1>Sub Nav</h1>
+	</div>
+	
+	<div class="colspan-12 col-reset library-header">
+		<h2>Theme = a (default), CTA = off (6 columns of links)</h2>
+	</div>
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/sub-nav.html?theme=theme-a"-->
+	</div>
+	
+	<!-- section container -->
+	<div class="colspan-12 col-reset library-header">
+		<h2>Theme = a (default), CTA = on (5 columns of links)</h2>
+	</div>
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/sub-nav.html?theme=theme-a&button=true"-->
+	</div>
+	<!-- section container -->
+	
+	<div class="colspan-12 col-reset library-header">
+		<h2>Theme = b, CTA = off (6 columns of links)</h2>
+	</div>
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/sub-nav.html?theme=theme-b"-->
+	</div>
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

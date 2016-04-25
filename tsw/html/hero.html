@@ -1,0 +1,40 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<div class="cols-grid">
+	<div class="colspan-12 col-reset text-align-center">
+		<h1>Heros</h1>
+	</div>
+	
+	<div class="colspan-12 col-reset library-header">
+		<h2>Hero, Desktop Text Position = Coordinates, Mobile Text Position = Top, Mobile Text Underlay = Off</h2>
+	</div>
+	<!--#set var="heroImage" value="hero1.jpg"-->
+	<!--#set var="showPrice" value="true"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero&mobileVerticalPosition=top"-->
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Hero, Desktop Text Position = Middle, Mobile Text Position = Middle, Mobile Text Underlay = On</h2>
+	</div>
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero&desktopVerticalPosition=middle&mobileVerticalPosition=middle&underlay=true"-->
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Super Hero, Desktop Text Position = Coordinates, Mobile Text Position = Middle</h2>
+	</div>
+	<!--#set var="heroImage" value="superhero2.jpg"-->
+	<!--#set var="showPrice" value="true"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero-super&mobileVerticalPosition=middle"-->
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Slim Hero, Desktop Text Position = Coordinates, Mobile Text Position = Middle</h2>
+	</div>
+	<!--#set var="heroImage" value="slim-hero.jpg"-->
+	<!--#set var="showPrice" value="false"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/hero.html?type=hero-slim&mobileVerticalPosition=middle"-->
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

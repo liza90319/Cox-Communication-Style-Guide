@@ -1,0 +1,65 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<!-- START: grid -->
+<div class="cols-grid">
+	
+	<!-- START: PARSYS: optional placeholder content, not part of template -->
+	<!-- START: section container -->
+	<div class="section-container constrain-960">
+		<div class="col-reset" style="outline:1px solid #c00;">
+			 <p>Placeholder Section Spanning All Columns</p>
+		</div>
+	</div>
+	<!-- END: section container -->
+	<!-- END: PARSYS: optional placeholder content, not part of template -->
+	
+	<!-- START: section container -->
+	<div class="section-container constrain-960">
+		<!-- START: main content area -->
+		<div class="colspan-9">
+			<div class="cols-9">
+				<!-- START: PARSYS: placeholder content, not part of template -->
+				<div class="col-content">
+					<p>main content component drop zone</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<!-- END: PARSYS: placeholder content, not part of template -->
+			</div>
+		</div>
+		<!--   END: main content area -->
+
+		<!-- START: right content area -->
+<!-- DEV NOTES: The ".right-col-divider" class on the node below is a toggle/checkbox option in AEM. -->
+		<div class="colspan-3 right-col-divider">
+<!-- DEV NOTES: User configurable background color would be applied as inline style on the following node: -->
+			<div class="cols-3" style="background-color:#7b7d7d;">
+				<!-- START: PARSYS: placeholder content, not part of template -->
+				<!--#include virtual="/ui/$version/tsw/html/library/includes/rail-feature.html?theme=theme-a"-->
+				<!--#include virtual="/ui/$version/tsw/html/library/includes/rail-feature.html?theme=theme-b"-->
+				<!-- END: PARSYS: placeholder content, not part of template -->
+			</div>
+		</div>
+		<!--   END: right content area -->
+	</div>
+	<!--   END: section container -->
+
+	<!-- START: PARSYS: optional placeholder content, not part of template -->
+	<!-- START: section container -->
+	<div class="section-container constrain-960">
+		<div class="col-reset" style="outline:1px solid #c00;">
+			 <p>Placeholder Section Spanning All Columns</p>
+		</div>
+	</div>
+	<!-- END: section container -->
+	<!-- END: PARSYS: optional placeholder content, not part of template -->
+	
+</div>
+<!--   END: grid -->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

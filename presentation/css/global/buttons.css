@@ -1,0 +1,33 @@
+/* global buttons */
+
+/* THEME specific styles are located in the residential and business folders */
+
+/* right positioned button */
+.button-right {
+	float: right;
+}
+
+/* right aligned buttons */
+.text-align-right .button,
+.text-align-right .button-payment,
+.text-align-right .button-secondary,
+.text-align-right .button-secondary-disabled {
+	margin-left: 26px;
+}
+
+/* ADOBE AEM Style Overrides
+ * 
+ * hide all the button styles in the styles drop down because AEM classes each select
+ * option with the button class name causing the option to get styled (in some browsers) */
+#CQ .x-html-editor-wrap option[class*='button'] {
+	display: block;
+	color: #000;
+	background-image: none;
+	border: 0;
+	text-align: left;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	margin: 0;
+	padding: 0;
+}

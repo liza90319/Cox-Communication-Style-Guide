@@ -1,0 +1,32 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="sticky" value=""-->
+<!--#if expr="${QUERY_STRING} = /sticky=(.*?)(&|$)/"-->
+	<!--#set var="sticky" value="anchor-sticky"-->
+<!--#endif-->
+
+<!--#set var="theme" value=""-->
+<!--#if expr="${QUERY_STRING} = /theme=(.*?)(&|$)/"-->
+	<!--#set var="theme" value="${1}"-->
+<!--#endif-->
+
+<!-- START: anchor-links-freeform -->
+<!-- DEV NOTES: "anchor-sticky" class below is optional based on configuration in AEM -->
+<div class="anchor-links-bar anchor-links-freeform <!--#echo var="theme"--> <!--#echo var="sticky"-->">
+	<!-- anchor inner -->
+	<div class="anchor-inner">
+		<div class="colspan-12">
+			<div class="col-content">
+				<img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/icons/phone.png" alt="" />
+				Lorum ipsum delore
+				<a href="tel:1-800-123-4567">1-800-123-4567</a>
+				<a href="#" class="button-secondary">Primary Button</a>
+			</div>
+		</div>
+	</div>
+	<!-- /anchor inner -->
+</div>
+<!--  END : anchor-links-freeform -->

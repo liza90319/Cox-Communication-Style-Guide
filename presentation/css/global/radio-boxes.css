@@ -1,0 +1,129 @@
+/* Styling for blue radio boxes */
+.group-choice {
+	background: #ffffff;
+	color: #2757a7;
+	width: 46%; /* Width needs to be change depending upon the module requirement */
+	height: 2.5em;
+	display: inline-block;
+	border: 1px solid #c9cacb;
+	-webkit-box-shadow: 1px 1px 1px 0 #c9cacb; /* FF3.5 - 3.6 */
+	-moz-box-shadow: 1px 1px 1px 0 #c9cacb; /* Saf3.0+, Chrome */
+	box-shadow: 1px 1px 1px 0 #c9cacb; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+	padding-left: 2.5%;
+	padding-top: 2%;
+	cursor: pointer;
+}
+.choice-gap {
+	margin-right: 20px; /* Gap between radio box needs to be change depending upon the module requirement */
+}
+.group-choice.active-choice a {
+	color: #fff;
+}
+/* Css for checked install option selection box */
+.group-choice.active-choice {
+	background-color: #0a3167;
+	color: #fff;
+	display: inline-block;
+	border: 1px solid #14496f;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.group-choice.focused-choice {
+	box-shadow: 0 0 5px #2757a7;
+	-webkit-box-shadow: 0 0 5px #2757a7;
+	-moz-box-shadow: 0 0 5px #2757a7;
+}
+
+.group-choice label {
+	color: #2757a7 !important;
+	cursor: pointer !important;
+}
+
+.hide-choice-input {
+	position: absolute;
+	left: -999px;
+}
+
+/* hide the styled radio btn */
+input[type="radio"].hide-choice-input + label:before {
+	height: 0 !important;
+	width: 0 !important;
+	display: inline-block !important;
+	margin: 0;
+}
+
+input[type="radio"].hide-choice-input + label {
+	margin-right: 0px;
+	vertical-align: top;
+}
+.group-choice input[type="text"] {
+	height: 25px;
+	line-height: normal;
+}
+
+.group-choice.active-choice label {
+	color: #E8E8E8 !important;
+}
+.group-choice label.red-heading {
+	 color: #d8544c !important;
+}
+.group-choice.active-choice .red-heading {
+	color: #fff !important;
+}
+
+@media screen and (max-width: 767px) {
+	.choice-text {
+		font-size: 0.89em; /* overriding to 16px as desktop font size was appearing too small in mobile */
+	}
+	/* Mobile version Css for unchecked install option selection box */
+	.group-choice {
+		padding: 3% 0 3% 0 !important;
+		display: inline-block;
+		line-height: 2em !important;
+		margin-bottom: 7%;
+		font-size: 0.7em !important;
+		height: 1%;
+		margin-right: 0;
+		text-align: center;
+		font-size: 1em !important;
+		-webkit-box-shadow: 1px 1px 0px 0px #cccccc; /* FF3.5 - 3.6 */
+		-moz-box-shadow: 1px 1px 0px 0px #cccccc; /* Saf3.0+, Chrome */
+		box-shadow: 1px 1px 0px 0px #cccccc; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+	}
+
+	input.choice-field {
+		width: 44% !important;
+		margin-left: 15px !important;
+		margin-top: 5px !important;
+	}
+
+	.group-choice label,
+	.group-choice span.choice-value {
+		display: inline-block !important;
+		text-align: left !important;
+		width: 94% !important;
+		margin-left: 10px !important;
+	}
+
+	.group-choice label.hide {
+		display: none !important;
+	}
+	
+	span.choice-value {
+		line-height: 20px;
+	}
+	.group-choice.active-choice .error-wrapper {
+		color: #FFFFFF;
+		margin-left: 2%;
+		text-align: left;
+	}
+}
+
+/* For all tablets in portrait version*/
+@media only screen and (min-device-width: 768px) and (orientation: portrait) {
+	.group-choice {
+		width: 44%; /* Width needs to be change depending upon the module requirement */
+	}
+}

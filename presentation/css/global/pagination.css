@@ -1,0 +1,92 @@
+/* global pagination */
+
+.paging {
+	margin: 30px 0 20px; /* bottom gets 10px additional from col-content margin */
+	text-align: center;
+}
+.paging ul,
+.paging ul li,
+.paging div.col-content > a {
+	display: inline-block;
+}
+.paging ul {
+	height: 30px;
+	overflow: hidden;
+	white-space: nowrap;
+	margin: auto;
+	padding: 10px 0 0 0;
+}
+.paging ul li {
+	min-width: 40px;
+}
+.paging ul li a {
+	padding: 1px 9px 4px;
+}
+.paging div.col-content > a {
+	vertical-align: middle;
+}
+/* Fix for alignment issue for Safari on Mac */
+body[data-os="mac"] .paging div.col-content > a {
+	vertical-align: 6px;
+}
+.paging a:focus {
+	text-decoration: none;
+	border-radius: 2px;
+	height: 28px;
+	-webkit-box-shadow: 0px 1px 6px -1px rgba(39, 87, 167, 1);
+	-moz-box-shadow: 0px 1px 6px -1px rgba(39, 87, 167, 1);
+	box-shadow: 0px 1px 6px -1px rgba(39, 87, 167, 1);
+}
+.paging ul li a.active {
+	color: #000000;
+	border-radius: 2px;
+	border: 1px solid #C9C9C9;
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(215, 215, 215, 1);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(215, 215, 215, 1);
+	box-shadow: 1px 1px 5px 0px rgba(215, 215, 215, 1);
+}
+.paging a {
+	width: 30px;
+	height: 30px;
+	font-size: 1.125em;
+}
+.paging a.disabled {
+	background-color: #e2e2e2 !important;
+	pointer-events: none;
+	cursor: default;
+}
+.paging a.first,
+.paging a.last {
+	margin-top: -30px;
+}
+.paging a.first {
+	background: url("/ui/$version/tsw/img/global/icons/page-first.png")no-repeat 50% 50%;
+}
+.paging a.previous {
+	background: url("/ui/$version/tsw/img/global/icons/page-previous.png") no-repeat 50% 50%;
+	margin: -30px 12px 0 10px;
+}
+.paging a.next {
+	background: url("/ui/$version/tsw/img/global/icons/page-next.png") no-repeat 50% 50%;
+	margin: -30px 10px 0 15px;
+}
+.paging a.last {
+	background: url("/ui/$version/tsw/img/global/icons/page-last.png")no-repeat 50% 50%;
+}
+
+/* Target only ios devices */
+body[data-os="ios"] .paging a.first,
+body[data-os="ios"] .paging a.previous,
+body[data-os="ios"] .paging a.next,
+body[data-os="ios"] .paging a.last {
+	margin-top: -2px;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+	/* default state hide all li's */
+	.paging ul li {
+		display: none;
+	}
+}

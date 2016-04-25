@@ -1,0 +1,17 @@
+<!--#set var="theme" value=""-->
+<!--#if expr="${QUERY_STRING} = /theme=(.*?)(&|$)/"-->
+	<!--#set var="theme" value="${1}"-->
+<!--#endif-->
+
+<!-- START: ankle.html -->
+<div class="ankle <!--#echo var="theme"-->">
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi4-left-ankle.html"-->
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi4-left-ankle.html"-->
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/fhi4-left-ankle.html"-->
+	</div>
+	<!-- /section container -->
+</div>
+
+<!--  END : ankle.html -->

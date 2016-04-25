@@ -1,0 +1,51 @@
+/* flexslider.css */
+
+.flexslider {
+	position: relative;
+	zoom: 1;
+	max-width: 1280px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.flexslider ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Control Nav */
+.flex-control-nav {
+	margin: 0;
+	padding: 15px 0 20px;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.0); /* style needed to make the control-nav area non-clickable in IE */
+}
+.flex-control-nav li {
+	margin: 0 9px;
+	display: inline-block;
+	zoom: 1;
+}
+.flex-control-nav li a {
+	width: 17px;
+	height: 17px;
+	display: block;
+	background: url('/ui/$version/tsw/img/global/icons/carousel-controls.png') no-repeat center top;
+	cursor: pointer;
+	text-indent: -9999px;
+	position: relative;
+}
+.flex-control-nav li a.flex-active {
+	background-position: center bottom;
+	cursor: default;
+}
+
+@media screen and (max-width: 767px) {
+	/* controls position on mobile */
+	.flex-control-nav {
+		bottom: 64px;
+	}
+}

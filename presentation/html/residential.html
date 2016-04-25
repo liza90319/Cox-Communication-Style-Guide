@@ -1,0 +1,41 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<div class="cols-grid">
+	<div class="section-container constrain-960">
+		<div class="colspan-8">
+			<div class="col-content">
+				<h1 id="unique-tab">This is the new header demo page.</h1>
+				<p>Lorum ipsum dolar sit amet, <b>consectetur adipiscing elit</b>, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, <strong>ut varius mauris</strong>, Praesent vitae massa nibh. Praesent vitae</p>
+			</div>
+		</div>
+		<div class="section-container constrain-960">
+			<div class="colspan-12">
+				<div class="col-content">
+					<h2>State Change Links</h2>
+					<p>The links below change various states of the UI, such as authenticated user views and locations.</p>
+					<ul>
+						<li><a href="?authenticated=false" title="Mimic Unauthenticated User">Unauthenticated User (for <b>My Account</b> panel)</a></li>
+						<li><a href="?authenticated=true" title="Mimic Authenticated User">Authenticated User (for <b>My Account</b> panel)</a></li>
+						<li><a href="?authenticated=partial" title="Mimic Partially Authenticated User">Partially Authenticated User (for <b>My Account</b> panel)</a></li>
+						<li><a href="?location=none" title="Mimic No Location">No Location Set (for <b>Location</b> panel)</a></li>
+						<li><a href="?location=outside" title="Mimic Location OUTSIDE Cox Footprint">Outside Cox Footprint (for <b>Location</b> panel)</a></li>
+						<li><a href="?location=customer" title="Mimic Location INSIDE Cox Footprint">Inside Cox Footprint (for <b>Location</b> panel)</a></li>
+						<li><a href="?location=invalid" title="Mimic Location INVALID">Invalid Location (for <b>Location</b> panel)</a></li>
+					</ul>
+					<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+					<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+					<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+					<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+					<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

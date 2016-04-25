@@ -1,0 +1,93 @@
+/* best-offer.css */
+
+/* Styling - When Carousel is applied. */
+.best-offer.colspan-4 {
+	width: inherit;
+	min-width: inherit;
+	max-width: inherit;
+}
+
+/* handle js disabled or the AEM authoring environment which excludes the slick-carousel class */
+.best-offer-container {
+	margin: 30px auto;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+.best-offer-container > li {
+	width: 315px;
+	margin: 0 auto 30px;
+	display: inline-block;
+}
+
+.best-offer-container .slick-dots {
+	position: relative;
+	bottom: 0 !important;
+	left: 0;
+	max-width: 100%;
+	margin: 20px 0 0 0;
+}
+.best-offer-container .slick-prev,
+.best-offer-container .slick-next {
+	top: 200px;
+}
+.best-offer-container.slick-carousel .slick-prev:before,
+.best-offer-container.slick-carousel .slick-next:before {
+	top: 0;
+	left: 0;
+}
+.best-offer-container.slick-carousel .slick-prev,
+.best-offer-container.slick-carousel .slick-next {
+	margin: 0;
+}
+.best-offer-container.slick-carousel .slick-prev {
+	left: 20px;
+}
+.best-offer-container.slick-carousel .slick-next {
+	right: 15px;
+}
+
+.best-offer > .col-content {
+	padding-bottom: 20px;
+}
+
+/* To highlight the best-offer */
+.best-offer .highlight {
+	background-color: #F6F6F7;
+}
+
+/* Override slick.css */
+.best-offer img {
+	display: block;
+	margin: 0 auto;
+}
+
+/* Best Value */
+.best-offer .best-value {
+	background-color: #75ccff;
+	font-size: 1.25em;
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	margin-bottom: 2px;
+	padding: 6px 0;
+}
+
+/* Other than Best Value */
+.best-offer .no-best-value {
+	padding: 16px 0;
+	margin-bottom: 2px;
+}
+.best-offer h3 {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	margin: 20px 40px 8px;
+}
+.best-offer .pd-no-shadow {
+	margin: 25px 9% 20px;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+	/* Positioning for best offer carousel dots and nav arrows in mobile */
+	.best-offer-container {
+		margin-top: 30px;
+	}
+}

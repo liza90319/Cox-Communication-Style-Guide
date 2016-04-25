@@ -1,0 +1,117 @@
+/* aem.css *
+ * 
+ * This file contains css to make the author components work as well as some of the individual aem components.
+ */
+
+/* Fix to align content after Adobe parsing  */
+.aem-component {
+	display: inline !important;
+}
+
+/* Fixes for AEM Emulator */
+body.simulator-content {
+	background-color: #fff !important;
+}
+
+/* AEM Adaptive Image */
+.aem-image .image-left {
+	text-align: left;
+}
+.aem-image .image-center img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.aem-image .image-right {
+	text-align: right;
+}
+
+/* common styles for mobile */
+@media screen and (max-width: 767px) {
+	.aem-image .image-right {
+		text-align: left;
+	}
+}
+
+
+/* styling to support certain aem components being dropped directly onto the grid
+ * as well as into existing components.
+ */
+.aem-cta,
+.aem-cta .col-content {
+	display: inline-block;
+}
+.col-content .aem-cta .col-content,
+.col-content .aem-image .col-content,
+.col-content .aem-rte .col-content {
+	margin: 0; /* remove the double col-content margin that occurs when dropped into existing components */
+}
+
+/* add horizontal scrollbar to RTE component to solve issue like too much content in a data-table */
+.aem-rte {
+	overflow-x: auto;
+	overflow-y: hidden; /* was visible 6/15/2015 but created a vertical scroll in Chrome */
+	padding-top: 2px; /* Prevent cropping off the top of tooltip */
+}
+.aem-rte::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 14px;
+	height: 8px;
+}
+.aem-rte::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	border: 3px solid #fff;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+@media screen and (max-width: 767px) {
+	.aem-cta,
+	.aem-cta .col-content {
+		display: block;
+	}
+}
+
+
+/* custom aem component wrapper */
+.aem-author-placeholder {
+	border: 2px solid #4bb2d9;
+	background-color: #edf7fb;
+	padding-top: 10px;
+	margin-bottom: 25px !important;
+}
+.aem-author-placeholder p {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.aem-author-placeholder textarea {
+	width: 100%;
+	height: 60px;
+}
+.aem-author-placeholder-labels {
+	font-weight: 600;
+}
+.aem-author-placeholder-labels .col-content {
+	font-size: 14px;
+}
+
+
+/* mega menu authoring */
+.aem-nav-group {
+	font-size: 10px;
+	margin-bottom: 25px;
+}
+.aem-nav-group h1 {
+	padding: 0 10px;
+}
+.aem-nav-section {
+	margin-left: 40px;
+}
+.aem-nav-item {
+	margin-left: 40px;
+}
+
+
+/* temporary for OOTB search component testing */
+[class*='cq-searchpromote-'] {
+	font-size: 16px;
+}

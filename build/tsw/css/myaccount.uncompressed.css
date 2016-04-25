@@ -1,0 +1,2358 @@
+/*Styling for account-overview-widget */
+.account-overview {
+	margin-top: -8px;
+}
+.account-overview .desktop-only .col-content {
+	font-size: 14px;
+}
+.account-overview .text-indent {
+	padding-left: 10px;
+}
+
+.account-overview .line-break {
+	display: block;
+}
+.account-overview .account-overview-button {
+	margin-top: 4px;
+	float: right;
+}
+.account-overview .button-secondary {
+	font-family: "open_sansregular", Arial, Helvetica, Sans-serif;
+	font-size: 1em; /* 14px */
+	padding: 7px 18px 7px 19px;
+}
+.account-overview .account-overview-divider {
+	margin-top: 6px;
+}
+.account-overview .desktop-only .account-overview-username {
+	font-size: 1.571em;
+	margin-top: -3px;
+}
+
+.account-overview .account-overview-services {
+	margin-top: 2px;
+}
+.account-overview .overview-outside-margin {
+	margin-bottom: -20px;
+}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	.account-overview {
+		margin-top: -20px;
+	}
+	.account-overview .myaccount-text {
+		background-color: #035490;
+		height: 25px;
+		text-align: center;
+		padding: 5px 0px 12px 0px;
+	}
+	.account-overview .overview {
+		background-color: #FAFAFA;
+		padding: 9px 0;
+		margin-top: 6px;
+	}
+
+	.account-overview .overview-outside-margin {
+		background-color: #FAFAFA;
+		margin-bottom: -21px;
+	}
+	.account-overview .myaccount-text h3 {
+		color: #FFFDF7;
+	}
+	.account-overview .line-break-mobile {
+		display: block;
+	}
+	.account-overview .line-break {
+		display: block;
+	}
+	.account-overview .account-overview-toggle {
+		margin-top: 8px;
+	}
+	.account-overview .account-overview-margin-mobile {
+		margin-top: 9px;
+	}
+	.account-overview .text-indent {
+		padding-left: 0px;
+	}
+	.account-overview .account-overview-username {
+		margin-bottom: -4px;
+	}
+	.account-overview .account-overview-services {
+		margin-top: 7px;
+	}
+	.account-overview .account-overview-divider {
+		margin-top: -35px !important;
+	}
+	.account-overview-page-divider {
+		background: url("/ui/4_1/tsw/img/myaccount/bill/page-divider-dark.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+		height: 37px;
+		margin: -63px 0px 25px;
+	}
+}
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	.account-overview .account-overview-mimage {
+		margin-top: 14px;
+	}
+	.account-overview .account-overview-mimage a {
+		background: url(/ui/4_1/tsw/img/myaccount/bill/open-close.png) no-repeat center top;
+		display: inline-block;
+		height: 41px;
+	}
+	.account-overview .expand-view a {
+		background-position: center bottom;
+	}
+	.account-overview .account-overview-mimage  a span {
+		visibility: hidden;
+	}
+
+}
+
+/* For all tablets in portrait version*/
+@media only screen and (min-device-width: 768px) and (orientation: portrait) {
+	.page-divider {
+		margin-right: 0px;
+	}
+	.account-overview .text-indent {
+		padding-left: 0px;
+		display: block;
+	}
+	.account-overview .account-overview-button {
+		width: 108%;
+	}
+}
+
+/*Styling for account -profile settings section */
+.account-profile-settings {
+	margin: 0 0 80px; /* 80px margin-bottom per psd */
+}
+.account-profile-settings h4{
+	padding-bottom: 0px !important;
+	padding-top: 17px;
+}
+.account-profile-settings .solid-divider {	
+	margin: 10px 100px 0 20px;
+}
+.account-profile-settings .col-content{
+	margin-top: 3px !important;
+}
+.account-profile-settings .multi-data {
+	display: block;
+}
+/*Styling for account services widget section*/
+.services-navigation > div {
+	text-align: center;
+}
+.services-navigation {
+	margin:  0px 0 15px;	
+}
+.services-navigation a,
+.services-navigation span {
+	display: block;	
+}
+.page-header-link {
+	margin: -5px 0 15px;
+}
+.page-header-link h1 {
+	margin-bottom: 12px;
+}
+.current-equipment a {
+	margin: 6px 20px 0 0;
+	display: inline-block;
+}
+.current-equipment select {
+	margin: -10px 0 0 -20px;
+	width: 150px;
+}
+.account-services-feature {
+	margin: 20px 0;
+}
+.upgrade-feature {
+	margin: 5px 0 0;
+}
+.upgrade-feature p {
+	margin: 10px 0 15px;
+	line-height: 1.7em;
+}
+.account-services-feature li {
+	padding: 5px 0 0;	
+}
+.account-services-feature .col-content{
+	margin-right:20px !important;
+}
+.account-services-feature a {
+	margin: 0px !important;
+}
+.solid-divider {
+	border-bottom: 1px solid #E8E8E8;
+}
+.equipment-section,
+.upgrade-feature {
+	padding-bottom: 20px;
+}
+.equipment-section .col-content {
+	display: inline-block;
+}
+.service {
+	margin-bottom: 35px;
+}
+.equipment-detail {
+	margin: 5px 0 0;
+}
+.equipment-detail label{
+	margin: 0 5px 0 0;
+}
+
+/* styles for current services price modal */
+.page-header .right-link {
+	float: right;
+}
+
+.page-header .page-header-link {
+	margin-left:10px;
+}
+
+.current-services {
+	padding:10px;
+	font-weight:bold;	
+}
+
+.current-services span {
+	font-size:0.875em !important;
+}
+
+.current-services .service-header {
+	padding-top:10px;
+	padding-bottom:10px;	
+}
+
+.service-header .col-content {
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+}
+
+.current-services .service-subheader {
+	background-color: #F2F2F2;
+	border-top: solid 2px #eaeaea;
+	border-bottom: solid 2px #eaeaea;
+	padding-left:20px;
+	padding-top:10px;
+}
+
+.current-services .service-sub-subheader {
+	display: block;
+	padding-left:30px;
+}
+
+.current-services span.service-price {
+	float:right;
+}
+
+.current-services .service-add-ons {
+	background-color: #fafafa;
+	padding-left:20px;
+	padding-top:10px;
+}
+
+.current-services .text-not-bold {
+	font-weight:normal;
+}
+/* style for account ankle and account tools widget */
+.account-ankle {
+	margin: 60px 0 -20px;
+}
+.account-ankle .col-content {
+    margin-top: 10px !important;
+    font-size: 14px;
+}
+.account-tools {
+	margin: 30px 0px;
+}
+.account-tools .colspan-1 {
+	max-width: 5.9%;
+	min-width: 5.9%;
+	width: 5.9%;
+}
+.account-tools .colspan-2 {
+	max-width: 14.1%;
+	min-width: 14.1%;
+	width: 14.1%;
+}
+.account-tools .colspan-2 .col-content {
+	margin: 20px 10px 0 10px !important;
+	font-size: 13px;
+}
+.email-count {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	display: block; 
+	color: #fff;
+	font-size: 0.813em;
+	line-height: 18px;
+	min-width: 8px;
+}
+.email-pos {
+	margin-top: -6px;
+	position: absolute;
+	right: -5px;
+	z-index: 100;
+}
+.email-pos .loading-wrapper-active {
+	min-height: 40px;
+	width: 40px;
+}
+.email-container {
+	border-radius: 45px;
+	height: 20px;
+	padding: 0 6px;
+	background-color: #D80A0A;
+}
+
+/* Style for my account link listing widget */
+.helpful-articles {
+	border-bottom:1px solid #E8E8E8;
+	margin-top: -10px;
+}
+.helpful-articles .colspan-3 .col-content {
+	margin: 5px 10px 0 20px !important;
+	font-size: 13px;
+}
+.helpful-articles >div {
+	margin-bottom: 10px;
+}
+.helpful-articles.last {
+	margin-bottom: 60px;
+}
+/* Styling for Bill Overview section */
+.bill-overview .col-content {
+	display: inline-block;
+}
+.bill-overview .account-number {	
+	margin: -10px 0px -5px 0px;
+}
+.bill-overview .account-number h4{
+	float: left;
+}
+.bill-overview .account-number span {
+	margin: 0 0 0 10px;
+}
+.bill-overview .total-due p,
+.bill-overview .past-due p {
+	margin-bottom: 5px;
+}
+.bill-overview .total-due .col-content,
+.bill-overview .past-due .col-content {
+	margin-top: 10px !important;
+}
+.bill-overview a.button {
+	margin: 5px 0 5px;	
+}
+.bill-overview h5 {
+	margin: 5px 0px;
+	font-size: 0.857em;  /* font size override to not break My Account with base size increase to 16px */
+	line-height: 1.167em; /* line-height override to not break My Account with base size increase to 16px */
+}
+.bill-overview select {
+	margin: -10px 0 0 -20px;
+	width: 181px;
+}
+.bill-links h5 {
+	color: #404040; /* override header color to match the mock */
+}
+.total-due-amount {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	font-size: 1.143em;
+	color: #000;
+}
+.past-due-amount {
+	color: #D80A0A;
+}
+.bill-links .col-content {
+	margin: 0 10px 0 20px !important; /* override callout col-content top margin */
+}
+.bill-links a {
+	display: block;
+}
+
+/* upsell widget */
+.upsell .colspan-1 img.col-content {
+	margin-left: 19px !important; /* image under callout, colspan-1 gets cut with 20px left margin */
+}
+.upsell p {
+	margin-bottom: 20px;
+}
+
+/* watch tv online widget */
+.tv-online a {
+	display: block;	 
+	margin: 0 0 5px;
+}
+.show > div {
+	text-align: center;
+}
+.show a {
+	margin: 5px 0 0;
+}
+
+.tv-content {
+	position: relative;
+	min-height:190px;
+}
+.tv-content .last {
+	padding-bottom: 45px; /* needed to adjust the height of vertical-divider so th per psd and to have it scale */
+}
+.vertical-feather {
+	height: 100%;
+	position: absolute;
+	width: 1px;
+	background: #E8E8E8;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, color-stop(0%, #FFFFFF), color-stop(20%, #E8E8E8),color-stop(80%, #E8E8E8), color-stop(100%, #FFFFFF) ); /* Saf4+, Chrome */
+	background: -webkit-linear-gradient(#FFFFFF 0%, #E8E8E8 20%,#E8E8E8 80%, #FFFFFF 100%); /* Chrome 10+, Saf5.1+ */
+	background: -moz-linear-gradient(#FFFFFF 0%, #E8E8E8 20%,#E8E8E8 80%, #FFFFFF 100%); /* FF3.6+ */
+	background: -ms-linear-gradient(#FFFFFF 0%, #E8E8E8 20%,#E8E8E8 80%, #FFFFFF 100%); /* IE10 */
+	background: linear-gradient(#FFFFFF 0%, #E8E8E8 20%,#E8E8E8 80%, #FFFFFF 100%); /* W3C */
+}/* bill-common.css - contains styles that span sections of view/pay bill */
+
+/* review/confirmation tables */
+.bill-review-table {
+	margin-bottom: 30px;
+}
+.bill-review-table td {
+	padding: 4px 14px;
+	vertical-align: top;
+}
+.bill-review-table td:first-child {
+	padding-left: 0;
+}
+
+/* pdf link style */
+.download-bill-pdf {
+	margin: 0 0 10px;
+}
+.download-bill-pdf-link {
+	background: url(/ui/4_1/tsw/img/interface/billing/adobe-PDF.gif) no-repeat;
+	display: inline-block;
+}
+.download-bill-pdf-link span {
+	margin-left: 25px;
+}
+
+/* common new styles */
+.payment-steps h4 {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	margin-top: 2px;
+}
+
+.asterisk-legend {
+	margin: 0 0 0 15px;
+}
+/* tab navigations */
+
+.cancel-form {
+	margin-right: 20px;
+}
+.cancel-popup-form .btn-close {
+	margin-right: 17px;
+}
+
+.confirmation-modal .bill-review-table {
+	margin-top: 35px;
+	margin-bottom: 25px;
+}
+.group-choice span,
+.manage-payment-table span {
+	background: url('/ui/4_1/tsw/img/myaccount/bill/credit_card_logos.png') -100px 0;
+	background-repeat: no-repeat;
+	padding-left: 0;
+	box-sizing: border-box; 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.IE8 .card-number {
+	margin-right: -50px; /* fix for IE8 not playing nice with box-sizing above */
+}
+span.Discover {
+	background-position: 3px -42px;
+	padding-left: 50px !important;
+}
+
+span.Amex {
+	background-position: 3px -129px;
+	padding-left: 50px !important;
+}
+
+span.Visa {
+	background-position: 3px -204px;
+	padding-left: 50px !important;
+}
+
+span.MasterCard {
+	background-position: 3px -280px;
+	padding-left: 50px !important;
+}
+
+span.generic-atm-card {
+	background-position: 3px -356px;
+	padding-left: 50px !important;
+}
+/* This class should be added to the next widget of title widget if its a multi statement scenario */
+.multi-statement-widget {
+	margin-top: 40px;
+}
+.help-icon .error-wrapper {
+	margin-left: 6.4%;
+}
+.IE8 .help-icon .error-wrapper {
+	margin-left: 7%;
+}
+.IE .help-icon .error-wrapper {
+	margin-left: 6%;
+}
+.leaf-image {
+	background-image: url('/ui/4_1/tsw/img/myaccount/bill/paperless-billing.png');
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: auto;
+	padding-left: 23px;
+}
+
+.calendar-image {
+	background-image: url('/ui/4_1/tsw/img/myaccount/bill/automatic-payment.png');
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: auto;
+	padding-left: 23px;
+}
+.bill-review-table th {
+	font-weight: 100;
+}
+
+/* Login page css for mobile */
+@media screen and (max-width: 767px) {
+	.remember-label {
+		display: block;
+		margin-top: 3px !important;
+	}
+	/* mobile styles for input fields in modal */
+	form.form-modal [class*="colspan-"],
+	.form-container [class*="colspan-"] {
+		float: none;
+	}
+	.form-modal .dialog-component-buttons input[type="submit"] {
+		width: 90%;
+	}
+	.form .tool-tip-field {
+		width: 82% !important;
+	}
+}
+
+/*Styling for bill-details.css */
+.view-bill {
+	float: right;
+	margin: -11px 8px 15px 0;
+}
+.billing-period .billing-period-drop-down {
+	width: 170px;
+	margin: -4px 0px 35px -72px
+}
+.statement-summary-div table {
+	width: 100%;
+}
+.IE8 .last-child {
+	padding-bottom: 20px;
+}
+.statement-summary-div {
+	margin-bottom: 40px;
+	background: none repeat scroll 0 0 #e6e7e8;
+}
+.statement-summary-div .account-summary.mobile-only {
+	margin-bottom: 6px;
+	margin-left: 10px;
+}
+.account-summary.mobile-only > p {
+	margin-bottom: 10px;
+	padding-top: 24px;
+}
+.statement-summary-div td {
+	padding: 3px 43px 3px 25px;
+}
+.statement-summary-div .statement-summary-charge {
+	float: right;
+}
+.statement-summary-div .statement-summary-header {
+	font-size: 20px;
+}
+.expansion-area-border {
+	padding-right: 0 !important;
+	border-bottom: 1px solid #ccc;
+}
+.statement-summary-div .total-due {
+	line-height: 23px;
+}
+.statement-summary-div tbody tr:first-child td {
+	padding-top: 20px;
+}
+.statement-summary-div tbody tr:last-child td {
+	padding-bottom: 20px;
+	padding-top: 12px;
+}
+.statement-summary-div tr td.expansion-area-border {
+	padding-top: 8px !important;
+}
+.statement-summary-div tbody tr:first-child + tr td {
+	padding-top: 12px;
+}
+.summary-charges .symbol-description {
+	margin-left: 43px;
+}
+.summary-charges > h1 {
+	margin-bottom: 15px;
+}
+.summary-charges > h4 > span {
+	float: right;
+	margin-right: 42px;
+}
+.summary-charges .cxl-charge {
+	background-image: url("/ui/4_1/tsw/img/interface/billing/arrow_solid.gif");
+	background-position: 0 8px;
+}
+.summary-charges .cxl-nocharge {
+	background-image: url("/ui/4_1/tsw/img/interface/billing/arrow_hollow.gif");
+	background-position: 0 8px;
+}
+.summary-charges .cxl-charge.symbol-description {
+	margin-bottom: 19px;
+}
+
+.summary-charges td.cxl-charge, .summary-charges td.cxl-nocharge {
+	background-position: 0 8px !important;
+	width: 65%;
+}
+.summary-charges td.no-cxl-charge {
+	width: 65%;
+}
+.summary-charges .cxl-nocharge, .summary-charges .cxl-charge {
+	background-repeat: no-repeat;
+	padding-left: 23px;
+}
+.summary-charges .cxl-nocharge, .summary-charges .no-cxl {
+	padding-left: 23px;
+}
+.summary-charges td.no-cxl {
+	width: 65%;
+}
+.summary-charges .accordion-inside {
+	margin-left: 8.6%;
+}
+.summary-charges .inside-accordion-text {
+	margin-bottom: 20px;
+}
+.summary-charges .total-table {
+	border-top: 1px solid #b3b3b3;
+	font-size: 24px;
+	margin-left: 9%;
+	padding-bottom: 50px;
+}
+.summary-charges .total-table td {
+	font-size: 20px;
+	padding-left: 5px;
+}
+.summary-charges .total-table > table {
+	margin-top: 14px;
+	width: 100%;
+}
+
+.summary-charges .accordion-inside .accordion-trigger {
+	border-color: transparent;
+}
+.summary-charges .total-table .total-monthly-amount {
+	float: right;
+	margin-right: 37px;
+}
+.summary-charges .accordion-trigger .accordion-dynamic-text {
+	margin-right: 42px;
+	font-size: 0.833em; /* SMT - For 20px font-size */
+	font-size: 0.75em; /* SMT - For 18px font-size */
+}
+.summary-charges .expansion-table td.expansion-area-charges {
+	float: right;
+	padding-right: 70%;
+}
+.summary-charges .expansion-table {
+	margin-left: 44px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+.summary-charges .expansion-table tr {
+	line-height: 24px;
+}
+.summary-charges td.total-service {
+	padding-left: 24px;
+}
+.summary-charges .total-bill {
+	margin-top: 19px;
+	margin-bottom: 0;
+}
+.summary-charges .total-bill > table {
+	width: 100%;
+}
+.summary-charges > a {
+	margin-left: 8px;
+}
+.statement-summary-div .statement-summary-charge.tool-tip {
+	padding-right: 40px;
+	text-align: right;
+}
+.telephone-usage-table td {
+	padding: 10px 20px 8px;
+	vertical-align: top;
+}
+.telephone-accordion-text {
+	margin-left: 60px;
+	margin-bottom: 25px;
+}
+.telephone-guide-text {
+	margin-left: 80px;
+}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	.billing-period {
+		margin-top: 22px;
+	}
+	.billing-period .billing-period-drop-down {
+		width: 100%;
+		margin: 10px 0 8px;
+	}
+	.view-bill {
+		float: none;
+		margin: 0 0 30px 0;
+	}
+	.statement-summary-div {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	.statement-summary-div tbody tr:first-child {
+		width: 100%;
+	}
+	.statement-summary-div td {
+		padding: 3px 10px 3px 10px;
+	}
+	.statement-summary-div .statement-summary-item {
+		width: 52%;
+	}
+	.summary-charges > h1 {
+		margin-bottom: 15px;
+	}
+	.summary-charges h2 > span {
+		margin-right: 0px;
+	}
+	.summary-charges > h4 > span {
+		margin-right: 0;
+	}
+	.summary-charges .expansion-table {
+		margin-left: 20px;
+		width: 95%;
+	}
+	.summary-charges .total-table .total-monthly-amount {
+		margin-right: 0;
+	}
+	.summary-charges .expansion-table td.expansion-area-charges {
+		padding-right: 5px;
+	}
+	.statement-summary-div .statement-summary-charge {
+		margin-right: 0;
+	}
+	.summary-charges .symbol-description {
+		margin-left: 38px;
+	}
+	.summary-charges td.cxl-charge, .summary-charges td.cxl-nocharge {
+		background-position: 21px 8px !important;
+	}
+	.summary-charges td.cxl-charge, .summary-charges td.cxl-nocharge, .summary-charges td.no-cxl {
+		padding-left: 35px !important;
+	}
+	.summary-charges .total-table {
+		padding-bottom: 40px;
+	}
+	.telephone-usage-table {
+		margin-left: 40px !important;
+	}
+}
+
+/* For all tablets in portrait version*/
+@media only screen and (min-device-width: 768px) and (orientation: portrait) {
+	.billing-period .billing-period-drop-down {
+		margin-left: -40px
+	}
+}
+
+/* view bill multi styles */
+.combined-statements > div {
+	text-align: center;
+	background: url("/ui/4_1/emergence/corp/en/img/interface/billing/bubble.png") no-repeat scroll 0 0 transparent;
+	height: 175px;
+	margin: 20px 0 30px;
+}
+
+.combined-statements .balance {
+	height: 80px;
+	margin: 10px 0 0;
+}
+.combined-statements form {
+	border-top: 1px solid #E5E5E5;
+	margin: 0 25px 5px !important;
+	padding: 10px 0 0;
+}
+.bold-text {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+}
+.normal-text {
+	font-weight: normal !important;
+}
+
+/* make payment multi styles */
+.multi-payment .statement-other-input {
+	margin-top: -5px;
+}
+/* Styling for EasyPay-SignIn */
+
+.easypay-signin .signin-button {
+	margin-top: -5px;
+}
+
+.easypay-signin .form-margin {
+	margin-top: 7px;
+}
+
+.easypay-signin .sign-in {
+	margin-bottom: 35px;
+}
+
+.easypay-signin .divider-margin {
+	margin-top: 22px;
+	margin-bottom: 19px;
+}
+
+.easypay-signin .register {
+	margin-bottom: -55px;
+}
+.easypay-signin .btn-help {
+		margin-top: 4px;
+	}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	.easypay-signin .signin-button {
+		margin-top: 20px;
+	}
+	.easypay-signin .btn-help {
+		margin-top: 6px;
+	}
+}/*Styling for ibill-account-summary-widget */
+.ibill-account-summary .video-image {
+	background-image: url('/ui/4_1/tsw/img/myaccount/bill/video-icon.png');
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: auto;
+}
+.ibill-account-summary .video-image span{
+	margin-left: 25px;
+}
+
+.red-heading {
+	color: #d8544c !important;
+}
+
+.ibill-account-summary .total-amount {
+	margin-bottom: 2px;
+}
+
+.ibill-account-summary .amount-dollars {
+	margin-bottom: 3px;
+	color: #404040;
+}
+
+.ibill-account-summary .due-payment {
+	margin-bottom: 1px;
+}
+
+.ibill-account-summary .due-date {
+	margin-bottom: 10px;
+}
+
+.ibill-account-summary .paynow-button-margin {
+	margin-bottom: 56px;
+}
+.ibill-account-summary .left-float > a {
+	vertical-align: middle;
+}
+.ibill-account-summary .left-float {
+	margin-bottom: 23px;
+	margin-top: -30px;
+}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+
+	.ibill-account-summary .left-float {
+		text-align: left !important;
+	}
+	.ibill-quick-links-widget .colspan-4.colspan-m12 {
+		float: none;
+		margin-top: 0;
+	}
+	.ibill-account-summary .left-float {
+		margin-bottom: 10px;
+	}
+
+}/* Styling for ibil activity widget */
+.ibill-activity-widget .page-divider {
+	margin: 15px 0 19px;
+}
+/*Styling for ibill-address-widget */
+.ibill-address-widget h3 {
+	margin: 0px 0px 22px;
+}
+.ibill-address-widget span {
+	margin-right: 22px;
+}
+.ibill-address-widget .address-malign {
+	margin: 0 0 6px -70px;
+}
+.accordion-mobile-only {
+	display: none !important;
+}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	.ibill-address-widget h3 {
+		margin: 20px 0px 20px;
+	}
+	.ibill-address-widget h4 {
+		margin-bottom: 15px;
+		line-height: 45px;
+	}
+	.ibill-address-widget h5 {
+		margin-left: 40px !important;
+	}
+	.ibill-address-widget .address-malign {
+		margin: 0px 0px 20px 0px !important;
+		line-height: 22px;
+		
+	}
+	.ibill-address-widget .address-malign span, .ibill-address-widget .address-malign a  {
+		margin-left: 40px;
+	}
+	.accordion-mobile-only {
+		display: block !important;
+	}
+	.ibill-address-widget .address-malign span {
+		display: block;
+	}
+}
+/* For all tablets in portrait version*/
+@media only screen and (min-device-width: 768px) and (orientation: portrait) {
+	.ibill-address-widget .address-malign {
+		margin-left: -15px;
+		line-height: 22px;
+	}
+	.ibill-address-widget .address-malign span {
+		display: block;
+	}
+}/*Styling for ibill-all-statements-overview */
+.multi-statements {
+	margin-top: -35px;
+}
+.multi-statements .header {
+	margin-top: -7px;
+	margin-bottom: 30px;
+}
+
+.multi-statements-amount-all {
+	font-size: 2.3em;
+	margin-top: 2px;
+}
+
+.multi-statements .total-amount {
+	float:left;	
+	padding-right:15px;
+}
+
+.multi-statements .total-due-div {
+	margin-top:-14px;	
+	margin-bottom:-12px;
+}
+
+.multi-statements .leaf-image {
+	background-position: left center;
+	margin-top: -5px;
+	margin-right: 1%;
+}
+
+.multi-statements .calendar-image {
+	background-image: url('/ui/4_1/tsw/img/myaccount/bill/automatic-payment.png');
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: auto;
+	padding-left: 23px;
+	margin-right: 3%
+}
+
+.multi-statements-area-border {
+	padding-right: 0 !important;
+	border-bottom: 1px solid #ccc;
+	margin-top: 14px;
+	margin-bottom: 25px;
+}
+
+.multi-statements .calendar-margin {
+	margin-bottom: 5px;
+}
+
+.multi-statements .sub-section-margin {
+	margin-bottom: 13px;
+}
+
+.multi-statements .sub-section-date {
+	margin-top: -13px;
+	font-weight: bold;
+}
+
+.multi-statements .pay-now-button {
+	margin-top: 6px;
+}
+
+.multi-statements .billing-details {
+	margin-top: 15px;
+}
+
+.multi-statements .multi-screen-footer {
+	margin-bottom: -17px;
+}
+
+.multi-statements .red-heading {
+	color: #d8544c;
+}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+
+	.multi-statements .header {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	
+	.multi-statements .total-amount {
+		float:none;
+		padding-right:0px;	
+	}
+
+	.multi-statements-amount-all {
+		text-align: center;
+		margin-top: -2px;
+	}
+
+	.multi-statements .line-break {
+		display: block;
+	}
+
+	.multi-statements-area-border {
+		padding-right: 0 !important;
+		border-bottom: 1px solid #ccc;
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+
+	.multi-statements .pay-all-button {
+		margin-top: 24px;
+		margin-bottom: -8px;
+	}
+
+	.multi-statements .mobile-section-heading {
+		margin-top: -5px;
+	}
+
+	.multi-statements-section-amount {
+		margin-top: -19px;
+		margin-bottom: 12px;
+	}
+
+	.multi-statements .pay-now-button {
+		margin-top: 1px;
+		margin-bottom: 32px;
+	}
+
+	.multi-statements .billing-details {
+		margin-bottom: -15px;
+	}
+
+	.multi-statements .multi-screen-footer {
+		margin-bottom: 63px;
+	}
+
+}
+
+/* For all tablets in portrait version*/
+@media only screen and (min-device-width: 768px) and (orientation: portrait) {
+	.multi-statements .pay-all-button {
+		margin-left: 20px;
+	}
+}
+
+/* Styling of ibill-billing-options widget */
+.ibill-billing-options-widget .openedDiv {
+	display: block;
+}
+
+.ibill-billing-options-widget .closedDiv {
+	display: none;
+}
+
+.ibill-billing-options-widget .page-divider {
+	margin: 10px 0 10px -10px;
+}
+
+.ibill-billing-options-widget .para-margin {
+	margin-top: 12px;
+}
+
+.ibill-billing-options-widget .div-margin {
+	margin-top: 17px;
+}
+
+.ibill-billing-options-widget .button-top-margin {
+	margin-top: 15px;
+	margin-bottom: -8px !important;
+}
+
+.ibill-billing-options-widget .bill-type-margin {
+	margin-bottom: -16px;
+	margin-top: 30px;
+}
+.ibill-billing-options-widget .radio-bottom {
+	margin-bottom: 0%;
+}
+
+.ibill-billing-options-widget .span-margin {
+	margin-right: 18px;
+}
+
+.ibill-billing-options-widget .radio-gap {
+	margin-right: 15px;
+}
+
+.ibill-billing-options-widget .monthly-statements {
+
+	margin-bottom: 12px;
+}
+.ibill-billing-options-widget.multi-paperless {
+	margin-top: 50px;
+}
+.update-email-modal-title {
+	font-size: 1.875em;
+	line-height: 1.133em;
+	margin-bottom: 42px;
+	margin-top: -25px;
+}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+
+	.address-margin {
+		display: block;
+		margin-top: 12px;
+	}
+	.full-width-button {
+		width: 100%;
+	}
+	.radio-margin {
+		margin-top: 5px;
+	}
+	.bill-type-margin {
+		margin-bottom: 7px;
+	}
+	.div-margin {
+		margin-top: 4px;
+	}
+	.para-margin {
+		margin-top: 22px;
+	}
+	.ibill-billing-options-widget .radio-gap {
+		margin-right: 0px;
+		margin-bottom: 15px;
+	}
+	.ibill-billing-options-widget .radio-boxes{
+		text-align: left;
+	}
+	.ibill-billing-options-widget .radio-boxes span {
+		padding-left: 12px;
+	}
+	.ibill-email-update-continue-margin {
+		margin-top: 10px;
+		width: 95% !important;
+	}
+	
+	.ibill-email-update-cancel-padding {
+		padding-bottom: 10px !important;
+	    padding-top: 9px !important;
+	}
+	
+	.ibill-email-update-cancel-button-width {
+		margin-left: 2.5%;
+		margin-top:20px;
+    	width: 95%;
+	}
+}
+/* for mobile screen less than 350px*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 350px) {
+	.ibill-billing-options-widget .span-margin {
+		display: block;
+		margin-bottom: 5px;
+	}
+}
+/* for mobile screen less than 350px*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 350px) and (orientation: landscape) {
+	.ibill-billing-options-widget .span-margin {
+		display: inline-block;
+		margin-bottom: 5px;
+	}
+}
+.payment-review-table {
+	margin-bottom: -17px;
+}
+.payment-review-table td:first-child {
+	padding-left: 0;
+	width: 135px;
+}
+.payment-review-table td {
+	padding: 16px 14px;
+	vertical-align: top;
+}
+
+.confirmation-payment-header-margin {
+	margin-bottom:23px;
+}
+
+.confirm-payment-modal-title {
+    font-size: 1.875em;
+    line-height: 1.133em;
+    margin-bottom: 43px;
+    margin-top: -27px;
+}
+
+@media screen and (max-width: 767px) {
+	.confirm-payment-modal-title {
+    margin-bottom: 22px;
+    margin-top: -15px;
+}
+}.choose-payment-text {
+	margin-top: 32px;
+}
+.viewpaybill .ibill-easypay-enroll .pay-bill-page {
+	display: none;
+}
+/* Styling of ibill-manage-payment-widget */
+
+.ibill-manage-payments .manage-payment-table {
+	width: 100%;
+	margin-bottom: 30px;
+}
+.ibill-manage-payments .manage-payment-table tr td {
+	padding: 11px 10px;
+	border-bottom: 1px solid #e6e6e6;
+	vertical-align: top;
+	}
+.ibill-manage-payments .manage-payment-table tfoot tr td {
+	border-bottom: 0;
+}
+
+.ibill-manage-payments .update-link{
+	float:right;
+}
+
+.ibill-manage-payments .manage-payment-table tr th {
+	border-top: 1px solid #E0DACB;
+	border-bottom: 1px solid #E0DACB;
+}
+
+.ibill-manage-payments .manage-payment-table tr th span {
+	display: block;
+	white-space: nowrap;
+	padding-right: 10px;
+	margin: 10px;
+	margin-left: 1px;
+	padding-left: 10px;
+	height: 15px;
+	border-left: 1px solid #e2dfd7;
+	margin-bottom: 14px;
+}
+
+.ibill-manage-payments .manage-payment-table th:first-child span {
+	border-left: none;
+}
+
+.ibill-manage-payments .click-header {
+	margin-top: 22px;
+	margin-bottom: 32px;
+}
+
+.ibill-manage-payments .manage-payment-table .amex-image {
+	background-image: url('/ui/4_1/tsw/img/interface/billing/credit-card-logos.gif');
+	background-repeat: no-repeat;
+	background-position: -123px 5px;
+	background-size: auto;
+	padding-left: 45px;
+}
+
+.ibill-manage-payments .manage-payment-table tr [class*='sort-'] span {
+	border-left: none;
+}
+.ibill-manage-payments .manage-payment-table tr th span {
+	padding-right: 30px;
+	padding-left: 7px;
+}
+
+.ibill-manage-payments .divider-margin {
+	margin-top: 15px;
+	margin-bottom: 19px;
+}
+
+.ibill-manage-payments .saved-payment-header {
+	margin-bottom: 20px;
+}
+
+.ibill-manage-payments .bank-account-header {
+	margin-top: 10px;
+}
+
+.ibill-manage-payments .add-payment {
+	margin-top: 5px;
+	margin-bottom: -11px;
+}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	.ibill-manage-payments .add-payment {
+		margin-top: 5px;
+		margin-bottom: 0px;
+	}
+	
+	.ibill-manage-payments .update-link{
+		float:none;
+		margin-left:25px;
+	}
+	.ibill-manage-payments .manage-payment-table tr td {
+		white-space: nowrap;
+	}
+}
+
+
+
+/* Styling of ibill add payment method, ibill update bank payment method and ibll update credit card payment method modal */
+.ibill-payment-method .radio-boxes {
+	width: 45%; /* Width needs to be changed depending upon the module requirement */
+	height: 2.5em;
+	padding-left: 3.3%;
+	padding-top: 3%;
+	margin-bottom: 5px;
+	margin-top:-3px;
+}
+
+.ibill-payment-method .label-enter-card-details {
+	margin-bottom: 25px;
+}
+
+.ibill-payment-method .bank-header {
+	margin-bottom: 32px;
+}
+
+.ibill-payment-method  .radio-gap {
+	margin-right: 15px;
+}
+
+.ibill-payment-method .top-margin {
+	margin-bottom: 10px;
+}
+
+.ibill-payment-method .form-margin {
+	margin-top: 26px;
+	margin-bottom: -5px;
+}
+	
+.ibill-payment-method .payment-modal-title{
+	font-size: 1.875em;
+	line-height: 1.133em;
+	margin-bottom: 42px;
+	margin-top: -27px;
+}
+
+.ibill-payment-method #month-input,
+.ibill-payment-method #year-input,
+.ibill-payment-method #account-type {
+	width: 120px;
+}
+.ibill-payment-method .year-margin {
+	margin-left: 20px;
+}
+.ibill-payment-method .name-card {
+	width: 47%;
+}
+.IE8 .ibill-payment-method .name-card {
+	width: 45%;
+}
+.ibill-payment-method .group-choice {
+	width: 44%;
+}
+.ibill-payment-method .checking-savings-account, .ibill-payment-method .credit-debit-card {
+	padding-top: 12%;
+}	
+/* chrome hack for month year drop down*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.ibill-payment-method .name-card {
+		width: 45%;
+	}
+}
+.ibill-payment-method input.txtCCNum {
+    padding-left: 50px;
+}
+.ibill-payment-method .delete-payment-margin {
+    margin-left: -25px;
+}
+
+.ibill-payment-method .delete-payment-div {
+    margin-top: 13px;
+    margin-bottom: -1px !important;
+}
+
+@media screen and (max-width: 767px) {
+	.ibill-payment-method {
+    	margin-bottom:-15px;
+	}
+	
+	.ibill-payment-method .radio-boxes {
+		margin-bottom: 23px;
+		height: 2em;
+		padding-left: 2.5%;
+	}
+	
+	.ibill-payment-method .form-margin {
+		margin-top: 19px;
+	}
+
+	.ibill-payment-method .radio-text {
+		font-size: 15px;
+	}
+
+	.ibill-payment-method .button-width {
+		width: 100%;
+	}
+
+	.ibill-payment-method .continue-margin {
+		margin-top: 10px;
+		width: 95% !important;
+	}
+
+	.ibill-payment-method .label-enter-card-details {
+		margin-bottom: 32px;
+	}
+
+	.ibill-payment-method .payment-modal-title {
+		margin-top: -17px;
+		margin-bottom: 23px;
+	}
+	
+	.ibill-payment-method .cancel-padding {
+	    padding-bottom: 10px;
+	    padding-top: 9px;
+	}
+	.ibill-payment-method input.tool-tip-field.txtCCNum {
+		width: 73% !important;
+	}
+	
+	.ibill-payment-method .cancel-button-width {
+		margin-left: 2.5%;
+		margin-top:20px;
+    	width: 95%;
+	}
+	.ibill-payment-method .year-margin {
+		margin-left: 16.6%;
+	}
+	.ibill-payment-method .group-choice {
+		width: 100%;
+	}
+}
+/*Styling for ibill-quick-links-widget */
+
+.ibill-quick-links-widget {
+	width: 45%;
+	float: right;
+}
+.ibill-quick-links-widget .links {
+	list-style-type: none;
+	list-style-position: inside;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	text-align: left;
+	padding: 0;
+}
+.ibill-quick-links-widget .li-border {
+	border-bottom: 1px solid #d3d3d3;
+}
+.ibill-quick-links-widget .anchor-block {
+	display: block;
+}
+
+.ibill-quick-links-widget .li-margin {
+	padding-bottom: 7px;
+	padding-top: 5px;
+}
+.ibill-quick-links-widget .colspan-4.colspan-m12 {
+	float: right;
+	margin-top: -30.9%;
+}
+.ibill-quick-links-widget .link-header {
+	margin-bottom: 3px;
+}
+
+.page-divider-margin {
+	margin-top: 25px;
+	margin-bottom: 26px;
+}
+.ibill-quick-links-widget .calendar-image {
+	margin-right: 3%
+}
+
+.ibill-quick-links-widget .leaf-image {
+	margin-right: 3%
+}
+
+.ibill-quick-links-widget .arrow-image {
+	background-image: url('/ui/4_1/tsw/img/myaccount/bill/arrow-link.png');
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	.ibill-quick-links-widget {
+		float: none;
+		width: 100% !important;
+	}
+}
+/* For all tablets in portrait version*/
+@media only screen and (min-device-width: 768px) and (orientation: portrait) {
+	.ibill-quick-links-widget {
+		width: 55%;
+		float: right;
+	}
+}/*Styling for ibill-title-widget */
+.ibill-title-widget {
+	margin-bottom: 10px;
+}
+.ibill-title-widget h2 {
+	margin: -5px 0 0;
+}
+
+.account-number {
+	margin: 0 22px 0 0;
+}
+.drop-down-margin {
+	margin-top: -6px;
+}
+
+.multi-statement-margin {
+	margin: 20px 0 15px;
+}
+
+.service-drop-down {
+	width: 252px;
+}
+.account-text {
+	margin-bottom: 15px !important;
+}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	.account-number {
+		margin-right: 5px;
+	}
+	.view {
+		margin-bottom: -10px;
+	}
+	.drop-down-margin {
+		margin-top: 14px !important;
+	}
+	.bill-select {
+		margin: -10px 0 20px 0;
+	}
+
+}
+/* Styling for update address modal */
+.ibill-update-address .radio-boxes {
+	width: 45%; /* Width needs to be change depending upon the module requirement */
+	padding-left: 3.3%;
+	padding-top: 3%;
+}
+
+.ibill-update-address  .radio-gap {
+	margin-right: 15px;
+}
+
+.ibill-update-address .form-margin {
+	margin-top: 45px;
+}
+
+.ibill-update-address .radio-div {
+	margin-top: -5px;
+	margin-bottom: 15px;
+}
+
+.ibill-update-address .update-address-modal-title {
+	font-size: 1.875em;
+	line-height: 1.133em;
+	margin-bottom: 50px;
+	margin-top: -28px;
+}
+
+.ibill-update-address .btn-help-align {
+	margin-top: 4px;
+}
+.ibill-update-address .group-choice {
+	width: 44%;
+}
+.ibill-update-address .showing-service-address, .ibill-update-address .showing-billing-address {
+	padding-top: 14%;
+}
+
+@media screen and (max-width: 767px) {
+
+	.ibill-update-address .group-choice {
+		width: 100% !important;
+	}
+
+	.ibill-update-address .radio-boxes {
+		height: 2.1em;
+	}
+
+	.ibill-update-address .button-margin {
+		margin-top: 20px;
+	}
+
+	.ibill-update-address .form-margin {
+		margin-top: 0px;
+	}
+
+	.ibill-update-address .radio-alignment {
+		margin-bottom: 20px;
+	}
+
+	.ibill-update-address input {
+		margin-top: -11px;
+		margin-bottom: 8px;
+	}
+
+	.ibill-update-address .update-address-modal-title {
+		font-size: 1.875em;
+		line-height: 1.133em;
+		margin-bottom: 30px;
+		margin-top: -19px;
+	}
+
+	.ibill-update-address .btn-help-align {
+		margin-top: -6px;
+	}
+
+	.ibill-update-address .state {
+		margin-top: -10px;
+	}
+	
+	.ibill-update-address .continue-margin {
+		margin-top: 10px;
+		width: 95% !important;
+	}
+	
+	.ibill-update-address .cancel-padding {
+		padding-bottom: 10px;
+	    padding-top: 9px;
+	}
+	
+	.ibill-update-address .cancel-button-width {
+		margin-left: 2.5%;
+		margin-top:20px;
+    	width: 95%;
+	}
+}	/*Styling for account-overview-widget */
+.ibill-bill-video-widget .button-top-margin {
+	margin-top: 20px;
+}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+
+	.mobile-version {
+		max-width: 100%;
+	}
+}/*style for EasyPayVerify */
+.easypay-verify h3 {
+	margin-bottom: 20px;
+}
+.easypay-verify .easypay-verify-desktop {
+	margin: 25px 0 -35px;
+}
+.easypay-verify-page-divider {
+	margin-top: 21px;
+	margin-bottom: 16px;
+}
+.easypay-verify-back {
+	float: left;
+}
+.easypay-verify .easypay-verify-submit {
+	float: left;
+	margin-left: 20px;
+}
+
+.payment-confirm-partial .multi-statement-payment-details span.alert-icon{
+	background-image: url("/ui/4_1/tsw/img/global/icons/alert.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	 display: block;
+    height: 20px;
+    left: -28px;
+    margin-top: -20px;
+    position: relative;
+    top: 18px;
+}
+.my-agreements {
+	margin: 10px 0px -30px !important;
+}
+
+/* paybill accordion layout */
+.update-payment {
+	padding: 25px 0 20px 20px !important;
+}
+
+input.txtCCNum, label.txtCCNum {
+	background-image: url('/ui/4_1/tsw/img/myaccount/bill/credit_card_logos.png');
+	background-repeat: no-repeat;
+	/* default: background-position: 3px -389px; */
+	/* discover default: background-position: 3px 3px; */
+	/* discover hover: background-position: 3px -36px; */
+	/* american default: background-position: 3px -86px; */
+	/* american hover: background-position: 3px -124px; */
+	/* visa default: background-position: 3px -166px; */
+	/* visa hover: background-position: 3px -199px; */
+	/* MasterCard default: background-position: 3px -236px; */
+	/* MasterCard hover: background-position: 3px -275px; */
+	/* generic default: background-position: 3px -311px; */
+	/* generic hover: background-position: 3px -351px; */
+	background-position: 3px -389px;
+	padding-left: 50px;
+}
+
+input.Discover {
+	background-position: 3px 3px;
+}
+
+input.Amex {
+	background-position: 3px -86px;
+}
+
+input.Visa {
+	 background-position: 3px -166px;
+}
+
+input.MasterCard {
+	background-position: 3px -236px;
+}
+
+input.generic-atm-card {
+	background-position: 3px -311px;
+}
+
+label.Visa {
+	 background-position: 0px -170px;
+}
+label.Discover {
+	background-position: 0px -2px;
+}
+label.MasterCard {
+	background-position: 0px -241px;
+}
+label.Amex {
+	background-position: 0px -89px;
+}
+label.generic-atm-card {
+	background-position: 0px -316px;
+}
+
+
+.viewpaybill span.accordion-dynamic-text {
+	background: url('/ui/4_1/tsw/img/myaccount/bill/credit_card_logos.png') -100px 0;
+	background-repeat: no-repeat;
+}
+
+.viewpaybill span.accordion-dynamic-text.Discover {
+	 background-position: 3px 1px;
+}
+
+.viewpaybill span.accordion-dynamic-text.Amex {
+	background-position: 3px -85px;
+}
+
+.viewpaybill span.accordion-dynamic-text.Visa {
+	background-position: 3px -166px; 
+}
+
+.viewpaybill span.accordion-dynamic-text.MasterCard {
+	background-position: 3px -236px;
+}
+
+.viewpaybill span.accordion-dynamic-text.generic-atm-card {
+	background-position: 3px -321px;
+}
+
+.viewpaybill .details-text {
+	margin-top: 31px;
+}
+.viewpaybill .routing-image {
+	margin-top: 5px;
+}
+.viewpaybill .save-checkbox label {
+	margin-right: 0;
+}
+.viewpaybill .ccMonth {
+	margin-right: 60px;
+	width: 16.5%;
+}
+.viewpaybill .ibill-no-accordion .ccMonth {
+	margin-right: 51px;
+}
+.IE8 .viewpaybill .ccMonth {
+	margin-right: 32px !important;
+}
+.IE8 .viewpaybill .ibill-no-accordion .ccMonth {
+	margin-right: 21px !important;
+}
+.IE .viewpaybill .ccMonth {
+	margin-right: 63px;
+}
+.IE .viewpaybill .ibill-no-accordion .ccMonth {
+	margin-right: 52px;
+}
+.viewpaybill .make-payment-page .easypay-page {
+	display: none;
+}
+.viewpaybill .terms-service-checkbox {
+	margin-top: 35px;
+}
+.viewpaybill .update-payment {
+	margin-top: 10px;
+}
+.viewpaybill .update-payment-link {
+	margin-top: 0;
+}
+.viewpaybill .add-payment-link {
+	margin-top: 22px;
+	margin-bottom: 25px !important;
+}
+.viewpaybill .ibill-no-accordion .add-payment-link {
+	margin-bottom: 15px !important;
+}
+.viewpaybill .saved-bank-accounts {
+	margin-top: 20px;
+}
+.viewpaybill .msg-error.server-error {
+	margin-top: 30px;
+	display: block !important;
+}
+.viewpaybill.multi-statement-widget {
+	margin-top: 10px;
+}
+.viewpaybill .pay-on-now {
+	display: none;
+}
+.viewpaybill .choose-payment-method-step .accordion-next {
+	margin: -15px 0 28px;
+}
+.viewpaybill .ibill-no-accordion .terms-services-checkbox {
+	display: block;
+}
+.viewpaybill .ibill-no-accordion .save-checkbox {
+	display: none;
+}
+.viewpaybill .terms-services-checkbox .overlay-trigger.btn-help {
+	margin-left: -10px;
+}
+.viewpaybill .calendar-image {
+	background-position: 42px center;
+	padding-left: 0px;
+}
+.viewpaybill .leaf-image {
+	background-position: 42px center;
+	padding-left: 0px;
+}
+.IE8 .viewpaybill .leaf-image, .IE8 .viewpaybill .calendar-image,.IE9 .viewpaybill .leaf-image, .IE9 .viewpaybill .calendar-image {
+	background-position: 42px -10px;
+}
+.IE10 .viewpaybill .calendar-image,.IE10 .viewpaybill .leaf-image,.IE11 .viewpaybill .calendar-image,.IE11 .viewpaybill .leaf-image  {
+	background-position: 42px 3px;
+}
+.viewpaybill .leaf-image span, .viewpaybill .calendar-image span {
+	margin-left: 30px;
+}
+.viewpaybill .accordion-panel {
+	margin-left: 48px;
+}
+.viewpaybill .pay-different {
+	width: 72px;
+}
+.viewpaybill .ibill-no-accordion .easypay-ccnum-tool-tip, .viewpaybill .ccnum-tool-tip {
+	display: inline-block;
+}
+
+.viewpaybill .ibill-no-accordion .ccnum-tool-tip, .viewpaybill .easypay-ccnum-tool-tip{
+	display: none;
+}
+.viewpaybill .future-billing label {
+	margin-right: 2px;
+}
+.viewpaybill .including-past-due {
+	font-size: 12px;
+	display: block;
+}
+span.saved-bank-name + span, span.card-number + span {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.viewpaybill .ccYear {
+	width: 16.6%;
+}
+.IE8 .viewpaybill .ccYear {
+	width: 19.6%;
+}
+/* chrome hack for month year drop down*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.viewpaybill .ccMonth {
+		margin-right: 53px;
+	}
+	.viewpaybill .ibill-no-accordion .ccMonth {
+		margin-right: 41px;
+	}
+	.viewpaybill .ccYear {
+		width: 16.2%;
+	}
+}
+.verify-payment .cancel-submit-button {
+	margin-left: 100px;	
+}
+.verify-payment .back-button {
+	margin-top: -73px;
+}
+.viewpaybill .select-payment-amount-step .select-past-due {
+	padding: 1.5%;
+	padding-bottom: 2%;
+}
+.viewpaybill .more-payment-options .radio-label {
+	margin-bottom: 14px !important;
+    margin-top: 24px;
+}
+.viewpaybill .multi-payment-options .group-choice {
+	width: 44.9%;
+}
+
+@media screen and (max-width: 767px) {
+	.viewpaybill .accordion-panel {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.easypay-verify .easypay-verify-button {
+		display: inline !important;
+		margin-top: 10px;
+		width: 100%
+	}
+	.easypay-verify .easypay-verify-mobile {
+		margin-bottom: 10px;
+	}
+	.verify-payment .payment-button {
+		display: inline-block !important;
+		margin-top: 10px;
+		box-sizing: border-box;
+	}
+	.verify-payment .verify-payment-form {
+		margin-bottom: 0px;
+	}
+	.viewpaybill span.Discover {
+		background-position: 3px -31px !important;
+		padding-left: 44px !important;
+		padding-top: 11px;
+	}
+
+	.viewpaybill span.Amex {
+		background-position: 3px -119px !important;
+		padding-left: 44px !important;
+		padding-top: 11px;
+	}
+
+	.viewpaybill span.MasterCard {
+		background-position: 3px -270px !important;
+		padding-left: 44px !important;
+		padding-top: 11px;
+	}
+
+	.viewpaybill span.Visa {
+		background-position: 3px -194px !important;
+		padding-left: 44px !important;
+		padding-top: 11px;
+	}
+
+	.viewpaybill span.generic-atm-card {
+		background-position: 3px -346px !important;
+		padding-left: 44px !important;			
+		padding-top: 11px;
+	}
+	.viewpaybill .saved-boxes {
+		height: 2.5em;
+	}
+	.card-number {
+		float: left !important;
+	}
+	.card-date {
+		float: right !important;
+		padding-left: 5px;
+	}
+	.choice-field {
+		display: block;
+		margin-left: -15px;
+		margin-top: -10px;
+	}
+	a.accordion-next {
+		margin-top: 18px;
+	}
+	.make-payment-form .accordion-trigger {
+		font-size: 1.2em;
+	}
+	.choice-gap {
+		margin-bottom: 18px;
+	}
+	.choose-payment-method-saved-step {
+		margin-top: 40px;
+	}
+	.bank-card-number {
+		float: right !important;
+	}
+	.payment-confirm-partial .multi-statement-payment-details span.alert-icon {
+		top: 25px;
+	}
+	.viewpaybill .card-label {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+	.viewpaybill .txtCCNum.card-details {
+		width: 90% !important;
+	}
+	.viewpaybill .name-on-account {
+		width: 90% !important;
+	}
+	.viewpaybill .ibill-no-accordion .terms-services-checkbox {
+		margin: 0px 0 30px;
+	}
+	.viewpaybill .accordion-panel.accordion-panel-open {
+		margin-top: 20px;
+	}
+	.viewpaybill .accordion-panel {
+		margin-left: 0px;
+	}
+	.viewpaybill .future-billing .paperless-checkbox {
+		margin: 30px 0px;
+	}
+	.viewpaybill span.accordion-dynamic-text.Discover {
+		background-position: 0px 12px !important;
+		padding-left: 45px !important;
+	}
+
+	.viewpaybill span.accordion-dynamic-text.Amex {
+		background-position: 0px -74px !important;
+		padding-left: 45px !important;
+	}
+
+	.viewpaybill span.accordion-dynamic-text.Visa {
+		background-position: 0px -155px !important;
+		padding-left: 45px !important;
+	}
+
+	.viewpaybill span.accordion-dynamic-text.MasterCard {
+		background-position: 0px -225px !important;
+		padding-left: 45px !important;
+	}
+
+	.viewpaybill span.accordion-dynamic-text.generic-atm-card {
+		background-position: 0px -306px !important;
+		padding-left: 45px !important;
+	}
+	.viewpaybill .pay-different {
+		width: 100%;
+		margin-left: 0px;
+	}
+	.viewpaybill .save-checkbox {
+		margin: 10px 0;
+	}
+	.verify-payment .back-button {
+		margin-top: 0px;
+	}
+	.viewpaybill .ccMonth {
+		margin-right: 48px;
+	}
+	.viewpaybill .including-past-due {
+		float: left;
+		margin-left: 16px;
+	}
+	.viewpaybill .saved-bank-name {
+		padding-left: 10px;
+	}
+	.viewpaybill .bank-card-number.choice-value {
+		text-align: center !important;
+	}
+	.viewpaybill .ibill-no-accordion .add-payment-link {
+		margin-bottom: 10px !important;
+	}
+	.cancel-popup-form input {
+		 max-width: 94%;
+    	 min-width: 94%;
+    	 width: 94%;
+	}
+	
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape)  {
+	.viewpaybill .including-past-due {
+		margin-left: 24px;
+	}
+
+}
+/* For all tablets in portrait version*/
+@media only screen and (min-device-width: 768px) and (orientation: portrait) {
+	.viewpaybill .ccMonth {
+		width: 20%;
+	}
+	.viewpaybill .ccYear {
+		width: 20%;
+	}
+	.viewpaybill .group-choice.active-choice .error-wrapper {
+		margin-top: 7.4% !important;
+		margin-left: 32% !important;
+	}
+	.viewpaybill .group-choice.active-choice .bubble-pointer:before {
+		display:none;
+	}
+	.viewpaybill .select-past-due.group-choice.active-choice .error-wrapper {
+		margin-top: 17.4% !important;
+		margin-left: 8% !important;
+	}
+	/* mobile styles for error-wrapper */
+	.viewpaybill .form .active-choice .error-wrapper {
+		background: none;
+		border: none;
+		padding: 0;
+		margin-left: 0; /* width and margin left given in % such that error wrapper does not break in any device */
+		position: relative;
+		margin-top: 6px;
+	}
+	.viewpaybill .form .active-choice .mbubble-pointer:before  {
+		border-style: none;
+	}
+	.viewpaybill .form .active-choice .mbubble-pointer:after {
+		border-style: none;
+	}
+	.viewpaybill .form .active-choice .mbubble-pointer:after {
+		border-width: 0;
+	}
+	.ui-datepicker:after {
+		width: 0px;
+	}
+	.viewpaybill .select-payment-amount-step .select-past-due {
+		padding-bottom: 3%;
+	}
+	.viewpaybill .cardType {
+		width: 35% !important;
+		max-width: 35% !important;
+	}
+}
+/* For all tablets in portrait version*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 800px) and (orientation: portrait) {
+	#ui-datepicker-div {
+		position: relative !important;
+		top: -685px !important;
+		left: 430px !important;
+	}
+}
+@media only screen and (max-width: 400px) and (orientation: portrait) {
+	.cancel-popup-form input {
+		 max-width: 90% !important;
+    	 min-width: 90% !important;;
+    	 width: 90% !important;;
+	}
+}
+/*
+body {
+	background-color: #f4f4f4 !important;
+}
+*/
+
+/* Clear extra margins/padding on internal columns. originally in _layout.css but not needed with CMS grid changes (breaks things there). */
+[class*='cols-'] [class*='cols-'] .col-content {
+	margin: 0;
+}/* sign-in.css */
+.myaccount-login input[type="text"],
+.myaccount-login input[type="password"] {
+	box-sizing: border-box; 
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	width: 100%;
+}
+
+.myaccount-login .sigin-lock {
+	background: url(/ui/4_1/tsw/img/global/icons/lock.png) no-repeat;
+	display: inline-block;
+	width: 14px;
+	height: 17px;
+	margin-top: 15px;
+	margin-left: 15px;
+}
+
+.myaccount-login .remove-margin {
+	margin-right: 0px !important;
+}
+
+.myaccount-login .form .error-wrapper {
+	position: absolute;
+	margin-left: 10%;
+	z-index: 999;
+	min-width: 192px;
+}
+
+.myaccount-login .msg-error {
+	margin-bottom: 0px;
+}
+
+.myaccount-login .register-now {
+	margin-top: -4px;
+}
+
+.myaccount-login .image-margin {
+	margin-left: 50px;
+}
+
+.myaccount-login .signin {
+	margin-top: 4px;
+	float: left;
+}
+
+.myaccount-login .remember-me {
+	margin-top: 9px;
+}
+
+.myaccount-login label {
+	margin-top: 7px;
+	margin-bottom: 0px !important;
+}
+
+.myaccount-login .div-align {
+	margin-left: 35px;
+}
+
+.myaccount-login .link-margin {
+	margin-top: 5px;
+}
+
+.myaccount-login .password {
+	margin-top: 0px;
+}
+
+@media screen and (max-width: 767px) {
+	.myaccount-login .remember-me {
+		margin-top: 17px;
+	}
+
+	.myaccount-login .register-now {
+		margin-top: 12px;
+	}
+
+	.myaccount-login .password {
+		margin-top: 7px;
+	}
+
+	.myaccount-login .signin-lock {
+		margin-left: 60%;
+		margin-top: 54%;
+		position: absolute;
+	}
+
+	.myaccount-login .signin {
+		margin-top: 15px;
+		background-image: url(/ui/4_1/tsw/img/global/icons/lock.png);
+		background-image: url(/ui/4_1/tsw/img/global/icons/lock.png), -webkit-gradient(linear, 0 0, 0 bottom, from(#2757a7), to(#1d4c9b)) !important;
+		background-image: url(/ui/4_1/tsw/img/global/icons/lock.png), -webkit-linear-gradient(#2757a7, #1d4c9b) !important;
+		background-image: url(/ui/4_1/tsw/img/global/icons/lock.png), -moz-linear-gradient(#2757a7, #1d4c9b) !important;
+		background-image: url(/ui/4_1/tsw/img/global/icons/lock.png), -ms-linear-gradient(#2757a7, #1d4c9b) !important;
+		background-image: url(/ui/4_1/tsw/img/global/icons/lock.png), -o-linear-gradient(#2757a7, #1d4c9b) !important;
+		background-image: url(/ui/4_1/tsw/img/global/icons/lock.png), linear-gradient(#2757a7, #1d4c9b) !important;
+		background-repeat: no-repeat, repeat !important;
+		background-position: 63% 50% !important;
+		background-position: calc(50% - -45px) 100% !important; /* should really be calc(50% + 45px) but there is a bug in yuicompressor that removes spaces and turns this into calc(50%+45px) which is invalid */
+	}
+	.SF .myaccount-login .signin {		
+		background-position: 63% 98% !important;	/* background position for iphone */	
+	}
+	.myaccount-login .form .error-wrapper {
+		position: relative;
+		margin-left: 0;
+	}
+}
+
+/* For all tablets in portrait version*/
+@media only screen and (min-device-width: 768px) and (orientation: portrait) {
+	.myaccount-login .image-margin {
+		margin-left: 15px;
+	}
+	.myaccount-login .form .error-wrapper {
+		background: none;
+		border: none;
+		padding: 0;
+		margin-left: 0; /* width and margin left given in % such that error wrapper does not break in any device */
+		position: relative;
+		margin-top: 6px;
+	}
+	.myaccount-login .form .bubble-pointer:before {
+		display:none;
+	}
+}
+/* Voicemail section styles */
+
+.voicemail-title label {
+	margin: 0px 17px 0px -18px !important; /* override callout col-content margin */
+}
+.voicemail-title select {
+	margin: -10px 0px 0px;
+	width: 137px;
+}
+.voicemail-title h4 {
+	float: left;
+	margin: 0px 5px 0px 0px;
+}
+.voicemail-details {
+	margin: 10px 0px -10px;
+}
+.voicemail-details .col-content {
+	margin-top: 10px !important;
+}
+.voicemail-details .date-time {
+	margin-left: 30px !important;
+}
+.voicemail-details .solid-divider {
+	margin: 0px 25px 0px 20px;
+}
+.voicemail-title .links a  {
+	margin: 0px 20px 0px 0px;
+}

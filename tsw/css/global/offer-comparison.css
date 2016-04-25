@@ -1,0 +1,303 @@
+/* offer-comparison.css */
+.offer-comparison-container {
+	border-top: 5px solid #0a3167;
+}
+
+/* handle js disabled or the AEM authoring environment which excludes the slick-carousel class */
+.offer-comparison {
+	width: 320px;
+	margin: 0 auto 30px;
+	display: inline-block;
+	text-align: center;
+}
+
+.offer-comparison .colspan-3 {
+	max-width: inherit;
+	min-width: inherit;
+	width: inherit;
+}
+.offer-comparison .col-content {
+	margin: 0;
+}
+
+.offer-comparison .price .product-name {
+	font: 1.125em "open_sanssemibold", Arial, Helvetica, Sans-serif; /* 18px */
+	color: #252525;
+}
+.offer-comparison div.col-content > div {
+	padding: 10px 0;
+}
+.offer-comparison div.col-content > div:nth-child(n+2) div,
+.offer-comparison div.col-content > div:nth-child(n+2) .header {
+	margin-bottom: 0;
+	min-height: 42px;
+}
+.offer-comparison div.col-content .vertical-divider > p {
+	margin-bottom: 0;
+}
+/* CSS for IE8 */
+.IE8 .offer-comparison div.col-content>div:first-child+div div,
+.IE8 .offer-comparison div.col-content>div:first-child+div+div div,
+.IE8 .offer-comparison div.col-content>div:first-child+div+div+div div,
+.IE8 .offer-comparison div.col-content>div:first-child+div+div+div+div div,
+.IE8 .offer-comparison div.col-content>div:first-child+div+div+div+div+div div {
+	margin-bottom: 0;
+	min-height: 42px;
+}
+.offer-comparison .odd {
+	background-color: #f4f4f4;
+}
+.offer-comparison-container .all-plans {
+	background-color: #4f5051;
+	clear: left;
+}
+.offer-comparison-container .all-plans > div,
+.offer-comparison .recommended {
+	color: #FFFFFF;
+}
+.offer-comparison-container .all-plans .toggle-container > p + div,
+.offer-comparison-container .all-plans .toggle-div div  {
+	display: inline-block;
+	vertical-align: top;
+	width: 19%;
+	max-width: 19%;
+	min-width: 19%;
+	font-family: open_sansregular;
+	font-size: 16px;
+	list-style-position: outside;
+	margin-left: 20px;
+}
+.offer-comparison-container .all-plans .toggle-div div  {
+	padding-left: 10%;
+}
+.offer-comparison-container .all-plans > div p {
+	padding: 15px;
+	margin-bottom: 0;
+}
+.offer-comparison .header:first-child + div, 
+.offer-comparison div.odd:first-child > div + div {
+	padding: 10px 21px 0;
+	min-height: 234px;
+	margin-bottom: 36px;
+}
+.offer-comparison .odd:first-child {
+	padding: 0 0 25px !important
+}
+
+/* CSS for Arrow and dots position in Desktop */
+.offer-comparison-container .slick-prev {
+	left: 12px;	
+}
+.offer-comparison-container .slick-next {
+	right: 5px;	
+}
+.offer-comparison-container .slick-prev,
+.offer-comparison-container .slick-next {
+	top: 125px;	
+}
+.offer-comparison-container .slick-dots {
+	bottom: inherit;
+}
+
+/* CSS for header with full width  */
+.offer-comparison-container .all-plans > div,
+.offer-comparison .header {
+	position: relative;
+	text-align: left;
+	z-index: 1;
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	font-size: 1.25em;
+}
+.offer-comparison .header {
+	padding: 0 10px 20px;
+}
+.slick-slider .offer-comparison .header {
+	visibility: hidden; /* do not want to hide the header if javascript is turned off or in the AEM authoring environment which has slick disabled */
+}
+.offer-comparison-container .all-plans > div {
+	padding: 0 10px 5px;
+}
+
+/* CSS for displaying the header */
+.offer-comparison.item-first .header {
+	visibility: visible;
+}
+
+/* CSS for keeping the height of Carousel */
+.slick-carousel .offer-comparison.slick-slide {
+	height: auto;
+}
+
+/* CSS for images  */
+.offer-comparison.slick-slide img {
+	display: inline-block;
+}
+.offer-comparison div.odd:first-child > div + div > img {
+	padding: 10px 0 !important;
+}
+
+/* CSS for adding Vertical Divider  */
+.offer-comparison .vertical-divider {
+	border-left: 1px solid #e7e7e8;
+}
+
+/* CSS for removing Vertical Divider  */
+.offer-comparison.item-first .vertical-divider {
+	border-left: none;
+}
+
+/* CSS for Recommended Section  */
+.offer-comparison .recommended {
+	background-color: #2757a7;
+	font: 0.750em "open_sanssemibold", Arial, Helvetica, Sans-serif; /* 12px */
+	margin-bottom: 10px;
+	padding: 7px 0;
+}
+.offer-comparison .no-recommended {
+	padding: 21px 0;
+}
+
+/* offer details text */
+.offer-comparison .offer-details a {
+	font: 0.857em "open_sanssemibold", Arial, Helvetica, Sans-serif;
+}
+
+/* CSS for toggle div in desktop */
+.offer-comparison-container .all-plans .toggle-div {
+	width: 75%;
+}
+.offer-comparison-container .all-plans .toggle-single-click a {
+	display: none;
+}
+
+/* desktop only styles */
+@media only screen and (min-width: 768px) {
+	.offer-comparison-container .all-plans .toggle-div {
+		display: inline-block !important; /*!important needed as it is overriding JS style*/
+	}
+}
+/* targeting dual layout device in landscape*/
+@media only screen and (min-width: 600px)
+and (max-width: 1000px) and (orientation: landscape) {
+	body[data-os="android"] .offer-comparison-container .all-plans .toggle-div {
+		display: inline-block !important; /*!important needed as it is overriding JS style*/
+	}
+}
+/* Tablet Styles */
+@media only screen and (min-device-width: 768px)  and (orientation: portrait) {
+	.offer-comparison-container .all-plans .toggle-container > p + div,
+	.offer-comparison-container .all-plans .toggle-div div  {
+	    margin-left: 16px;
+	    width: 22%;
+		max-width: 22%;
+		min-width: 22%;
+	}
+	.offer-comparison-container .all-plans .toggle-div div {
+		padding-left: 7%;
+	}
+}
+
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+
+	.offer-comparison .colspan-3 {
+		max-width: 100%;
+		min-width: 100%;
+		width: 100%;
+	}
+	.offer-comparison-container .all-plans .toggle-container > p + div,
+	.offer-comparison-container .all-plans .toggle-div div {
+		width: 100%;
+		max-width: 100%;
+		min-width: 100%;
+		margin: 0 0 -15px 18px;
+	}	
+	.offer-comparison-container .all-plans .toggle-container > p + div ul li,
+	.offer-comparison-container .all-plans .toggle-div div ul li {
+		padding: 3px;
+	}
+	.offer-comparison div.col-content > div:nth-child(n+2) div,
+	.offer-comparison div.col-content > div:nth-child(n+2) .header {
+		min-height: 0;
+	}
+	
+	/* CSS for Header in Mobile  */
+	.offer-comparison .header {
+		visibility: visible !important;
+	}
+	.offer-comparison .header:first-child + div {
+		border-left: none;
+		padding: 0 10px 10px;
+		text-align: left;
+	}
+	.offer-comparison div.odd:first-child > div + div {
+		padding: 10px;
+		border-left: none;
+		margin-bottom: 0;
+	}
+	.offer-comparison-container .all-plans > div p {
+		padding: 10px 0;
+	}
+	.offer-comparison .odd:first-child {
+		padding: 0 0 35px !important;
+	}
+	.offer-comparison-container .all-plans > div {
+		padding: 0 10px 20px;
+	}
+
+	/* CSS for Toggle Div in Mobile */
+	.offer-comparison-container .all-plans .toggle-single-click a {
+		display: inline-block;
+		color: #ffffff;
+		font-family: open_sansregular;
+		font-size: 16px;
+		margin-top: 5px;
+		padding-right: 22px;
+	}
+	.offer-comparison-container .all-plans .expand-view a {
+		background: url("/ui/$version/tsw/img/global/white-arrow-up.png") no-repeat right 7px;
+	}
+	.offer-comparison-container .all-plans .collapse-view a {
+		background: url("/ui/$version/tsw/img/global/white-arrow-down.png") no-repeat right 7px;
+	}
+	.offer-comparison-container .all-plans .toggle-div, .offer-comparison-container .all-plans .toggle-single-click.collapse-view .toggle-arrow-up, .offer-comparison-container .all-plans .toggle-single-click.expand-view .toggle-arrow-down {
+		display: none;
+	}
+	.offer-comparison-container .all-plans .toggle-div {
+		width: 100%;
+	}
+	.offer-comparison-container .all-plans .toggle-div > div {
+		padding-left: 0;
+	}
+
+	/* CSS for Arrow and dots position in Mobile */
+	.offer-comparison-container.slick-carousel .slick-prev {
+		left: -25px;		
+	}
+	.offer-comparison-container.slick-carousel .slick-next {
+		right: -28px;		
+	}
+	.offer-comparison-container.slick-carousel .slick-prev, .offer-comparison-container.slick-carousel .slick-next  {
+		top: 170px;
+	}
+	.offer-comparison-container.slick-carousel .slick-dots {
+		bottom: auto;
+		top: 292px;
+	}
+	.offer-comparison-container.slick-carousel .slick-dots li {
+		margin: 0 7px;
+	}
+	/* CSS for check/cross image */
+	.offer-comparison .icon-check,
+	.offer-comparison .icon-cross {
+		margin: 0;
+	}
+	/* CSS for Order Now Button */
+	.offer-comparison .button-payment {
+	    margin: 33px 0;
+	}
+	.offer-comparison .vertical-divider img + p {
+		margin-bottom: 20px;
+	}
+}

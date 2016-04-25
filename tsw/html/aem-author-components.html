@@ -1,0 +1,31 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<div class="cols-grid">
+	<div class="colspan-12 col-reset text-align-center">
+		<h1>AEM Author Components</h1>
+		<p>These are components that appear only in the author view. They serve as placeholders on the page so that the author is aware of the configurations and how to edit it.</p>
+	</div>
+	
+	<div class="colspan-12 col-reset library-header">
+		<h2>Modal</h2>
+	</div>
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/aem-author-modal.html"-->
+	
+	<div class="colspan-12 col-reset library-header">
+		<h2>Tooltip</h2>
+	</div>
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/aem-author-tooltip.html"-->
+
+	<div class="colspan-12 col-reset library-header">
+		<h2>Mega Menu</h2>
+	</div>
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/aem-mega-menu.html"-->
+
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

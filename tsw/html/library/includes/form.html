@@ -1,0 +1,256 @@
+<div class="colspan-6">
+	<div class="cols-6">
+				
+		<form class="form col-content" action="#forms.html" method="post">
+			<fieldset>
+				<!-- div for displaying error message at the top -->
+				<div class="msg-error error-header"></div>
+				
+		 		<p><strong>Section Header</strong></p>
+		 		
+				<label class="colspan-2 required-asterisk" for="fname-input1">First Name</label>
+				<div class="colspan-4">
+					<input type="text" name="fname" id="fname-input1" size="30" class="required" placeholder="Please enter your first name"/>
+					<a href="#" data-content-element="fname-help" class="tooltip-trigger btn-help">Help for First name</a>
+					<div id="fname-help" class="tooltip-message">
+						<p>Contextual help to provide more details about this field.</p>
+					</div>
+				</div>
+				<label class="colspan-2 required-asterisk" for="lname-input2">Last Name</label>
+				<div class="colspan-4">
+					<input type="text" name="lname" id="lname-input2" size="30" class="required" placeholder="Please enter your last name" />
+				</div>
+		
+				<label class="colspan-2 required-asterisk" for="street-input1">Address</label>
+				<div class="colspan-4">
+					<input type="text" name="street" id="street-input1" size="30" placeholder="Please enter your address" class="required" />
+				</div>
+		
+				<label class="colspan-2 required-asterisk" for="city-input2">City</label>
+				<div class="colspan-4">
+					<input type="text" name="city" id="city-input2" size="30" minlength="3" class="required" placeholder="Please enter your city" />
+				</div>
+		
+				<label class="colspan-2 required-asterisk" for="phone-input1">Phone Number</label>
+				<div class="colspan-4">
+					<input type="tel" name="phone" id="phone-input1" maxlength="10" size="30" class="required" data-mask="(000) 000-0000" placeholder="Please enter phone number" />
+				</div>
+		
+				<label class="colspan-2 required-asterisk" for="email-input">Email</label>
+				<div class="colspan-4">
+					<input type="text" name="email" id="email-input" size="30" class="required email" placeholder="Please enter your email" />
+				</div>
+		
+				<label class="colspan-2 required-asterisk" for="number-input">Number</label>
+				<div class="colspan-4">
+					<input type="tel" name="txtNumber" id="number-input" size="30" range="10,20" class="range required number" placeholder="Please enter a number" />
+				</div>
+		
+				<label class="colspan-2 required-asterisk" for="alphanumeric-input">Alpha-numeric</label>
+				<div class="colspan-4">
+					<input type="text" name="txtAlphanumeric" id="alphanumeric-input" size="30" class="required alphanumeric" placeholder="Please enter an alphanumeric" />
+				</div>
+		
+				<label class="colspan-2 required-asterisk" for="alpha-input">Alpha</label>
+				<div class="colspan-4">
+					<input type="text" name="txtAlpha" id="alpha-input" size="30" class="required lettersonly" placeholder="Please enter alphabetic characters" />
+				</div>
+				
+				<label class="colspan-2 required-asterisk" for="currency-input">Currency</label>
+				<div class="colspan-4">
+					<input type="text" name="txtCurrency" class="required currency" id="currency-input" size="30" data-mask="C" placeholder="Please enter currency value"/>
+				</div>
+				
+				<label class="colspan-2 required-asterisk" for="zipcode">Zipcode</label>
+				<div class="colspan-4">
+					<input type="tel" name="zipcode" id="zipcode" minlength="5" maxlength="10" size="30" class="required" data-mask="00000-0000" placeholder="Please enter a zipcode"/>
+				</div>
+		
+				<label class="colspan-2 required-asterisk" for="password">Password</label>
+				<div class="colspan-4">
+					<input name="password" id="password" size="30" class="required" type="password" minlength="5" />
+				</div>
+		
+				<label class="colspan-2 required-asterisk" for="confirm-password">Confirm Password</label>
+				<div class="colspan-4">
+					<input name="confirm-password" id="confirm-password" size="30" class="required" equalTo="#password" minlength="5" type="password" />
+				</div>
+		
+				<p><strong>Section Header</strong></p>
+		
+				<label class="colspan-2 required-asterisk" for="calendar-input-start">Start Date</label>
+				<div class="colspan-4">
+					<input type="text" name="calendar-input-start" id="calendar-input-start" size="11" class="required date date-picker" maxlength="10" placeholder="mm/dd/yyyy" readonly="readonly" />
+				</div>
+		
+				<label class="colspan-2 required-asterisk" for="calendar-input-end">End Date</label>
+				<div class="colspan-4">
+					<input type="text" name="calendar-input-end" id="calendar-input-end" size="11" class="required date date-picker" maxlength="10" placeholder="mm/dd/yyyy" readonly="readonly" />
+				</div>
+		
+				<label class="colspan-2">SpinBox</label>
+				<div class="sb-wrapper colspan-4 spinner">
+					<input type="button" value='&#8212' name="sb-down" class="sb-button disabled" data-spin-type="decrease" id="sb-down" title="decrease" />
+					<div class="sb-circle-wrapper">
+						<div class="sb-circle">									
+							<span step="1" max="4" min="0" class="sb-input"> 0 </span>
+						</div>
+					</div>
+					<input type="button" value="+" name="sb-up" class="sb-button" data-spin-type="increase" id="sb-up" title="increase" />
+				</div>
+				<label class="colspan-2 required-asterisk" for="state-input">State</label>
+				<div class="colspan-4">
+					<select name="state" id="state-input" class="required">
+						<option value="">Select One</option>
+						<option value="AZ">Arizona</option>
+						<option value="AR">Arkansas</option>
+						<option value="CA">California</option>
+						<option value="CT">Connecticut</option>
+						<option value="FL">Florida</option>
+						<option value="GA">Georgia</option>
+						<option value="ID">Idaho</option>
+						<option value="IA">Iowa</option>
+						<option value="KS">Kansas</option>
+						<option value="LA">Louisiana</option>
+						<option value="MA">Massachusetts</option>
+						<option value="MO">Missouri</option>
+						<option value="NE">Nebraska</option>
+						<option value="NV">Nevada</option>
+						<option value="NC">North Carolina</option>
+						<option value="OH">Ohio</option>
+						<option value="OK">Oklahoma</option>
+						<option value="RI">Rhode Island</option>
+						<option value="VA">Virginia</option>
+					</select>
+				</div>
+		
+				<label class="colspan-2" for="multi-input">Multi-Select</label>
+				<div class="colspan-4">
+					<select name="multi" id="multi-input" multiple="multiple">
+						<option value="AZ">Arizona</option>
+						<option value="AR">Arkansas</option>
+						<option value="CA">California</option>
+						<option value="CT">Connecticut</option>
+						<option value="FL">Florida</option>
+						<option value="GA">Georgia</option>
+						<option value="ID">Idaho</option>
+						<option value="IA">Iowa</option>
+						<option value="KS">Kansas</option>
+						<option value="LA">Louisiana</option>
+						<option value="MA">Massachusetts</option>
+						<option value="MO">Missouri</option>
+						<option value="NE">Nebraska</option>
+						<option value="NV">Nevada</option>
+						<option value="NC">North Carolina</option>
+						<option value="OH">Ohio</option>
+						<option value="OK">Oklahoma</option>
+						<option value="RI">Rhode Island</option>
+						<option value="VA">Virginia</option>
+					</select>
+				</div>
+		
+				<label class="colspan-2" for="time">Time</label>
+				<div class="colspan-4">
+					<input type="tel" name="time" maxlength="4" size="5" placeholder="hh:mm" data-mask="00:00" />
+				</div>
+		
+				<label class="colspan-2" for="comments">Comments</label>
+				<div class="colspan-4">
+					<textarea name="comments" id="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+				</div>  
+		
+				<!-- inline checkboxes -->
+				<label class="colspan-2 required-asterisk">Services</label>
+				<span class="colspan-4">						
+					<input type="checkbox" class="required" name="services" id="service-tv" />
+					<label for="service-tv">TV</label>
+				
+					<input type="checkbox" class="required" name="services" id="service-internet" />
+					<label for="service-internet">Internet</label>															
+				</span>
+				
+				<!-- inline checkboxes -->
+				<label class="colspan-2 required-asterisk"> Exsiting Services</label>
+				<span class="colspan-4">						
+					<input type="checkbox" class="required" name="existing-services" id="tv-service" />
+					<label for="tv-service" class="disabled">TV</label>
+				
+					<input type="checkbox" class="required" name="existing-services" id="internet-service" checked="checked"/>
+					<label for="internet-service" class="disabled">Internet</label>
+				</span>
+		
+				<!-- vertically grouped check-boxes -->
+				<div class="colspan-6 required-asterisk">
+					<label>What security features are you interested about?</label>						
+				</div>				
+				<span class="colspan-6 vertical-group-element">
+					<input type="checkbox" class="required" name="check-services" id="service-security" value="Home Security" >
+					<label for="service-security">Home Security</label> 
+				</span>
+				<span class="colspan-6 vertical-group-element">
+					<input type="checkbox" class="required" name="check-services" id="service-automation" value="Home Automation" />
+					<label for="service-automation">Home Automation</label> 
+				</span>
+				<span class="colspan-6 vertical-group-element">
+					<input type="checkbox" class="required" name="check-services" id="service-safety" value="Home Safety" />
+					<label for="service-safety">Home Safety</label> 
+				</span>
+				<span class="colspan-6 vertical-group-element">
+					<input type="checkbox" class="required" name="check-services" id="service-surveillance" value="Home Surveillance" />
+					<label for="service-surveillance">Home Surveillance</label>
+				</span>
+		
+				<!-- radio buttons -->
+				<label class="colspan-6 required-asterisk">Do you like our service?</label>				
+				<span class="colspan-6">
+					<input type="radio" name="service" id="service-yes" checked="checked" value="yes" />
+					<label for="service-yes">Yes</label> 
+				</span>
+				<span class="colspan-6">
+					<input type="radio" name="service" id="service-no" value="no" />
+					<label for="service-no">No</label>
+				</span>
+				<span class="colspan-6">
+					<input type="radio" name="service" id="service-hmmm" value="hmm" />
+					<label for="service-hmmm">Hmmm</label> 
+				</span>
+		
+				<!-- Inline radio buttons -->
+				<label class="colspan-6 required-asterisk">Current Customer?</label>
+				<div class="colspan-6">	
+					<input type="radio" name="customer" id="customer-yes" checked="checked" value="yes" />
+					<label for="customer-yes">Yes</label>
+					<input type="radio" name="customer" id="customer-no" value="no" />
+					<label for="customer-no">No</label>	
+				</div>
+		
+				<!-- Inline radio buttons -->
+				<label class="colspan-6 required-asterisk">Current Customer2?</label>
+				<div class="colspan-6">	
+					<input type="radio" name="customer2" id="customer2-yes" value="yes" />
+					<label for="customer2-yes">Yes</label>
+					<input type="radio" name="customer2" id="customer2-no" checked="checked" value="no" />
+					<label for="customer2-no">No</label>	
+				</div>
+				
+				<!-- Inline radio buttons -->
+				<label class="colspan-6 required-asterisk">Current Customer3?</label>
+				<div class="colspan-6">	
+					<input type="radio" name="customer3" id="customer3-yes" value="yes" />
+					<label for="customer3-yes" class="disabled">Yes</label>
+					<input type="radio" name="customer3" id="customer3-no" value="no" checked="checked" />
+					<label for="customer3-no" class="disabled">No</label>	
+				</div>
+					
+				<label class="colspan-2">Slider 1</label>
+				<div class="colspan-4 colspan-m12"><div class="slider" data-min-value="10" data-max-value="900"></div></div>
+		
+				<div class="colspan-6">	
+					<input type="submit" value="Submit" />
+				</div>
+		
+			</fieldset>
+		</form>
+		
+	</div>
+</div>

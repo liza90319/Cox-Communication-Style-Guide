@@ -1,0 +1,3149 @@
+#container {
+	background-image: -webkit-gradient(linear, top, bottom, from(#ffffff), to(#e7e8e9)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( top, #ffffff, #e7e8e9); /* Chrome 10+, Saf5.1+ */
+	background-image: -moz-linear-gradient( top, #ffffff, #e7e8e9); /* FF3.6+ */
+	background-image: -ms-linear-gradient( top, #ffffff, #e7e8e9); /* IE10 */
+	background-image: linear-gradient( to bottom, #ffffff, #e7e8e9); /* W3C */	
+}
+.IE8 #container, .IE9 #container {
+	background: #e6e7e8 url(/ui/4_1/tsw/img/digital-switch/main-gradient.png) repeat-x;	
+	z-index: 997;
+}
+/* reset styles */
+.col-reset, .col-content {
+	font-size: 18px; /* 1em */
+}
+/* Reset font-size for different zoom level */
+.pf-style-font-medium .col-reset, .pf-style-font-medium .col-content {
+	font-size: 20px !important; /* 1.125em */
+}
+.pf-style-font-large .col-reset, .pf-style-font-large .col-content {
+	font-size: 22px !important; /* 1.25em */
+}
+
+/* Clear extra margins/padding on internal columns. originally in _layout.css but not needed with CMS grid changes (breaks things there). */
+[class*='cols-'] [class*='cols-'] .col-content {
+	margin: 0;
+}
+
+/* digital switch modal font*/
+.dialog-component {
+	font-size: 18px;
+}
+
+/* header styles */
+h1 {
+	font-size: 2.222em !important; /* 18*2.222 = 40px; base font-size taken as 18px; */
+	line-height: .967em;
+	margin-bottom: 7px; /* gives 10px bottom margin with line height and margin */
+}
+h2 {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	font-size: 1.667em; /* 18*1.6667 = 30px; base font-size taken as 18px; */
+	line-height: 1.111em;
+	margin-bottom: 8px; /* gives 15px bottom margin with line height and margin */
+}
+h3 {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	font-size: 1.333em; /* 24px */
+	line-height: 1em;
+	margin-bottom: 8px; /* gives 15px bottom margin with line height and margin */
+}
+h4 {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	font-size: 1em; /* 18px */
+	line-height: 1.143em;
+	margin-bottom: 5px; /* gives 12px bottom margin with line height and margin */
+}
+h5 {
+	font-size: .778em; /* 14px */
+	line-height: 1.167em;
+	margin-bottom: 5px;
+}
+h6 {
+	font-size: .667em; /* 10px */
+	line-height: 1.200em;
+	margin-bottom: 5px;
+}
+
+/* form styles */
+input, textarea, select {
+	font-size: 0.889em; /* 16px */
+}
+
+/* digital switch button styles */
+
+/* primary button styles */
+#container input[type="submit"],
+.dialog-component input[type="submit"],
+.button,
+.button-secondary,
+.button-payment {
+	font-size: 1em !important;
+}
+
+/* primary disabled button styles  */
+/* !important override is needed as we are doing attribute chaining */ 
+#container input[type="submit"][disabled="disabled"],
+.dialog-component input[type="submit"][disabled="disabled"],
+.button-disabled {
+	border: 1px solid #cecece !important;
+	background: #e6e7e8 !important;
+	-webkit-box-shadow: none !important; /* Saf3.0+, Chrome */
+	-moz-box-shadow: none !important; /* FF3.5 - 3.6 */
+	box-shadow: none!important; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+	color: #c3c3c3 !important;
+	cursor: default !important;
+}
+
+/* digital switch page header style */
+.page-header {
+	margin: 0 0 5px;
+}
+.page-header h1 {
+	font-size: 1.33em !important;
+	line-height: 1em;
+	color: #2757a7;
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+}
+.page-header .col-content {
+	border-bottom: 4px solid #2757a7;	
+	font-weight: 600;
+	padding: 0 0 10px;
+}
+
+/* section headers */
+.section-heading {
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	padding-bottom: 0.25em;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+}
+/* orange */
+.orange-heading {
+	color: #fa4616;
+}
+/* yellow */
+.yellow-heading {
+	color: #ffa300;
+}
+/* magenta */
+.magenta-heading {
+	color: #db1e90;
+}
+/* purple */
+.purple-heading {
+	color: #981d97;
+}
+/* green */
+.lt-green-heading {
+	color: #8fc740;
+}
+.dk-green-heading {
+	color: #007749;
+}
+/* blue */
+.blue-heading {
+	color: #009fdf;
+}
+
+/* digital switch desktop error positioning overrides */
+.form .bubble-pointer:before {
+	top: 11px;
+}
+.form .bubble-pointer:after {
+	top: 12px;
+}
+
+#pf-footer {
+	margin-top: 0 !important;
+}
+.colspan-mpage {
+	padding-bottom: 80px;
+}
+/* override global modal title font */
+.dialog-component .dialog-component-title {
+	font-family: "open_sanssemibold";
+	font-size: 1.667em; /* 30px */ 
+}
+
+/* disclaimer widget style */
+.digital-disclaimer {
+	margin: 35px 0 0;
+}
+.digital-disclaimer > p {
+	font-size: 0.667em;
+}
+
+/* common styles for mobile */
+@media screen and (max-width: 767px) {	
+	.page-header {
+		margin: 26px 0 5px;
+	}	
+	.text-align-mcenter {
+		text-align: center;
+	}
+}
+/* styles for activate confirm */
+
+/*styles for finish activation*/
+.activate-confirm .panel-heading a {
+	padding: 16px 0 17px 10px !important; 
+}
+.confirm-info {
+	margin: 24px 30px 0;
+}
+.confirm-video {
+	margin: 5px 30px 22px !important;
+}
+.confirm-video p, .activate-again p  {
+	margin-bottom: 10px;
+}
+.confirm-video a.button {
+	margin-top: 110px;
+}
+
+/* styles for activate again*/
+.activate-again a {
+	display: inline-block;
+}
+.user-guide-link {
+	margin: 3px 0 24px;    
+}
+.activate-again .button-secondary {
+	margin: 4px 0 40px;
+}
+.need-help-pos {
+	margin: 19px 0 -5px !important;
+}
+
+/* intercept modal css for mobile */
+@media screen and (max-width: 767px) {
+	.confirm-info {
+	    margin: 20px 20px 0;
+	}
+	.confirm-video {
+	    margin: 5px 20px 22px !important;
+	}
+	.confirm-video-mtext {
+		margin: 5px 0 20px;
+	}	
+	.confirm-video a.button {
+	    margin: 35px 0;	  
+	}
+	.activate-again {
+		margin: 0 20px !important;
+	}
+	
+}/* styles for activate initial */
+
+.activate .panel-heading a {
+	padding: 16px 0 17px 10px !important; 
+}
+.activate-initial-content {
+	display: block;
+    margin: 24px 30px 40px;
+}
+.activate-initial-text {
+	margin-bottom: 25px;
+    margin-top: 20px;
+}
+.view-install-link {
+	display: block;
+    margin-top: 15px;
+}
+.minibox-list {
+	margin: 0 0 40px;
+}
+.activate-initial-minibox {
+	margin-bottom: 18px !important;
+}
+.activate-initial-content .total-miniboxes {
+	height: 65px;
+    margin: 42px 0 0 48px;
+    width: 74%;
+}
+.activate-initial-content .minibox-count {
+	background-color: #2757a7;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-weight: 600;
+    left: 35px;
+    padding: 13px 17px;
+    position: absolute;
+    text-align: center;
+    top: 21px;
+    z-index: 100;
+}
+.activate-mini-box {
+	margin: 0 0 10px;
+}
+.serial-numbers span {
+	display: block;
+	margin-bottom: 5px;
+}
+.activate-action .button-secondary {
+	margin-left: 14px;
+}
+.activate-initial-content .serial-numbers {
+	margin: -3px 0 0;
+}
+
+/* styles for tablet in portrait orientation */
+@media screen and (min-device-width: 768px)
+and (orientation : portrait) {
+	.activate-action {
+		width: 123%; /* fix so that the buttons do not break */		
+	}
+	.activate-action .button-secondary {
+		margin-left: 3.5%;
+	}
+}
+
+/* intercept modal css for mobile */
+@media screen and (max-width: 767px) {
+	
+	.activate-initial-content {
+	    margin: 27px 20px 40px;
+	}
+	.activate-initial-minibox {
+		margin: 0 0 6px 14% !important;
+		text-align: center;
+    	width: 70%;
+	}
+	.activate-initial-content .minibox-count {
+		margin: 2px 0 0 -30px;
+		padding: 5% 7%;
+		font-size: 1.334em;
+	}
+	.activate-initial-content .total-miniboxes {
+	    width: 100%;
+	    margin: 42px 0 20px 12px;
+	    height: 95px;	    
+	}	
+	.minibox-list {
+	    margin-bottom: 30px;
+	}
+	.activate-action .button-secondary {
+		margin: 30px 0 0;
+	}
+}/* styles for activity menu widget*/
+
+.activity-menu-header h1 {
+	margin: -6px 0 10px;	
+}
+.activity-menu-header h3 {
+	margin: 40px 0;
+}
+.activity-img {
+	text-align: center;
+}
+.activity-img .order.active {
+	background: url(/ui/4_1/tsw/img/digital-switch/order-active.png) 50% 0 no-repeat;
+}
+.activity-img .order.inactive {
+	background: url(/ui/4_1/tsw/img/digital-switch/order-inactive.png) 50% 0 no-repeat;
+}
+.activity-img .receive.active {
+	background: url(/ui/4_1/tsw/img/digital-switch/receive-active.png) 50% 0 no-repeat;
+}
+.activity-img .receive.inactive {
+	background: url(/ui/4_1/tsw/img/digital-switch/receive-inactive.png) 50% 0 no-repeat;
+}
+.activity-img .install.active {
+	background: url(/ui/4_1/tsw/img/digital-switch/install-active.png) 50% 0 no-repeat;
+}
+.activity-img .install.inactive {
+	background: url(/ui/4_1/tsw/img/digital-switch/install-inactive.png) 50% 0 no-repeat;
+}
+.IE8 .activity-img .receive {
+	background-position: 51% 0;
+}
+.IE8 .activity-img .install {
+	background-position: 40% 0;
+	width: 105%;	
+}
+.activity-img > div {
+	height: 130px;	
+}
+.activity-order-flow {
+	margin: 20px 0 11px;
+}
+.order-content, .receive-content,
+.activate-order {
+	width: 25.3%;
+}
+.order-content, .receive-content {
+	margin-right: 10%;
+}
+.order-content span, .receive-content span,
+.activate-order span {
+	display: block;
+	line-height: 1.286em;
+}
+.step-enable-header, .step-disable-header {
+	text-align: center;
+	margin: 14px 0 10px;
+}
+.step-enable-header {
+	color: #2757a7;
+}
+.step-disable-header, .step-disable-info {
+	color: #909090;
+}
+.step-enable-info,
+.step-disable-info {
+	min-height: 140px;
+}
+
+/* styles for activity menu more info widget*/
+
+.align-activity-btn {
+	margin: 26px auto 0;
+	display: block !important;
+	width: 100%; /* one off case of button being 100% width */
+}
+.activity-footer-pos {
+	margin:	0 0 50px;
+}
+
+@media screen and (min-width: 768px) 
+and (orientation : portrait) {
+	.step-enable-info,
+	.step-disable-info {
+		min-height: 160px;
+	}
+}
+
+/* activity menu css for mobile */
+@media screen and (max-width: 767px) {	
+	.activity-menu, .activity-menu-info .activity-menu {
+		margin: 0 20px;
+	}	
+	.activity-img {
+		float: left;
+		text-align: left;
+		width: 26%;
+	}
+	.activity-img > div {
+		background-size: contain !important;
+		height: 100px;
+	}
+	.order-content, .receive-content {
+		margin-right: 0;
+	}
+	.step-enable-header, .step-disable-header {
+		text-align: left;
+		float: right;
+		width: 69%;
+		margin: 0 0 5px;
+	}
+	.step-enable-info, .step-disable-info {		
+		width: 69%;
+		float: right;
+		min-height: 0;
+	}
+	.step-disable-info {
+		height: auto;
+	}
+	.activity-footer-pos div {
+		margin:	0 0 20px;
+	}
+	.activity-footer-pos {
+		margin: 0 0 -20px
+	}
+	.align-activity-btn {
+		margin: 20px 0 35px !important;
+		display: inline-block !important;
+	}
+	.activity-menu-info {
+		background: linear-gradient(to bottom, #ffffff, #e7e8e9) repeat;
+	}
+	.activity-menu-divider {
+	    background-image: linear-gradient(to bottom, #777777, #f3f3f3);
+	    height: 7px;
+	}
+}
+
+/* styles for compare equipment modal */
+
+/* modal override styles*/
+.compare-equipment-modal .dialog-component-title {
+	margin-top: 24px;
+}
+
+.compare-equipment {
+	margin: -4px 0 0;
+}
+
+/*compare equipment modal table styles*/
+.compare-equipment-table {
+	margin-bottom: 15px
+}
+.compare-equipment-1-col {
+	width: 210px;
+}
+.compare-equipment-2-col {
+	width: 330px;
+}
+.compare-equipment-3-col {
+	width: 340px;	
+}
+.compare-equipment-table thead tr td .compare-header {
+	margin: 0 0 20px;
+	display: block;
+	font-size: 1.2em;
+}
+.compare-equipment-table tr td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 7px 20px 2px;
+}
+.compare-equipment-table tr td.features,
+.compare-equipment-table tr td.feature-alternate  {
+	text-align: left;
+	padding-left: 28px;	
+}
+.compare-equipment-table tr td.feature-alternate {
+	background-color: #F9FAFB;
+    border-right: 1px solid #FFFFFF;
+}
+.compare-equipment-table tr td.minibox,
+.compare-equipment-table tr td.minibox-alternate {
+	background-color: #F3F3F3;
+}
+.compare-equipment-table tr td.minibox-alternate {
+	background: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%,#F3F3F3), color-stop(50%,#E7E7E7),color-stop(100%,#F3F3F3));
+	background: -webkit-linear-gradient(left, #F3F3F3 0%, #E7E7E7 50%,#F3F3F3 100%);
+	background: -moz-linear-gradient(left, #F3F3F3 0%, #E7E7E7 50%,#F3F3F3 100%);
+	background: -ms-linear-gradient(left, #F3F3F3 0%, #E7E7E7 50%,#F3F3F3 100%);
+	background: -o-linear-gradient(left, #F3F3F3 0%, #E7E7E7 50%,#F3F3F3 100%);
+	background: linear-gradient(left, #F3F3F3 0%, #E7E7E7 50%,#F3F3F3 100%);
+}
+.compare-equipment-table tr td.receiver {
+	background-color: #FAFAFA;
+}
+.compare-equipment-table tr td.receiver-alternate {
+	background: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%,#FAFAFA), color-stop(50%,#F3F3F3),color-stop(100%,#FAFAFA));
+	background: -webkit-linear-gradient(left, #FAFAFA 0%, #F3F3F3 50%,#FAFAFA 100%);
+	background: -moz-linear-gradient(left, #FAFAFA 0%, #F3F3F3 50%,#FAFAFA 100%);
+	background: -ms-linear-gradient(left, #FAFAFA 0%, #F3F3F3 50%,#FAFAFA 100%);
+	background: -o-linear-gradient(left, #FAFAFA 0%, #F3F3F3 50%,#FAFAFA 100%);
+	background: linear-gradient(left, #FAFAFA 0%, #F3F3F3 50%,#FAFAFA 100%);
+}
+.compare-equipment-info .compare-minibox {
+    display: block;
+    height: 49px;
+    margin: 17px 0 43px 27.5%;
+}
+.compare-equipment-info .minibox a {
+	margin: -3px 0 3px;
+}
+.compare-equipment-info .compare-stb {
+    display: block;
+    height: 60px;
+    margin: -64px 0 0px 16%;
+}
+.compare-equipment-table .check-mark {
+    margin: -5px auto 0;
+}
+td.minibox-alternate .legal-symbol, 
+td.minibox .legal-symbol {
+	display: block;
+    margin: -21px 0 0 17%;
+    position: absolute;
+}
+td.receiver-alternate .legal-symbol, 
+td.receiver .legal-symbol {
+	display: block;
+    margin: -21px 0 0 18%;
+    position: absolute;
+}
+.compare-equipment-table .compare-row-border td {
+	padding: 0px;
+}
+.compare-equipment-table .compare-row-border td div {
+	height: 1px;
+	background: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%,#FAFAFA), color-stop(50%,#E7E7E7),color-stop(100%,#FAFAFA));
+	background: -webkit-linear-gradient(left, #FAFAFA 0%, #E7E7E7 50%,#FAFAFA 100%);
+	background: -moz-linear-gradient(left, #FAFAFA 0%, #E7E7E7 50%,#FAFAFA 100%);
+	background: -ms-linear-gradient(left, #FAFAFA 0%, #E7E7E7 50%,#FAFAFA 100%);
+	background: -o-linear-gradient(left, #FAFAFA 0%, #E7E7E7 50%,#FAFAFA 100%);
+	background: linear-gradient(left, #FAFAFA 0%, #E7E7E7 50%,#FAFAFA 100%);
+}
+.option-description > p {
+	font-size: 0.778em;
+}
+.compare-equipment-modal .digital-disclaimer {
+	margin: 34px 0 -8px;
+}
+/* For all tablet, in portrait mode page */
+@media only screen 
+and (min-device-width : 768px)
+and (orientation : portrait) {
+	.compare-equipment-info .compare-minibox {
+	    margin: 17px 0 43px 20.5%;
+	}
+	.compare-equipment-info .compare-stb {
+    	margin: -64px 0 0px 12%;
+	}
+}
+/* styles for delivery details/order step 3 */
+
+/* Self intsall- ship */
+.shipping-info {
+	margin: 21px 0 16px;
+}
+.shipping-details select {
+	width: 287px;
+	padding: 6px 8px;
+	font-size: 0.7778em;
+	margin-bottom: 0 !important; /* need override as 10px gets added due to colspan-m12 class */
+}
+.IE8 .shipping-details select {
+	width: 272px;
+}
+.shipping-details .next-step {
+	margin: 20px 0 15px !important;	
+}
+.previous-step a {
+	display: block;
+	margin: 15px 0 -19px;
+}
+
+/* mobile styles for delivery details/order step 3 */
+@media screen and (max-width: 767px) {
+	.form .shipping-details .error-wrapper {
+		margin: 23px 0 10px;
+	}		
+}/* Css file for delivery method module step 2*/
+.delivery-method .delivery-method-blue-horizontal-line {
+	border-bottom: 1px solid #009FDF;
+	margin-bottom: 27px;
+	margin-top: 22px;
+}
+.delivery-method .self-installation-link {
+	padding: 0.5% 0 1%;
+}
+.delivery-method .delivery-method-video {
+	float: right;
+}
+.delivery-method .method-text {
+	font-size: 0.725em; /* 13px */
+}
+/* Css for unchecked install option selection box */
+.delivery-method .install-options {
+	background: #ffffff;
+	color: #2757a7;
+	width: 27%;
+	height: 3.7em;
+	display: inline-block;
+	border: 1px solid #CCCCCC;
+	-webkit-box-shadow: 0 1px #CCCCCC; /* FF3.5 - 3.6 */
+	-moz-box-shadow: 0 1px #CCCCCC; /* Saf3.0+, Chrome */
+	box-shadow: 0 0 #CCCCCC; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+	margin-right: 1.6%;
+	padding-left: 2.5%;
+	padding-top: 2%;
+	cursor: pointer;
+}
+.delivery-method .install-options.active-install a {
+	color: #E8E8E8 !important;
+}
+/* Css for checked install option selection box */
+.delivery-method .install-options.active-install {
+	background-color: #2757a7;
+	color: #E8E8E8 !important;
+	display: inline-block;
+	border: 1px solid #2757a7;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.50) inset;
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.50) inset;
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.50) inset;
+	background: linear-gradient(#2757a7, #1d4c9b) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.delivery-method .select-delivery-method-text {
+	font-weight: bold;
+	margin-bottom: 16px;
+}
+.delivery-method .delivery-self-text {
+	margin-right: 34%;
+}
+.delivery-method .delivery-method-pricing {
+	margin-right: 62%;
+}
+.delivery-method .delivery-pickup-text {
+	margin-right: 39%;
+}
+.delivery-method .learn-more-text {
+	margin-top: -58px;
+	margin-bottom: 28px;
+}
+.delivery-method .delivery-method-back-step {
+	margin-top: 15px;
+	margin-bottom: -3px !important;
+}
+.delivery-method .delivery-method-begin {
+	margin-top: 18px;
+	margin-bottom: -6px;
+}
+
+/* For all tablet, in portrait mode page */
+@media only screen 
+and (min-device-width : 768px)
+and (orientation : portrait) {
+	.delivery-method .learn-more-text {	
+		margin-top: -3.2%;	
+	}	
+	.delivery-method .delivery-method-pricing {	
+		margin-right: 0;	
+	}	
+	.delivery-method span .modal-trigger {	
+		margin-top: 4px;	
+	}
+	.delivery-professional-text {
+    	padding-right: 2px;
+	}
+}
+
+@media screen and (max-width: 767px) {	
+	.delivery-method .method-text {		
+		font-size: 0.89em; /* overriding to 16px as desktop font size was appearing too small in mobile */
+	}
+	.delivery-method .select-delivery-method-text {
+		margin-bottom: 7%;
+		margin-top: 6%;
+		font-weight: bold;
+	}
+	/* Mobile version Css for unchecked install option selection box */
+	.delivery-method .install-options {
+		padding: 3% 0 3% 0 !important;
+		display: inline-block;
+		line-height: 2em !important;
+		margin-bottom: 7%;
+		font-size: 0.7em !important;
+		height: 1%;
+		margin-right: 0;
+		text-align: center;
+		font-size: 1em !important;
+	}
+	.delivery-method span .modal-trigger {
+		margin-top: 3px;
+	}
+	.delivery-method .mtext-align-center {
+		text-align: center;
+	}
+
+	.delivery-method .delivery-self-text {
+		margin-right: 0;
+	}
+	.delivery-method .delivery-method-pricing {
+		margin-right: 0;
+	}
+	.delivery-method .learn-more-text {
+		margin-bottom: 29px;
+    	margin-top: 8px;
+	}
+	.delivery-method .delivery-method-blue-horizontal-line {
+		margin-bottom: 5%;
+	}
+	.delivery-method .delivery-pickup-text {
+		margin-right: 0;
+	}
+	.delivery-method .install-radio-block {
+		line-height: 20px;
+		padding: 0 5px 0 5px;
+	}
+
+}
+/* styles for ineligible no-tv, node not active and please call page */
+
+/* ineligible no-tv desktop styles */
+.msg-info {
+	margin: 20px 0;
+}
+.msg-info p {
+	margin-bottom: 0 !important;
+}
+.no-tv-offer {
+	margin-top: 10px;
+}
+.IE8 .no-tv-offer {
+	width: 100%; /* width explicitly set for IE8 */
+}
+.no-tv-offer p, .please-call p {
+	margin: 10px 0 20px;
+}
+.no-tv-offer .price {
+	font-size: 2.65em;
+}
+.no-tv-offer .price span {
+	font-size: 50%;
+	margin-top: -8px;
+	*margin-top: 5px;
+	float: left;
+}
+.no-tv-offer .price div {
+	float: left;
+}
+.no-tv-offer a {
+	margin: 30px 0 0;
+}
+.no-tv-content p {
+	margin-bottom: 20px;
+}
+
+/* ineligible node not active desktop styles */
+.no-node-content .button {
+	margin-top: 10px;
+}
+
+/* please call page desktop styles */
+.please-call img {
+	margin-top: 17px;
+}
+.no-node-content, .no-tv-offer {
+	margin-bottom: 80px !important;
+}
+.please-call {
+	margin-bottom: 70px;
+}
+.please-call .call-text {
+	white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+	/* ineligible no-tv mobile styles */
+	.msg-info {
+		margin: 15px 0 20px;
+	}
+	.no-tv-offer {
+		margin-top: 40px;
+		margin-bottom: 0;
+	}
+	.no-tv-offer .col-content {
+		text-align: center;
+	}
+	.no-tv-offer img {
+		margin: 0 20px 0 10px;
+	}
+	.no-tv-offer .price-wrapper {
+		margin: 0 10px 10px !important;
+	}
+	.no-tv-offer .price {
+		font-size: 2.4em;
+		margin: 0 0 0 15%; /* optimum left margin % which works for all devices */
+	}
+	.no-tv-offer a {
+		margin: 8px 0 0;
+	}
+	/* ineligible node not active mobile styles */
+	.no-node-content .button {
+		margin: 23px 0 80px;
+	}
+	.please-call {
+		margin-bottom: 0px;
+	}
+	.colspan-5.please-call .col-content {
+		margin: 0 0 10px;
+	}
+	.no-node-content {
+		margin-bottom: 0px !important;
+	}
+}/* installation-instructions modal styles */
+/* desktop style */
+
+/* common styles for step content */
+.install-guide [class*="content-step-"] {
+	background-color: #dfe8ec;
+	margin: 0 -30px;
+	padding: 60px 30px;
+}
+/* position for print instruction */
+.install-guide .print-instruction {
+	position: absolute; 
+	margin: -70px 0 0 60%;
+}
+.install-guide .indicator {
+	width: 8%; 
+	float: left;
+	background: url("/ui/4_1/tsw/img/digital-switch/icons/icon-install-instruction-step.png") no-repeat scroll transparent;
+	height: 52px;
+}
+.install-guide .content-step-1 .indicator {
+	background-position: 0 0;
+}
+.install-guide .content-step-2 .indicator {
+	background-position: 0 33%;
+}
+.install-guide .content-step-3 .indicator {
+	background-position: 0 67%;
+}
+.install-guide .content-step-4 .indicator {
+	background-position: 0 100%;
+}
+.install-guide .info {
+	width: 38%; 
+	float: left; 
+	margin: 100px 0 0 -10px;
+}
+.install-guide .icon img {
+	margin: 0 auto; 
+	display: block;
+	padding: 60px 0;
+}
+.install-guide .button-secondary {
+	margin: 0 105px 0 -190px;
+}
+.install-guide .blue {
+	background-color: #0093d0;
+	padding: 8px 10px;
+}
+.install-guide .step-3 .icon img {
+	padding: 75px 0;
+}
+
+/* css for mobile */
+@media screen and (max-width: 767px) {
+	.install-guide [class*="content-step-"] {
+		margin: 0 -20px;		
+	}
+	.install-guide .print-instruction {
+		margin: -70px 0 0 80%;
+	}
+	.install-guide .indicator {
+		width: 15%; 	
+	}
+	.install-guide .info {
+		width: 77%; 		
+		margin: 5px 0 0 25px;
+	}
+	.install-guide .content-step-1 .icon {
+		width: 58%;
+		margin: 0 21% 0;
+	}
+	.install-guide .content-step-2 .icon {
+		width: 54%;
+		margin: 0 23% 0;
+	}
+	.install-guide .content-step-3 .icon,
+	 .install-guide .content-step-4 .icon{
+		width: 82%;
+		margin: 0 9% 0;
+	}	
+	.install-guide .icon img {
+		padding-top: 25px; 		
+	}	
+	.install-guide .button,
+	.install-guide .button-secondary {
+		margin: 20px 20px 0 !important;
+		
+	}
+	
+}
+
+/* CSS overrides for iPhone only */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+	.install-guide .indicator {
+		width: 18%; 	
+	}
+	.install-guide .info {
+		width: 72%; 				
+	}	
+	.install-guide .print-instruction {
+		margin: -70px 0 0 75% !important;
+	}
+}/* Login page css for desktop */
+.login-details {
+	margin: 0 0px 50px;
+}
+/* login intro */
+.login-info {
+	margin: 14px 10px 21px !important;
+}
+/* login tabs style */
+.login-details .login-tabs {
+	display: block;
+	float: left;
+	text-align: center;
+}
+form.form .login-tabs {
+	margin-bottom: -10px !important; /* override forms margin-bottom */
+}
+.login-details .login-tabs.active {
+	padding: 0 0 10px;
+}
+.login-tabs > div {
+	text-align: center;
+	margin: 0 10px 10px !important;
+	background-color: #fff;
+}
+.login-tabs.active > div {
+	background-color: #2757a7;
+	margin-bottom: 0 !important;
+	padding: 0 0 12px;
+}
+.login-tabs.active  a, .login-tabs.active  a:hover, .login-tabs.active  a:focus, .login-details .active {
+	color: #FFFFFF;
+	border: none;
+	box-shadow: none;
+	-webkit-box-shadow: none; /* Saf3.0+, Chrome */
+	-moz-box-shadow: none; /* FF3.5 - 3.6 */
+}
+.login-tabs a {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	display: block;
+	padding: 20px 0;
+	-webkit-box-shadow: 1px 1px 1px 1px #ccc;
+	-moz-box-shadow: 1px 1px 1px 1px #ccc;
+	box-shadow: 1px 1px 1px 1px #ccc;
+}
+/* login content div styles */
+.login-content {
+	margin-bottom: 20px;
+}
+.login-content > div {
+	background-color: #2757a7;
+}
+.login-content  .tab-pane {
+	display: none;
+}
+.login-content .tab-pane.active {
+	display: block;
+	margin: 0 10px;
+	padding: 11px 0;
+	overflow: hidden;
+}
+/* field styles */
+.login-details input[type="text"],
+.login-details input[type="tel"],
+.login-details input[type="password"] {
+	margin-bottom: 10px !important;
+	border-radius: 0;
+}
+.login-details .remember-label {
+	margin-top: 4px !important;
+}
+.login-details .uncheck {
+	margin-left: 42px;
+}
+.login-details label {
+	color: #fff;
+}
+.login-details .no-credentials {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	margin-top: 16px !important;
+	margin-bottom: 2px !important;
+}
+.login-img-pos {
+	margin-top: 20px !important;
+	margin-bottom: 78px !important;
+}
+/* IE8 overrides */
+.IE .login-details input[type='text'],
+.IE .login-details input[type='password'],
+.IE .login-details input[type='tel'] {
+	width: 420px;
+}
+.IE8 .login-tabs span {
+	padding: 10% 20%; /* fix to make whole tab clickable in IE8 */
+}
+
+
+/* placeholder styles */
+label.display-placeholder {
+	position: absolute;
+	z-index: 2;
+	color: #000;
+	padding: 8px 10px 0px 10px;
+	height: 22px;
+	border-color: #a0a0a0 #d6d6d6 #f0f0f0;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #f1f1f1;
+	display: none;
+	width: 91%;
+	cursor: text;
+}
+.IE9 label.display-placeholder, .IE8 label.display-placeholder, .IE7 label.display-placeholder {
+	display: block;
+}
+/* error styles */
+.form .login-details .error-wrapper {
+	position: absolute;
+	margin: -44px 0 0 102%;
+	z-index: 999;	
+	min-width: 310px;
+}
+
+.CH .form .login-details .error-wrapper,
+.SF .form .login-details .error-wrapper {
+	margin: 0 0 0 38px; /* different margin for chrome and safari browser */
+}
+
+/* desktop only */
+@media screen and (min-width: 768px) {
+	body[data-os='ios'] .form .login-details .error-wrapper {
+		margin: -44px 0 0 102% !important;
+	}
+}
+.IE .form .login-details .error-wrapper {
+	margin: 0px 0 0 27px;
+}
+.form label.error {
+	background-color: #fbeeed;
+}
+
+/* Login page css for mobile */
+@media screen and (max-width: 767px) {
+	/* login intro */
+	.login-info {
+		margin: 14px 20px 21px !important;
+	}
+	.login-details {
+		margin: 0 10px;
+	}
+	.login-details .hide-section {
+		display: none !important;
+	}
+	.login-details .no-credentials {
+		display: inline-block;
+		margin-top: 7px !important;
+		margin-bottom: 30px !important;
+	}
+	.login-content {
+		margin-bottom: 40px !important;
+	}
+	.login-details input[type="text"],
+	.login-details input[type="tel"],
+	.login-details input[type="password"] {
+		margin-bottom: 6px;
+		margin-top: 5px;
+	}
+	.login-tabs a {
+		padding: 20px 40px;
+	}
+	.remember-label {
+		display: block;
+		margin-top: 3px !important;
+	}
+
+	/* error messaging styles */
+	.form .login-details .error-wrapper {
+		margin: 13px 0 25px !important;
+		position: relative;
+	}
+	.form .mbubble-pointer:before {
+		border-color: #d8544c rgba(0, 0, 0, 0);
+		border-style: solid;
+		border-width: 0 18px 23px;
+		content: "";
+		display: block;
+		left: 44%;
+		position: absolute;
+		top: -24px;
+		width: 0;
+		z-index: 0;
+	}
+	.form .mbubble-pointer:after {
+		border-color: #fbeeed rgba(0, 0, 0, 0);
+		border-style: solid;
+		border-width: 0 18px 23px;
+		content: "";
+		display: block;
+		left: 44%;
+		position: absolute;
+		top: -23px;
+		width: 0;
+		z-index: 1;
+	}
+	.form .error-wrapper p {
+		background-position: 4px 2px;
+		margin-bottom: 5px;
+		padding: 0 5px 0 30px;
+	}
+	.form .msg-error {
+		margin: 30px 0px;
+	}
+
+}
+
+/* Login page css for mobile screen less than 568px*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+	.form .mbubble-pointer:after, .form .mbubble-pointer:before {
+		left: 40%
+	}
+	.login-tabs a {
+		padding: 20px 35px;
+	}
+}
+
+/* error-wrapper positioning fix for kindle in landscape mode */
+@media only screen and (max-device-width: 1280px) and (orientation : landscape) {
+	.KF .form .login-details .error-wrapper {
+		margin: 0 0 0 38px !important;
+	}
+}
+/* Css file for date picker modal opens on mobile device*/
+@media screen and (max-width: 767px) {
+	
+.datepicker-modal-component {
+	position: absolute;
+	z-index: 2002;
+	background-color: #fff;
+	border: 1px solid #9a9a9a;
+	-webkit-box-shadow: #888 10px 10px 10px; /* FF3.5 - 3.6 */
+	-moz-box-shadow: #888 10px 10px 10px; /* Saf3.0+, Chrome */
+	box-shadow: #888 10px 10px 10px; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+	font-size: 18px;
+}
+.datepicker-modal-component .datepicker-modal-component-content {
+	margin: 30px 30px 40px;
+}
+.datepicker-modal-component .datepicker-modal-component-title {
+	font-family: "open_sansregular", Arial, Helvetica, Sans-serif;
+	font-size: 2.143em; /* 14*2.143 = 30.002px; base font-size taken as 14px; */
+	line-height: .967em; /* 29px */
+	margin: 30px 30px 50px;
+}
+.datepicker-modal-component .datepicker-modal-component-content .modal-inline-content > h2 { /* allow for title to be passed in content area instead of in title tag component and look like H1 */
+	font-family: "open_sansregular", Arial, Helvetica, Sans-serif;
+	font-size: 2.143em; /* 14*2.143 = 30.002px; base font-size taken as 14px; */
+	line-height: .967em; /* 29px */
+	margin-bottom: 50px;
+}
+.datepicker-modal-component .datepicker-modal-component-head {
+	position: relative;
+	border-bottom: 1px solid #b7b7b7;
+	height: 67px;
+}
+.datepicker-modal-component .datepicker-modal-component-head span.mpick-date-close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	width: 27px;
+	height: 27px;
+	background: url(/ui/4_1/tsw/img/global/icons/close.png) no-repeat;
+	cursor: pointer;
+}
+
+.datepicker-modal-component .datepicker-modal-component-buttons {
+	border-top: 1px solid #b7b7b7;
+	margin: 65px -30px 0px;
+	padding: 10px 0 0;
+}
+
+/* loading date picker modal */
+.datepicker-modal-component .datepicker-modal-component-title h3.loading-title {
+	font-family: "open_sansregular", Arial, Helvetica, Sans-serif;
+	background: url(/ui/4_1/tsw/img/global/loading-whitebg.gif) no-repeat top center;
+	padding-top: 40px;
+	text-align: center;
+}
+.datepicker-modal-component .datepicker-modal-component-content .loading-message p {
+	text-align: center;
+}
+
+.modal-inline-content {
+	display: none;
+}
+.datepicker-modal-component-content .modal-inline-content {
+	display: block;
+}
+.datepicker-modal-component .ui-datepicker {
+	left: -20px !important;
+	position: relative !important;
+	top: 0 !important;
+	z-index: 0 !important;
+	border: none !important;
+	border-radius: none !important;
+	box-shadow: none !important;
+	width: 104% !important;
+}
+.date-modal-button,.date-modal-close {
+	margin: 20px 20px 0px !important;
+}
+.datepicker-modal-component .ui-datepicker:after {
+	left: -40px;
+}
+
+}
+/* Css file for Open Orders*/
+.order-list h1 {
+	margin-left: 13px;
+}
+.order-list table {
+	margin: 37px 0 35px 0;
+	box-shadow: inset 0 0 5px #e1e2e2;
+	-moz-box-shadow: inset 0 0 5px #e1e2e2;
+	-webkit-box-shadow: inset 0 0 5px #e1e2e2;	
+	border: 1px solid #cdced0;
+}
+.order-list tr th {
+	padding: 10px 20px;	
+	border-right: 1px solid #c1c2c3;
+}
+.order-list tr td {
+	padding: 20px 0 15px 21px;
+}
+.order-list span {
+	padding: 0;
+}
+.order-list tbody tr {
+	border: solid #c1c2c3;
+	border-width: 0 0 1px;
+}
+.order-list tbody tr.first-row {
+	border-width: 1px 0;
+}
+.order-list tbody tr td {
+    background-color: #fff !important;
+    border: none; /* overriding global style */
+}
+.order-list tbody tr:hover td {
+	background-color: #dfe8ec !important;
+	cursor: pointer;
+}
+.order-list .description-text {
+	margin-bottom: 20px;
+}
+.order-list a.button {
+	margin: 2px 0 9px 0;
+}
+.order-list .instructions-link {
+	margin-bottom: 50px;
+}
+.order-list span {
+	display: table-cell;
+}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	.order-list h1 {
+		margin-left: 0;
+	}
+	.order-list .instructions-link {
+		margin-bottom: 0;
+	}
+	.order-list a.button {
+		margin: 37px 0 30px 0;
+	}
+	.order-list tr td {
+		padding: 17px 4px 13px 6px;
+	}
+	.order-list tr th {
+		padding: 10px 6px;
+	}
+}
+
+/* Opt Out Confirmation Styles */
+.content-position {
+	margin-bottom: 72px;
+}
+.opt-out p {
+	margin: 15px 0 20px;
+}
+.opt-out .button {
+	margin: 5px 0 0;
+}
+
+
+/* Opt Out styles */
+.opt-out h1 {
+	margin-bottom: 40px;
+}
+.opt-out .button-secondary {
+	margin: 0 0 0 23px;
+}
+.opt-out .switch-later {
+	margin: 40px 0 0;
+}
+
+
+/* mobile styles */
+
+@media screen and (max-width: 767px) {
+	.content-position {
+		margin-bottom: 0;
+	}
+	.opt-mout h1 {
+		margin: 35px 0 -5px;
+	}
+	.opt-mout p {
+		margin: 37px 0 15px;
+	}
+	.opt-mout .button,
+	.opt-mout .button-secondary {
+		margin: 30px 0 0;
+	}	
+}/* pane styles */
+.panel-group [class*='panel-step-'] {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #E1E1E1;
+	background-color: #f8f8f8;
+}
+.panel-group {
+	margin-bottom: 80px;
+}
+.panel-group .form {
+	margin-bottom: 0;
+}
+.panel-body {
+	margin: 0 30px 40px;
+}
+.panel-group .panel-heading {
+	padding: 0 10px;
+}
+.panel-group .panel-heading a {
+	color: #C3C3C3;
+	padding: 11px 10px;
+	display: block;
+}
+.panel-group .complete .panel-heading > a {
+	color: #2757a7;
+}
+.panel-group .panel-body {
+	display: none;
+}
+.panel-body .account-detail {
+	margin: 20px 0;
+}
+
+/* active pane styles */
+.panel-group .active {
+	-webkit-box-shadow: #63666a 0 0 5px 0;
+	-moz-box-shadow: #63666a 0 0 5px 0;
+	box-shadow: #63666a 0 0 5px 0;
+	background-color: #FFFFFF;
+}
+
+.panel-group .active .panel-heading a {
+	border-bottom: 4px solid #2757a7;
+	color: #2757a7 !important;
+	display: block;
+	font-weight: bold;
+	padding: 13px 0 9px 10px;
+	font-size: 1.333em;
+	height: auto;
+	line-height: 1em;
+}
+.panel-group .active .panel-body {
+	display: block !important;
+}
+.next-step {
+	margin-top: 30px;
+}
+.call-mbutton {
+	display: none;
+}
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	.panel-group .active .panel-heading a {		
+		line-height: 1.1em;
+	}
+	.panel-body {
+		margin: 0 20px 40px;
+	}	
+	.call-mbutton {
+		display: block;
+		margin: 20px 20px 80px;
+		font-size: 18px;
+		text-align: center;
+	}	
+	.panel-body .button {
+		width: 88%;
+	}
+	.panel-group {
+		margin-bottom: 0;
+	}
+}
+/* order receipt page styles */
+
+.order-receipt {
+	margin-bottom: 50px;
+}
+.order-receipt .msg-success {
+	margin: 35px 0;
+}
+.order-receipt .order-status-info {
+	margin-bottom: 30px;
+}
+.order-receipt .order-summary-subheader {
+	margin: -4px 0 20px;
+}
+.order-receipt .minibox-price-details {
+	width: 53.24%;
+}
+.order-receipt .install-info {
+	margin-top: -10px;
+}
+.order-receipt .order-details input {
+	margin-top: 20px;
+}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	.order-receipt {
+		margin-bottom: 0;
+	}
+	.order-receipt .order-details input {
+		margin-top: 30px;
+	}
+}/* current miniboxes message styles */
+.panel-body .miniboxes-current {
+	margin: 0 -30px 22px;
+	font-size: 18px;
+	background-color: #dfe8ec;
+	padding: 15px 10px;
+	display: table;	
+}
+.panel-body .miniboxes-current p {
+	margin: 0 15px 0 0;
+}
+.panel-body .miniboxes-number {
+	float: left;
+	background: url(/ui/4_1/tsw/img/digital-switch/icons/icon-minibox-small.png) 3px 24px no-repeat;
+	display: table-cell;
+	width: 50px;
+	height: 35px;
+	margin: 4px 20px;
+	text-align: center;
+	vertical-align: middle;
+}
+.panel-body .minibox-mtext {
+	display: table-cell;
+	vertical-align: middle;
+	width: 90%;
+}
+.panel-body .miniboxes-number > span {
+	display: block;
+	font-weight: bold;
+	padding-top: 3px;
+}
+.minibox-price p {
+	margin-bottom: 0;
+}
+/* minibox setup message style */
+.minibox-setup {
+	background-color: #dfe8ec;
+	padding: 17px 20px;
+}
+.minibox-setup .minibox-text {
+	width: 40%;
+}
+.minibox-setup .minibox-spacer {
+	width: 20%;
+	display: inline-block;
+}
+.minibox-setup .minibox-img {
+	width: 35%;
+	margin-right: 5%;
+	margin-top: 15px;
+}
+/* minibox max count reached message style */
+.minibox-max {
+	margin: 25px -10px;
+}
+.minibox-max .msg-info {
+	margin-bottom: 0;
+	padding-bottom: 3px;
+}
+.minibox-max span {
+	padding-left: 26px;
+}
+.minibox-max span {
+	display: inline-block;
+}
+.minibox-max p, .minibox-max span {
+	margin-bottom: 15px;
+}
+.minibox-max .call-us {
+	font-weight: bold;
+	margin-top: 10px;
+}
+.call-us a {
+	color: #252525;
+}
+
+/* add minibox styles */
+.sb-content-container {
+	margin: 40px 0 30px;
+}
+.sb-content {
+	width: 23.125%;
+	margin-right: 2.5%;
+	float: left;
+}
+
+.sb-content.last {
+	margin-right: 0;
+}
+
+.sb-content .minibox {
+	margin: 20px 0 0px;
+	padding: 10px 5px;	
+	background-color: #DFE8EC;
+	text-align: center;	
+}
+
+.sb-control {
+	background: url(/ui/4_1/tsw/img/digital-switch/icons/icon-sb-control.png) no-repeat 3px -2px;
+	height: 17px;
+	vertical-align: top;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	input[type="button"],
+	input[type="submit"] {
+		-webkit-appearance: none; /* fix required for iphone weird behavior  with input type 'button' */
+	}
+}
+/* mobile overrides */
+@media screen and (max-width: 767px) {	
+	.sb-content-container {
+		margin: 40px 0 0;
+	}
+	.sb-content img {
+		width: 75%;
+		margin: 0 auto;
+		display: block;
+	}
+	.sb-content .minibox {
+		margin: 0 0 40px;		
+	}
+	.sb-content {
+		width: 45%;
+		margin-right: 10%;		
+	}
+	.sb-content.mlast {
+		margin-right: 0;
+	}
+	.sb-control {
+		margin-top: 2px;
+	}
+	.panel-body {
+		margin: 0 20px 40px;
+	}
+	.panel-body .miniboxes-current {
+		margin: 0 -20px 25px;
+		padding: 15px 0px;
+		width: auto;
+	}
+	.panel-body .miniboxes-number {		
+		margin: 4px 20px 4px 10px;		
+	}	
+	.minibox-mtext{
+		margin-left: 22%;
+	}
+	.minibox-img {
+		margin: 5px 0 0;
+	}
+	.minibox-max .msg-info {
+		padding-bottom: 75px;
+	}
+}
+
+
+
+/* order status processing, shipped and delivered modal style */
+
+/* order status modal override style */
+.order-status.dialog-component .dialog-component-content {
+    margin: -37px 0 40px;
+}
+.order-status.dialog-component .dialog-component-buttons {
+    margin: 65px 0 0;
+}
+
+/* order status header style */
+.order-status .panel-heading {
+	padding: 0 20px;
+}
+.order-status .panel-heading span {
+    border-bottom: 4px solid #2757a7;
+    color: #2757a7 !important;
+    display: block;
+    font-size: 1.333em;
+    font-weight: bold;
+    height: auto;
+    line-height: 1em;
+    padding: 13px 0 17px 10px;
+}
+
+/* order status progress bar style */
+.order-progress-bar {
+	margin: 22px 0px 10px;
+    width: 56.7%;
+}
+.order-progress-bar > div {
+	float: left;
+	width: 33%;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #d8d8d8;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.31) inset;
+	-moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.31) inset;
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.31) inset;
+}
+.order-progress-bar > div.complete {
+	background-color: #2757a7;
+	box-shadow: 0 2px 5px -4px rgba(0, 0, 0, 0.31) inset;
+	-moz-box-shadow: 0 2px 5px -4px rgba(0, 0, 0, 0.31) inset;
+	-webkit-box-shadow: 0 2px 5px -4px rgba(0, 0, 0, 0.31) inset;
+}
+.order-progress-bar > div h5 {
+	margin: 2px 0 3px;
+    color: #FFFFFF;
+}
+
+.order-progress-bar > div.last {
+	border-right: 1px solid #FFFFFF;
+}
+
+/* order status content style */
+.order-status-details {
+	margin:	14px 20px 0px 30px;
+}
+.order-status-info .info-pos {
+	margin: 0 29px 0 9px;
+}
+.order-status-info .order-pos {
+	float: left;
+}
+.retail-location {
+	display: block;
+	margin: 10px 0 0;
+}
+.order-status-info p {
+	margin: 0 0 10px;
+}
+.order-status-track {
+	margin: 22px 0 0;
+}
+.order-status-subheader {
+	margin: 0 0 27px;
+}
+.order-status .minibox-info {
+	width: 37%;
+	float: left;
+	margin: 31px 0 0;
+}
+.order-status-minibox {
+	margin: 0 0 24px;
+}
+.order-status-digital-minibox {
+    background-color: #2757a7;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: 600;
+    left: 30px;
+    padding: 0.5em 0.8em;
+    position: absolute;
+    text-align: center;
+    z-index: 1000;
+}
+.order-status-total-minibox {
+	height: 65px;
+	margin: 18px 0px 0px 12px;
+}
+
+/* order status tracking information and delivery style */
+.order-status .track-information {
+	width:	60.273%;
+	margin: 20px 0 0;
+	float: right;
+}
+.track-information .delivery {
+	padding: 16px 20px 18px !important;
+}
+.track-information .delivery-header {
+    margin: 0 0 -3px;
+}
+.track-information .delivery-subheader {    
+	margin: 13px 0 6px;
+}
+.track-information .delivery-subheader span + span {
+    float: right;
+    margin-right: 34px;
+}
+.track-pos {
+	margin: 0 0 30px;
+}
+.track-info {
+	margin: -6px 0 -3px;
+}
+.track-info a {
+	float: right;
+    margin-right: 48px;
+}
+.track-information .delivery-info {
+	display: block;
+	margin: 0 0 22px;
+}
+.track-information .delivery-details {
+	margin: -4px 0 -5px;
+}
+.track-information .no-equipment {
+	margin: 10px 0 0;
+}
+.track-information .delivery-subheader span,
+.track-information .track-info span	 {
+    display: inline-block;
+    width: 45%;
+}
+.track-information .delivery-subheader span + span,
+.track-info a {
+    float: none;
+    margin-right: 0;
+    
+}
+.track-info span + span {
+	width: 51% !important; 
+	word-wrap: break-word;
+}
+
+/* order status pro installation style */
+.installation-details {
+	margin: 22px 0 15px;
+}
+.installation-details .date-time-picker, .installation-details p {
+	margin: 20px 0 0;
+}
+.installation-details a {
+	display: block;
+   	margin: 25px 0;
+}
+.edit-image  {
+	background: url(/ui/4_1/tsw/img/digital-switch/icons/edit-icon.png) no-repeat;
+    display: block;
+    height: 40px;
+    background-position: 7px 8px;
+    background-repeat: no-repeat;    
+}
+.edit-text {
+	display: block;
+    margin: -30px 0 0 40px;
+}
+
+/* order status modal style for mobile */
+@media screen and (max-width: 767px) {	
+	/* order status header style */
+	.order-status .panel-heading span {	   
+	    margin-top: 55px;
+    	padding: 13px 0 12px 7px;
+	}
+	
+	/* order status modal override style */
+	
+	.order-status .dialog-component-buttons {
+	    margin: 65px 0 0 !important;	    
+	}
+	.order-status .dialog-component-buttons .button {
+	    margin: 15px 20px 0;	    
+	}
+	
+	/* order status content style */
+	.order-status-details {
+	    margin: 14px 30px -55px;
+	}
+	.order-status-info .order-pos {
+		float: none;
+	}	
+	.order-status-track {
+	    margin: 22px -5px 15px 0;
+	}
+	.order-progress-bar {
+		width: 100%;
+	}
+	.order-progress-bar > div h5 {
+	    margin: 8px 0 9px;
+	}
+	.order-status .minibox-info {
+	    margin: 32px 0 0;
+	}
+	.order-status-minibox-mtext {
+		margin: 36px 0 26px;
+	}	
+	.order-status-total-minibox {
+	    height: 70px;
+	    width: 50%;
+	    margin: 18px 0 -2px 12px;
+	}	
+	
+	/* order status tracking information and delivery style */
+	.order-status-info .info-pos {
+		margin: 0 0 0 9px;
+		display: inline-block;
+		width: 54%;
+		vertical-align: top;
+	}
+ 	.order-status .track-information {
+	    margin: 18px 0 0;
+	}
+	.track-information .delivery {
+	    padding: 25px 20px 28px !important;
+	}
+	.track-information .mdelivery {
+	    margin: 2px 0 30px !important;
+	}
+		
+	/* order status pro installation style */
+	.installation-details .date-time-picker input {
+		margin: 10px 0 !important;
+	}
+	.installation-details .date-time-picker input.pro-date[type="text"],
+	.installation-details .date-time-picker input.enabled[type="text"] {
+		background-position: 90% 10px !important;
+	}	
+}
+
+/* order status css for iphone and the like */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+	.order-status-info .info-pos {
+		width: 46% !important;		
+	}
+}/* order summary styles */
+
+.hide-element {
+	display: none;
+}
+.order-summary-info {
+	margin: 19px 0 21px !important;
+}
+.order-summary-subheader {
+	margin-bottom: 21px !important;
+}
+.order-details {
+	width:	54%;
+}
+.mini-boxes {
+	float: left;
+    width: 33.75%;
+}
+.mini-boxes p {
+	width: 200%;
+}
+.digital-miniboxes {    
+    height: 35px;
+    margin-top: -2px;
+    margin-left: 20px;
+    width: 70%;
+}
+.minibox-price-details {
+	width: 61.24%;
+	float: right;
+	margin-left: 5%;
+}
+.minibox-price-details p {
+	margin: 0px;
+}
+.minibox-price-details span {
+	font-size: 0.778em;
+	width: 86%;
+	display: inline-block;
+}
+.minibox-price-details a {
+	float: right;
+    margin-top: -21px;
+}
+.blue-divider {
+	 border-bottom: 1px solid #2757a7;
+	 margin-bottom: 16px;
+	 width: 100%;
+}
+.total-order-details {
+	margin-bottom: -4px !important;
+}
+.total-miniboxe-header {
+	margin-bottom: 15px;
+}
+.total-miniboxes {	
+    height: 65px;
+    margin-left: 12px;
+    margin-top: 12px;
+    width: 95%;
+}
+.minibox-count {
+	background-color: #2757a7;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: 600;
+    left: 0;
+    padding: 0.5em 0.8em;
+    text-align: center;
+    position: absolute;
+    top: 41px;
+    z-index: 1000;
+}
+.minibox-price-details .total-price {
+	font-size: 1.333em;
+}
+.pro-install-pos {
+	margin: -20px 0 35px;
+}
+.details-pos {
+	margin-bottom: 32px !important;
+}
+/* delivery section styles */
+.delivery-container {
+	margin-left: 7%;
+    width: 38.72%;
+}
+.delivery {
+	background-color: #DFE8EC; 
+	padding: 15px 10px 14px 19px !important;
+}
+.delivery-header {
+	margin-bottom: 10px;
+}
+.delivery-info {
+	margin-top: -7px;
+	margin-bottom: 22px;
+	width: 85%;
+}
+.delivery-details > p {
+    margin-bottom: 3px;
+}
+.delivery-container .delivery span {
+	display: block;	
+	width: 85%;
+}
+.delivery-details {
+	margin-top: -10px;
+	width: 85%;
+}
+.delivery-subheader a {
+	float: right;
+	margin-right: 10px;
+}
+
+/* order step 4 button styles */
+.submit-order-pos input {
+	margin-top: 10px;
+}
+.backbtn-pos {
+	display: block;
+	margin-top: 14px;
+	margin-bottom: -6px;
+}
+
+/* order summary retail styles */
+.cox-centers {	
+	margin: 20px 0 !important;
+}
+.cox-centers .service-address {
+	padding: 10px 0;
+}
+.cox-centers ol {
+	margin: 0;	
+}
+.cox-centers .hr-feather-divider {
+	height: 2px; 
+	width: 90%; 
+	background-color: #E8E8E8;
+	background: -moz-linear-gradient(left center,#FFFFFF 0%, #E8E8E8 20%,#E8E8E8 80%, #FFFFFF 100%);		
+	background: -webkit-gradient(linear, left bottom, right bottom , color-stop(0%, #FFFFFF),color-stop(20%, #E8E8E8),color-stop(80%, #E8E8E8), color-stop(100%, #FFFFFF)); /* Saf4+, Chrome */
+	background: -webkit-linear-gradient(left , #FFFFFF 0%, #E8E8E8 20%,#E8E8E8 80%, #FFFFFF 100%); /* Chrome 10+, Saf5.1+ */
+	background: -ms-linear-gradient(left , #FFFFFF 0%, #E8E8E8 20%,#E8E8E8 80%, #FFFFFF 100%); /* IE10 */
+	background: linear-gradient(left , #FFFFFF 0%, #E8E8E8 20%,#E8E8E8 80%, #FFFFFF 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#FFFFFF, endColorStr=#E8E8E8, GradientType=1);
+	margin: 0 0 12px;
+}
+.cox-centers li {
+	list-style: none;
+	padding: 10px 0 4px;	
+}
+.cox-centers .location {
+	float: left;
+	width: 78%;
+	margin-right: 2%;
+}
+.cox-centers p {
+	margin-bottom: 3px;
+}
+.retail-cta {
+	margin: 0 !important; 
+}
+
+
+/* For all tablet, in portrait mode page does not fit to screen */
+@media only screen 
+and (min-device-width : 768px)
+and (orientation : portrait) {
+	.minibox-price-details span {
+		width: 82%;		
+	}
+	.delivery-info, .delivery-details {
+		width: 82%;
+	}		
+}
+
+
+/* order summary mobile css */
+@media screen and (max-width: 767px) {
+	
+	.blue-divider{
+		width: 100%;
+		margin-top: 45px;
+	}
+	.digital-miniboxes {
+		margin-left: 7px;
+	}	
+	.minibox-price-details a {
+	    float: none;
+	    display: block;
+	    margin-top: 8px;
+	}
+	.mtotal-minibox-pos {
+		margin-bottom: 70px !important;
+	}
+	.mpro-install-pos {
+	    margin-bottom: 28px !important;
+	}
+	.mini-boxes {
+	    width: 41.41%;
+	}
+	.minibox-price-details {
+	    width: 53.43%;
+	}
+	.mdelivery {
+		margin: 2px 0 26px !important;
+	}
+	.delivery-container {
+		margin-left: 0;
+	}
+	.submit-order-pos input {
+		margin-top: 14px;
+	}
+	.cox-centers .hr-feather-divider {		
+		width: 96%; 		
+	}
+}
+
+/* Css file for past due review, past due payment, past due confirmation*/
+.payment-fields select {
+	font-size: 0.778em;
+	padding: 6px 8px;	
+}
+
+.past-due-payment .order-mini-text {
+	font-size: 1.667em;
+	line-height: 1.2em;
+}
+.past-due-payment .order-pricing-text {
+    vertical-align: middle;
+    color: #c00000;
+}
+.past-due-payment .payment-required-text {
+	margin: -4px 0 10px;
+}
+.past-due-payment .enter-card-text {
+	font-size: 130%;
+}
+.past-due-payment .input-fields-starts {
+	margin-top: 55px;
+}
+.past-due-payment .payment-fields {
+	margin: 30px 0 24px;
+}
+/* margin for month and year drop down*/
+.past-due-payment .month-year-label {
+	margin: 0 -3% 0 4.5%;
+}
+.IE8 .past-due-payment .month-year-label {
+	margin: 0 -26px 0 30px;
+}
+.past-due-payment .entrust-icon-position {
+	margin: -25px 0 0 8%;
+}
+/* chrome hack for month year drop down*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.past-due-payment .month-dropdown {
+		width: 74px;
+	}
+	.past-due-payment .year-dropdown {
+		width: 90px;
+	}
+	.past-due-payment .month-year-label {
+		margin: 0 -20px 0 39px;
+	}	
+	.past-due-payment .entrust-icon-position {
+    	margin: -25px 0 0 45px;
+	}
+	.past-due-payment .colspan-9 input {
+		width: 49%;
+	}
+	.past-due-payment .form .error-wrapper {
+     	margin-left: 3%;
+	}
+}
+
+
+/* css for review payment button*/
+.past-due-payment .review-payment-button {
+	margin-top: 19px;
+}
+
+/* Css for past due review and confirmation page*/
+.past-due-review .order-mini-text {
+	font-size: 168%;
+	line-height: 1.2em;
+}
+.past-due-review .review-fields {
+	margin-top: 25px;
+}
+.past-due-review .payment-details {
+	margin-top: 54px;
+}
+/* margin for disabled input fields*/
+.past-due-review .fields-margin {
+	margin-bottom: 6px !important;
+}
+.past-due-review .payment-info {
+	font-size: 1.667em;
+}
+.past-due-review .field-value-margin {
+	margin-left: -90px;
+}
+.past-due-review .address-field {
+	margin: -10px 0 0 -90px;
+	display: block;
+}
+.past-due-review .payment-total-field {
+	margin-top: 18px;
+}
+.card-details-text {
+	margin: 0 10px 5px 0 !important;
+	word-wrap: break-word;
+}
+.payment-card-details {
+	background-color: #DFE8EC;
+	padding: 20px 0 10px 35px;
+	width: 98.3%;
+	margin-top: -30px;
+}
+
+/* positioning of terms and conditions checked and unchecked check box*/
+.past-due-review .entrust-icon-position {
+	float: right;
+    margin-right: 30px;
+    margin-top: -56px;
+}
+.past-due-review .terms-conditions-checkbox {
+	margin-top: 1px;
+}
+.terms-conditions-checkbox .error-wrapper.bubble-pointer.mbubble-pointer {
+	margin-top: -8px;
+}
+.past-due-review .terms-conditions-block {
+	margin-left: -10px;
+	margin-top: 20px;
+}
+.past-due-review .edit-submit-button {
+	margin-top: 16px;
+	margin-bottom: 14px !important;
+}
+.past-due-review .submit-button {
+	margin-right: 590px;
+	float: right !important;
+}
+.past-due-review .order-mini-button {
+	margin-top: 5px;
+}
+.cox-privacy-policy-link {
+	margin-top: 10px;
+}
+.past-due-review .msg-sucess-margin {
+	margin-top: 59px;
+	margin-bottom: -14px !important;
+}
+.past-due-review {
+	 margin: -5px 0 35px;
+}
+
+@media screen and (max-width: 767px) {
+	
+	/* Css for past due review page*/
+	.past-due-payment .order-mini-text {
+		font-size: 90%;
+	}
+	.past-due-payment .order-pricing-text {
+		font-size: 100%;
+	}
+	.past-due-payment .payment-required-text {
+		font-size: 1.33em !important;
+		margin-bottom: 15px;
+	}
+	.past-due-payment .payment-fields {
+		margin: 15px 0 -40px 0;
+	}
+	.past-due-payment .mpayment-label {
+		margin-top: 10px;
+	}
+	.past-due-payment .input-fields-starts {
+		margin-top: 25px;
+	}
+	.past-due-payment .year-dropdown {
+		width: 90px;
+	}
+	.past-due-payment .month-dropdown {
+		width: 88px;
+	}
+	input.terms-conditions[type="checkbox"]:checked + label,
+	input.terms-conditions[type="checkbox"] + label  {
+		height: 30px; /* set height so that checkbox display correctly in mobile */
+	}
+	/* Css for month year dropdown*/
+	.past-due-payment .month-year-label {
+		margin: 0 -1px 0 0 !important;
+	}	
+	.past-due-payment .month-year-dropdown {
+		margin-right: 10px;
+	}
+	.past-due-payment .entrust-icon {
+		float: right !important;
+	}
+	.past-due-payment .entrust-icon-position {
+    	float: right;
+    	margin: -68px 48px 0 0;
+	}
+	.payment-fields .error-wrapper {
+		margin: 23px 0 10px !important;
+	}
+	/* chrome hack for entrust icon positioning*/
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+			.past-due-payment .entrust-icon-position {
+		    	margin: -68px 65px 0 0;
+			}
+			.past-due-payment .colspan-9 input {
+				width: 94%;
+			}
+	}
+	.past-due-payment .review-payment-button {
+		margin-top: 12px;
+	}
+	.past-due-payment .cox-privacy-policy-link {
+		margin: 13px 0 0 0;
+	}
+		/* Css for past due payment and confirmation page*/
+	.past-due-review .morder-mini-text {
+		font-size: 128%;
+	}
+	.past-due-review .payment-required-text {
+		font-size: 1.8em !important;
+		margin-bottom: 14px;
+	}
+	.terms-conditions-checkbox .error-wrapper.bubble-pointer.mbubble-pointer {
+		margin: 25px 0 0;
+	}
+	.past-due-review .payment-info {
+		margin-bottom: 8px;
+    	margin-top: 13px;
+	}
+	.past-due-review .address-field {
+		margin-left: 15px;
+	}
+	.past-due-review .payment-total-field {
+		margin-top: 12px;
+	}
+	.past-due-review .submit-button {		
+		float: none !important;
+		margin: 0 0 32px !important;
+	}
+	.past-due-review .edit-payment-button {
+		float: none;
+	}
+	.past-due-review .field-value-margin {
+		margin-left: 15px;
+	}
+	.past-due-review .fields-margin {
+		float: none !important;
+	}
+	.past-due-review .payment-card-details {
+		width: 95%;
+		padding: 28px 0 22px 18px;
+		margin-top: 5px;
+	}
+	.past-due-review .msg-sucess-margin {
+		margin-top: 47px;
+		margin-bottom: 37px !important;
+	}
+	.past-due-review .payment-box {
+		margin-bottom: 22px
+	}
+	.past-due-review .order-mini-button {
+		margin-top: 41px;
+	}
+	.past-due-review .terms-conditions-block {
+		margin-top: 27px;
+	}
+	.past-due-review .edit-submit-button {
+		margin-top: 35px;
+		margin-bottom: 30px !important;
+	}
+	.past-due-review .entrust-icon-position {
+    	margin-right: 22%;
+	}
+	.past-due-review .confirmation-policy-link {
+		margin-bottom: -4px;
+	}
+	.past-due-review .payment-details {
+		margin-top: 29px;
+	}
+	.past-due-review .review-fields {
+		margin-top: 14px;
+	}
+	.past-due-review {
+	 	margin-bottom: 0;
+	}
+	.past-due-review {
+	 	margin-top: 37px;
+	}
+}
+/* For all tablet, in portrait mode page */
+@media only screen 
+and (min-device-width : 768px)
+and (orientation : portrait) {	
+	.past-due-review .submit-button {
+		margin-right: 55%;
+	}
+	.past-due-review .field-value-margin {
+    	margin-left: -40px;
+	}
+	.past-due-review .address-field {
+    	margin: -10px 0 0 -35px;
+	}
+}
+															/* Css file for pro install delivery details*/
+.schedule-install-text {
+	margin: 22px 0 17px;
+}
+
+/* style for date input field*/
+input.pro-date[type="text"]{
+	background-color: #ffffff !important;
+	color: #2757a7;
+	display: inline-block;
+	border: 1px solid #CCCCCC;
+	-webkit-box-shadow: 0 1px #CCCCCC; /* FF3.5 - 3.6 */
+	-moz-box-shadow: 0 1px #CCCCCC; /* Saf3.0+, Chrome */
+	box-shadow: 0 1px #CCCCCC; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+	border-radius: 0 !important;
+	height: 2.6em;
+	background: url(/ui/4_1/tsw/img/digital-switch/icons/date-icon.png) no-repeat 95% 10px;
+}
+
+/* style for time input field*/
+input.pro-time[type="text"] {
+	background-color: #ffffff !important;
+	color: #000000;
+	display: inline-block;
+	border: 1px solid #CCCCCC;
+	-webkit-box-shadow: 0 1px #CCCCCC; /* FF3.5 - 3.6 */
+	-moz-box-shadow: 0 1px #CCCCCC; /* Saf3.0+, Chrome */
+	box-shadow: 0 1px #CCCCCC; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+	border-radius: 0 !important;
+	height: 2.6em;
+	margin-left: 8.5%;
+	background: url(/ui/4_1/tsw/img/digital-switch/icons/clock-icon-disabled.png) no-repeat 96% 10px;
+}
+.IE8 input.pro-date[type="text"],
+.IE8 input.pro-time[type="text"] {
+	line-height: 2.6em;
+}
+/* style for time input field when it is enabled*/
+input.enabled[type="text"] {
+	color: #2757a7;
+	background: url(/ui/4_1/tsw/img/digital-switch/icons/clock-icon.png) no-repeat 96% 10px !important;
+}
+
+.pro-install input.pro-date::-webkit-input-placeholder,
+.pro-install input.enabled::-webkit-input-placeholder {  
+      color: #2757a7 !important; 
+}
+
+/* Css for unchecked install option selection box */
+.pro-install .install-options {
+	background-color: #ffffff !important;
+	color: #2757a7;
+	display: inline-block;
+	border: 1px solid #CCCCCC;
+	box-shadow: 0 1px #CCCCCC;
+	-moz-box-shadow: 0 1px #CCCCCC;
+	-webkit-box-shadow: 0 1px #CCCCCC;
+	background: none;
+	margin-right: 10px;
+	cursor: pointer;
+	margin: 1% 0px 8px 12px;
+	padding-top: 4%;
+	padding-bottom: 2.5%;
+	width: 93%;
+	-webkit-appearance: none;
+}
+.pro-install .first-time {
+	margin-top: 4%;
+}
+.pro-install .install-options.active-install a {
+	color: #E8E8E8 !important;
+}
+/* Css for checked install option selection box */
+.pro-install .install-options.active-install {
+	background-color: #2757a7 !important;
+	color: #E8E8E8 !important;
+	display: inline-block;
+	border: 0 solid #000000;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.50) inset;
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.50) inset;
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.50) inset;
+	background: linear-gradient(#2757a7, #1d4c9b) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+/* style for pick time overlay */
+.pro-install .overlay-container {
+	background-color: #fff !important;
+	border: 1px solid #9a9a9a !important;
+	-webkit-box-shadow: #888 0 0 10px; /* FF3.5 - 3.6 */
+	-moz-box-shadow: #888 0 0 10px; /* Saf3.0+, Chrome */
+	box-shadow: #888 0 0 10px; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+	border-radius: 0 !important;
+	width: 39% !important; /* width and left set to optimum % which works for all devices in portrait and landscape mode */
+	left: 56% !important;	
+}
+.IE .pro-install .overlay-container {
+	left: 482.683px !important;
+}
+.IE8 .pro-install .overlay-container {
+	top: 50px !important;
+}
+.IE8 .pro-install .install-options span {
+	padding: 4% 21% 4% 20%;
+}
+.pro-install .overlay-container:after {
+	left: -7% !important;
+	top: 10px !important;
+	background: url(/ui/4_1/tsw/img/global/icons/calendar-arrow.png) no-repeat;
+	height: 39px;
+	width: 7%;
+}
+.pro-install-back {
+	margin: 15px 0 -4px 0;
+}
+.hide-pro {
+	display: none !important;
+}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	
+	.mtime-field {
+		margin-top: 10px;
+	}
+	/* style for date input field*/
+	input.mpro-date[type="text"] {
+		background-color: #ffffff !important;
+		color: #2757a7;
+		display: inline-block;
+		border: 0 solid #63666a;
+		box-shadow: 0 0 1px rgba(0, 0, 0, 0.9) inset;
+		-moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.9) inset;
+		-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.9) inset;
+		background: none;
+		height: 2.6em;
+		background: url(/ui/4_1/tsw/img/digital-switch/icons/date-icon.png) no-repeat 97% 10px;
+	}
+	/* style for time input field*/
+	input.mpro-time[type="text"] {
+		background-color: #ffffff !important;
+		color: #000000;
+		display: inline-block;
+		border: 0 solid #63666a;
+		box-shadow: 0 0 1px rgba(0, 0, 0, 0.9) inset;
+		-moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.9) inset;
+		-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.9) inset;
+		background: none;
+		height: 2.6em;
+		background: url(/ui/4_1/tsw/img/digital-switch/icons/clock-icon-disabled.png) no-repeat 97% 10px;
+	}
+	/* style for time input field when it is enabled*/
+	input.menabled[type="text"] {
+		color: #2757a7;
+		background: url(/ui/4_1/tsw/img/digital-switch/icons/clock-icon.png) no-repeat 97% 10px;
+	}
+	.pro-install input.mpro-date::-webkit-input-placeholder {  
+      color: #2757a7 !important; 
+}
+	.pro-install input.menabled::-webkit-input-placeholder {
+		color: #2757a7 !important;
+	} 
+	/* styling for pick time overlay*/
+	.pro-install .install-options {
+		margin: 0px 0px 12px 0px;
+		padding-top: 18px;		
+	}
+	.mpro-time-close {
+		margin-top: 20px;
+	}
+	.pro-install-back {
+    	margin-top: 15px;
+	}
+	.pro-install-button {
+		margin-top: 20px !important;
+	}
+	.pro-install .dialog-component-buttons {
+	    margin: 65px -20px 0;
+	    padding: 10px 0 0;
+	}
+	.pro-install .button, .pro-install .button-secondary {
+    	margin: 20px 20px 0 !important;
+	}
+}
+
+/* For all tablet, in portrait mode page does not fit to screen */
+@media only screen 
+and (min-device-width : 768px)
+and (orientation : portrait) {
+	.colspan-3.colspan-m12.mtime-field {
+		margin-left: 7%;
+	}
+}
+
+/* progress bar styles */
+.step-indicator {
+	margin-bottom: 7px;
+}
+.step-indicator > div {
+	background: url("/ui/4_1/tsw/img/digital-switch/icons/progress-status-icon.png") no-repeat scroll transparent;
+	margin: 0 0 20px;
+	height: 50px;
+}
+.step-indicator .order {
+	background-position: 50% 0;
+}
+.step-indicator .receive {
+	background-position: 50% 46%;
+}
+.step-indicator .activate {
+	background-position: 50% 100%;
+}
+
+/* mobile override for progress bar */
+@media all and (max-width: 767px) {
+	.step-indicator {
+		margin-top: 10px;
+	}
+	.step-indicator > div {
+		background: url("/ui/4_1/tsw/img/digital-switch/icons/progress-status-mobile-icon.png") no-repeat scroll transparent;
+		margin: 0px 0 25px;
+		height: 55px;
+	}
+	.step-indicator .order {
+		background-position: 58% 0;
+	}
+	.step-indicator .receive {
+		background-position: 50% 51%;
+	}
+	.step-indicator .activate {
+		background-position: 50% 100%;
+	}
+}
+
+/* splash page styles */
+
+/* splash page intro styles */
+.splash-intro {
+	margin: -10px 0 85px 25px;
+}
+.intro-info h2 {
+	font-size: 2.778em;
+}
+.intro-info p {
+	margin-top: 10px;
+}
+.splash-intro .intro-info {
+	padding: 0 0 0 19px;
+}
+.splash-intro .intro-info h1 {
+	margin: 0 0 15px;
+}
+.welcome-digital-info > p {
+	margin-top: 15px;
+}
+.welcome-digital-info > h1 {
+	margin-bottom: 9px;
+}
+/* splash page big switch styles */
+
+.welcome-digital-info {
+	text-align: center;
+	margin: 45px 0 71px;
+}
+.splash-digital-main h2, .digital-switch-easy h2 {
+	font-family: "open_sansregular", Arial, Helvetica, Sans-serif;
+}
+.splash-digital-main {
+	background-color: #E6E7E8;
+	margin-top: -40px;
+}
+.digital-signal-header {
+	margin-bottom: 16px !important;
+}
+.digital-signal-header p {
+	border-bottom: 6px solid #FA4616;
+	color: #FA4616;
+	padding: 0 0 4px;
+	margin-top: -10px;
+	font-size: 2.222em !important;
+	text-transform: uppercase;
+}
+digital-signal-content img {
+	height: 166px;
+}
+.digital-signal-content h3 {
+	margin-top: 10px;
+	text-align: center;
+}
+.splash-digital-content h3 {
+	text-align: center;
+	margin-top: 14px;
+}
+.digital-signal-info {
+	margin: 72px 10px 30px !important;
+}
+.splash-digital-header {
+	margin: 26px 0 15px;
+}
+.splash-digital-header p {
+	border-bottom: 6px solid #E10098;
+	color: #E10098;
+	padding: 0 0 4px;
+	margin-top: -10px;
+	font-size: 2.222em !important;
+	text-transform: uppercase;
+}
+.digital-icon-img img {
+	height: 174px;
+	max-width: 160px;
+}
+.icon-dta-img img {
+	height: 164px;
+	max-width: 139px; /* prevent help icon from distortion */
+}
+.plus-equal-img {
+	margin: 58px 0 30px;
+}
+.pick-equipment-header {
+	margin: 29px 0 53px;
+}
+.pick-equipment-header p {
+	border-bottom: 6px solid #8FC740;
+	color: #8FC740;
+	padding: 0 0 4px;
+	margin-top: -10px;
+	font-size: 2.222em !important;
+	text-transform: uppercase;
+}
+.equipment-price-value {
+	display: block;
+	margin: -19px 0 18px;
+}
+.equipment-price-btn {
+	margin: 20px 0 0;
+}
+.splash-minibox-pick {
+	margin: 17px 0 0 115px;
+}
+.equipment-price-info {
+	color: #8FC740;
+	font-size: 2.222em;
+}
+.equipment-feature-container {
+	float: right;
+}
+.equipment-feature {
+	margin-left: 31px !important;
+}
+ul.equipment-feature-list li {
+	color: #8FC740;
+}
+.equipment-feature > h4 {
+	margin-bottom: 7px;
+}
+.or-text {
+	margin: 45px 0 20px;
+}
+.set-top-box {
+	background-color: #FFFFFF;
+	border: 1px solid #CECECE;
+	width: 68.5%;
+	padding: 24px 20px 25px;
+	margin: 11px 0 80px 13%;
+}
+.set-top {
+	margin: 30px 0 20px;
+}
+.set-top-img {
+	float: left;
+	margin: 10px 0 20px 10%;
+	width: 31%;
+}
+.equipment-price-btn .button {
+	position: relative;
+	text-align: center;
+}
+.set-top-box-header {
+	float: right;
+	width: 52%;
+	margin-right: 4px;
+}
+.set-top-box-header p, .set-top-box-header a {
+	margin-left: 9px;
+}
+.set-top-box-header a {
+	margin-top: -7px;
+}
+.digital-progress-bar .button {
+	margin-top: 38px;
+}
+.align-center {
+	text-align: center;
+}
+.col-content.digital-signal-info.text-align-mcenter > h4 {
+	color: #fa4616;
+}
+.colspan-4.digital-signal-content .align-center h3 {
+	margin-left: 15%;
+	width: 72%;
+}
+.set-top-box-info > p {
+	font-size: 14.19px;
+	width: 90%;
+	margin-left: 5%;
+}
+.equipment-feature-list span {
+	color: #252525;
+}
+/*splash page - bubble styling */
+.magenta-bubble {
+	background: #e10098;
+	margin: 1.9em auto;
+}
+.green-bubble {
+	background: #8fc740;
+	margin: 1.5em auto;
+}
+.magenta-bubble, .green-bubble {
+	color: #FFFFFF;
+	display: inline-block;
+	font-size: 25px;
+	height: 24px;
+	padding: 10px 25px;
+	position: relative;
+	text-align: center;
+}
+.magenta-bubble:after {
+	content: "";
+	position: absolute;
+	bottom: -28px;
+	left: 38%;
+	border-style: solid;
+	border-width: 28px 29px 0;
+	border-color: #e10098 transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+}
+.green-bubble:after {
+	content: "";
+	position: absolute;
+	bottom: -28px;
+	left: 40%;
+	border-style: solid;
+	border-width: 28px 29px 0;
+	border-color: #8fc740 transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+}
+
+/* splash page easy switch style*/
+.digital-switch-divider {
+	background-image: linear-gradient(to bottom, #777777, #F3F3F3);
+	height: 7px;
+}
+.digital-switch-easy {
+	background-image: linear-gradient(to bottom, #FFFFFF, #E7E8E9);
+	padding: 60px 0;
+}
+.digital-switch-easy-header {
+	margin-top: -13px;
+}
+.digital-switch-easy-header p {
+	border-bottom: 6px solid #009fdf;
+	color: #009fdf;
+	padding: 0 0 4px;
+	margin-top: -10px;
+	font-size: 2.222em !important;
+	text-transform: uppercase;
+}
+.opt-out-divider {
+	border: 1px solid #009fdf;
+}
+.digital-progress-bar {
+	margin: 18px 0px 61px;
+	text-align: center;	
+}
+.splash-bar {
+	margin: 50px 0 0;
+}
+.progress-bar-img {
+	margin-top: -90px;
+}
+.progress-bar-img > div {
+	display: inline-block;	
+}
+.progress-bar-img span {
+	display: block; 
+	margin: 18px 0 0; 
+	text-align: center;
+}
+.progress-bar-img .receive {
+	margin-left: 25%;
+}
+.progress-bar-img .activate {
+	margin-left: 28%;
+}
+.digital-switch-opt {
+	margin: 26px 0 0;
+}
+.digital-switch-opt h2 {
+	margin: 0 0 29px;
+}
+.digital-switch-opt a {
+	display: block;
+	margin: 23px 0 0;
+}
+.digital-switch-easy .digital-disclaimer {
+	margin: 25px 0 18px;
+}
+.splash-digital-main .minibox-alternative-text {
+	margin-bottom: 17px;
+}
+.signal-modal .signal-img {
+	float: right;
+}
+.signal-modal .signal-content {
+	width: 55%;
+}
+.signal-modal .digital-disclaimer {
+	margin-top: 75px;
+}
+.digital-icon img {
+	margin-top: -20%;
+}
+
+/* styles for mobile */
+@media screen and (max-width: 767px) {
+	.splash-digital-main .pf-constrain-width,
+	.digital-switch-easy .pf-constrain-width {
+		margin: 0 10px;
+	}
+	.splash-intro {
+		margin: 0 10px 40px;
+	}
+	.splash-intro .intro-info {
+		text-align: center;
+		padding: 0;
+	}
+	.splash-digital-main {
+		margin-top: -20px;
+	}
+	.splash-minibox-pick {
+		margin: 17px 0 0 28%;
+	}
+	.digital-signal-info {
+		margin: 20px 10px 30px !important;
+	}
+	.welcome-digital-info {
+		margin: 45px 0 41px;
+	}
+	.equipment-feature {
+		margin: 0 !important;
+	}
+	.equipment-feature-list {
+		margin: 0 0 15px 20px;
+	}
+	.equipment-price {
+		float: left;
+		width: 45%;
+		margin: 10px 0 0;
+	}
+	.equipment-price-btn {
+		width: 55%;
+		float: left;
+	}
+	.equipment-price-btn .button {
+		margin: 60px 0 0 20px;
+	}
+	.or-text {
+		margin: 0 0 20px;
+	}
+	.set-top-box {
+		width: 100%;
+		padding: 0;
+		margin: 24px 0 80px;
+	}
+	.set-top-box-info > p {
+		width: 100%;
+		margin-left: 0;
+	}
+	.set-top {
+		margin: 30px 40px 24px -10px;
+	}
+	.set-top-box-info {
+		margin: 30px 40px 25px;
+	}
+	.set-top-img {
+		margin: 10px 0 0 7%;
+		width: 36%;
+	}	
+	.signal-modal .signal-img {
+		float: none;
+		margin: 0 0 0 10px;
+		text-align: center;
+	}
+	.signal-modal .signal-content {
+		margin: 32px 0 0 0;
+		width: 100%;
+	}
+	.signal-modal .digital-disclaimer {
+		font-size: 0.8em;
+		width: 100%;
+		margin-top: 40px;
+	}
+	.digital-icon img {
+		margin-top: 0;
+	}
+	.splash-bar {
+		width: 95%;
+		margin: 20px 0 0;
+	}
+	.progress-bar-img {
+		margin-top: -26%;
+	}
+	.progress-bar-img div {
+		width: 15%;
+		margin: 15% 0 0;
+	}
+	.progress-bar-img span {
+		font-size: 0.857em;
+		margin-left: -3px;
+	}
+	.progress-bar-img .receive {
+		margin: 0 27% 0 24%;		
+	}	
+	.progress-bar-img .activate {
+		margin-left: 0;
+	}	
+}
+
+/* For all tablets in portrait version*/
+@media only screen 
+and (min-device-width : 768px)
+and (orientation: portrait) {
+	.splash-bar {
+		width: 95%;			
+	}
+	.progress-bar-img div {
+		width: 15%;		
+		margin: 2% 0 0 1px;
+	}
+}
+
+/* splash page css for mobile screen less than 568px*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {	
+	.splash-minibox-pick {
+		margin: 17px 0 0 15%;
+	}
+}/* use page styles */
+
+.use-intro h1 {
+	text-transform: uppercase;
+}
+.use-intro .colspan-8 .col-content {
+	margin-right: 40px;
+}
+
+.use-intro .colspan-4 {
+	float: right;
+	margin-top: -40px;
+}
+
+.use-section {
+	background-image: -webkit-gradient(linear, top, bottom, from(#ffffff), to(#e7e8e9)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( top, #ffffff, #e7e8e9); /* Chrome 10+, Saf5.1+ */
+	background-image: -moz-linear-gradient( top, #ffffff, #e7e8e9); /* FF3.6+ */
+	background-image: -ms-linear-gradient( top, #ffffff, #e7e8e9); /* IE10 */
+	background-image: linear-gradient( to bottom, #ffffff, #e7e8e9); /* W3C */
+	padding: 60px 0;
+}
+.use-section-divider {
+	height: 7px;
+	background-image: -webkit-gradient(linear, top, bottom, from(#777777), to(#f3f3f3)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( top, #777777, #f3f3f3); /* Chrome 10+, Saf5.1+ */
+	background-image: -moz-linear-gradient( top, #777777, #f3f3f3); /* FF3.6+ */
+	background-image: -ms-linear-gradient( top, #777777, #f3f3f3); /* IE10 */
+	background-image: linear-gradient( to bottom, #777777, #f3f3f3); /* W3C */
+}
+
+.use-resource {
+	float: left;
+	box-sizing: border-box;
+	width: 33.3%;
+	height: 16.333em;
+	padding: 1.111em;
+	position: relative;
+	border: 1px solid #63666a;
+}
+.use-resource img {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.use-resource a.button {
+	position: absolute;
+	bottom: 1.667em;
+	left: 1.111em;
+}
+
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	.use-intro .colspan-8 .col-content {
+		margin-right: 0;
+	}	
+	.use-resource {
+		float: none;
+		margin-bottom: 30px;
+	}
+	.use-resource a.button {
+		width: auto;
+	}
+}
+
+/* For all tablets in portrait version*/
+@media only screen 
+and (min-device-width : 768px)
+and (orientation: portrait) {
+	.use-resource a.button {
+		bottom: 1.445em;
+		font-size: 0.73em !important;
+	}
+	.use-resource img {
+		max-width: 36%;
+	}
+}

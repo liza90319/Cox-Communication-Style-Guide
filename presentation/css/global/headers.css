@@ -1,0 +1,54 @@
+/* headers.css */
+
+/* page header */
+.page-header {
+	margin: 0 0 60px; /* bottom margin of 60px */
+}
+.page-header .col-content {
+	margin: 0 10px;
+}
+
+.page-header-centered {
+	text-align: center;
+}
+.page-header-split h1,
+.page-header-centered h1 {
+	display: inline;
+	font-size: 1.625em; /* 26px */
+}
+.page-header-split .button {
+	float: right;
+	margin-top:-5px;
+}
+.page-header-centered .button {
+	margin-left: 37px;	/* margin left of 40px */
+}
+
+/* section header */
+.section-header {
+	background: url('/ui/$version/tsw/img/global/section-header.png') repeat-x left bottom; 
+	height: 38px;
+	margin: 0 0 40px; /* bottom margin of 40px */
+}
+.section-header .col-content {
+	margin: 0 10px;
+}
+.section-header h2 {
+	background: url('/ui/$version/tsw/img/global/section-header.png') no-repeat right top;
+	display: inline-block;
+	font-size: 1.250em; /* 20px */
+	margin: 0;
+	padding: 8px 225px 10px 0;
+	zoom: 1;
+	*display: inline;
+}
+.section-sub-header h3 {
+	font-size: 1.143em; /* 16px */
+}
+
+/* common styles for mobile */
+@media screen and (max-width: 767px) {
+	.page-header .col-content {
+		margin: 0 20px 10px;
+	}	
+}

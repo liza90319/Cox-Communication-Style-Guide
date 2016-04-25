@@ -1,0 +1,28 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<div class="library-header">
+	<h1>Promo Feature</h1>
+</div>
+
+<div class="colspan-12 col-reset library-header">
+	<h2>Theme = a</h2>
+</div>
+<!-- section container -->
+<div class="library-module section-container constrain-960">
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/promo-feature.html?theme=theme-a"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/promo-feature.html?content=more&theme=theme-a"-->
+</div>
+<!-- /section container -->
+
+<div class="colspan-12 col-reset library-header">
+	<h2>Theme = b</h2>
+</div>
+<!-- section container -->
+<div class="library-module section-container constrain-960">
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/promo-feature.html?content=most&theme=theme-b"-->
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/promo-feature.html?content=more&theme=theme-b"-->
+</div>
+<!-- /section container -->

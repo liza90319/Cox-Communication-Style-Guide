@@ -1,0 +1,15 @@
+<!--#set var="image" value=""-->
+<!--#if expr="${QUERY_STRING} = /image=(.*?)(&|$)/"-->
+	<!--#set var="image" value="${1}"-->
+<!--#endif-->
+
+<!-- START: text-image -->
+<div class="colspan-12 text-image">
+	<div class="col-content image-<!--#echo var="image"-->">
+		<img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/fpo-3-col.png" alt="FPO Image" />
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu quam, volutpat quis laoreet id, euismod at diam. Vivamus non auctor leo, sed facilisis augue. In sed ligula sed risus bibendum accumsan. Nullam posuere felis at varius aliquet. Suspendisse pulvinar, nisl eget mattis luctus, ligula nisl egestas tortor, sed vestibulum dui dui eget eros. Praesent ultrices urna massa, at commodo libero laoreet et. Praesent luctus tincidunt tortor, vitae sagittis lectus. Sed rhoncus placerat varius. Aenean tincidunt viverra nunc, ut tristique nisi.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu quam, volutpat quis laoreet id, euismod at diam. Vivamus non auctor leo, sed facilisis augue. In sed ligula sed risus bibendum accumsan. Nullam posuere felis at varius aliquet. Suspendisse pulvinar, nisl eget mattis luctus, ligula nisl egestas tortor, sed vestibulum dui dui eget eros. Praesent ultrices urna massa, at commodo libero laoreet et. Praesent luctus tincidunt tortor, vitae sagittis lectus. Sed rhoncus placerat varius. Aenean tincidunt viverra nunc, ut tristique nisi.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu quam, volutpat quis laoreet id, euismod at diam. Vivamus non auctor leo, sed facilisis augue. In sed ligula sed risus bibendum accumsan. Nullam posuere felis at varius aliquet. Suspendisse pulvinar, nisl eget mattis luctus, ligula nisl egestas tortor, sed vestibulum dui dui eget eros. Praesent ultrices urna massa, at commodo libero laoreet et. Praesent luctus tincidunt tortor, vitae sagittis lectus. Sed rhoncus placerat varius. Aenean tincidunt viverra nunc, ut tristique nisi.</p>
+	</div>
+</div>
+<!--   END: text-image -->

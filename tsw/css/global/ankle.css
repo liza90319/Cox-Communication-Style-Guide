@@ -1,0 +1,63 @@
+/* global ankle */
+
+.ankle {
+	padding: 25px 0 15px;
+}
+.ankle > .col-content {
+	text-align: left;
+}
+.ankle p {
+	margin-bottom: 5px;
+}
+.ankle a {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+}
+
+/* themes */
+.ankle.theme-a {
+	background-color: #f2f2f2;
+	text-align: center;
+}
+
+/* theme b-d */
+/* styles are only for business */
+
+/* responsive mobile css */
+@media screen and (max-width: 767px) {
+	.ankle {
+		margin: calc(100% / 32 * 1.32 * 2) 0 calc(100% / 32 * 1.32 * -2);
+		padding: calc(100% / 32 * 1.32 * 2) 0 calc(100% / 32 * 1.32 * 2);
+	}
+	.ankle > .colspan-3 {
+		max-width: 100%;
+		min-width: 100%;
+		width: 100%;
+	}
+	.ankle [class*='cols-'] .colspan-1 {
+		width: calc(100% / 4);
+		max-width: calc(100% / 4);
+		min-width: calc(100% / 4);
+	}
+	.ankle [class*='cols-'] .colspan-3 {
+		width: calc(100% / 4 * 3);
+		max-width: calc(100% / 4 * 3);
+		min-width: calc(100% / 4 * 3);
+	}
+	.ankle [class*='cols-'] .colspan-1 .col-content {
+		margin-top: 0;
+		margin-right: 12.5%;
+		margin-bottom: 12.5%;
+		margin-left: 12.5%;
+		margin-right: calc(100% / 32 * 4);
+		margin-bottom: calc(100% / 32 * 4);
+		margin-left: calc(100% / 32 * 4);
+	}
+	.ankle [class*='cols-'] .colspan-3 .col-content {
+		margin-right: 4%;
+		margin-bottom: 8%;
+		margin-left: 4%;
+		margin-right: calc(100% / 32 * 1.32);
+		margin-bottom: calc(100% / 32 * 1.32 * 2);
+		margin-left: calc(100% / 32 * 1.32);
+	}
+}

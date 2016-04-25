@@ -1,0 +1,114 @@
+/* video-player.css */
+
+.video-player {
+	margin: 30px 0;
+}
+.video-holder {
+	background: url(/ui/$version/tsw/img/global/loading-whitebg.gif) no-repeat center center;
+	min-height: 90px;
+}
+
+/* responsive you tube player */
+.youtube-video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 30px;
+	height: 0;
+}
+.youtube-video-container iframe,
+.youtube-video-container object,
+.youtube-video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* customizations that could not be done in the jwplayer-skin.xml file */
+
+.video-player * {
+	font-family: "open_sansregular", Arial, Helvetica, Sans-serif !important;
+}
+.video-player .jwplayer {
+	width: 100%; /* needed to support responsive player with playlist shifting from right to below player */
+}
+.video-player .jwtitle { /* playlist title */
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif !important;
+}
+
+/* custom playlist */
+.video-player .carousel-container {
+	height: 100px;
+	margin: 10px 0 0;
+	text-align: left;
+}
+.video-player .playlist-item p a {
+	color: #2757a7;
+}
+
+/* video player navigation bottom - positioning styles */
+.video-player-nav {
+	margin-top: 25px;
+}
+.video-player-nav img {
+	max-width: 50%; 
+	float: left;
+}
+.video-player-nav span {
+	font-size: 0.875em;
+	text-align: left;
+	display: block; 	
+	margin-left: 56%;
+}
+.video-player-nav .title {
+	margin-bottom: 10px;
+}
+.video-player-nav .description {
+	color: #252525;
+}
+.video-player-nav .slick-dots {
+	bottom: -35px;
+}
+/* to override the blue outline from jwplayer.js*/
+.jw-tab-focus:focus{
+	outline: none !important;	
+}
+/* desktop only style */
+@media screen and (min-width: 768px) {
+	.video-player-nav .slick-prev,
+	.video-player-nav .slick-next {
+		top: 43%;
+	}
+	.video-player-nav {
+		max-width: 94%; /* display carousel including arrows with in video player width */
+		margin-left: 28px;
+	}
+}
+/* mobile styles */
+@media screen and (max-width: 767px) {
+	/* video container */
+	.jwmain {
+		right: 0 !important;
+	}
+	/* playlist */
+	.jwplaylistcontainer {
+		width: 100% !important;
+	}
+	.jwplaylistcontainer .jwlist {
+		width: calc(100% - 23px) !important;
+	}
+	.modal-inline-content .video-player{
+		margin: 38px 0;
+	}	
+	.video-player-nav .slick-prev,
+	.video-player-nav .slick-next {
+		bottom: -35px;
+		top: initial;
+	}	
+	.video-player-nav .slick-prev:before,
+	.video-player-nav .slick-next:before {
+		top: initial;
+	}
+}
+

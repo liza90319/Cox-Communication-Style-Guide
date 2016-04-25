@@ -1,0 +1,112 @@
+<!--#set var="license" value=""-->
+<!--#if expr="${QUERY_STRING} = /license=(.*?)(&|$)/"-->
+<!--#set var="license" value="${1}"-->
+<!--#endif-->
+<!--#set var="hotspot" value=""-->
+<!--#if expr="${QUERY_STRING} = /hotspot=(.*?)(&|$)/"-->
+<!--#set var="hotspot" value="${1}"-->
+<!--#endif-->
+<!--#set var="recommended" value=""-->
+<!--#if expr="${QUERY_STRING} = /recommended=(.*?)(&|$)/"-->
+<!--#set var="recommended" value="${1}"-->
+<!--#endif-->
+<!--#set var="content" value=""-->
+<!--#if expr="${QUERY_STRING} = /content=(.*?)(&|$)/"-->
+<!--#set var="content" value="${1}"-->
+<!--#endif-->
+<!--#set var="offerSpeed" value="${offerSpeed}"-->
+<!--#set var="offerLicenses" value="${offerLicenses}"-->
+
+<!-- DEV Notes: Add class="header" to all DIVs which need to be spread across columns -->
+<!-- The header DIV content needs to be replicated for all included file i.e columns to make it responsive -->
+<!--  	START : offer-comparison -->
+<div class="offer-comparison">
+	<div class="colspan-3">
+		<div class="col-content">
+			<div class="odd">
+				<!--#if expr="${recommended} = 'recommended'"-->
+				<div class="recommended">
+					RECOMMENDED
+				</div>
+				<!--#else-->
+				<div class="no-recommended"></div>
+				<!--#endif-->
+				<div class="vertical-divider">
+					<!--#if expr="${content} = 'text'"-->
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html"-->
+					<!--#else-->
+					<img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/fpo-2-col.png" alt="FPO Image" />
+					<p>
+						<!--#echo var="offerSubHeader"-->
+					</p>
+					<!--#endif-->
+				</div>
+			</div>
+			
+			<div>
+				<p class="header">
+					Download &amp; Upload Speeds
+				</p>
+				<div class="vertical-divider">
+					<!-- placeholder content -->
+					<p>
+						<!--#echo var="offerSpeed"-->
+					</p>
+					<!-- placeholder content -->
+				</div>		
+				
+			</div>
+			<div class="odd">
+				<p class="header">
+					Over 250,000 Free Wifi Hotspots
+				</p>
+				<div class="vertical-divider">
+					<!-- placeholder content -->
+
+					<!--#if expr="${hotspot} = 'check'"-->
+					<div class="icon-check"></div>
+					<!--#elif expr="${hotspot} = 'cross'"-->
+					<div class="icon-cross"></div>
+					<!--#else-->
+					<p><!--#echo var="offerHotspots"--></p>
+					<!--#endif-->
+					
+					<!-- placeholder content -->
+				</div>				
+			</div>
+			<div>
+				<p class="header">
+					Security Suite
+				</p>
+				<div class="vertical-divider">
+					<!-- placeholder content -->
+
+					<!--#if expr="${license} = 'check'"-->
+					<div class="icon-check"></div>
+					<!--#elif expr="${license} = 'cross'"-->
+					<div class="icon-cross"></div>
+					<!--#else-->
+					<p><!--#echo var="offerLicenses"--></p>
+					<!--#endif-->
+					
+					<!-- placeholder content -->
+				</div>
+			</div>
+			<div class="odd">
+				<p class="header">
+					Online Backup
+				</p>
+				<div class="vertical-divider">
+					<!-- placeholder content -->
+					<p>
+						<!--#echo var="offerBackup"-->
+					</p>
+					<!-- placeholder content -->
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<!--  	END : offer-comparison -->
+<!--#set var="QUERY_STRING" value=""-->

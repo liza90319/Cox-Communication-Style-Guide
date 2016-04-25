@@ -1,0 +1,289 @@
+/* Nodes duplicated for mobile view hidden on desktop */
+.IE8 .pf-sub-nav-home,
+.IE8 .pf-primary-home,
+.IE8 .pf-main-nav .pf-mobile-signin-btn {
+	display: none;
+}
+/* Changing the content of pseudo-elements is the only thing that generates a repaint in IE8, such that stat change style adjustments apply as well.
+ * http://stackoverflow.com/questions/8703799/forcing-ie8-to-rerender-repaint-before-after-pseudo-elements
+ */
+.IE8 .pf-main-nav .pf-main-right-nav li.pf-my-account a:after,
+.IE8 .pf-header-business .pf-main-nav .pf-main-right-nav li.pf-my-account.selected a:after,
+.IE8 .pf-header-business .pf-main-nav .pf-main-nav-primary-links li.selected:after {
+	content: "  ";
+}
+.IE8 .pf-main-nav .pf-main-right-nav li.pf-my-account.selected a:after,
+.IE8 .pf-header-business .pf-main-nav .pf-main-right-nav li.pf-my-account a:after,
+.IE8 .pf-header-business .pf-main-nav .pf-main-nav-primary-links li:after {
+	content: "   ";
+}
+
+/* sub nav active/close */
+.IE8 .pf-sub-nav.active {
+	max-height: 900px;
+}
+.IE8 .pf-sub-nav-close {
+	position: absolute;
+	z-index: 1000;
+	right: 1px;
+	top: 0;
+}
+/* Flyouts */
+.IE8 .pf-sub-nav-link {
+	z-index: 21;
+}
+.IE8 .pf-sub-nav-link div {
+	width: 25%;
+	min-width: 25%;
+	max-width: 25%;
+	background-color: transparent;
+}
+/* Changing the content of pseudo-elements is the only thing that generates a repaint in IE8, such that stat change style adjustments apply as well.
+ * http://stackoverflow.com/questions/8703799/forcing-ie8-to-rerender-repaint-before-after-pseudo-elements
+ */
+.IE8 .pf-sub-nav .pf-sub-nav-link div:after {
+	content: "  ";
+}
+.IE8 .pf-sub-nav.active .pf-sub-nav-link div:after {
+	content: "   ";
+}
+.IE8 .pf-sub-nav-link li {
+	padding: 13px 20px 12px;
+}
+.IE8 .pf-sub-nav-link .pf-sub-nav-columns-2 {
+	width: 50%;
+	min-width: 50%;
+	max-width: 50%;
+}
+.IE8 .pf-sub-nav-link .pf-sub-nav-columns-2 img {
+	max-width: inherit;
+}
+/* Menu Flyouts -- pf-has-flyouts */
+.IE8 .pf-has-flyouts li.selected {
+	background-color: #03406a;
+}
+.IE8 .pf-has-flyouts li.selected a {
+	color: #ffffff !important;
+}
+.IE8 .pf-has-flyouts li.pf-primary {
+	background-color: transparent !important;
+}
+.IE8 .pf-has-flyouts li.pf-primary a {
+	color: inherit !important;
+}
+.IE8 .pf-has-flyouts .pf-flyout.open {
+	margin-left: 25%;
+}
+/* slideout adjacent DIVs when flyout opens */
+.IE8 .pf-sub-nav-link .slide-out.first-flyout {
+	margin-left: 25%;
+}
+.IE8 .pf-sub-nav-link .slide-out.last-flyout {
+	display: none;
+}
+/* Sign Out */
+.IE8 .pf-sign-in-items  {
+	padding-top: 40px;
+	z-index: 12;
+	pointer-events: none;
+	overflow: hidden;
+}
+.IE8 .pf-sub-nav-underlay .pf-sub-nav-close {
+	z-index: 22;
+}
+
+/* business unit overrides? */
+.IE8 .pf-top-nav ul li > a {
+	height: 34px;
+	line-height: 34px;
+}
+.IE8 .pf-top-nav .pf-overlay-active a,  
+.IE8 .pf-top-nav .pf-overlay-active p {
+	font-size: 0.875em;
+	height: auto !important;
+	line-height: 1.2em !important;
+}
+
+/* .pf-trigger background images */
+.IE8 .pf-top-nav .contact.selected + .geo-location a.pf-trigger {
+	background-position: 0 -558px !important;
+}
+.IE8 .pf-top-nav .geo-location.location-text.selected a.pf-trigger {
+	background-position: 0 -527px !important;
+}
+.IE8 .pf-top-nav .contact.selected,
+.IE8 .pf-top-nav .geo-location.location-text.selected {
+	position: relative;
+}
+.IE8 .pf-top-nav .contact.selected:after {
+	content: "";
+	background-color: #fff;
+	top: 32px;
+	left: 0;
+	position: absolute;
+	bottom: 0;
+	display: inline-block;
+	width: 100%;
+	z-index: 1200;
+}
+.IE8 .pf-top-nav .geo-location.location-text.selected:after {
+	content: "";
+	background-color: #fff;
+	top: 32px;
+	left: 0;
+	position: absolute;
+	bottom: 0;
+	display: inline-block;
+	width: 100%;
+	z-index: 1200;
+}
+
+.IE8 .pf-top-nav ul:first-child li a {
+	font-size: 0.875em;
+	background: url("/ui/4_1/presentation/img/menu.png") 0 -438px;
+	padding-left: 13px;
+	padding-right: 13px;
+}
+.IE8 .pf-top-nav ul:first-child li:first-child a,
+.IE8 .pf-top-nav ul:first-child li.pf-mobile-only + li a {
+	padding-left: 9px;
+	background: none;
+	margin-right: -4px;
+}
+.IE8 .pf-top-nav ul li.contact a.pf-trigger {
+	color: #fff;
+	font-size: 0.875em;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* top nav - selected styles */
+.IE8 .pf-top-nav ul li.selected {
+	background-color: #fff;
+}
+.IE8 .pf-top-nav ul li.selected a.pf-trigger {
+	color: #2757a7;
+}
+
+.IE8 .pf-top-nav li.geo-location .pf-trigger span {
+	background: none;
+	width: auto !important;
+}
+
+.IE8 .pf-top-nav .geo-location a.pf-trigger {	
+	background: url("/ui/4_1/presentation/img/menu.png") no-repeat 0 -495px;
+	padding-left: 37px;
+	margin-right: 1px;
+	padding-right: 10px;
+}
+.IE8 .pf-top-nav .geo-location:first-child a.pf-trigger {	
+	background-position: 0 -558px;
+}
+.IE8 .pf-location-panel a {
+	font-size: 1.00em !important;
+}
+
+/* BEGIN IE8 top nav overrides */
+.IE8 .pf-top-nav > ul:first-child + ul {
+	float:right;
+}
+.IE8 .pf-top-nav > ul:first-child + ul {
+	right: 0;
+}
+.IE8 .pf-top-nav > ul:first-child + ul > li:first-child a {
+	font-size: 0.875em;
+}
+.IE8 .pf-top-nav ul:first-child li a,
+.IE8 .pf-top-nav ul.pf-top-nav-overlays li.contact a:first-child,
+.IE8 .pf-top-nav ul.pf-top-nav-overlays li.geo-location a {
+	height: 34px;
+	line-height: 34px;
+	color: #fff;
+}
+.IE8 .pf-top-nav ul:first-child li.selected a,
+.IE8 .pf-top-nav ul.pf-top-nav-overlays li.contact.selected a:first-child,
+.IE8 .pf-top-nav ul.pf-top-nav-overlays li.geo-location.selected a {
+	color:#2757a7;
+}
+.IE8 .pf-top-nav .pf-overlay-active a,
+.IE8 .pf-top-nav .pf-overlay-active p {
+	font-size: 0.875em;
+	height: 14px !important;
+	line-height: 14px !important;
+}
+.IE8 .pf-top-nav li {
+	display: table-cell;
+}
+.IE8 .pf-top-nav li.contact,
+.IE8 .pf-top-nav li.contact.selected {
+	margin-top: 0;
+	padding-bottom:0px;
+	margin-bottom: 0;
+}
+.IE8 .pf-top-nav ul:first-child li a,
+.IE8 .pf-top-nav ul:first-child li.selected a,
+.IE8 .pf-top-nav li.contact.selected a,
+.IE8 .pf-top-nav li.contact a,
+.IE8 .pf-top-nav li.geo-location.selected a,
+.IE8 .pf-top-nav li.geo-location a {
+	line-height: 34px;
+	height:34px;
+}
+
+.IE8 .pf-top-nav li.geo-location,
+.IE8 .pf-top-nav li.geo-location.selected {
+	margin-top: 0;
+	padding-bottom:0px;
+	margin-bottom: 0;
+}
+.IE8 .pf-top-nav .contact.selected:after,
+.IE8 .pf-top-nav .geo-location.location-text.selected:after {
+	top: -10px;
+	bottom: -20px;
+	left: 0;
+	height: 5px;
+}
+.IE8 .pf-contact-panel {
+	border:#ddd solid 1px;
+}
+.IE8 .pf-contact-panel li {
+	padding-top: 15px;
+	display: inline-block;
+}
+.IE8 .pf-contact-panel ul li a.pf-button {
+	color: #fff !important;
+}
+.IE8 .pf-contact-panel ul li a {
+	margin-bottom: 3px;
+	color:#2757a7; !important;
+}
+.IE8 .pf-overlay a.pf-button {
+	color:#fff !important;
+}
+.IE8 .pf-overlay a {
+	color:#2757a7 !important;
+}
+.IE8 .pf-sub-header {
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+	position: relative;
+}
+.IE8 .pf-location-panel {
+	border:#ddd solid 1px;
+}
+.IE9 #pf-signin-panel label.display-placeholder,
+.IE8 #pf-signin-panel label.display-placeholder {
+	display: block;
+}
+.IE8 #pf-signin-panel label.display-placeholder {
+	width: 199px;
+}
+.IE8 .pf-sign-in-items .pf-authenticated-links li:first-child+li+li+li {
+	margin-bottom: 20px !important;
+}
+.IE8 .pf-search-items, .IE8 .pf-sign-in-items {
+	display:none;
+}
+/*  END  IE8 top nav overrides */

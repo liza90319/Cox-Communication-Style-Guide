@@ -1,0 +1,61 @@
+<!--#set var="theme" value=""-->
+<!--#if expr="${QUERY_STRING} = /theme=(.*?)(&|$)/"-->
+	<!--#set var="theme" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="image" value=""-->
+<!--#if expr="${theme} = 'theme-a'"-->
+	<!--#set var="image" value="fpo-2-col.png"-->
+<!--#else-->
+	<!--#set var="image" value="fpo-30-square.png"-->
+<!--#endif-->
+
+<!-- START : rail feature -->
+<div class="colspan-3 rail-feature <!--#echo var="theme"-->">
+	<!-- Item - 1 -->
+	<div class="col-content">
+		<a href="#"><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/<!--#echo var="image"-->" alt="FPO Image" /></a>
+		<p>Lorem Ipsum Dolor</p>
+		<div class="feature-link">
+			<a href="#">Text Link</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+	<!-- Item - 2 -->		
+	<div class="col-content">
+		<a href="#"><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/<!--#echo var="image"-->" alt="FPO Image" /></a>
+		<p>Lorem Ipsum Dolor</p>
+		<div class="feature-link">
+			<a href="#">Text Link</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+	<!-- Item - 3 -->	
+	<div class="col-content">
+		<a href="#"><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/<!--#echo var="image"-->" alt="FPO Image" /></a>
+		<p>Lorem Ipsum Dolor</p>
+		<div class="feature-link">
+			<a href="#">Text Link</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+	<!-- Item - 4 -->		
+	<div class="col-content">
+		<a href="#"><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/<!--#echo var="image"-->" alt="FPO Image" /></a>
+		<p>Lorem Ipsum Dolor</p>
+		<div class="feature-link">
+			<a href="#">Text Link</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+	<!-- Item - 5 -->		
+	<div class="col-content">
+		<a href="#"><img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/<!--#echo var="image"-->" alt="FPO Image" /></a>
+		<p>Lorem Ipsum Dolor</p>
+		<div class="feature-link">
+			<a href="#">Text Link</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+</div>
+<!--  END : rail feature -->

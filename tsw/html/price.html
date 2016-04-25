@@ -1,0 +1,120 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<div class="cols-grid">
+	<div class="colspan-12 col-reset text-align-center">
+		<h1>Pricing Widget</h1>
+	</div>
+	<div class="colspan-12 col-reset library-header">
+		<h2>3-column</h2>
+	</div>
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<div class="colspan-3">
+			<div class="col-content">
+<!--#set var="pricingCents" value=".00"-->
+				<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html?content=more"-->
+			</div>
+		</div>
+		<div class="colspan-3">
+			<div class="col-content">
+<!--#set var="pricingDollars" value="119"-->
+<!--#set var="pricingOfferDetailsLinkText" value="Offer Details &amp; Terms"-->
+<!--#set var="pricingDetails" value="Per month for 12 months"-->
+<!--#set var="pricingOfferId" value="1243254"-->
+				<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html"-->
+			</div>
+		</div>
+		<div class="colspan-3">
+			<div class="col-content">
+<!--#set var="pricingProduct" value="Phone Essential + Internet Essential"-->
+<!--#set var="pricingDollars" value="89"-->
+<!--#set var="pricingRecurrence" value="/mo."-->
+<!--#set var="pricingDetails" value="Per month for 24 months"-->
+<!--#set var="pricingDetailsRegular" value="Regular price \$27.95/month."-->
+<!--#set var="pricingOfferId" value="5556546"-->
+<!--#set var="pricingOfferDetailsGuarantee" value="Price Lock guarantee with 24 month service agreement."-->
+<!--#set var="pricingStartsAt" value="true"-->
+<!--#set var="pricingPrimaryButtonText" value="Pricing Button"-->
+				<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html?content=most"-->
+			</div>
+		</div>
+		<div class="colspan-3">
+			<div class="col-content">
+<!--#set var="pricingDollars" value="FREE"-->
+<!--#set var="pricingCents" value="empty"-->
+<!--#set var="pricingRecurrence" value=""-->
+<!--#set var="pricingOfferDetailsLinkText" value=""-->
+<!-- #set var="pricingStartsAt" value=""-->
+<!--#set var="pricingFreeInstallation" value="true"-->
+				<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html"-->
+			</div>
+		</div>
+	</div>
+	<!-- /section container -->
+	<div class="colspan-12 col-reset library-header">
+		<h2>4-column</h2>
+	</div>
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<div class="colspan-4">
+			<div class="col-content">
+<!--#set var="pricingDollars" value="27"-->
+<!--#set var="pricingProduct" value="One Thing"-->
+				<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html"-->
+			</div>
+		</div>
+		<div class="colspan-4">
+			<div class="col-content">
+<!--#set var="pricingProduct" value="One OTHER Thing"-->
+<!--#set var="pricingRecurrence" value="/mo."-->
+<!--#set var="pricingFreeInstallation" value="true"-->
+				<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html"-->
+			</div>
+		</div>
+		<div class="colspan-4">
+			<div class="col-content">
+<!--#set var="pricingProduct" value="Yet ANOTHER Thing"-->
+				<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html"-->
+			</div>
+		</div>
+	</div>
+	<!-- /section container -->
+	<div class="colspan-12 col-reset library-header">
+		<h2>6-column</h2>
+	</div>
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<div class="colspan-6">
+			<div class="col-content">
+<!--#set var="pricingProduct" value="Some THING Else"-->
+				<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html"-->
+			</div>
+		</div>
+		<div class="colspan-6">
+			<div class="col-content">
+<!--#set var="pricingProduct" value=""-->
+				<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html"-->
+			</div>
+		</div>
+	</div>
+	<!-- /section container -->
+	<div class="colspan-12 col-reset library-header">
+		<h2>12-column</h2>
+	</div>
+	<!-- section container -->
+	<div class="section-container constrain-960">
+		<div class="colspan-12">
+			<div class="col-content">
+				<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html"-->
+			</div>
+		</div>
+	</div>
+	<!-- /section container -->
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

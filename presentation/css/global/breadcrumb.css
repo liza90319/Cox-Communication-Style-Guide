@@ -1,0 +1,88 @@
+/* bread-crumb.css */
+.breadcrumb {
+	margin-top: 20px;
+	text-align: left;
+}
+.breadcrumb ul {
+	list-style: none;
+	overflow: hidden;
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+.breadcrumb ul li {
+	float: left;
+}
+.breadcrumb ul li a {
+	padding-left: 5px;
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	font-size: 0.875em;
+}
+.breadcrumb ul li a span {
+	color: #000;
+}
+.breadcrumb ul li a.active {
+	color: #000;
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+}
+
+.breadcrumb .toggle-single-click {
+	display: none;
+}
+/* CSS for displaying the toggle-div on resizing the browser*/
+@media screen and (min-width: 768px) {
+	.breadcrumb .toggle-div {
+		display: block !important;
+	}
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+	.breadcrumb {
+		margin-top: 0;
+	}
+	.breadcrumb .col-content {
+		margin: 0;
+	}
+	.breadcrumb ul li {
+		background-color: #F4F4F4;
+		height: 45px;
+		width: 100%;
+		border-bottom: solid 1px #E8E8E5;
+	}
+	.breadcrumb ul li a {
+		display: inline-block;
+		padding: 0 0 0 15px;
+		margin-top: 13px;
+	}
+	.breadcrumb ul li a span {
+		display: none;
+	}
+	/* CSS for Toggle Div in Mobile */
+	.breadcrumb .toggle-single-click a {
+		margin-top: 0;
+		width: 50px;
+		height: 45px;
+		vertical-align: middle;
+		float: right;
+		padding: 0 0 0 4%;
+		text-indent: -9999em;
+	}
+	.breadcrumb .toggle-single-click.collapse-view a {
+		background: url("/ui/$version/tsw/img/global/icons/plus.png") no-repeat 30px 12px;
+	}
+	.breadcrumb .toggle-single-click.expand-view a {
+		background: url("/ui/$version/tsw/img/global/icons/minus.png") no-repeat 30px 23px;
+	}
+	.breadcrumb .toggle-div {
+		display: none;
+	}
+	.breadcrumb .toggle-div,
+	.breadcrumb .toggle-single-click.collapse-view .toggle-arrow-up,
+	.breadcrumb .toggle-single-click.expand-view .toggle-arrow-down {
+		display: none;
+	}
+	.breadcrumb .toggle-single-click {
+		display: inline;
+	}
+}

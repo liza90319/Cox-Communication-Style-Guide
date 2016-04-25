@@ -1,0 +1,70 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<!--#include virtual="/ui/$version/presentation/html/includes/header-residential.html"-->
+
+<div class="cols-grid">
+	<div class="colspan-12 col-reset text-align-center">
+		<h1>Modals</h1>
+	</div>
+	<div class="section-container constrain-960">
+		<div class="colspan-12">
+			<div class="col-content">
+				<!-- DEVNOTES:
+					1. The 'data-modal-width' attribute corresponds to column spans as follows:
+						* 1010 == colspan-12
+						* 850  == colspan-10
+						* 690  == colspan-8
+					2. You can make a trigger open on page load by adding the following class:
+						* cms-auto-launch
+					3. You can change the theme by adding the following to the 'data-modal-theme' attribute:
+						* dark
+					4. You can hide the bottom close button by placing the following in the 'data-hide-close-btn' attribute:
+						* true
+				-->
+				<p><a data-modal-width="1010" class="cms-modal-trigger" href="library/includes/modal.html" title="Modal Title">Launch Modal (12 Columns)</a>.</p>
+				<p><a data-modal-width="850" class="cms-modal-trigger" href="library/includes/modal.html" title="Modal Title">Launch Modal (10 Columns)</a>.</p>
+				<p><a data-modal-width="690" class="cms-modal-trigger" href="library/includes/modal.html" title="Modal Title">Launch Modal (8 Columns)</a>.</p>
+
+				<p><a data-modal-width="850" class="cms-modal-trigger" href="library/includes/cms-modal-form.html" title="Modal Title" data-hide-close-btn="true">Launch Modal No Close Button with Form</a>.</p>
+				<p><a data-modal-width="1010" class="cms-modal-trigger" href="library/includes/modal-fh6.html" title="Modal Title" data-modal-theme="dark">Launch Black Modal with Feature Highlight 6</a>.</p>
+				<p><a data-modal-width="1010" class="cms-modal-trigger" href="library/includes/modal.html" title="Modal Title" data-hide-close-btn="true" data-modal-theme="dark">Launch Black Modal No Close Button</a>.</p>
+
+				<!-- RS: commenting out the below for now because it loads the js file which makes the inline work. without it, it does not so need to fix the issue -->
+				<!--<p><a data-modal-width="850" class="cms-modal-trigger" href="library/includes/video-player.html?playlist=right" title="Modal Title" data-hide-close-btn="true">Launch Ajax Modal with Video Player</a>.</p>-->
+				<p><a href="#" data-modal-width="850" class="cms-modal-trigger" title="Modal Title Inline Content" data-hide-close-btn="false" data-content-element="video-div-1">Launch a Modal of inline video content <b>(Uses <i>data-content-element</i>)</b></a>.</p>
+				<div id="video-div-1" class="modal-inline-content">
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/video-player.html?playlist=right"-->
+				</div>
+
+				<!-- DEVNOTES: The 'data-content-element' attribute contains the id of a hidden (by virtue of the "modal-inline-content" class) node on the page. The content of that node is placed into the dialog. -->
+				<p><a href="#" data-modal-width="850" class="cms-modal-trigger" title="Modal Title Inline Content" data-hide-close-btn="true" data-content-element="modal-div-1">Launch a Modal of in page content using data-content-element WITH form <b>(Uses <i>data-content-element</i>)</b></a>.</p>
+				<div id="modal-div-1" class="modal-inline-content">
+					<div class="col-reset">
+						<p>This is a mashup of the modal form include and custom buttons.</p>
+					</div>
+					<form class="form cols-10 col-reset" action="#modals.html" method="post">
+						<!-- div for displaying error message at the top -->
+						<div class="msg-error error-header"></div>
+						<h3 class="colspan-10">Contact</h3>
+						<label class="colspan-3 required-asterisk" for="phone-input92">Phone Number</label>
+						<div class="colspan-7">
+							<input type="tel" name="phone" id="phone-input92" maxlength="10" size="30" class="required phoneUS" data-mask="(000) 000-0000" placeholder="Please enter phone number" />
+						</div>
+						<label class="colspan-3 required-asterisk" for="email-input93">Email</label>
+						<div class="colspan-7">
+							<input type="text" name="email" id="email-input93" size="30" class="required email" placeholder="Please enter your email" />
+						</div>
+						<div class="colspan-10">
+							<input type="submit" value="Submit" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--#include virtual="/ui/$version/presentation/html/includes/footer-residential.html"-->

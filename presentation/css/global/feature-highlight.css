@@ -1,0 +1,31 @@
+/* feature-highlight.css */
+
+.feature-highlight {
+	margin: 30px 0 20px; /* bottom gets 10px additional from col-content margin */
+	text-align: left;
+}
+
+.feature-highlight > .col-content {
+	text-align: left;
+}
+.feature-highlight .text-align-center {
+	text-align: center;
+}
+
+.feature-highlight input[type="submit"] {
+	margin-top: 15px;
+}
+
+.feature-highlight img {
+	margin-bottom: 20px;
+}
+
+/* responsive mobile css */
+@media screen and (max-width: 767px) {
+	.feature-highlight [class*='cols-'] .colspan-1 .col-content {
+		margin-bottom: 0;
+	}
+	.feature-highlight .text-align-center {
+		text-align: left;
+	}
+}

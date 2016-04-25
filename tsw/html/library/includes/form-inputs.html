@@ -1,0 +1,263 @@
+<div class="colspan-6">
+	<div class="cols-6">
+		<form action="#forms.html" method="post">
+			<fieldset>
+				<!-- div for displaying error message at the top -->
+				<div class="colspan-6">
+					<div class="col-content">
+						<div class="msg-error error-header"></div>
+			 		</div>
+		 		</div>
+				
+				<div class="colspan-6">
+					<div class="col-content">
+				 		<p><strong>Single Line Text Inputs</strong></p>
+			 		</div>
+		 		</div>
+		 	
+		 		<div class="colspan-2 required-asterisk">
+		 			<label class="col-content" for="fname-input1">Basic Input</label>
+		 		</div>
+				<div class="colspan-4">
+					<div class="col-content">
+						<input type="text" name="textInput" id="fname-input1" size="30" class="required has-help" placeholder="Sample placeholder" />
+						<a href="#" data-content-element="textInput-help" class="tooltip-trigger btn-help">Help for Text Input</a>
+						<div id="textInput-help" class="tooltip-message">
+							<p>Contextual help to provide more details about this field.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="colspan-2 required-asterisk">
+		 			<label class="col-content" for="email-input">Email</label>
+		 		</div>
+				<div class="colspan-4">
+					<div class="col-content">
+						<input type="text" name="email" id="email-input" size="30" class="required email" />
+					</div>
+				</div>
+		
+				<div class="colspan-2 required-asterisk">
+		 			<label class="col-content" for="number-input">Numeric</label>
+		 		</div>
+				<div class="colspan-4">
+					<div class="col-content">
+						<input type="tel" name="txtNumber" id="number-input" size="30" range="10,20" class="range required number" />
+					</div>
+				</div>
+		
+				<div class="colspan-2 required-asterisk">
+		 			<label class="col-content" for="alphanumeric-input">Alpha-numeric</label>
+		 		</div>
+				<div class="colspan-4">
+					<div class="col-content">
+						<input type="text" name="txtAlphanumeric" id="alphanumeric-input" size="30" class="required alphanumeric" />
+					</div>
+				</div>
+		
+				<div class="colspan-2 required-asterisk">
+		 			<label class="col-content" for="zipcode">Zipcode</label>
+		 		</div>
+				<div class="colspan-4">
+					<div class="col-content">
+						<input type="tel" name="zipcode" id="zipcode" minlength="5" maxlength="10" size="30" class="required" data-mask="00000-0000" />
+					</div>
+				</div>
+		
+				<div class="colspan-2 required-asterisk">
+		 			<label class="col-content" for="password">Password</label>
+		 		</div>
+				<div class="colspan-4">
+					<div class="col-content">
+						<input name="password" id="password" size="30" class="required" type="password" minlength="5" />
+					</div>
+				</div>
+		
+				<div class="colspan-2 required-asterisk">
+		 			<label class="col-content" for="confirm-password">Confirm Password</label>
+		 		</div>
+				<div class="colspan-4">
+					<div class="col-content">
+						<input name="confirm-password" id="confirm-password" size="30" class="required" equalTo="#password" minlength="5" type="password" />
+					</div>
+				</div>
+		
+				<div class="colspan-2 required-asterisk">
+		 			<label class="col-content" for="calendar-input">Date</label>
+		 		</div>
+				<div class="colspan-4">
+					<div class="col-content">
+						<input type="text" name="calendar-input" id="calendar-input" size="11" class="required date date-picker" maxlength="10" placeholder="mm/dd/yyyy" readonly="readonly" />
+					</div>
+				</div>
+
+				<div class="colspan-6">
+					<div class="col-content">
+				 		<p><strong>Multi Line Text Input</strong></p>
+			 		</div>
+		 		</div>
+		 		
+				<div class="colspan-2 required-asterisk">
+		 			<label class="col-content" for="comments">Comments</label>
+		 		</div>
+				<div class="colspan-4">
+					<div class="col-content">
+						<textarea name="comments" id="comments" class="required" cols="30" rows="5"></textarea>
+					</div>
+				</div>  
+
+				<div class="colspan-6">
+					<div class="col-content">
+				 		<p><strong>Selects</strong></p>
+			 		</div>
+		 		</div>
+				
+				<div class="colspan-2 required-asterisk">
+		 			<label class="col-content" for="state-input">Single-Select</label>
+		 		</div>
+				<div class="colspan-4">
+					<div class="col-content">
+						<select name="state" id="state-input" class="required">
+							<option value="">Select One</option>
+							<option value="AZ">Arizona</option>
+							<option value="AR">Arkansas</option>
+							<option value="CA">California</option>
+							<option value="CT">Connecticut</option>
+							<option value="FL">Florida</option>
+							<option value="GA">Georgia</option>
+							<option value="ID">Idaho</option>
+							<option value="IA">Iowa</option>
+							<option value="KS">Kansas</option>
+							<option value="LA">Louisiana</option>
+							<option value="MA">Massachusetts</option>
+							<option value="MO">Missouri</option>
+							<option value="NE">Nebraska</option>
+							<option value="NV">Nevada</option>
+							<option value="NC">North Carolina</option>
+							<option value="OH">Ohio</option>
+							<option value="OK">Oklahoma</option>
+							<option value="RI">Rhode Island</option>
+							<option value="VA">Virginia</option>
+						</select>
+					</div>
+				</div>
+		
+				<div class="colspan-2 required-asterisk">
+		 			<label class="col-content" for="multi-input">Multi-Select</label>
+		 		</div>
+				<div class="colspan-4">
+					<div class="col-content">
+						<select name="multi" id="multi-input" multiple="multiple">
+							<option value="AZ">Arizona</option>
+							<option value="AR">Arkansas</option>
+							<option value="CA">California</option>
+							<option value="CT">Connecticut</option>
+							<option value="FL">Florida</option>
+							<option value="GA">Georgia</option>
+							<option value="ID">Idaho</option>
+							<option value="IA">Iowa</option>
+							<option value="KS">Kansas</option>
+							<option value="LA">Louisiana</option>
+							<option value="MA">Massachusetts</option>
+							<option value="MO">Missouri</option>
+							<option value="NE">Nebraska</option>
+							<option value="NV">Nevada</option>
+							<option value="NC">North Carolina</option>
+							<option value="OH">Ohio</option>
+							<option value="OK">Oklahoma</option>
+							<option value="RI">Rhode Island</option>
+							<option value="VA">Virginia</option>
+						</select>
+					</div>
+				</div>
+		
+				<div class="colspan-6">
+					<div class="col-content">
+				 		<p><strong>Checkboxes</strong></p>
+			 		</div>
+		 		</div>
+				
+				<!-- vertically grouped check-boxes -->
+				<div class="colspan-6 required-asterisk">
+					<label class="col-content">What security features are you interested about?</label>
+		 		</div>
+				<div class="colspan-6 vertical-group-element">
+					<div class="col-content">
+						<input type="checkbox" class="required" name="check-services" id="service-security" value="Home Security" >
+						<label for="service-security">Home Security</label>
+					</div>
+				</div>
+				<div class="colspan-6 vertical-group-element">
+					<div class="col-content">
+						<input type="checkbox" class="required" name="check-services" id="service-automation" value="Home Automation" />
+						<label for="service-automation">Home Automation</label>
+					</div>
+				</div>
+				<div class="colspan-6 vertical-group-element">
+					<div class="col-content">
+						<input type="checkbox" class="required" name="check-services" id="service-safety" value="Home Safety" />
+						<label for="service-safety">Home Safety</label>
+					</div>
+				</div>
+				<div class="colspan-6 vertical-group-element">
+					<div class="col-content">
+						<input type="checkbox" class="required" name="check-services" id="service-surveillance" value="Home Surveillance" />
+						<label for="service-surveillance">Home Surveillance</label>
+					</div>
+				</div>
+					
+				<div class="colspan-6">
+					<div class="col-content">
+				 		<p><strong>Radio Buttons</strong></p>
+			 		</div>
+		 		</div>
+		 		
+				<!-- radio buttons -->
+				<div class="colspan-6">
+					<label class="col-content">Do you like our service?</label>
+		 		</div>
+				<div class="colspan-6">
+					<div class="col-content">
+						<input type="radio" name="service" id="service-yes" checked="checked" value="yes" />
+						<label for="service-yes">Yes</label>
+					</div>
+				</div>
+				<div class="colspan-6">
+					<div class="col-content">
+						<input type="radio" name="service" id="service-no" value="no" />
+						<label for="service-no">No</label>
+					</div>
+				</div>
+		
+				<div class="colspan-6">
+					<div class="col-content">
+				 		<p><strong>Other</strong></p>
+			 		</div>
+		 		</div>
+		
+				<div class="colspan-2 required-asterisk">
+		 			<label class="col-content">SpinBox</label>
+		 		</div>
+				<div class="colspan-4 sb-wrapper spinner">
+					<div class="col-content clearfix">
+						<input type="button" value='&#8212' name="sb-down" class="sb-button disabled" data-spin-type="decrease" id="sb-down" title="decrease" />
+						<div class="sb-circle-wrapper">
+							<div class="sb-circle">
+								<input id="sb-val" value="" type="hidden" value="0" name="spinboxval" class="sb-value" />
+								<span step="1" max="4" min="0" class="sb-input">0</span>
+							</div>
+						</div>
+						<input type="button" value="+" name="sb-up" class="sb-button" data-spin-type="increase" id="sb-up" title="increase" />
+					</div>
+				</div>
+			
+				<div class="colspan-6">
+					<div class="col-content">
+						<input type="submit" value="Submit" />
+					</div>
+				</div>
+
+			</fieldset>
+		</form>
+	</div>
+</div>

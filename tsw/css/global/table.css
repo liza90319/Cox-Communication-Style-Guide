@@ -1,0 +1,228 @@
+/* table.css */
+
+table.data-table,
+.data-table table {
+	width: 100%;
+	margin: 30px 0 20px; /* bottom gets 10px additional from col-content margin */
+	background-color: transparent;
+}
+.data-table .col-content {
+	margin: 0 10px;
+}
+
+.data-table .nowrap {
+	white-space: nowrap;
+}
+
+.data-table .center {
+	text-align: center;
+}
+
+.data-table .right {
+	text-align: right;
+}
+
+.data-table .strike {
+	text-decoration: line-through;
+}
+
+.data-table th,
+.data-table td {
+	border-left: 1px solid #fff;
+}
+.data-table th:first-child,
+.data-table td:first-child {
+	border-left: 0;
+}
+
+/* style for check-mark image */
+.data-table .check-mark {
+	display: block;
+	width: 18px;
+	height: 18px;
+	margin: 0 auto;
+	background: url(/ui/$version/tsw/img/global/icons/check-mark.png) no-repeat;
+}
+
+/* table header */
+.data-table th {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	font-weight: 100;
+	padding: 12px 15px;
+	background-color: #4f5051;
+	color: #fff;
+	/* vertical-align: middle; */
+}
+.data-table th.selected {
+	background-color: #0a3167;
+}
+.data-table th a {
+	color: #fff;
+}
+
+/* table cell */
+.data-table td {
+	/* vertical-align: top; */
+	background-color: rgba(247, 247, 247, 0.6);
+	padding: 10px 15px;
+	border-left: 1px solid #fff;
+}
+
+/* Set base table background so cells and columns can mix transparent colors */
+.IE8 .data-table td,
+.IE9 .data-table td {
+	background-color: transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#fafafafa,endColorstr=#fafafafa);
+}
+
+/* Add mixer for odd rows */
+.data-table tr:nth-child(odd) td {
+	background-color: rgba(234, 234, 234, 0.6);
+}
+.IE9 .data-table tr:nth-child(odd) td {
+	background-color: transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f2f2f2,endColorstr=#f2f2f2f2);
+}
+
+/* Add mixer for selected column */
+.data-table col.selected {
+	background-color: rgba(64, 143, 173, 0.35);
+}
+.IE8 .data-table col.selected,
+.IE9 .data-table col.selected {
+	background-color: #0a3167;
+}
+
+/* selected cell for tables that cannot support the colgroup option, like AEM tables */
+.data-table tr td.selected {
+	background-color: #dee9ed;
+	filter: none;
+}
+.data-table tr:nth-child(odd) td.selected {
+	background-color: #d6e1e5;
+	filter: none;
+}
+
+/* styling for special offer image */
+.data-table td span.special-offer-icon {
+	background: url(/ui/$version/tsw/img/global/icons/pricing.png) no-repeat 0 50%;
+	display: inline-block;
+	height: 22px;
+	width: 40px;
+	vertical-align: middle;
+}
+
+
+/* sort table */
+table.tablesorter { /* deprecated but used in a few places */
+	width: 100%;
+}
+.tablesorter table {
+	width: 100%;
+	margin: 30px 0 20px; /* bottom gets 10px additional from col-content margin */
+}
+.tablesorter .nowrap {
+	white-space: nowrap;
+}
+.tablesorter .center {
+	text-align: center;
+}
+.tablesorter .right {
+	text-align: right;
+}
+.tablesorter .date {
+	width: 90px;
+}
+.tablesorter .checkbox {
+	width: 60px;
+}
+.tablesorter th {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	font-weight: 100;
+	cursor: pointer;
+	border-top: 1px solid #E0DACB;
+	border-bottom: 1px solid #E0DACB;
+}
+.tablesorter td {
+	padding: 8px 10px;
+	border-bottom: 1px solid #e6e6e6;
+	vertical-align: top;
+}
+.tablesorter tfoot td {
+	border-bottom: 0;
+}
+.tablesorter td.cost {
+	text-align: right;
+	padding-right: 25px;
+	width: 50px;
+}
+
+.tablesorter tr th a {
+	display: block;
+	white-space: nowrap;
+	background: url(/ui/$version/tsw/img/global/icons/sortable-table.png) right 4px no-repeat;
+	padding-right: 10px;
+	margin: 10px;
+	margin-left: 1px;
+	padding-left: 10px;
+	height: 15px;
+	border-left: 1px solid #e2dfd7;
+}
+.tablesorter th:first-child a {
+	border-left: none;
+}
+.tablesorter tr th.sort-asc a {
+	background: url(/ui/$version/tsw/img/global/icons/sortable-table-highlight.png) right 4px no-repeat;
+}
+.tablesorter tr th.sort-desc a {
+	background: url(/ui/$version/tsw/img/global/icons/sortable-table-highlight.png) right -38px no-repeat;
+}
+.tablesorter tr [class*='sort-'] {
+	background-color: #2757a7;
+}
+.tablesorter tr [class*='sort-'] a {
+	color: #fff;
+	border-left: none;
+}
+.tablesorter tr th a {
+	padding-right: 30px;
+}
+.tablesorter th.no-sorting {
+	cursor: default;
+}
+
+/* css for making table scrollable */
+.scroll-table,
+.data-table,
+.tablesorter {
+	overflow-x: auto;
+	overflow-y: visible;
+	margin-bottom: 30px;
+}
+.scroll-table::-webkit-scrollbar,
+.data-table::-webkit-scrollbar,
+.tablesorter::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 14px;
+	height: 8px;
+}
+.scroll-table::-webkit-scrollbar-thumb,
+.data-table::-webkit-scrollbar-thumb,
+.tablesorter::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	border: 3px solid #fff;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+/* Targetting only iPhone 5 - portrait orientation */
+/* Defect fix# 58928 - Fix for right margin not displayed on iPhone */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (device-aspect-ratio: 40/71)
+and (orientation: portrait) {
+	table.data-table tbody {
+		margin-right: calc(100% / 32);
+		display: inline-block;
+	}
+}

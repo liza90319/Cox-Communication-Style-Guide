@@ -1,0 +1,45 @@
+<!--#set var="size" value=""-->
+<!--#if expr="${QUERY_STRING} = /size=(.*?)(&|$)/"-->
+	<!--#set var="size" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="alignment" value=""-->
+<!--#if expr="${QUERY_STRING} = /alignment=(.*?)(&|$)/"-->
+	<!--#set var="alignment" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="background-color" value=""-->
+<!--#if expr="${QUERY_STRING} = /background-color=(.*?)(&|$)/"-->
+	<!--#set var="background-color" value="background-color:#${1};"-->
+<!--#endif-->
+
+<!--#set var="background-image" value=""-->
+<!--#if expr="${QUERY_STRING} = /background-image=(.*?)(&|$)/"-->
+	<!--#set var="background-image" value="background-image:url(${1});"-->
+<!--#endif-->
+
+<!--#set var="padding-top" value=""-->
+<!--#if expr="${QUERY_STRING} = /padding-top=(.*?)(&|$)/"-->
+	<!--#set var="padding-top" value="padding-top:${1}px;"-->
+<!--#endif-->
+
+<!--#set var="padding-bottom" value=""-->
+<!--#if expr="${QUERY_STRING} = /padding-bottom=(.*?)(&|$)/"-->
+	<!--#set var="padding-bottom" value="padding-bottom:${1}px;"-->
+<!--#endif-->
+
+<!--#set var="background-position" value=""-->
+<!--#if expr="${QUERY_STRING} = /background-position=(.*?)(&|$)/"-->
+	<!--#set var="padding-bottom" value="background-position:${1};"-->
+<!--#endif-->
+
+<!-- START: section-container -->
+<div class="section-container <!--#echo var="size"--> <!--#echo var="alignment"-->" style="<!--#echo var="background-color"--><!--#echo var="background-image"--><!--#echo var="background-position"--><!--#echo var="padding-top"--><!--#echo var="padding-bottom"-->">
+	<!-- start sample content -->
+	<div class="col-content" style="outline:1px solid #c00;">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur nulla diam, id placerat elit aliquet et. Cras ut maximus quam. Nam vehicula felis ultricies volutpat ultricies. Maecenas posuere ultricies odio eu ullamcorper. Aliquam tincidunt sollicitudin diam at ultrices. Sed sed tempus odio, non lacinia risus. Suspendisse potenti.</p>
+		<p>Phasellus semper laoreet sapien quis blandit. Mauris consequat ex sit amet quam mollis vestibulum. Mauris pellentesque ultrices felis, ac euismod quam sollicitudin ac. Vivamus a lacinia lorem. Etiam molestie lacus eu elementum mattis. Pellentesque consectetur urna et dictum commodo. Quisque eget nulla finibus, sollicitudin neque at, laoreet ante. Nullam aliquet consectetur aliquam. Fusce lectus massa, suscipit in euismod eget, varius et nunc. Mauris a mi molestie, sollicitudin purus ut, ultrices ipsum.</p>
+	</div>
+	<!-- /start sample content -->
+</div>
+<!--   END: section-container -->

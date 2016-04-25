@@ -1,0 +1,14 @@
+/* offer-terms styles */
+
+.offer-terms {
+	margin: 30px 0 20px; /* bottom gets 10px additional from col-content margin */
+	text-align: left;
+}
+
+.offer-terms .offer-description {
+	font-size: 0.75em;
+}
+
+.offer-terms .pd-shadow {
+	margin: 30px 0 -40px 0;
+}

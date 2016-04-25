@@ -1,0 +1,45 @@
+/* hide print only DOM elements from regular page view */
+.print-only {
+	display: none;
+}
+
+@media print {
+	/* hide things you don't want to print */
+	.no-print {
+		display: none !important;
+	}
+	/* display items to show during print only */
+	.print-only {
+		display: block;
+	}
+	
+	/* fixes issue with printing locking up browsers and printers with OpenSans web font */
+	input, textarea, select {
+		font-family: Arial, Helvetica, Sans-serif;
+	}
+
+	/* Convert Channel Lineup check marks into printable version */
+	.cols-grid .check-mark {
+		display: list-item;
+		list-style-image: url(/ui/$version/tsw/img/global/icons/check-mark.png);
+		list-style-position: inside;
+		background: none;
+	}
+
+	/* reposition modals to top left corner; main page container is hidden when modal active */
+	.dialog-component {
+		position: relative !important;
+		top: 0 !important;
+		left: 0 !important;
+		width: auto !important;
+		height: auto !important;
+	}
+	.dialog-component .dialog-component-head {
+		display: none;
+	}
+
+	/* hide underlay under modal to prevent extra pages printing */
+	#underlay {
+		display: none !important;
+	}
+}

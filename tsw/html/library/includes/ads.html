@@ -1,0 +1,94 @@
+<!-- DEV NOTES: this first script should go into HeadContext -->
+	
+<script src="//static-segments.beringmedia.com/dfp/1/bmi.segments.js"></script>
+<script>
+	var segmentStr = "";
+	if (bmi) {
+		bmi.segments.getSegments({
+			timeoutMs : 1000,
+			publisherId : "52ac4a92-fb84-4f60-a518-13cd6da99f3d",
+			callback : function(segments) {
+				if (segments && segments.length > 0) {
+					segmentStr = segments;
+				}
+			}
+		});
+	}
+
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+	(function() {
+		var gads = document.createElement("script");
+		gads.async = true;
+		gads.type = "text/javascript";
+		var useSSL = "https:" == document.location.protocol;
+		gads.src = ( useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+		var node = document.getElementsByTagName("script")[0];
+		node.parentNode.insertBefore(gads, node);
+	})();
+</script>
+
+<!-- DEV NOTES: this logic is just for our prototypes; need to build into widget. Should not appear in the widget -->
+<!--#if expr="$addSizeParam" -->
+	<!--#set var="addSize" value="$addSizeParam"-->
+<!--#else -->
+	<!--#set var="addSize" value="160, 600"-->
+<!--#endif -->
+
+<!--#if expr="$addSize = '160, 600'" -->
+	<!--#set var="addCols" value="2"-->
+<!--#else -->
+	<!--#set var="addCols" value="4"-->
+<!--#endif -->
+
+<!-- DEV NOTES:
+	The numbers in div-gpt-ad-1234567891234 should be a random unique ID and populated in 3 places below.
+	
+	Ad sizes:
+	1. 1280 x 800 – Full take-over advertisement (Ad-rotation) - currently not used
+	2. 300 x 600 – Filmstrip (Ad-rotation)    - 4 column ad
+	3. 300 x 250 – Medium Rectangle (Default) - 4 column ad
+	4. 160 x 600 - SkyScraper (My Connection) - 2 column ad
+-->
+
+<!-- DEV NOTES: The 2 addCols variables below is based on the ad size selected per the above comments -->
+<div class="colspan-<!--#echo var="addCols"--> ad-widget">
+	<div class="cols-<!--#echo var="addCols"-->">
+		<!-- DEV NOTES: the id below should be dynamic and unique to each ad component and match the 2 other references. -->
+		<div class="col-content" id="div-gpt-ad-1234567891234">
+			<script>
+				googletag.cmd.push(function() {
+					// Define a size mapping object. The first parameter to addSize is
+					// a viewport size (width, height), while the second is a list of allowed ad sizes.
+					var mapping = googletag.sizeMapping().
+
+					// Mobile Ad size.
+					// DEV NOTES: Please be sure to pull these values from global.properties using the variable names below.
+					// Should live in the doubleclick section.
+					// First set is 'mobile-viewport-size', second set is 'mobile-ad-size'.
+					addSize([320, 320], [320, 50]).
+
+					// Anything bigger than above. 
+					// DEV NOTES: Please be sure to pull these values from global.properties using the variable names below.
+					// Should live in the doubleclick section.
+					// First set is 'desktop-view-size', second set (addSize variable) comes from widget config
+					addSize([321, 321], [<!--#echo var="addSize"-->]).build();
+
+					// DEV NOTES: The value 'middlegeorgia' should be based on the site.
+					// If the user is in a cox market, display the site name, otherwise the site value is 'national'.
+					// The addSize variable comes from widget config. The 'div-gpt...' value should be dynamic and match the 2 other references.
+					googletag.defineSlot('/131/ssl.middlegeorgia.cox.com', [<!--#echo var="addSize"-->], 'div-gpt-ad-1234567891234').
+						defineSizeMapping(mapping).
+						addService(googletag.pubads())
+						.setTargeting("brg", segmentStr)
+						.setTargeting("pg", "sign-in")
+						.setTargeting("rg", "phoenix");
+					googletag.enableServices();
+					
+					// DEV NOTES: the id below should be dynamic and match the 2 other references.
+					googletag.display('div-gpt-ad-1234567891234');
+				});
+			</script>
+		</div>
+	</div>
+</div>

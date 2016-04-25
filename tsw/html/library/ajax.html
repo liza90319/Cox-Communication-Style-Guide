@@ -1,0 +1,56 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<div class="library-header">
+	<h1>Ajax</h1>
+</div>
+
+<div class="col-reset">
+	<h3 class="library-h3">Form Load/Submit</h3>
+</div>
+<div class="library-module">
+<!-- form submit -->
+<div class="col-reset ajax-loader" data-ajax-source="/ui/<!--#echo var="version"-->/tsw/html/library/includes/ajax-form-submit.html">
+	<div class="loading-wrapper" id="ajaxFormSubmit">
+		<div class="loader"></div>
+		<div class="response"></div>
+	</div>
+</div>
+<!-- /form submit -->
+</div>
+
+<div class="col-reset">
+	<h3 class="library-h3">Auto Load</h3>
+</div>
+<div class="library-module">
+<!-- auto load -->
+<div class="callout colspan-3">
+	<div class="cols-3 ajax-loader" data-ajax-source="/ui/<!--#echo var="version"-->/tsw/html/library/includes/ajax.html">
+		<div class="loading-wrapper" id="insertUniqueIdHere">
+			<div class="loader"></div>
+			<div class="response"></div>
+		</div>
+	</div>
+</div>
+<!-- /auto load -->
+</div>
+
+<div class="col-reset">
+	<h3 class="library-h3">Load With Controls</h3>
+</div>
+<div class="library-module">
+<!-- auto load with no tirgger -->
+<div class="callout colspan-3">
+	<div class="cols-3 loading-wrapper loading-wrapper-active" id="insertUniqueIdHere2">
+		<div class="loader"></div>
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/ajax.html"-->
+	</div>
+</div>
+<div class="col-reset">
+	<input type="button" value="Kill Loading" onclick="coxfw.core.events.trigger({'type':'hideThrobber', 'data':{'nodes':'#insertUniqueIdHere2'}});"/>
+	<input type="button" value="Enable Loading" onclick="coxfw.core.events.trigger({'type':'showThrobber', 'data':{'nodes':'#insertUniqueIdHere2'}});"/>
+</div>
+<!-- /auto load with no tirgger -->
+</div>

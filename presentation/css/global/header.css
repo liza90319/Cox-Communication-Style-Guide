@@ -1,0 +1,201 @@
+/* Header Component Styles */
+/* Page Heading h1 */
+.ph {
+	margin: 30px 0 20px; /* bottom gets 10px additional from col-content margin */
+}
+.ph h1 {
+	margin: 0; /* reset global h1 style */
+}
+.ph-left-link-right h1,
+.ph-cntr-link h1 {
+	display: inline;
+	vertical-align: middle;
+}
+/* Page Heading with right-aligned button */
+.ph-left-link-right .button {
+	margin-top: 2px;
+}
+/* Page Heading left */
+.ph-left {
+	text-align: left;
+}
+/* Page Heading centered */
+.ph-cntr,
+.ph-cntr-link {
+	text-align: center;
+}
+.ph-cntr-link .button {
+	margin-left: 57px;
+	position: relative;
+	top: 2px;
+}
+/* Page Heading Stroke (Move to CB css when we get to that sprint) */
+.ph-stroke {
+	text-align: center;
+}
+.ph-stroke h1 {
+	text-align: center;
+}
+.ph-stroke h1:before,
+.ph-stroke h1:after {
+	height: 2px;
+	content: '';
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	width: 30%;
+	background: #bbb;
+}
+.ph-stroke h1:before {
+	background: -moz-linear-gradient(left, #ffffff 0%, #bbbbbb 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(100%,#bbbbbb)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ffffff 0%,#bbbbbb 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #ffffff 0%,#bbbbbb 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #ffffff 0%,#bbbbbb 100%); /* IE10+ */
+	background: linear-gradient(to right, #ffffff 0%,#bbbbbb 100%); /* W3C */
+	right: 17px;
+	margin-left: -50%;
+}
+.ph-stroke h1:after {
+	background: -moz-linear-gradient(left, #bbbbbb 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#bbbbbb), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #bbbbbb 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #bbbbbb 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #bbbbbb 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to right, #bbbbbb 0%,#ffffff 100%); /* W3C */
+	left: 17px;
+	margin-right: -50%;
+}
+.IE9 .ph-stroke h1:before,
+.IE9 .ph-stroke h1:after {
+	margin: 0;
+}
+
+/* Section Heading h2 */
+.sh {
+	margin: 30px 0 0; /* bottom is now zero because it created too much space with the component that followed */
+}
+.sh-left-link-right h2,
+.sh-cntr-link h2 {
+	display: inline;
+	vertical-align: middle;
+}
+.sh-left-link-right a {
+	position: relative;
+}
+.sh-left-link-right a:not(.button) {
+	top: 8px;
+}
+/* Sub Heading left */
+.sh-left {
+	text-align: left;
+}
+/* Sub Heading centered */
+.sh-cntr-link,
+.sh-cntr {
+	text-align: center;
+}
+.sh-cntr-link .button {
+	margin-left: 42px;
+	position: relative;
+	top: 2px;
+	margin-bottom: 4px;
+}
+.sh-cntr-link a {
+	margin-left: 32px;
+	position: relative;
+}
+.sh-cntr-link h2,
+.sh-cntr-link a {
+	vertical-align: middle;
+}
+/* Page divider spanning 960 px */
+.pd-no-shadow {
+	border-top: 1px solid #dadadc; /* fallback */
+	border-top: 1px solid rgba(0,0,0,0.15);
+}
+/* page divider shadow */
+.pd-shadow {
+	background-repeat: no-repeat;
+	height: 8px;
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0.06) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.06)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.06) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,0.06) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0.06) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0.06) 0%,rgba(0,0,0,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+/* Text alignment variations */
+.ph-left-link-right .col-content,
+.sh-left-link-right .col-content {
+	text-align: right;
+}
+/* Float variations */
+.ph-left-link-right h1,
+.sh-left-link-right h2,
+.sh-left-link-right h3 {
+	float: left;
+}
+/* Clear variations */
+.sh-left-link-right h3 {
+	clear: left;
+}
+
+/* mobile overrides */
+@media screen and (max-width: 767px) {
+	/* Make buttons "mobile" */
+	.ph-left-link-right .button,
+	.ph-cntr-link .button,
+	.sh-cntr-link .button,
+	.sh-cntr-link a,
+	.sh-left-link-right a {
+		float: none;
+		margin-top: 15px;
+		margin-left: 0px;
+	}
+	/* do not show stroke styles */
+	.ph-stroke.ph-cntr {
+		text-align: center;
+	}
+	.ph-stroke h1:before,
+	.ph-stroke h1:after {
+		display: none;
+	}	
+	/* Revert to block display */
+	.sh-left-link-right h2,
+	.sh-cntr-link h2 {
+		display: inherit;
+	}
+	/* Reset top */
+	.sh-cntr-link .button,
+	.sh-left-link-right a {
+		top: 0 !important;
+	}
+	/* Reset text alignment */
+	.ph-left-link-right .col-content,
+	.sh-left-link-right .col-content {
+		text-align: left;
+	}
+	/* Reset float */
+	.ph-left-link-right h1,
+	.sh-left-link-right h2,
+	.sh-left-link-right h3 {
+		float: none;
+	}
+	/* Reset float and margin */
+	.sh-left-link-right h2,
+	.sh-left-link-right h3 {
+		margin-top: 8px;
+	}
+}
+
+/* target tablet portrait mode   */
+@media only screen and (min-device-width: 768px) and (orientation: portrait) {
+	.ph-stroke h1:before {
+		right: 4px;
+	}
+	.ph-stroke h1:after {
+		left: 0px;
+	}
+}

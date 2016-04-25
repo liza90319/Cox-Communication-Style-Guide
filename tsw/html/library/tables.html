@@ -1,0 +1,24 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<div class="library-header">
+	<h1>Tables</h1>
+</div>
+
+<div class="colspan-12 col-reset library-header">
+	<h2>Grid Table</h2>
+</div>
+<!-- section container -->
+<div class="library-module section-container constrain-960">
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/tables-data-table.html"-->
+</div>
+
+<div class="colspan-12 col-reset library-header">
+	<h2>Sortable Table</h2>
+</div>
+<!-- section container -->
+<div class="library-module section-container constrain-960">
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/tables-sortable-table.html"-->
+</div>

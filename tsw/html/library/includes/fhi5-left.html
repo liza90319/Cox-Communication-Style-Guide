@@ -1,0 +1,33 @@
+<!--#set var="content" value=""-->
+<!--#if expr="${QUERY_STRING} = /content=(.*?)(&|$)/"-->
+	<!--#set var="content" value="${1}"-->
+<!--#endif-->
+<!-- START: fhi5-left -->
+<div class="colspan-5 feature-highlight">
+	<div class="cols-5">
+		<div class="colspan-2">
+			<div class="col-content">
+				<img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/fpo-2-col.png" alt="FPO Image"/>
+			</div>
+		</div>
+		<div class="colspan-3">
+			<div class="col-content">
+				<h3>fhi5-left</h3>
+				<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+<!--#if expr="${content} = 'more'"-->
+				<p>Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris.</p>
+<!--#elif expr="${content} = 'most'"-->
+				<p>Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris.</p>
+				<ul>
+					<li>You have to have 2 legs</li>
+					<li>You have to have 2 arms</li>
+					<li>You have to have 1 head</li>
+				</ul>
+				<p>Lorum ipsum dolar sit amet, consectetur adipiscing elit, Quisque id scelerisqe orci, Etiam id leo in massa condimentum tristique. Ult sed nibh et nibh auctor trum. Donec eget luctus nisi, ut varius mauris, Praesent vitae massa nibh. Praesent vitae</p>
+<!--#endif-->
+				<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html"-->
+			</div>
+		</div>
+	</div>
+</div>
+<!--  END : fhi6-left -->

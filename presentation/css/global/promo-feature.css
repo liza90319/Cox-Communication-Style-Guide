@@ -1,0 +1,166 @@
+/* global promo feature */
+
+.promo-feature {
+	margin: 20px 0;
+	position: relative;
+	overflow: hidden;		
+}
+.promo-feature.theme-a > .col-content {
+	background-color: #ffffff;
+} 
+.promo-feature.theme-b > .col-content {
+	background-color: #f4f4f4;
+} 
+.promo-feature-details .price {
+	margin-left: 14%;
+}
+/* promo feature content - the initial visible DIV */
+/* only for desktop so no overrides needed for mobile */
+body[data-layout="desktop"] .promo-feature,
+body[data-layout="desktop"] .promo-feature-content {
+	min-height: 220px;
+	max-height: 220px;
+}
+/* css to display both promo feature content and details div on AEM auth mode */
+.promo-feature.auth-mode {
+	max-height: initial;
+}
+.promo-feature-content .colspan-2 .col-content,
+.promo-feature-content .colspan-4 .col-content {
+	padding-top: 30px;
+}
+.promo-feature-content {
+	position: relative;
+}
+
+/* link to animate the promo feature */
+.promo-feature-link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid #2757A7;	
+}
+.promo-feature-link .col-content,
+.promo-feature-details .col-content {
+	margin-bottom: 0;	
+}
+.promo-feature-link a,
+.promo-feature-details-link a {
+	font-family: open_sanssemibold;
+	text-align: center;
+	display: block;
+	font-size: 0.875em;
+}
+.promo-feature-link a {	
+	padding-bottom: 8px;		
+}
+.promo-feature-link a:after {
+	background: url("/ui/$version/tsw/img/global/arrow.png") no-repeat -18px -10px;
+	width: 18px;
+	content: "";
+	position: absolute;
+	top: 4px;
+	margin-left: 10px;
+	height: 9px;
+}
+/* feature details */
+.promo-feature-details {
+	color: #ffffff;	     
+}
+.IE8 .promo-feature-details {
+	width: 100%; /* DIV width squeezes if not specified */
+}
+.promo-feature-details h2 {
+	color: #ffffff;	
+	font-size: 1.5em;
+}
+.promo-feature-details .colspan-3 .col-content,
+.promo-feature-details .colspan-6:first-child .col-content {
+	padding-top: 14px;
+}
+.promo-feature-details.active .vertical-divider {	
+	background: #ffffff; /*fallback*/
+	background: -ms-linear-gradient(top,  rgba(255, 255, 255, 0.02) 0%, #E8E8E8 20%, #E8E8E8 80%, rgba(255, 255, 255, 0.02) 100%); /* IE10+ */ 	
+	background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.02) 0%, #E8E8E8 20%, #E8E8E8 80%, rgba(255, 255, 255, 0.02) 100%); /* Mozilla Firefox */ 	
+	background: -webkit-gradient(to bottom, rgba(255, 255, 255, 0.02) 0%, #E8E8E8 20%, #E8E8E8 80%, rgba(255, 255, 255, 0.02) 100%); /* Webkit (Safari/Chrome 10) */ 	
+	background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 0%, #E8E8E8 20%, #E8E8E8 80%, rgba(255, 255, 255, 0.02) 100%); /* Webkit (Chrome 11+) */ 	
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 0%, #E8E8E8 20%, #E8E8E8 80%, rgba(255, 255, 255, 0.02) 100%); /* W3C Markup */ 
+	width: 1px;
+	height: 70%;
+	position: absolute;
+	right: -10%;
+	top: 25%;
+}
+/* transition for active and inactive state - open and close animation */
+.promo-feature-details.active,
+.promo-feature-details.inactive {
+	position: absolute;  
+	-webkit-transition: max-height 0.25s linear;
+	-moz-transition: max-height 0.25s linear;
+	transition: max-height 0.25s linear;	
+	bottom: 0;	
+}
+/* desktop only height for active state */
+.promo-feature-details.active {
+	max-height: 220px;
+	height: 220px;
+}
+.promo-feature-details.inactive {
+	max-height: 0;	
+}
+/* display and hide link */
+.promo-feature-details.inactive .promo-feature-details-link {
+	display: none;
+}
+.promo-feature-details-link {
+	padding-bottom: 10px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.promo-feature-details-link a {	
+	color: #fff;
+}
+.promo-feature-details-link a:after {
+	background: url("/ui/$version/tsw/img/global/arrow.png") no-repeat 0 -1px;
+	width: 18px;
+	content: "";
+	position: absolute;
+	top: 5px;
+	margin-left: 10px;
+	height: 9px;
+}
+/* mobile only styles */
+@media screen and (max-width: 767px) {	
+	.promo-feature-details-link {
+		margin-top: 20px;
+	}	
+	.promo-feature-details.active .vertical-divider {
+		background: none;
+	}	
+	.promo-feature-details .price {
+		margin-left: 0; /* override desktop margin */
+	}
+	.promo-feature-content .colspan-4 .col-content,
+	.promo-feature-details .colspan-3:nth-child(2) .col-content {
+		padding-top: 0;
+	}
+}
+/* iphone only styles in landscape mode */
+@media screen and (max-width: 767px) and (orientation: landscape) {	
+	body[data-os="ios"] .promo-feature-link a:after {
+		top: 10px;
+	}
+}
+/* set height for tablets */
+@media only screen and (min-device-width: 768px) and (orientation: portrait) {
+	body:not([data-os="windows"]) .promo-feature,
+	body:not([data-os="windows"]) .promo-feature-content {
+		min-height: 260px;
+		max-height: 260px;
+	}
+	body:not([data-os="windows"]) .promo-feature-details.active {
+		max-height: 260px;
+		height: 260px;
+	}
+}

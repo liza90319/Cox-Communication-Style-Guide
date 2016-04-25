@@ -1,0 +1,58 @@
+<!--#set var="layout" value=""-->
+<!--#if expr="${QUERY_STRING} = /layout=(.*?)(&|$)/"-->
+	<!--#set var="layout" value="link-list-cols-${1}"-->
+<!--#endif-->
+
+<!--#set var="style" value=""-->
+<!--#if expr="${QUERY_STRING} = /style=(.*?)(&|$)/"-->
+	<!--#set var="style" value="link-list-${1}"-->
+<!--#endif-->
+
+<!--#set var="theme" value=""-->
+<!--#if expr="${QUERY_STRING} = /theme=(.*?)(&|$)/"-->
+	<!--#set var="theme" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="maxItemsDisplay" value="mobile"-->
+<!--#if expr="${QUERY_STRING} = /data-max-items-display=(.*?)(&|$)/"-->
+	<!--#set var="maxItemsDisplay" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="maxItems" value="3"-->
+<!--#if expr="${QUERY_STRING} = /data-max-items=(.*?)(&|$)/"-->
+	<!--#set var="maxItems" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="moreText" value="Read More"-->
+<!--#if expr="${QUERY_STRING} = /data-more-text=(.*?)(&|$)/"-->
+	<!--#set var="moreText" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="lessText" value="Read Less"-->
+<!--#if expr="${QUERY_STRING} = /data-less-text=(.*?)(&|$)/"-->
+	<!--#set var="lessText" value="${1}"-->
+<!--#endif-->
+
+<!--  START: link-listing -->
+<div class="colspan-12 link-list <!--#echo var="layout"--> <!--#echo var="style"--> <!--#echo var="theme"-->">
+	<div class="cols-12">
+<!-- DEV NOTES: do not render this div below if there is no header and subheader defined -->
+		<div class="colspan-12">
+			<div class="col-content">
+				<h2>Link List Header</h2>
+			</div>
+		</div>
+		<ul class="colspan-12 hide-max-items" data-max-items-display="<!--#echo var="maxItemsDisplay"-->" data-max-items="<!--#echo var="maxItems"-->" data-more-text="<!--#echo var="moreText"-->" data-less-text="<!--#echo var="lessText"-->">
+			<li class="col-content"><a href="#">Lorem Ipsum Dolor 1</a></li>
+			<li class="col-content"><a href="#">Lorem Ipsum Dolor 2</a></li>
+			<li class="col-content"><a href="#">Lorem Ipsum Dolor 3</a></li>
+			<li class="col-content"><a href="#">Lorem Ipsum Dolor 4</a></li>
+			<li class="col-content"><a href="#">Lorem Ipsum Dolor 5</a></li>
+			<li class="col-content"><a href="#">Lorem Ipsum Dolor 6</a></li>
+			<li class="col-content"><a href="#">Lorem Ipsum Dolor 7</a></li>
+			<li class="col-content"><a href="#">Lorem Ipsum Dolor 8</a></li>
+		</ul>
+	</div>
+</div>
+<!--  END: link-listing -->
+

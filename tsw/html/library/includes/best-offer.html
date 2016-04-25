@@ -1,0 +1,52 @@
+<!--#set var="highlight" value=""-->
+<!--#if expr="${QUERY_STRING} = /highlight=(.*?)(&|$)/"-->
+	<!--#set var="highlight" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="image" value=""-->
+<!--#if expr="${QUERY_STRING} = /image=(.*?)(&|$)/"-->
+	<!--#set var="image" value="${1}"-->
+<!--#endif-->
+
+<!-- START: best-offer -->
+<div class="colspan-4 best-offer">
+	<div class="col-content <!--#echo var="highlight"-->">
+<!--#if expr="${highlight} = 'highlight'"-->
+		<div class="best-value">BEST VALUE</div>
+<!--#else-->
+		<div class="no-best-value"></div>
+<!--#endif-->	
+<!--#if expr="${image} != 'hide'"-->
+		<img src="/ui/<!--#echo var="version"-->/tsw/img/fpo/fpo-4-col.png" alt="FPO Image" />
+<!--#endif-->
+		<h3>Header Three Two Lines Of Text</h3>
+		<!-- drop and drag adaptive page divider component -->
+		<div class="pd-no-shadow"></div>
+		<!-- drop and drag price component -->
+		<!--#set var="pricingPrimaryButtonText" value="Pricing Button"-->
+		<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html"-->
+		<!-- pricing highlights -->
+		<div class="cols-4 pricing-higlights">
+			<div class="colspan-2">
+				<div class="col-content">280+ Channels</div>
+			</div>
+			<div class="colspan-2">
+				<div class="col-content">150 Mbps Speeds</div>
+			</div>
+			<div class="colspan-2">
+				<div class="col-content">150 Mbps Speeds</div>
+			</div>
+		</div>
+		<!-- /pricing highlights -->
+		<!-- drop and drag adaptive page divider component -->
+		<div class="pd-no-shadow"></div>
+		<!-- drop and drag adaptive image component -->
+		<img style="margin-bottom:20px;" src="/ui/<!--#echo var="version"-->/tsw/img/fpo/channel-logos.png" alt="Enjoy these channels" title="Enjoy these channels" />
+		<!-- drop and drag adaptive image component -->
+		<img style="margin-bottom:20px;" src="/ui/<!--#echo var="version"-->/tsw/img/fpo/fpo-1-col.png" alt="$100 Gift Card" title="$100 Gift Card" />
+		<!-- drop and drag cta component -->
+		<a data-modal-width="850" class="cms-modal-trigger" href="/ui/<!--#echo var="version"-->/tsw/html/residential/shop/tv/includes/channel-lineup.html?package=TV%20Starter">View Channel Lineup</a>
+	</div>
+</div>
+<!--  END : best-offer -->
+<!--#set var="QUERY_STRING" value=""-->

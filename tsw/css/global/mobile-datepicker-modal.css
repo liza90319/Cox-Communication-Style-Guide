@@ -1,0 +1,84 @@
+/* Css file for date picker modal opens on mobile device*/
+@media screen and (max-width: 767px) {
+	
+.datepicker-modal-component {
+	position: absolute;
+	z-index: 2002;
+	background-color: #fff;
+	border: 1px solid #9a9a9a;
+	-webkit-box-shadow: #888 10px 10px 10px; /* FF3.5 - 3.6 */
+	-moz-box-shadow: #888 10px 10px 10px; /* Saf3.0+, Chrome */
+	box-shadow: #888 10px 10px 10px; /* Opera 10.5, IE9, FF4+, Chrome 10+ */
+	font-size: 18px;
+}
+.datepicker-modal-component .datepicker-modal-component-content {
+	margin: 30px 30px 40px;
+}
+.datepicker-modal-component .datepicker-modal-component-title {
+	font-family: "open_sansregular", Arial, Helvetica, Sans-serif;
+	font-size: 2.143em; /* 14*2.143 = 30.002px; base font-size taken as 14px; */
+	line-height: .967em; /* 29px */
+	margin: 30px 30px 50px;
+}
+.datepicker-modal-component .datepicker-modal-component-content .modal-inline-content > h2 { /* allow for title to be passed in content area instead of in title tag component and look like H1 */
+	font-family: "open_sansregular", Arial, Helvetica, Sans-serif;
+	font-size: 2.143em; /* 14*2.143 = 30.002px; base font-size taken as 14px; */
+	line-height: .967em; /* 29px */
+	margin-bottom: 50px;
+}
+.datepicker-modal-component .datepicker-modal-component-head {
+	position: relative;
+	border-bottom: 1px solid #b7b7b7;
+	height: 67px;
+}
+.datepicker-modal-component .datepicker-modal-component-head span.date-modal-close {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	width: 27px;
+	height: 27px;
+	background: url(/ui/$version/tsw/img/global/icons/close.png) no-repeat;
+	cursor: pointer;
+}
+
+.datepicker-modal-component .datepicker-modal-component-buttons {
+	border-top: 1px solid #b7b7b7;
+	margin: 65px -30px 0px;
+	padding: 10px 0 0;
+}
+
+/* loading date picker modal */
+.datepicker-modal-component .datepicker-modal-component-title h3.loading-title {
+	font-family: "open_sansregular", Arial, Helvetica, Sans-serif;
+	background: url(/ui/$version/tsw/img/global/loading-whitebg.gif) no-repeat top center;
+	padding-top: 40px;
+	text-align: center;
+}
+.datepicker-modal-component .datepicker-modal-component-content .loading-message p {
+	text-align: center;
+}
+
+.modal-inline-content {
+	display: none;
+}
+.datepicker-modal-component-content .modal-inline-content {
+	display: block;
+}
+.datepicker-modal-component .ui-datepicker {
+	left: -20px !important;
+	position: relative !important;
+	top: 0 !important;
+	z-index: 0 !important;
+	border: none !important;
+	border-radius: none !important;
+	box-shadow: none !important;
+	width: 104% !important;
+}
+.date-modal-button,.date-modal-close {
+	margin: 20px 20px 0px !important;
+}
+.datepicker-modal-component .ui-datepicker:after {
+	left: -40px;
+}
+
+}

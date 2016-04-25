@@ -1,0 +1,95 @@
+<!--#set var="theme" value=""-->
+<!--#if expr="${QUERY_STRING} = /theme=(.*?)(&|$)/"-->
+	<!--#set var="theme" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="button" value=""-->
+<!--#if expr="${QUERY_STRING} = /button=true(&|$)/"-->
+	<!--#set var="button" value="true"-->
+<!--#endif-->
+
+<!-- START : sub-nav -->
+<!-- DEV NOTES: add a class of 'desktop-only' below to hide from mobile view if the user has configured this in AEM -->
+<div class="sub-nav <!--#echo var="theme"-->">
+<!--#if expr="${button} = 'true'"-->
+<!-- DEV NOTES: Only use the ".colspan-10 > .cols-10" pattern below if USER CONFIGURES BUTTON. -->
+	<div class="colspan-10">
+		<div class="cols-10">
+<!--#else-->
+<!-- DEV NOTES: Only use the ".colspan-12 > .cols-12" pattern below if there is NO BUTTON. -->
+	<div class="colspan-12">
+		<div class="cols-12">
+<!--#endif-->
+			<div class="colspan-2">
+				<div class="col-content">
+					<!-- DEV NOTES: add a class of "active" to the page that you are currently on -->
+					<a href="#" class="active">Lorem 16px</a>
+				</div>
+			</div>
+			<div class="colspan-2">
+				<div class="col-content">
+					<a href="#">Lorem 16px</a>
+				</div>
+			</div>
+			<div class="colspan-2">
+				<div class="col-content">
+					<a href="#">Lorem 16px</a>
+				</div>
+			</div>
+			<div class="colspan-2">
+				<div class="col-content">
+					<a href="#">Lorem 16px Wrapping Text</a>
+				</div>
+			</div>
+			<div class="colspan-2">
+				<div class="col-content">
+					<a href="#">Lorem 16px</a>
+				</div>
+			</div>
+			<div class="colspan-2">
+				<div class="col-content">
+					<a href="#">Lorem 16px</a>
+				</div>
+			</div>
+			<div class="colspan-2">
+				<div class="col-content">
+					<a href="#">Lorem 16px</a>
+				</div>
+			</div>
+			<div class="colspan-2">
+				<div class="col-content">
+					<a href="#">Lorem 16px</a>
+				</div>
+			</div>
+			<div class="colspan-2">
+				<div class="col-content">
+					<a href="#">Lorem 16px</a>
+				</div>
+			</div>
+			<div class="colspan-2">
+				<div class="col-content">
+					<a href="#">Lorem 16px</a>
+				</div>
+			</div>
+			<div class="colspan-2">
+				<div class="col-content">
+					<a href="#">Lorem 16px Wrapping Text</a>
+				</div>
+			</div>
+			<div class="colspan-2">
+				<div class="col-content">
+					<a href="#">Lorem 16px</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--#if expr="${button} = 'true'"-->
+<!-- DEV NOTES: DO NOT USE the div below if there is NO BUTTON. -->
+	<div class="colspan-2">
+		<div class="col-content">
+			<a href="#" class="button">Button</a>
+		</div>
+	</div>
+<!--#endif-->
+</div>
+<!--  END  : sub-nav-->

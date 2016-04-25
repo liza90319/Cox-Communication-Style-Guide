@@ -1,0 +1,94 @@
+.cms-dialog {
+	background-color: #fff;
+	border: 1px solid #9a9a9a;
+	font-size: 1em; /* to match the container font size and reset from zero */
+	z-index: 9999;
+}
+
+/* alternate modal theme dark color */
+.dark {
+	background-color: #000;
+}
+.dark * {
+	color:#fff;
+}
+
+/* prevent headline from hitting close button */
+.cms-dialog h2:first-child {
+	margin-bottom: 40px;	
+	margin-right: 60px;
+}
+.cms-dialog .ui-dialog-title,
+.cms-dialog .ui-dialog-titlebar .ui-button-text {
+	display: none;
+}
+.cms-dialog .ui-dialog-titlebar-close {
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	width: 40px;
+	height: 40px;
+	background: url(/ui/$version/tsw/img/global/icons/cms-close.png) no-repeat;
+	cursor: pointer;
+	border: none;
+	-webkit-box-shadow: none; 
+	-moz-box-shadow: none; 
+	z-index: 9999;
+}
+.cms-dialog .ui-dialog-content {
+	margin: 25px 25px 40px;
+	width: auto;
+	min-width: inherit;
+	max-width: inherit;
+}
+.IE .cms-dialog .ui-dialog-content {
+	margin-right: 25px; /* override global margin-right set on colspan-* affecting modal */
+}
+.cms-dialog .ui-dialog-buttonset { 
+    text-align: right;
+    margin: 20px 25px;
+}
+
+/*  modal overlay CSS taken from http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css */
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    opacity: 0.75;
+    z-index: 2001;
+	filter: alpha(opacity=75);
+}
+
+.cms-dialog .modal-inline-content {
+	display: block;
+}
+
+
+/* modal mobile styles */
+@media screen and (max-width: 767px) {	
+	.cms-dialog {
+		left: 0 !important;
+		width: 100% !important;
+	}	
+	.cms-dialog h2:first-child {
+		margin-top: 45px !important;
+	}
+	.cms-dialog .ui-dialog-buttonset button { 
+	    width: 100%;
+	}
+	.cms-dialog .ui-dialog-content input[type="text"],
+	.cms-dialog .ui-dialog-content input[type="tel"],
+	.cms-dialog .ui-dialog-content input[type="password"] {
+		width: 85% !important;		
+	}
+}
+/* target tablet portrait mode */
+@media only screen and (min-device-width: 768px) and (orientation: portrait)  {
+	.cms-dialog {
+		box-sizing: border-box;
+	}
+}
+

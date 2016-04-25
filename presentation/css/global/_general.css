@@ -1,0 +1,242 @@
+/* NOTE: the following section is needed in case we have a page without the header which loads presentation.css which normally loads this */
+/* open sans - regular */
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: "open_sansregular";
+	src: url('/ui/$version/presentation/css/fonts/OpenSans-Regular-webfont.eot');
+	src: url('/ui/$version/presentation/css/fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/ui/$version/presentation/css/fonts/OpenSans-Regular-webfont.woff') format('woff'),
+		url('/ui/$version/presentation/css/fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+		url('/ui/$version/presentation/css/fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+}
+/* open sans - semi-bold */
+@font-face {
+	font-family: "open_sanssemibold";
+	font-weight: normal;
+	font-style: normal;
+	src: url('/ui/$version/presentation/css/fonts/open-sans.semibold-webfont.eot');
+	src: url('/ui/$version/presentation/css/fonts/open-sans.semibold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/ui/$version/presentation/css/fonts/open-sans.semibold-webfont.woff') format('woff'),
+		url('/ui/$version/presentation/css/fonts/open-sans.semibold-webfont.ttf') format('truetype'),
+		url('/ui/$version/presentation/css/fonts/open-sans.semibold-webfont.svg#open_sanssemibold') format('svg');
+}
+/* open sans - bold */
+@font-face {
+	font-family: "open_sansbold";
+	font-weight: normal;
+	font-style: normal;
+	src: url('/ui/$version/presentation/css/fonts/OpenSans-Bold-webfont.eot');
+	src: url('/ui/$version/presentation/css/fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/ui/$version/presentation/css/fonts/OpenSans-Bold-webfont.woff') format('woff'),
+		url('/ui/$version/presentation/css/fonts/OpenSans-Bold-webfont.ttf') format('truetype'),
+		url('/ui/$version/presentation/css/fonts/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #404040;
+	font: 12pt/1.125em "open_sansregular", Arial, Helvetica, sans-serif;
+	background-color: #fff;
+}
+/* End duplication from presentation.css */
+
+
+/* reset styles */
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p,
+a, img, strong, ol, ul, li, hr,
+fieldset, form, label,
+table, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+
+:focus {
+	outline: 0;
+}
+::-moz-focus-inner {
+	border: 0;
+}
+select:-moz-focusring {
+	color: transparent !important;
+	text-shadow: 0 0 0 #000;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:focus {
+	text-decoration: underline;
+}
+
+#container {
+	position: relative;
+	text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 100;
+	color: #000;
+}
+
+h1 {
+	font-size: 2.500em; /*  40px; */
+	line-height: 1.100em; /* 44px */
+	margin-bottom: 8px; /* gives 15px bottom margin with line height and margin */
+}
+h2 {
+	font-size: 1.875em; /* 30px; */
+	line-height: 1.133em; /* 34px */
+	margin-bottom: 8px; /* gives 15px bottom margin with line height and margin */
+}
+h3 {
+	font-size: 1.500em; /* 24px */
+	line-height: 1.167em; /* 28px */
+	margin-bottom: 8px; /* gives 15px bottom margin with line height and margin */
+}
+h4 {
+	font-size: 1.250em; /* 20px */
+	line-height: 1.333em; /* 24px */
+	margin-bottom: 8px; /* gives 15px bottom margin with line height and margin */
+}
+h5 {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	font-size: 1em; /* 16px */
+	line-height: 1.250em; /* 20px */
+	margin-bottom: 5px;
+}
+h6 {
+	font-family: "open_sansbold", Arial, Helvetica, Sans-serif;
+	font-size: 0.875em; /* 14px */
+	line-height: 1.286em; /* 18px */
+	margin-bottom: 5px;
+}
+
+strong, b {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	font-weight: 100;
+}
+
+small {
+	font-size: 12px;
+}
+
+#container li,
+.dialog-component li {
+	line-height: 1.250em; /* 20px */
+}
+
+p {
+	line-height: 1.250em; /* 20px */
+	margin-bottom: 15px;
+}
+
+/* top level bullets - should be completely left aligned */
+ul,
+ol {
+	margin: 0 0 15px 0;
+	padding-left: 22px;
+}
+ul ul,
+ol ol {
+	margin: 0;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th, td {
+	text-align: left;
+}
+
+img {
+	border: 0;
+	max-width: 100%;
+}
+
+#container hr,
+.page-divider {
+	background: url('/ui/$version/tsw/img/global/page-divider.png') no-repeat 0 0;
+	height: 6px;
+	margin: 30px -10px 25px -10px;
+}
+
+/* clearfix */
+.clearfix {
+	zoom: 1;
+}
+.clearfix:after {
+	content: " ";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.hide {
+	display: none !important;
+}
+
+/* page width restrictions - used mostly with section-container */
+.constrain-960 {
+	max-width: 960px;
+}
+.constrain-1280 {
+	max-width: 1280px;
+}
+
+/* superscript */
+sup {
+	font-size: 60%; /* needs to be bigger by default because anything smaller is not readable at 12px */
+	margin-left: 2px;
+}
+sup.symbol {
+	font-size: 100%
+}
+
+/* jsf error class */
+.mojoValidationError {
+	color: #d8544c;
+	display: block;
+	font-size: 14px !important; /* needed because of the font-size zero in the grids template */
+}
+
+/* text alignment */
+.text-align-left {
+	text-align: left;
+}
+.text-align-center {
+	text-align: center;
+}
+.text-align-right {
+	text-align: right;
+}
+
+/* check icon */
+.icon-check {
+	background: url('/ui/$version/tsw/img/global/icons/check.png') no-repeat;
+	width: 38px;
+	height: 38px;
+	margin: 0 auto;
+}
+/* cross icon */
+.icon-cross {
+	background: url('/ui/$version/tsw/img/global/icons/cross.png') no-repeat;
+	width: 38px;
+	height: 38px;
+	margin: 0 auto;
+}
+
+/* common styles for mobile */
+@media screen and (max-width: 767px) {
+	.text-align-mcenter {
+		text-align: center !important;
+	}
+}

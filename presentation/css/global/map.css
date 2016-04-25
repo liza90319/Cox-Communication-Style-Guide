@@ -1,0 +1,558 @@
+/* global map styles */
+.map-wrapper {
+	margin-top:38px;
+	margin-bottom:115px;
+}
+
+.map-wrapper h1 {
+	margin-bottom: 31px;
+	font-size:30px;
+}
+
+.map-wrapper .map-search-wrapper input {
+	margin-right:13px;
+	margin-top:4px;
+}
+
+.map-wrapper .map-search-wrapper .map-search-results {
+	border-left: 1px solid #ccc;
+	height: 78px;
+	margin-bottom: 20px;
+	padding-left:20px;
+}
+
+.map-wrapper .map-container {
+	height: 562px;
+	padding-right:20px;
+}
+
+.map-wrapper .map-container-wrapper {
+	position:relative;
+	background-color:#f4f4f4;
+	/*margin-top:20px;*/
+}
+
+.map-wrapper .top-border-map {
+	position:absolute;
+	width:100%;
+	height: 20px;
+	top:0;
+	-webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.4);
+    -moz-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.4);
+    box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.4);
+}
+
+/* wifi styles */
+.map-wrapper .wifi-icons-wrapper {
+	margin-top:-50px;
+}
+
+.map-wrapper .wifi-icons-wrapper ul {
+	list-style: none;
+}
+
+.map-wrapper .wifi-icons-wrapper li {
+	float:left;
+	margin-right: 30px;
+	margin-bottom: 10px;
+	background-repeat: no-repeat;
+	height: 26px;
+	padding-left:26px;
+}
+
+.map-wrapper .wifi-icons-wrapper li.cox-indoor {
+	background-image: url(/ui/3_15/tsw/img/global/icons/maps/indoor-cox-small.png);
+}
+
+.map-wrapper .wifi-icons-wrapper li.cable-outdoor {
+	background-image: url(/ui/3_15/tsw/img/global/icons/maps/outdoor-cable-small.png);
+}
+
+.map-wrapper .wifi-icons-wrapper li.cox-outdoor {
+	background-image: url(/ui/3_15/tsw/img/global/icons/maps/outdoor-cox-small.png);
+}
+
+.map-wrapper .wifi-icons-wrapper li.cable-indoor {
+	background-image: url(/ui/3_15/tsw/img/global/icons/maps/indoor-cable-small.png);
+}
+
+.map-wrapper .wifi-icons-wrapper li.wifi-cluster {
+	background-image: url(/ui/3_15/tsw/img/global/icons/maps/cluster-small.png);
+}
+
+/* cox centers styles */
+.map-wrapper .cox-centers-select-options {
+	margin-top:-40px;
+	margin-bottom: 20px;
+}
+
+.map-wrapper .centers-list-wrapper {
+	height 100%;
+	position:absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	display:block;
+	z-index: 1;
+}
+
+.map-wrapper .centers-list-wrapper .centers-list-item {
+	height: 95px;
+	margin-left:20px;
+	padding-top:10px;
+	display:none;
+}
+
+.map-wrapper .centers-list-wrapper .centers-list-item.active-page {
+	display:block;
+}
+
+.map-wrapper .centers-list-wrapper .centers-list-item .center-marker-number {
+	color:#fff;
+	width: 22px; 
+	height: 22px; 
+	background: #057bb8; 
+	-moz-border-radius: 22px; 
+	-webkit-border-radius: 22px; 
+	border-radius: 22px;
+	
+	text-align:center;
+	font-weight:bold;
+	position:absolute;
+	margin-left:10px;
+	margin-top:0;
+	padding:3px;
+}
+
+.map-wrapper .centers-list-item.active {
+	background-color: #ceeefa;
+}
+
+
+.map-wrapper .centers-list-item h5 {
+	font-size:.9em;
+	margin-bottom:0;
+	margin-left:50px;
+}
+
+.map-wrapper .centers-list-item p {
+	font-size:.8em;
+	margin-bottom:0;
+	margin-left:50px;
+}
+
+
+.map-wrapper .centers-list-wrapper .centers-list-pagination {
+	border: #00f solid 1px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	margin-left:20px;
+}
+
+
+.map-wrapper .paging {
+	margin: 0 !important;
+	text-align: left !important;
+	position:absolute;
+	right:0;
+	bottom: 0;	
+	z-index: 99;
+}
+
+.map-wrapper .paging ul {
+	margin-left:45px;
+}
+
+.map-wrapper .paging a.previous {
+	margin:0;
+	position: absolute;
+	top:7px;
+	left:0;
+	
+}
+
+.map-wrapper .paging a.disabled  {
+	border:none !important;
+	box-shadow: none !important;
+}
+
+.map-wrapper .paging a.next {
+	margin:0;
+	position: absolute;
+	top:7px;
+	right:0;
+}
+
+.map-wrapper .paging li.hide-page {
+	display:none !important;
+}
+
+.marker-label {
+   color: white;
+   font-family: "Arial";
+   font-size: 12px;
+   font-weight: bold;
+   text-align: center;
+   width: 25px;    
+   position:absolute; 
+   white-space: nowrap;
+   top: -200px;
+}
+
+/* mobile styles */
+@media screen and (max-width: 767px) {
+	.map-wrapper {
+		margin-top:19px;
+	}
+	
+	.map-wrapper h1 {
+		margin-bottom: 20px;
+	}
+	
+	.map-wrapper .map-search-wrapper input {
+		margin-bottom: 12px;
+	}
+	
+	.map-wrapper .map-search-wrapper .map-search-results {
+		border:none;
+		height: auto;
+		
+		margin-top:20px;
+		margin-left:0;
+		margin-bottom:20px;
+		padding-left:0;
+		padding-right:0;
+	}
+	
+	/* wifi styles */
+	.map-wrapper .wifi-icons-wrapper {
+		margin-top:0;
+	}
+	
+	/* cox centers styles */
+	.map-wrapper .cox-centers-select-options {
+		margin-top:0;
+	}
+	
+	.map-wrapper .centers-list-wrapper {
+		position:relative;
+	}
+	
+	.map-wrapper .centers-list-wrapper .centers-list-item {
+		margin-left:0;
+	}
+	
+	.map-wrapper .paging {
+		margin-left:0;
+	}
+	
+	.map-wrapper .paging a.previous {
+		left:-10px;
+		top:-10px;
+	}
+	
+	.map-wrapper .paging a.next {
+		top: -10px;
+	}
+	
+	.map-wrapper .paging ul {
+		top:-46px;
+	}
+}
+
+
+
+/* google map 
+.map-module img {
+	max-width: none; /* fixes images that disappear because of max-width: 100% in global 
+}
+.map-module .hr {
+	margin: 12px 0 15px 0;
+}
+
+.map-module .map-container {
+	float: left;
+	display: block;
+	width: 746px;
+	height: 530px;
+}
+
+/* loading throbber 
+.map-module .map-container.loading {
+	background: #fff url(/ui/$version/tsw/img/global/loading-whitebg.gif) no-repeat center center !important;
+}
+.map-module .map-container.loading .gm-style {
+	opacity: .2;
+}
+
+
+/* Can't scope this section because gmaps
+ * determines the width before the node is inserted in
+ * the appropriate place in the DOM.
+
+.map-info-panel {
+	min-width: 300px;
+	font-weight: 400; /* fix for google setting parent container to weight 300 making text hard to read in Chrome 
+}
+
+/* Directions List *
+.map-dir-container {
+	width: 746px;
+	float: left;
+	display: none;
+}
+.map-dir-container table {
+	width: 100%;
+}
+.map-dir-container table td {
+	padding: 4px;
+}
+.map-dir-container table.adp-placemark {
+	margin: 10px 0;
+	border: 1px solid silver;
+	background: #eee;
+}
+.map-dir-container .adp-text {
+	vertical-align: middle;
+}
+.map-dir-container .adp-summary,
+.map-dir-container .adp-distance {
+	text-align: right;
+}
+
+.map-module .directions-error {
+	display: none;
+}
+.map-module .directions-inputs {
+	float: left;
+}
+.map-info-panel-directions {
+	display: none;
+}
+
+.map-info-panel-directions-forms .msg-error {
+	margin-bottom: 10px;
+}
+.map-info-panel-directions-forms form {
+	display: none;
+}
+.map-info-panel-directions-forms form.active {
+	display: block;
+}
+.map-info-panel-directions-forms .get-directions-label {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	border-top: 1px solid #ccc;
+	margin: 2px 0px 2px 0;
+	padding-top: 5px;
+}
+.map-info-panel-directions-forms a {
+	font-family: "open_sans", Arial, Helvetica, Sans-serif;
+	text-decoration: underline;
+}
+.map-info-panel-directions-forms a.active {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	text-decoration: none;
+}
+
+/* hide the info window shadow *
+img[src*="iws3.png"] {
+	display: none;
+}
+
+/* cox centers css *
+.map-module .map-controls {
+	float: left;
+	width: 179px;
+	padding: 0 0 0 15px;
+}
+
+.map-module .hr {
+	margin: 12px 0 15px 0;
+	border-top: 2px dotted #ccc;
+}
+
+.map-module .form-submit .btn-div {
+	color: #e6e6e6;
+	padding: 3px 6px 0 2px;
+	float: left;
+}
+
+.map-module .map-dirsearch-container {
+	float: right;
+	width: 128px;
+	padding: 0 0 0 10px;
+	border-left: 1px solid #e6e6e6;
+	position: relative;
+}
+
+.map-module .map-search-container {
+	float: right;
+}
+
+.map-module .map-dirsearch-container a.map-it {
+	width: 105px;
+	height: 18px;
+	background: url(/ui/$version/tsw/img/interface/map/close-directions.png) no-repeat;
+	text-indent: -2000px;
+	float: left;
+}
+.map-module a.reverse-dir {
+	width: 86px;
+	height: 21px;
+	background: url(/ui/$version/tsw/img/interface/map/reverse-dir.png) no-repeat;
+	text-indent: -2000px;
+	float: left;
+	margin: 10px 0 15px 0;
+}
+
+.map-module .map-address-input,
+.map-module .map-start-address-input,
+.map-module .map-end-address-input {
+	width: 635px;
+	margin-right: 10px;
+}
+.map-module .popup-start-address-input,
+.map-module .popup-end-address-input {
+	width: 190px;
+	font-size: 12px;
+	margin-right: 10px;
+}
+
+.map-module .map-end-address-container {
+	margin-top: 10px;
+}
+
+#directions-balloon {
+	display: none;
+}
+#directions-forms form {
+	display: none;
+}
+#directions-forms form.active {
+	display: block;
+}
+#directions-forms h5 {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	border-top: 1px solid #ccc;
+	margin: 10px 0px 5px 0;
+	padding-top: 5px;
+}
+#directions-forms a {
+	font-weight: normal;
+	text-decoration: underline;
+}
+#directions-forms a.active {
+	font-family: "open_sanssemibold", Arial, Helvetica, Sans-serif;
+	text-decoration: none;
+}
+
+/* Map Controls *
+.map-controls .map-marker-toggles {
+	margin: 0;
+	list-style: none;
+}
+.map-controls li {
+	margin-bottom: 8px;
+}
+.map-controls li label {
+	float: left;
+	display: block;
+	margin: 0 0 0 3px !important;
+	padding: 0 0 0 20px;
+	width: 136px;
+	cursor: pointer;
+}
+.map-controls li #map-toggle-demos-label {
+	background: url(/ui/$version/tsw/img/interface/map/1.png) no-repeat;
+}
+.map-controls li #map-toggle-pickup-label {
+	background: url(/ui/$version/tsw/img/interface/map/2.png) no-repeat;
+}
+.map-controls li #map-toggle-dropoff-label {
+	background: url(/ui/$version/tsw/img/interface/map/3.png) no-repeat;
+}
+.map-controls li #map-toggle-payment-label {
+	background: url(/ui/$version/tsw/img/interface/map/4.png) no-repeat;
+}
+.map-controls li #map-toggle-spanish-label {
+	background: url(/ui/$version/tsw/img/interface/map/5.png) no-repeat;
+}
+.map-controls li #map-toggle-retail-label {
+	background: url(/ui/$version/tsw/img/interface/map/6.png) no-repeat;
+}
+/* turn off all the fancy checkboxes. can not get it to display properly without html changes *
+.map-controls li input {
+	display: block;
+	float: left;
+	margin: 4px 0 0 !important;
+	position: relative !important;
+	width: auto !important;
+	height: auto !important;
+	opacity: 100 !important;
+}
+.map-controls li input[type="checkbox"] + label:before {
+	display: none;
+}
+.map-controls label {
+	padding-bottom: 5px;
+	display: block;
+}
+.map-controls li.map-payment-loc {
+	padding-top: 20px;
+}
+.map-controls li.map-payment-loc label {
+	background: url(/ui/$version/tsw/img/interface/map/4.png) no-repeat;
+}
+
+
+/* wifi icons *
+.map-icons-container {
+	margin-top: 40px;
+	margin-bottom: 10px;
+	height: 50px;
+}
+.map-icons-container li {
+	background-repeat: no-repeat;
+	padding-left: 50px;
+	padding-right: 40px;
+	display: inline-block;
+	zoom: 1;
+	padding-bottom: 60px;
+	padding-top: 10px;
+	color: #666;
+	font-size: 1.083em;
+}
+.map-icons-container li.cable-indoor {
+	background-image: url(/ui/$version/tsw/img/interface/map/cable-indoor.png);
+}
+.map-icons-container li.cox-indoor {
+	background-image: url(/ui/$version/tsw/img/interface/map/cox-indoor.png);
+}
+.map-icons-container li.cable-outdoor {
+	background-image: url(/ui/$version/tsw/img/interface/map/cable-outdoor.png);
+}
+.map-icons-container li.cox-outdoor {
+	background-image: url(/ui/$version/tsw/img/interface/map/cox-outdoor.png);
+}
+
+
+.zoom-too-high {
+	position: absolute;
+	background-color: #fff;
+	border-radius: 4px;
+	border: #ddd solid 1px;
+	height: auto;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	padding: 10px;
+	top: 20px;
+	width: 50%;
+}
+
+.zoom-too-high p {
+	text-align: center;
+	margin: 0;
+}*/

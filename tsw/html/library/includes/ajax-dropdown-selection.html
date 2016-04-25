@@ -1,0 +1,35 @@
+<!--#set var="alignment" value=""-->
+<!--#if expr="${QUERY_STRING} = /alignment=(.*?)(&|$)/"-->
+	<!--#set var="alignment" value="${1}"-->
+<!--#endif-->
+
+<!-- Current Equipment widget -->
+<div class="current-equipment callout ajax-loader " data-ajax-source="/ui/<!--#echo var="version"-->/tsw/html/residential/myaccount/includes/equipment-details.html?option=">
+	
+	<div class="cols-6">			
+		<div class="colspan-5 ">			
+			
+			<!-- optional div for select box starts -->		
+					
+			<div class="col-content">
+				<!-- DEV Notes: If there is single equipment, show label and add 'hide-element' class to select -->
+				<!-- DEV Notes: Vice versa if multiple equipments are available -->
+				<label for="device-select" class="col-content">Make Your Selection:</label>	
+				<select name="device-select" class="device-select ajax-select">
+					<option value="device-a">Selection Number One</option>
+					<option value="device-b">Selection Number Two</option>
+					<option value="device-c">Selection Number Three</option>					
+				</select>
+			</div>
+			<!-- optional div for select box ends -->	
+			
+			<div class="loading-wrapper equipment-details">
+				<div class="loader"></div>
+				<div class="response"></div>
+			</div>	
+		
+		</div>					
+	</div>	
+		
+</div> 
+	

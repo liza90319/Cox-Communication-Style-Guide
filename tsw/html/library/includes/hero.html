@@ -1,0 +1,70 @@
+<!--#set var="type" value=""-->
+<!--#if expr="${QUERY_STRING} = /type=(.*?)(&|$)/"-->
+	<!--#set var="type" value="${1}"-->
+<!--#endif-->
+
+<!--#set var="desktopVerticalPosition" value=""-->
+<!--#if expr="${QUERY_STRING} = /desktopVerticalPosition=(.*?)(&|$)/"-->
+	<!--#set var="desktopVerticalPosition" value="position-content-desktop-${1}"-->
+<!--#endif-->
+
+<!--#set var="mobileVerticalPosition" value=""-->
+<!--#if expr="${QUERY_STRING} = /mobileVerticalPosition=(.*?)(&|$)/"-->
+	<!--#set var="mobileVerticalPosition" value="position-content-mobile-${1}"-->
+<!--#endif-->
+
+<!--#set var="textalign" value=""-->
+<!--#if expr="${QUERY_STRING} = /textalign=(.*?)(&|$)/"-->
+	<!--#set var="textalign" value="text-align-${1}"-->
+<!--#endif-->
+
+<!--#set var="underlay" value=""-->
+<!--#if expr="${QUERY_STRING} = /underlay=(.*?)(&|$)/"-->
+	<!--#set var="underlay" value="hero-text-underlay"-->
+<!--#endif-->
+
+<!--#set var="color" value=""-->
+<!--#if expr="${QUERY_STRING} = /color=(.*?)(&|$)/"-->
+	<!--#set var="color" value="${1}"-->
+<!--#endif-->
+
+<!-- BEGIN: Hero -->
+<!-- DEV NOTES - add a class of either 'hero', 'super-hero', or 'slim-hero' below based on type of hero -->
+<div class="hero-block <!--#echo var="type"--> col-reset">
+	<!-- BEGIN: text block containing the HDLN, BC, PRC, BTN; width: 960px on desktop; 100% on mobile -->
+	<!-- DEV NOTES - add a class of 'font-white' below to have text color set to white (default- black); hero-text-underlay for text background config (optional)  -->
+	<div class="text-block <!--#echo var="underlay"--> <!--#echo var="color"-->">
+		<!-- DEV NOTES - mobile text position: position-content-mobile-top or position-content-mobile-middle (default); left and top position for the desktop content or position-content-desktop-middle -->
+		<div class="position-content <!--#echo var="textalign"--> <!--#echo var="desktopVerticalPosition"--> <!--#echo var="mobileVerticalPosition"-->" style="left: 1%; top: 20px;">
+			<!-- DEV NOTES - width configuration for the content block -->
+			<div class="text-wrapper" style="width: 52%;">
+				<h2>Exclusive Offer for Cox Customers</h2>
+				<p>Upgrade to Advanced TV with Contour</p>
+				<!--#if expr="${showPrice} != 'false'"-->
+					<!--#set var="pricingStartsAt" value="true"-->
+					<!--#set var="pricingDollars" value="69"-->
+					<!--#set var="pricingDollars" value="99"-->
+					<!--#set var="pricingRecurrence" value="/mo."-->
+					<!--#set var="pricingDetails" value="Per month for 24 months"-->
+					<!--#set var="pricingDetailsRegular" value="Regular price \$80.95/month."-->
+					<!--#set var="pricingOfferDetailsLinkText" value="Offer Details &amp; Terms"-->
+					<!--#set var="pricingOfferDetailsGuarantee" value="Price Lock guarantee with 24 month service agreement."-->
+					<!--#set var="pricingPrimaryButtonText" value="Pricing Button"-->
+					<!--#include virtual="/ui/$version/tsw/html/library/includes/price.html"-->
+				<!--#endif-->
+			</div>
+		</div>
+	</div>
+	<!--  END : Text Block -->
+	<!-- BEGIN: Image -->
+	<a class="hero-image" data-desktop-background="/ui/<!--#echo var="version"-->/tsw/img/fpo/rotator/<!--#echo var="heroImage"-->" data-mobile-background="/ui/<!--#echo var="version"-->/tsw/img/fpo/rotator/superhero3-mobile.jpg" href="http://www.cnn.com" target="_blank" data-track-id="{tracking id}"></a>	
+	<!--  END : Image -->
+	<!-- BEGIN: Button for Mobile -->
+	<div class="mobile-only">
+		<div class="col-reset">
+			<a href="http://www.yahoo.com" target="_blank" class="button">Click Me</a>
+		</div>
+	</div>
+	<!--  END : Button for Mobile -->
+</div>
+<!--  END : Hero -->

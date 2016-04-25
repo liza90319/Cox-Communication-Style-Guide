@@ -1,0 +1,57 @@
+<!--#set var="version" value=""-->
+<!--#if expr="${DOCUMENT_URI} = /\/ui\/(.*?)\//"-->
+	<!--#set var="version" value="${1}"-->
+<!--#endif-->
+
+<div class="library-header">
+	<h1>Messaging</h1>
+</div>
+
+<div class="colspan-12 col-reset library-header">
+	<h2>Error Message</h2>
+</div>
+<!-- section container -->
+<div class="section-container constrain-1280">
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/messaging-error.html"-->
+</div>
+<!-- /section container -->
+
+<div class="colspan-12 col-reset library-header">
+	<h2>Confirmation Message</h2>
+</div>
+<!-- section container -->
+<div class="section-container constrain-1280">
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/messaging-success.html"-->
+</div>
+<!-- /section container -->
+
+<div class="colspan-12 col-reset library-header">
+	<h2>Info Message</h2>
+</div>
+<!-- section container -->
+<div class="section-container constrain-1280">
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/messaging-info.html"-->
+</div>
+<!-- /section container -->
+
+<div class="colspan-12 col-reset library-header">
+	<h2>Alerts &amp; Notifications Styles</h2>
+</div>
+<!-- section container -->
+<div class="section-container constrain-1280">
+	<!--#include virtual="/ui/$version/tsw/html/library/includes/messaging-alert.html"-->
+</div>
+<!-- /section container -->
+
+<div class="colspan-12 col-reset library-header">
+	<h2>System Errors</h2>
+</div>
+<!-- section container -->
+<div class="section-container constrain-1280">
+	<div class="msgAdvisory">
+		<div class="col-content">
+			<p>We're unable to load this content.</p>
+		</div>
+	</div>
+</div>
+<!-- /section container -->
